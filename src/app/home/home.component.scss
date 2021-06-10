@@ -10,7 +10,7 @@
   position: absolute;
   right: 0;
   width: 100%;
-  min-height: 100vh;
+  //min-height: 100vh;
   display: flex;
   transition: 0.5s;
   z-index: 2;
@@ -27,6 +27,20 @@
   padding: 50px;
   border-radius: 70px;
 }
+.toolBar {
+  z-index: 1000;
+  margin-top: 10rem;
+}
+.test{
+  background-color: red;
+}
+
+.owl-carouse .owl-theme .owl-dots .owl-dot{
+  position:absolute;
+  left:10rem;
+  top:25rem
+}
+
 
 @media (max-width: 991px)
 {

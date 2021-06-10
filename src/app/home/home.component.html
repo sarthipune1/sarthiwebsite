@@ -1,9 +1,16 @@
+  <div  class="header-container">
+    <img alt="logo" src="../../assets/images/logo.png " class="header-bg header-logo"/>
+  </div>
+<div></div>
+<owl-carousel-o [options]="customOptions">
 <div>
-  <div  class="header-container">
-    <img alt="image" src="../../assets/images/bg.png " class="header-bg"/>
-  </div>
-  <div  class="header-container">
-    <img alt="image" src="../../assets/images/logo.png " class="header-bg header-logo"/>
-  </div>
+  <ng-template carouselSlide>
+    <img alt="bg" src="../../assets/images/bg.png " class="header-bg"/>
+  </ng-template>
 </div>
+  <ng-template carouselSlide><img alt="bg" src="../../assets/images/bg.png " class="header-bg"/></ng-template>
+  <ng-template carouselSlide><img alt="bg" src="../../assets/images/bg.png " class="header-bg"/></ng-template>
+</owl-carousel-o>
+<div></div>
+
 
