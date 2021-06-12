@@ -2,10 +2,11 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HomeComponent } from './home.component';
 import {MatToolbarModule} from "@angular/material/toolbar";
-import {FlexModule} from "@angular/flex-layout";
+import {FlexModule,FlexLayoutModule} from "@angular/flex-layout";
 import {RouterModule} from "@angular/router";
 
 import { CarouselModule } from 'ngx-owl-carousel-o';
+import {ScrollingModule} from '@angular/cdk/scrolling'
 
 
 
@@ -20,8 +21,10 @@ import { CarouselModule } from 'ngx-owl-carousel-o';
     CommonModule,
     MatToolbarModule,
     FlexModule,
+    FlexLayoutModule,
     RouterModule,
-    CarouselModule
+    CarouselModule,
+    ScrollingModule
   ]
 })
 export class HomeModule { }
