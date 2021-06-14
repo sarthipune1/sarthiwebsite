@@ -1,26 +1,14 @@
-<div class="header-container">
-  <img alt="logo" class="header-bg header-logo" src="../../assets/images/logo.png "/>
-</div>
 <div class="navItems">
-  <div fxLayout.lt-sm="column" fxLayoutAlign="space-between center" fxLayoutAlign.lt-md="space-between left">
-    <a href="#">Home</a>
-    <a href="#">About Us</a>
-    <a href="#">Department</a>
-    <a href="#">Accounts</a>
-    <a href="#">Notice Board</a>
-    <a href="#">Photo Gallery</a>
-    <a href="#">Contact Us</a>
-  </div>
   <div class="header-text" fxLayout="column">
-    <span>
-      Skill Development & Training
-    </span>
+      <span>
+        Skill Development <br>& Training
+      </span>
     <img alt="line" src="../../assets/images/line.png "/>
   </div>
   <div class="sub-text">
-     <span style="font-size: 20px;">
-      Simply The Most Featured Rich HTML5 Learning Management System
-    </span>
+       <span style="font-size: 20px;">
+        Simply The Most Featured Rich HTML5 Learning Management System
+      </span>
   </div>
 </div>
 <owl-carousel-o [options]="customOptions">
@@ -32,113 +20,129 @@
   <ng-template carouselSlide><img alt="bg" class="header-bg" src="../../assets/images/bg.png "/></ng-template>
   <ng-template carouselSlide><img alt="bg" class="header-bg" src="../../assets/images/bg.png "/></ng-template>
 </owl-carousel-o>
-<div fxLayout="row" fxLayoutAlign="space-between center" style="background-color: #FFFFFF">
+<div fxLayout="row" fxLayoutAlign="space-evenly center" class="main-container" fxLayout.lt-md="column" >
   <div class="notice-main-container">
     <div class="notice-header">
+        <span>
+        Notice Board
+      </span>
+    </div>
+    <div class="notice-details-container">
+      <div class="notice-container">
+        <a fxLayout="row" fxLayoutAlign="flex-start center">
+          <div class="notice-date" fxLayout="column" fxLayoutAlign="center center">
+          <span class="month">
+          May
+        </span><span class="day">
+          31
+        </span>
+          </div>
+          <div class="notice-details" fxLayout="column" fxLayoutAlign="center flex-start ">
+        <span class="event-details">
+          Memorial day holiday 2021
+        </span><span class="event-time">
+          12:00 AM
+        </span>
+          </div>
+        </a>
+      </div>
+      <div class="notice-container">
+        <a fxLayout="row" fxLayoutAlign="flex-start center">
+          <div class="notice-date" fxLayout="column" fxLayoutAlign="center center">
+          <span class="month">
+          June
+        </span><span class="day">
+          11
+        </span>
+          </div>
+          <div class="notice-details" fxLayout="column" fxLayoutAlign="center flex-start">
+        <span class="event-details">
+          Summer A 2021 classes (4 & 8 week) begins
+        </span><span class="event-time">
+          12:00 AM
+        </span>
+          </div>
+        </a>
+      </div>
+      <div class="notice-container">
+        <a fxLayout="row" fxLayoutAlign="flex-start center">
+          <div class="notice-date" fxLayout="column" fxLayoutAlign="center center">
+          <span class="month">
+          SEP
+        </span><span class="day">
+          25
+        </span>
+          </div>
+          <div class="notice-details" fxLayout="column" fxLayoutAlign="center flex-start">
+        <span class="event-details">
+          Summer 2 2021 (6 week)
+        </span><span class="event-time">
+          12:00 AM
+        </span>
+          </div>
+        </a>
+      </div>
+      <div class="notice-container">
+        <a fxLayout="row" fxLayoutAlign="flex-start center">
+          <div class="notice-date" fxLayout="column" fxLayoutAlign="center center">
+          <span class="month">
+          May
+        </span><span class="day">
+          31
+        </span>
+          </div>
+          <div class="notice-details" fxLayout="column" fxLayoutAlign="center flex-start">
+        <span class="event-details">
+          Memorial day holiday 2021
+        </span><span class="event-time">
+          12:00 AM
+        </span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+     <div class="strength-container">
+       <div class="strength-header">
+        <span>
+        Our Strength
+      </span>
+       </div>
+       <div class="strength-title">
       <span>
-      Notice Board
-    </span>
-    </div>
-   <div class="notice-details-container">
-     <div class="notice-container">
-       <a fxLayout="row" fxLayoutAlign="flex-start center" >
-         <div class="notice-date" fxLayout="column" fxLayoutAlign="center center" >
-        <span class="month">
-        May
-      </span><span class="day">
-        31
+        Sed ut perspiciatis omnis iste natus error sit accusantium doloremque
       </span>
+       </div>
+       <div fxLayoutGap="50px" fxLayout.lt-md="column">
+         <div fxLayout="row" fxLayoutAlign="center center">
+           <div>
+             <img alt="bg" src="../../assets/images/strength-1.png "/>
+           </div>
+           <div fxLayout="column">
+             <span>EXCELLENT FALCUTY</span>
+             <span>Sed ut perspiciatis omnis iste natus error sit accusantium doloremque</span>
+           </div>
          </div>
-         <div class="notice-details" fxLayout="column" fxLayoutAlign="center flex-start ">
-      <span class="event-details">
-        Memorial day holiday 2021
-      </span><span class="event-time">
-        12:00 AM
-      </span>
+         <div fxLayout="row" fxLayoutAlign="center center">
+           <div>
+             <img alt="bg" src="../../assets/images/strength-2.png "/>
+           </div>
+           <div fxLayout="column">
+             <span>INDUSTRY LEADER</span>
+             <span>Sed ut perspiciatis omnis iste natus error sit accusantium doloremque</span>
+           </div>
          </div>
-       </a>
-     </div> <div class="notice-container">
-     <a fxLayout="row" fxLayoutAlign="flex-start center" >
-       <div class="notice-date" fxLayout="column" fxLayoutAlign="center center" >
-        <span class="month">
-        June
-      </span><span class="day">
-        11
-      </span>
+         <div fxLayout="row" fxLayoutAlign="center center">
+         <div>
+           <img alt="bg" src="../../assets/images/strength-3.png "/>
+         </div>
+         <div fxLayout="column">
+           <span>THOUSAND STUDENTS</span>
+           <span>Sed ut perspiciatis omnis iste natus error sit accusantium doloremque</span>
+         </div>
        </div>
-       <div class="notice-details" fxLayout="column" fxLayoutAlign="center flex-start">
-      <span class="event-details">
-        Summer A 2021 classes (4 & 8 week) begins
-      </span><span class="event-time">
-        12:00 AM
-      </span>
        </div>
-     </a>
-   </div> <div class="notice-container">
-     <a fxLayout="row" fxLayoutAlign="flex-start center" >
-       <div class="notice-date" fxLayout="column" fxLayoutAlign="center center" >
-        <span class="month">
-        SEP
-      </span><span class="day">
-        25
-      </span>
-       </div>
-       <div class="notice-details" fxLayout="column" fxLayoutAlign="center flex-start">
-      <span class="event-details">
-        Summer 2 2021 (6 week)
-      </span><span class="event-time">
-        12:00 AM
-      </span>
-       </div>
-     </a>
-   </div> <div class="notice-container">
-     <a fxLayout="row" fxLayoutAlign="flex-start center" >
-       <div class="notice-date" fxLayout="column" fxLayoutAlign="center center" >
-        <span class="month">
-        May
-      </span><span class="day">
-        31
-      </span>
-       </div>
-       <div class="notice-details" fxLayout="column" fxLayoutAlign="center flex-start">
-      <span class="event-details">
-        Memorial day holiday 2021
-      </span><span class="event-time">
-        12:00 AM
-      </span>
-       </div>
-     </a>
+     </div>
    </div>
-   </div>
-  </div>
-  <div  style="background-color: white; border: #c0c0c033 solid 1px; border-radius: 10px; box-shadow: 0px 10px 15px 5px #E5E5E5; margin-left:50px ; padding: 10px; height: 50rem;
-">
-    <div>Our Strength</div>
-  <div>
-    <span>
-      Sed ut perspiciatis omnis iste natus error sit accusantium doloremque
-    </span>
-  </div>
-    <div>
-    <img alt="bg" src="../../assets/images/strength-1.png "/>
-      <span>EXCELLENT FALCUTY</span>
-    </div>
-    <div>
-      <span>Sed ut perspiciatis omnis iste natus error sit accusantium doloremque</span>
-    </div> <div>
-    <img alt="bg" src="../../assets/images/strength-2.png "/>
-      <span>INDUSTRY LEADER</span>
-    </div>
-    <div>
-      <span>Sed ut perspiciatis omnis iste natus error sit accusantium doloremque</span>
-    </div> <div>
-    <img alt="bg" src="../../assets/images/strength-3.png "/>
-      <span>THOUSAND STUDENTS</span>
-    </div>
-    <div>
-      <span>Sed ut perspiciatis omnis iste natus error sit accusantium doloremque</span>
-    </div>
-  </div>
-</div>
 
 

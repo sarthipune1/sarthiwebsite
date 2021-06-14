@@ -7,6 +7,7 @@ import {RouterModule} from "@angular/router";
 
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import {ScrollingModule} from '@angular/cdk/scrolling'
+import {HeaderModule} from "../header/header.module";
 
 
 
@@ -24,7 +25,8 @@ import {ScrollingModule} from '@angular/cdk/scrolling'
     FlexLayoutModule,
     RouterModule,
     CarouselModule,
-    ScrollingModule
+    ScrollingModule,
+    HeaderModule,
   ]
 })
 export class HomeModule { }
