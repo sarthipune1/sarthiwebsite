@@ -20,89 +20,36 @@
   <ng-template carouselSlide><img alt="bg" class="header-bg" src="../../assets/images/bg.png " /></ng-template>
   <ng-template carouselSlide><img alt="bg" class="header-bg" src="../../assets/images/bg.png " /></ng-template>
 </owl-carousel-o>
-<div fxLayout="row" fxLayoutAlign="space-evenly center" class="main-container" fxLayout.lt-md="column">
-  <div class="notice-main-container">
+<div fxLayout="row" fxLayout.lt-md="column" fxLayoutAlign="space-evenly center" fxLayoutGap="0px"
+  fxLayoutGap.lt-md="40px" [ngStyle]="{'height': '40rem'}" [ngStyle.lt-md]="{'height': 'auto'}" class="main-container">
+  <div class="notice-main-container" fxFlex="40" fxFlex.lt-md="90">
     <div class="notice-header">
       <span>
         Notice Board
       </span>
     </div>
-    <div class="notice-details-container">
-      <div class="notice-container">
+    <div class="notice-details-container" [ngStyle.lt-md]="{'max-height': '35rem'}">
+      <div class="notice-container" *ngFor="let notice of noticeData">
         <a fxLayout="row" fxLayoutAlign="flex-start center">
           <div class="notice-date" fxLayout="column" fxLayoutAlign="center center">
             <span class="month">
-              May
+              {{notice.date.month}}
             </span><span class="day">
-              31
+              {{notice.date.date}}
             </span>
           </div>
           <div class="notice-details" fxLayout="column" fxLayoutAlign="center flex-start ">
             <span class="event-details">
-              Memorial day holiday 2021
+              {{notice.title}}
             </span><span class="event-time">
-              12:00 AM
-            </span>
-          </div>
-        </a>
-      </div>
-      <div class="notice-container">
-        <a fxLayout="row" fxLayoutAlign="flex-start center">
-          <div class="notice-date" fxLayout="column" fxLayoutAlign="center center">
-            <span class="month">
-              June
-            </span><span class="day">
-              11
-            </span>
-          </div>
-          <div class="notice-details" fxLayout="column" fxLayoutAlign="center flex-start">
-            <span class="event-details">
-              Summer A 2021 classes (4 & 8 week) begins
-            </span><span class="event-time">
-              12:00 AM
-            </span>
-          </div>
-        </a>
-      </div>
-      <div class="notice-container">
-        <a fxLayout="row" fxLayoutAlign="flex-start center">
-          <div class="notice-date" fxLayout="column" fxLayoutAlign="center center">
-            <span class="month">
-              SEP
-            </span><span class="day">
-              25
-            </span>
-          </div>
-          <div class="notice-details" fxLayout="column" fxLayoutAlign="center flex-start">
-            <span class="event-details">
-              Summer 2 2021 (6 week)
-            </span><span class="event-time">
-              12:00 AM
-            </span>
-          </div>
-        </a>
-      </div>
-      <div class="notice-container">
-        <a fxLayout="row" fxLayoutAlign="flex-start center">
-          <div class="notice-date" fxLayout="column" fxLayoutAlign="center center">
-            <span class="month">
-              May
-            </span><span class="day">
-              31
-            </span>
-          </div>
-          <div class="notice-details" fxLayout="column" fxLayoutAlign="center flex-start">
-            <span class="event-details">
-              Memorial day holiday 2021
-            </span><span class="event-time">
-              12:00 AM
+              {{notice.time}}
             </span>
           </div>
         </a>
       </div>
     </div>
   </div>
-  <div class="strength-container">
+  <div class="strength-container" fxFlex="40" fxFlex.lt-md="90">
     <div class="strength-header">
       <span>
         Our Strength
