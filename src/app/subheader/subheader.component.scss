@@ -5,6 +5,7 @@
   background-repeat: no-repeat;
   //position: absolute;
   top: 0;
+  background-color: #E5E5E5;
 }
 
 .sub-container {
@@ -23,5 +24,15 @@
   //left: 85rem;
   //top: 20rem;
   right: 10px;
-  top: 20rem;
+  top: 21rem;
 }
+
+//:host ::ng-deep app-header {
+//  .nav-items {
+//    a {
+//      &:after {
+//        background-color: white;
+//      }
+//    }
+//  }
+//}
