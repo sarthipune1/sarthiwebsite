@@ -71,3 +71,46 @@
   border-radius: 2rem;
   padding: 6rem;
 }
+
+.directors-header {
+  background: #344658;
+  height: 43rem;
+  position: relative;
+}
+
+.style-container {
+  height: 100%;
+  background-repeat: no-repeat;
+  position: absolute;
+  right: 10px;
+  top: 21rem;
+}
+
+.directors-header-description {
+  font-size: 3.5rem;
+  line-height: 4.5rem;
+  font-weight: 500;
+  color: white;
+  padding: 9rem 19rem 18.5rem 18.5rem;
+  max-width: 90%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.view-now {
+  height: 5.5rem;
+  width: 17rem;
+  border-radius: 5.5rem;
+  background-color: #f67e22;
+  margin-top: 3rem;
+
+
+  a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.6rem;
+    font-weight: 700;
+  }
+}
