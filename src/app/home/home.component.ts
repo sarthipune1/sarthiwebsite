@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { OwlOptions } from 'ngx-owl-carousel-o';
+import {Component, OnInit} from '@angular/core';
+import {OwlOptions} from 'ngx-owl-carousel-o';
 
 @Component({
   selector: 'app-home',
@@ -7,9 +7,6 @@ import { OwlOptions } from 'ngx-owl-carousel-o';
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements OnInit {
-  constructor() {}
-
-  ngOnInit(): void {}
   customOptions: OwlOptions = {
     loop: true,
     mouseDrag: true,
@@ -38,7 +35,6 @@ export class HomeComponent implements OnInit {
     },
     nav: true,
   };
-
   noticeData = [
     {
       date: {
@@ -73,4 +69,27 @@ export class HomeComponent implements OnInit {
       time: '12:00 AM',
     },
   ];
+  strengthData = [
+    {
+      icon: "strength-1.png",
+      title: 'EXCELLENT FALCUTY',
+      description: 'Sed ut perspiciatis omnis iste natus error sit accusantium doloremque',
+    },
+    {
+      icon: "strength-2.png",
+      title: 'INDUSTRY LEADER',
+      description: 'Sed ut perspiciatis omnis iste natus error sit accusantium doloremque',
+    },
+    {
+      icon: "strength-3.png",
+      title: 'THOUSAND STUDENTS',
+      description: 'Sed ut perspiciatis omnis iste natus error sit accusantium doloremque',
+    },
+  ];
+
+  constructor() {
+  }
+
+  ngOnInit(): void {
+  }
 }

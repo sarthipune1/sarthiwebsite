@@ -8,6 +8,7 @@
   box-sizing: border-box;
   font-family: "Poppins", sans-serif !important;
 }
+
 ::-webkit-scrollbar-thumb {
   //background: #3E5063;
   background: rgba(62, 80, 99, 0.5);
@@ -71,6 +72,7 @@
   position: absolute;
   top: 25vw;
 }
+
 .main-container {
   margin: 50px 0;
 }
@@ -80,11 +82,13 @@
   font-weight: 500;
   padding: 25px;
 }
+
 .strength-header {
   font-size: 2rem;
   font-weight: 500;
   margin-bottom: 40px;
 }
+
 .strength-title {
   margin-bottom: 45px;
 }
@@ -125,8 +129,9 @@
   border: #c0c0c033 solid 1px;
   border-radius: 15px;
   box-shadow: 0px 10px 15px 5px #e5e5e5;
-  padding: 4rem 3.5rem;
+  padding: 2.5rem 3.5rem;
   height: 100%;
+
   img {
     width: 8.5rem;
     height: 8.5rem;
@@ -180,9 +185,141 @@
   overflow: scroll;
 }
 
+.about-container {
+  height: 100%;
+  min-width: 100vw;
+  background-image: url("../../assets/images/about-curve.png");
+  background-repeat: no-repeat;
+}
+
+.about-title {
+  padding: 8.5vw 0 0 10vw;
+  font-size: 4rem;
+  font-weight: 700;
+}
+
+
+.strength-sub-title {
+  margin-bottom: 20px;
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+
+.strength-description {
+  font-size: 1rem;
+  font-weight: 300;
+  //max-width: 17rem;
+}
+
+.about-description {
+  max-width: 60rem;
+  padding: 2.5vw 0 0 10vw;
+  margin-top: 2.5vw;
+  color: white;
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 2.5rem;
+}
+
+.read-more {
+  font-size: 1.25rem;
+  font-weight: 400;
+  padding: 2.5vw 0 0 10vw;
+
+  a {
+    color: white;
+    text-decoration: none;
+
+    &:after {
+      content: ">";
+      margin-left: 10px;
+      font-size: 1.5rem;
+      color: #f67e22;
+
+    }
+  }
+}
+
+.img-container {
+  position: absolute;
+  right: 10px;
+  top: 240px;
+}
+
+.sub-container {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+.main-objectives {
+  margin-bottom: 4rem;
+
+  span {
+    font-size: 4rem;
+    font-weight: 700;
+
+    &:after {
+      content: 'Objectives';
+      margin-left: 1.5vw;
+      color: #f67e22;
+    }
+  }
+
+}
+
+.main-objectives-container {
+  padding: 0 12.5vw 12vw 14.5vw;
+}
+
+.objective-description {
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 2.5rem;
+  margin-bottom: 5vw;
+}
+
+.skill-container {
+  span {
+    font-size: 1.25rem;
+    font-weight: 500;
+    line-height: 2.5rem;
+
+    &:before {
+      content: '\2727';
+      color: #f67e22;
+      font-weight: 800;
+      font-size: 1.5rem;
+      margin-right: 5px;
+    }
+  }
+
+}
+
+.information {
+  //width: 25rem;
+  height: 15rem;
+  object-fit: contain;
+}
+
+.read-button {
+  width: 17rem;
+  height: 5rem;
+  background: #f67e22;
+  border-radius: 5rem;
+
+  a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.8rem;
+    font-weight: 700;
+  }
+}
+
 @media (max-width: 559px) {
   .header-logo {
     padding: 15px;
+
   }
 }
 
