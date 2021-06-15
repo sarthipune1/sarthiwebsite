@@ -1,0 +1,27 @@
+.main-container {
+  height: 100%;
+  min-width: 100vw;
+  background-image: url("../../assets/images/aboutus-1.png");
+  background-repeat: no-repeat;
+  //position: absolute;
+  top: 0;
+}
+
+.sub-container {
+  height: 100%;
+  min-width: 100vw;
+  background-image: url("../../assets/images/aboutus-2.png");
+  background-repeat: no-repeat;
+  position: relative;
+
+}
+
+.container {
+  height: 100%;
+  background-repeat: no-repeat;
+  position: absolute;
+  //left: 85rem;
+  //top: 20rem;
+  right: 10px;
+  top: 20rem;
+}

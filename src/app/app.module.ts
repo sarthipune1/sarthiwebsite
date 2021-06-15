@@ -14,9 +14,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
+import { AboutUsComponent } from './about-us/about-us.component';
+import { SubheaderComponent } from './subheader/subheader.component';
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, FooterComponent],
+  declarations: [AppComponent, HeaderComponent, FooterComponent, AboutUsComponent, SubheaderComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
