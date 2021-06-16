@@ -1,60 +1,79 @@
 <div class="navItems">
-  <div class="header-text" fxLayout="column">
-    <div>
-      <span>
-      About Us
-    </span>
+    <div class="header-text" fxLayout="column">
+        <div>
+            <span>About Us</span>
+        </div>
+        <div>
+            <img alt="line" src="../../assets/images/line.png ">
+        </div>
     </div>
-    <div><img alt="line" src="../../assets/images/line.png "/></div>
-  </div>
-  <div class="sub-text">
-    <span>
-    Sed ut perspiciatis omnis iste natus error sit accusantium doloremque Sed ut perspiciatis omnis iste natus error sit
+    <div class="sub-text">
+        <span>
+            Sed ut perspiciatis omnis iste natus error sit accusantium doloremque Sed ut perspiciatis omnis iste natus error sit
     accusantium doloremque
-    </span>
-  </div>
+        </span>
+    </div>
 </div>
 <div class="container">
-  <div class="admin-container">
-    <div class="header">
-      <span>About</span>
-    </div>
-    <div class="description">
-      <div> <span>
-      Chhatrapati Shahu Maharaj Research Training and Human Development Institute (SARTHI),
+    <div class="admin-container">
+        <div class="header">
+            <span>About</span>
+        </div>
+        <div class="description body">
+            <div>
+                <span>
+                    Chhatrapati Shahu Maharaj Research Training and Human Development Institute (SARTHI),
       Pune is registered under Company Act, 2013 under Section 8 as Non-Profit government company for research, policy advocacy, training etc.
       for socio-economic and education development of Maratha, Maratha-Kunbi, Kunbi-Maratha, Kunbi community in Maharashtra State.
       Our organisation thrust areas includes research, policy advocacy to government, training etc. and guidance to rural population,
       particularly the farmers whose livelihood is dependent on agriculture.
-    </span></div>
-      <div><span>
-      Chhatrapati Shahu Maharaj Research Training and Human Development Institute (SARTHI),
+                </span>
+            </div>
+            <div>
+                <span>
+                    Chhatrapati Shahu Maharaj Research Training and Human Development Institute (SARTHI),
       Pune is registered under Company Act, 2013 under Section 8 as Non-Profit government company for research, policy advocacy, training etc.
       for socio-economic and education development of Maratha, Maratha-Kunbi, Kunbi-Maratha, Kunbi community in Maharashtra State.
       Our organisation thrust areas includes research, policy advocacy to government, training etc. and guidance to rural population,
       particularly the farmers whose livelihood is dependent on agriculture.
-    </span></div>
+                </span>
+            </div>
+        </div>
     </div>
-  </div>
 </div>
 <div class="directors-header">
-  <div>
-    <div class="style-container" fxHide.lt-md>
-      <img alt="logo" src="../../assets/images/footerdesign.png "/>
+    <div>
+        <div class="style-container" fxHide.lt-md>
+            <img alt="logo" src="../../assets/images/footerdesign.png ">
+        </div>
+        <div class="directors-header-description" fxLayout="column">
+            <div>
+                <span>
+                    First Appointed Director and Member of the Organization and Articles of Association & Memorandum of Association
+                </span>
+            </div>
+            <div id="main-section">
+                <a (click)="scroll(sub_section)">View Now</a>
+            </div>
+        </div>
     </div>
-    <div class="directors-header-description" fxLayout="column">
-      <div>
+</div>
+<div #sub_section class="directors-container flex-center flex-column">
+    <div class="directors-board">
+        <span>GR of Board Of</span>
+    </div>
+    <div class="flex-center directors-board-description">
         <span>
-        First Appointed Director and Member of the Organization and Articles of Association & Memorandum of Association
-      </span>
-      </div>
-      <div class="view-now">
-        <a href="#">View Now</a>
-      </div>
+            I inherited my grandparents house which needed desperate repairs before i could use it or rent it. The ongoing costs even before fixing I inherited my grandparents house which
+        </span>
     </div>
-  </div>
+    <div class="photo-gallery flex-center">
+        <div *ngFor="let photo of photoItems" class="photo-gallery-item flex-center flex-column">
+            <div>
+                <img alt="line" src="../../assets/images/{{photo.image}} ">
+            </div>
+            <div class="name">{{photo.name}}</div>
+            <div class="position">{{photo.position}}</div>
+        </div>
+    </div>
 </div>
-<div>
-  Test
-</div>
-

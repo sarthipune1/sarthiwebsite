@@ -30,7 +30,7 @@ import {PhotoGalleryComponent} from "./photo-gallery/photo-gallery.component";
 import {StatisticsComponent} from "./statistics/statistics.component";
 import {RouterModule} from "@angular/router";
 import {AccountsComponent} from './accounts/accounts.component';
-import {AccountsModule} from "./about-us/accounts.module";
+import {AccountsModule} from "./accounts/accounts.module";
 import {EventsComponent} from './events/events.component';
 
 @NgModule({
@@ -63,7 +63,7 @@ import {EventsComponent} from './events/events.component';
       {path: 'accounts', component: AccountsComponent},
       {path: 'notices', component: NoticeComponent},
       {path: 'photo-gallery', component: PhotoGalleryComponent},
-      {path: 'statistics', component: StatisticsComponent},
+      {path: 'reports', component: StatisticsComponent},
       {path: 'events', component: EventsComponent},
     ])
   ],
