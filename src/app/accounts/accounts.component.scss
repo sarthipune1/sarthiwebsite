@@ -71,3 +71,76 @@
   border-radius: 2rem;
   padding: 6rem;
 }
+.audit-header{
+  background:#3E4350 ;
+  height: 5.1rem;
+  padding: 1rem 4.4rem;
+  margin-top: 4rem;
+  line-height: 1.8rem;
+  border-top-left-radius: 1.5rem;
+  border-top-right-radius: 1.5rem;
+  span{
+  color: white;
+    font-size: 1.6rem;
+    font-weight: 500;
+  }
+
+}
+.download{
+  color: #F67E22 !important;
+  font-size: 1.4rem;
+  font-weight: 500 !important;
+  &:before{
+    content: '\2B73';
+    color: #F67E22;
+    font-size: 1.5rem;
+    font-weight: 800 !important;
+    padding: 15px;
+  }
+}
+.table {
+  width: 80vw;
+
+}
+#audit-report-table {
+  border-collapse: collapse;
+  width: 100%;
+  background-color: white;
+}
+
+#audit-report-table td, #audit-report-table th {
+  height: 7.5rem;
+}
+#audit-report-table a{
+  text-decoration: none;
+  color: #F67E22;
+}
+
+//#audit-report-table tr:nth-child(even){background-color: #f2f2f2;}
+
+//#audit-report-table tr:hover {background-color: #ddd;}
+
+#audit-report-table th {
+  font-size: 1.25rem;
+  font-weight: 600;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  color: #404040;
+}
+#audit-report-table td {
+  font-size: 1.25rem;
+  font-weight: 400;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  color: #7A7A7A;
+}
+#audit-report-table tr {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  color: #7A7A7A;
+  border: solid #E8E6E6 1px ;
+}
+
