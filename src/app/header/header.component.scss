@@ -37,6 +37,7 @@
 
 .header-logo {
   padding: 50px;
+  width: 100vw;
 }
 
 .toolBar {
@@ -51,6 +52,9 @@
   justify-content: center;
   font-weight: 500;
   z-index: 5000;
+  div{
+    flex-wrap: wrap;
+  }
 
   a {
     color: white;

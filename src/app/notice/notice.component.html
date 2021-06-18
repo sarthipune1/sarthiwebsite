@@ -1,10 +1,8 @@
 <div class="navItems">
   <div class="header-text" fxLayout="column">
-    <div>
-      <span>
-      Administration & Management
+      <span [ngStyle.lt-md]="{'font-size': '3rem' ,'font-weight': 500}">
+      Notice Board
     </span>
-    </div>
     <div><img alt="line" src="../../assets/images/line.png "/></div>
   </div>
   <div class="sub-text">
@@ -15,25 +13,60 @@
   </div>
 </div>
 <div class="container">
-  <div class="admin-container">
     <div class="header">
-      <span>Administration &</span>
+      <span>Events &</span>
     </div>
-    <div class="description">
-      <div> <span>
-      Chhatrapati Shahu Maharaj Research Training and Human Development Institute (SARTHI),
-      Pune is registered under Company Act, 2013 under Section 8 as Non-Profit government company for research, policy advocacy, training etc.
-      for socio-economic and education development of Maratha, Maratha-Kunbi, Kunbi-Maratha, Kunbi community in Maharashtra State.
-      Our organisation thrust areas includes research, policy advocacy to government, training etc. and guidance to rural population,
-      particularly the farmers whose livelihood is dependent on agriculture.
-    </span></div>
-      <div><span>
-      Chhatrapati Shahu Maharaj Research Training and Human Development Institute (SARTHI),
-      Pune is registered under Company Act, 2013 under Section 8 as Non-Profit government company for research, policy advocacy, training etc.
-      for socio-economic and education development of Maratha, Maratha-Kunbi, Kunbi-Maratha, Kunbi community in Maharashtra State.
-      Our organisation thrust areas includes research, policy advocacy to government, training etc. and guidance to rural population,
-      particularly the farmers whose livelihood is dependent on agriculture.
-    </span></div>
+  <div [ngStyle.lt-md]="{'height': 'auto'}" [ngStyle]="{'height': '40rem'}" class="main-container" fxLayout="row"
+       fxLayout.lt-md="column" fxLayoutAlign="space-evenly center" fxLayoutGap="0px"
+       fxLayoutGap.lt-md="40px">
+    <div class="notice-main-container" fxFlex="40" fxFlex.lt-md="90">
+      <div class="notice-header">
+      <span>
+        Events
+      </span>
+      </div>
+      <div [ngStyle.lt-md]="{'max-height': '35rem'}" class="notice-details-container">
+        <div *ngFor="let notice of noticeData" class="notice-container">
+          <a fxLayout="row" fxLayoutAlign="flex-start center">
+            <div class="notice-date" fxLayout="column" fxLayoutAlign="center center">
+            <span class="month">
+              {{notice.date.month}}
+            </span><span class="day">
+              {{notice.date.date}}
+            </span>
+            </div>
+            <div class="notice-details" fxLayout="column" fxLayoutAlign="center flex-start ">
+            <span class="event-details">
+              {{notice.title}}
+            </span><span class="event-time">
+              {{notice.time}}
+            </span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="Announcements-container" fxFlex="40" fxFlex.lt-md="90">
+      <div class="Announcements-header">
+      <span>
+        Announcements
+      </span>
+      </div>
+      <div fxLayout.lt-md="column" fxLayoutGap="50px" class="notice-details-container">
+        <div *ngFor="let strength of strengthData" fxLayout="row" fxLayout.lt-md="column" fxLayoutAlign="flex-start center" fxLayoutGap="20px" class="announcements Announcements-block-container">
+          <div class="Announcements-description">
+            <img alt="bg" src="../../assets/images/{{strength.icon}}"/>
+          </div>
+          <div fxLayout="column" class="check-here" fxLayoutGap="20px">
+            <div>
+              <span class="Announcements-sub-title">{{strength.title}}
+              </span>
+              <a href="#">Check Here</a>
+            </div>
+            <span class="Announcements-description">{{strength.description}}</span>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
