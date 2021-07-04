@@ -4,8 +4,7 @@ import { FlexModule, FlexLayoutModule } from '@angular/flex-layout';
 import { AboutUsComponent } from './about-us.component';
 
 @NgModule({
-  declarations: [AboutUsComponent],
-  exports: [AboutUsComponent],
+  declarations: [],
   imports: [CommonModule, FlexLayoutModule, FlexModule],
 })
 export class AboutUsModule {}

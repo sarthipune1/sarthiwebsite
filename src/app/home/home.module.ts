@@ -10,8 +10,7 @@ import { ScrollingModule } from '@angular/cdk/scrolling';
 import { HeaderModule } from '../header/header.module';
 
 @NgModule({
-  declarations: [HomeComponent],
-  exports: [HomeComponent],
+  declarations: [],
   imports: [
     CommonModule,
     MatToolbarModule,
