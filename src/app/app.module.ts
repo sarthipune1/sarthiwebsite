@@ -37,6 +37,7 @@ import { EventsComponent } from './events/events.component';
 @NgModule({
   declarations: [
     AppComponent,
+    HomeComponent,
     HeaderComponent,
     FooterComponent,
     SubheaderComponent,

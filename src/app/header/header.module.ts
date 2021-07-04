@@ -4,6 +4,6 @@ import { FlexModule, FlexLayoutModule } from '@angular/flex-layout';
 
 @NgModule({
   declarations: [],
-  imports: [CommonModule, FlexModule, FlexLayoutModule],
+  imports: [CommonModule, FlexLayoutModule],
 })
 export class HeaderModule {}

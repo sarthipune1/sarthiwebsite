@@ -1,51 +1,50 @@
 <div style="position: relative">
   <div class="navItems">
     <div class="header-text" fxLayout="column">
-    <span>
-      Skill Development <br>& Training
-    </span>
-      <img alt="line" src="../../assets/images/line.png "/>
+      <span>
+        Skill Development <br>& Training
+      </span>
+      <img alt="line" src="../../assets/images/line.png " />
     </div>
     <div class="sub-text">
-    <span style="font-size: 20px;">
-      Simply The Most Featured Rich HTML5 Learning Management System
-    </span>
+      <span style="font-size: 20px;">
+        Simply The Most Featured Rich HTML5 Learning Management System
+      </span>
     </div>
   </div>
   <owl-carousel-o [options]="customOptions">
     <div>
       <ng-template carouselSlide>
-        <img alt="bg" class="header-bg" src="../../assets/images/bg.png "/>
+        <img alt="bg" class="header-bg" src="../../assets/images/bg.png " />
       </ng-template>
     </div>
-    <ng-template carouselSlide><img alt="bg" class="header-bg" src="../../assets/images/bg.png "/></ng-template>
-    <ng-template carouselSlide><img alt="bg" class="header-bg" src="../../assets/images/bg.png "/></ng-template>
+    <ng-template carouselSlide><img alt="bg" class="header-bg" src="../../assets/images/bg.png " /></ng-template>
+    <ng-template carouselSlide><img alt="bg" class="header-bg" src="../../assets/images/bg.png " /></ng-template>
   </owl-carousel-o>
   <div [ngStyle.lt-md]="{'height': 'auto'}" [ngStyle]="{'height': '40rem'}" class="main-container" fxLayout="row"
-       fxLayout.lt-md="column" fxLayoutAlign="space-evenly center" fxLayoutGap="0px"
-       fxLayoutGap.lt-md="40px">
+    fxLayout.lt-md="column" fxLayoutAlign="space-evenly center" fxLayoutGap="0px" fxLayoutGap.lt-md="40px">
     <div class="notice-main-container" fxFlex="40" fxFlex.lt-md="90">
       <div class="notice-header">
-      <span>
-        Notice Board
-      </span>
+        <span>
+          Notice Board
+        </span>
       </div>
       <div [ngStyle.lt-md]="{'max-height': '35rem'}" class="notice-details-container">
         <div *ngFor="let notice of noticeData" class="notice-container">
           <a fxLayout="row" fxLayoutAlign="flex-start center">
             <div class="notice-date" fxLayout="column" fxLayoutAlign="center center">
-            <span class="month">
-              {{notice.date.month}}
-            </span><span class="day">
-              {{notice.date.date}}
-            </span>
+              <span class="month">
+                {{notice.date.month}}
+              </span><span class="day">
+                {{notice.date.date}}
+              </span>
             </div>
             <div class="notice-details" fxLayout="column" fxLayoutAlign="center flex-start ">
-            <span class="event-details">
-              {{notice.title}}
-            </span><span class="event-time">
-              {{notice.time}}
-            </span>
+              <span class="event-details">
+                {{notice.title}}
+              </span><span class="event-time">
+                {{notice.time}}
+              </span>
             </div>
           </a>
         </div>
@@ -53,19 +52,19 @@
     </div>
     <div class="strength-container" fxFlex="40" fxFlex.lt-md="90">
       <div class="strength-header">
-      <span>
-        Our Strength
-      </span>
+        <span>
+          Our Strength
+        </span>
       </div>
       <div class="strength-title">
-      <span>
-        Sed ut perspiciatis omnis iste natus error sit accusantium doloremque
-      </span>
+        <span>
+          Sed ut perspiciatis omnis iste natus error sit accusantium doloremque
+        </span>
       </div>
       <div fxLayout.lt-md="column" fxLayoutGap="50px">
         <div *ngFor="let strength of strengthData" fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="20px">
           <div class="strength-description">
-            <img alt="bg" src="../../assets/images/{{strength.icon}}"/>
+            <img alt="bg" src="../../assets/images/{{strength.icon}}" />
           </div>
           <div fxLayout="column">
             <span class="strength-sub-title">{{strength.title}}</span>
@@ -96,7 +95,7 @@
       <!--      <a href="#" style="color: #f67e22; text-decoration: none">></a>-->
     </div>
     <div class="img-container" fxHide.lt-md>
-      <img alt="logo" src="../../assets/images/footerdesign.png "/>
+      <img alt="logo" src="../../assets/images/footerdesign.png " />
     </div>
   </div>
 </div>
@@ -125,12 +124,10 @@
       <span>Skill aptitude</span>
     </div>
     <div>
-      <img alt="logo" class="information" src="../../assets/images/personal_information.png "/>
+      <img alt="logo" class="information" src="../../assets/images/personal_information.png " />
     </div>
   </div>
   <div class="read-button" fxLayoutAlign="center center">
     <a href="#">Read More</a>
   </div>
 </div>
-
-
