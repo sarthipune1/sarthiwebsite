@@ -52,7 +52,7 @@
   justify-content: center;
   font-weight: 500;
   z-index: 5000;
-  div{
+  div {
     flex-wrap: wrap;
   }
 
@@ -101,7 +101,8 @@
 
 @media (max-width: 991px) {
   .navItems {
-    justify-content: left;
+    justify-content: flex-end;
+    align-items: flex-end;
     display: flex;
     font-weight: 500;
     padding: 0px 40px 0px 40px;
@@ -112,4 +113,8 @@
       line-height: 1.5;
     }
   }
+}
+
+ul {
+  list-style: none;
 }
