@@ -132,6 +132,7 @@ ul {
   list-style: none;
   overflow: hidden;
   max-height: 500px;
+  margin-top: 2rem;
   &.minimized {
     max-height: 0;
   }
