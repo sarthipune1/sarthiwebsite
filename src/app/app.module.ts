@@ -39,6 +39,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 @NgModule({
   declarations: [
     AppComponent,
+    AccountsComponent,
     HomeComponent,
     HeaderComponent,
     FooterComponent,
