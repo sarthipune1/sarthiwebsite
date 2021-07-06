@@ -1,3 +1,5 @@
+$orange: #f67e22;
+
 @import url("https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap");
 
 *,
@@ -58,7 +60,7 @@
   transition: all 500ms ease-in-out 0.3s;
 
   &.toggled {
-    background-color: rgba($color: #ffffff, $alpha: 0.15);
+    background-color: rgba($color: $orange, $alpha: 1);
   }
 
   div {
@@ -108,14 +110,14 @@
   }
 }
 
-@media (max-width: 991px) {
+@media (max-width: 1250px) {
   .navItems {
     justify-content: flex-end;
     align-items: flex-end;
     display: flex;
     font-weight: 500;
     // padding: 0px 40px 0px 40px;
-    padding: 2rem 1rem;
+    padding: 3rem 1rem;
     margin: 0 2rem;
     border-radius: 20px;
 
