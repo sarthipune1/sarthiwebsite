@@ -1,73 +1,67 @@
 .navItems {
-  position: absolute;
-  top: 20%;
-  z-index: 5000;
-  //width: 100%;
-  left: 10%;
-  font-weight: 500;
-
-  span {
-    //font-size: 4.5rem;
-    color: white;
-    //font-weight: 700;
-    //line-height: 5vw;
-  }
-
-  img {
-    width: 150px;
-    padding: 2rem 0 0 0;
-  }
-
+    position: absolute;
+    top: 20%;
+    z-index: 5000;
+    //width: 100%;
+    // left: 10%;
+    padding: 5vw;
+    font-weight: 500;
+    span {
+        //font-size: 4.5rem;
+        color: white;
+        //font-weight: 700;
+        //line-height: 5vw;
+    }
+    img {
+        width: 150px;
+        padding: 2rem 0 0 0;
+    }
 }
 
-
 .header-text {
-  line-height: 80px;
-  margin-top: 6vw;
-  margin-bottom: 2rem;
-  font-weight: 700;
-  font-size: 4.5rem;
+    line-height: 80px;
+    margin-top: 10vw;
+    margin-bottom: 2rem;
+    font-weight: 700;
+    font-size: 4.5rem;
 }
 
 .sub-text {
-  //position: relative;
-  max-width: 60%;
-  line-height: 2.5rem;
-  font-size: 1.5rem;
-
+    //position: relative;
+    // max-width: 60%;
+    line-height: 2.5rem;
+    font-size: 1.5rem;
 }
 
 .container {
-  padding: 0 9rem 5.5rem 15rem;;
-  background-color: #E5E5E5;
+    padding: 5.5vw 9vw;
+    background-color: #E5E5E5;
 }
 
 .header {
-  font-size: 3.4rem;
-  font-weight: 700;
-  margin-bottom: 3rem;
-  line-height: 5rem;
-
-  &:after {
-    content: 'Management';
-    margin-left: 10px;
-    color: #f67e22;
-  }
+    font-size: 3.4rem;
+    font-weight: 700;
+    padding-bottom: 2vw;
+    line-height: 5rem;
+    &:after {
+        content: 'Management';
+        margin-left: 10px;
+        color: #f67e22;
+    }
 }
 
 .description {
-  font-size: 1.25rem;
-  color: #808080;
-  font-weight: 400;
-  line-height: 2.5rem;
-
-  div {
-    margin-bottom: 2.5rem;
-  }
+    font-size: 1.25rem;
+    color: #808080;
+    font-weight: 400;
+    line-height: 2.5rem;
+    div {
+        margin-bottom: 2.5rem;
+    }
 }
 
 .admin-container {
-  background-color: white;
-  border-radius: 2rem;
-  padding: 6rem;
+    background-color: white;
+    border-radius: 2rem;
+    padding: 6rem;
 }
