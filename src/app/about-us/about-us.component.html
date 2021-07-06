@@ -1,13 +1,13 @@
-<div class="navItems">
-    <div class="header-text" fxLayout="column">
+<div class="navItems" [ngStyle.lt-sm]="{'top':'15%'}" [ngStyle.lt-md]="{'top':'25%'}">
+    <div class="header-text" fxLayout="column" [ngStyle.lt-md]="{ 'line-height':'0', 'font-size':'2rem', 'margin-bottom':'1rem'}">
         <div>
-            <span>About Us</span>
+            <span [ngStyle.lt-md]="{'font-size':'2.5rem', 'margin-top':'0'}">About Us</span>
         </div>
         <div>
             <img alt="line" src="../../assets/images/line.png ">
         </div>
     </div>
-    <div class="sub-text">
+    <div class="sub-text" [ngStyle.lt-sm]="{ 'line-height':'2rem', 'font-size':'1rem'}">
         <span>
             Sed ut perspiciatis omnis iste natus error sit accusantium doloremque Sed ut perspiciatis omnis iste natus error sit
     accusantium doloremque
@@ -15,19 +15,15 @@
     </div>
 </div>
 <div class="container">
-    <div class="admin-container">
-        <div class="header">
+    <div class="admin-container" fxLayout='column' fxFlexAlign='center center' [ngStyle.lt-md]="{'padding':'3rem'}" [ngStyle.lt-sm]="{'padding':'1.5rem'}">
+        <div class="header" [ngStyle.lt-md]="{'font-size':'2rem'}" fxLayoutAlign.lt-sm='center center'>
             <span>About</span>
         </div>
-        <div class="description body">
+        <div class="description body" [ngStyle.lt-md]="{'font-size':'0.8rem','text-align': 'justify', 'line-height': '1.5rem'}" [ngStyle.lt-sm]="{'font-size':'0.6rem','text-align': 'justify', 'line-height': '1.5rem'}">
             <div>
-                <span>
-                    Chhatrapati Shahu Maharaj Research Training and Human Development Institute (SARTHI),
-      Pune is registered under Company Act, 2013 under Section 8 as Non-Profit government company for research, policy advocacy, training etc.
-      for socio-economic and education development of Maratha, Maratha-Kunbi, Kunbi-Maratha, Kunbi community in Maharashtra State.
-      Our organisation thrust areas includes research, policy advocacy to government, training etc. and guidance to rural population,
-      particularly the farmers whose livelihood is dependent on agriculture.
-                </span>
+                Chhatrapati Shahu Maharaj Research Training and Human Development Institute (SARTHI), Pune is registered under Company Act, 2013 under Section 8 as Non-Profit government company for research, policy advocacy, training etc. for socio-economic and education
+                development of Maratha, Maratha-Kunbi, Kunbi-Maratha, Kunbi community in Maharashtra State. Our organisation thrust areas includes research, policy advocacy to government, training etc. and guidance to rural population, particularly the
+                farmers whose livelihood is dependent on agriculture.
             </div>
             <div>
                 <span>
@@ -46,28 +42,30 @@
         <div class="style-container" fxHide.lt-md>
             <img alt="logo" src="../../assets/images/footerdesign.png ">
         </div>
-        <div class="directors-header-description" fxLayout="column">
+        <div class="directors-header-description" fxLayout="column" [ngStyle.lt-md]="{'font-size':'1rem','text-align': 'center', 'line-height': '2rem'}">
             <div>
                 <span>
                     First Appointed Director and Member of the Organization and Articles of Association & Memorandum of Association
                 </span>
             </div>
-            <div id="main-section">
-                <a (click)="scroll(sub_section)">View Now</a>
+            <div id="main-section" [ngStyle.lt-md]="{'height': '3rem', 'width': '8rem', 'border-radius': '1.5rem'}" fxLayoutAlign='center center'>
+                <a [ngStyle.lt-md]="{'font-size':'1rem','text-align': 'center'}" (click)="scroll(sub_section)">
+                    View Now
+                </a>
             </div>
         </div>
     </div>
 </div>
 <div #sub_section class="directors-container flex-center flex-column">
     <div class="directors-board">
-        <span>GR of Board Of</span>
+        <span [ngStyle.lt-md]="{'font-size':'2rem', 'line-height': '3rem'}">GR of Board Of</span>
     </div>
     <div class="flex-center directors-board-description">
-        <span>
+        <span [ngStyle.lt-md]="{'font-size':'1rem', 'line-height': '2rem'}">
             I inherited my grandparents house which needed desperate repairs before i could use it or rent it. The ongoing costs even before fixing I inherited my grandparents house which
         </span>
     </div>
-    <div class="photo-gallery flex-center">
+    <div class="photo-gallery" fxLayoutAlign='center center' fxLayout='row' fxFlex.lt-md='column'>
         <div *ngFor="let photo of photoItems" class="photo-gallery-item flex-center flex-column">
             <div>
                 <img alt="line" src="../../assets/images/{{photo.image}} ">

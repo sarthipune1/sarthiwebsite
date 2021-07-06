@@ -8,6 +8,10 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Rubik', sans-serif !important;
+    -webkit-transition: all 500ms ease-in-out 0.3s;
+    -moz-transition: all 500ms ease-in-out 0.3s;
+    -o-transition: all 500ms ease-in-out 0.3s;
+    transition: all 500ms ease-in-out 0.3s;
 }
 
 html,
@@ -76,10 +80,11 @@ body {
     align-items: center;
     justify-content: center;
 }
+
 .flex-start {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
 }
 
 .flex-between {
