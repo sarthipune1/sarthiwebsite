@@ -34,6 +34,8 @@ import { AccountsComponent } from './accounts/accounts.component';
 import { AccountsModule } from './accounts/accounts.module';
 import { EventsComponent } from './events/events.component';
 
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -68,6 +70,7 @@ import { EventsComponent } from './events/events.component';
     MatSlideToggleModule,
     BrowserAnimationsModule,
     CarouselModule,
+    FontAwesomeModule,
     RouterModule.forRoot([
       { path: '', component: HomeComponent },
       { path: 'about-us', component: AboutUsComponent },

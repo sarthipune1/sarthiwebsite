@@ -3,10 +3,11 @@
     <img alt="logo" class="header-bg header-logo" src="../../assets/images/logo.png"
       [ngStyle.lt-sm]="{'padding': '25px'}" />
   </div>
-  <div class="navItems" fxflex="100" fxlayoutalign="center" fxlayoutalign.lt-sm="start">
+  <div class="navItems" [ngClass.lt-md]="{'toggled': !isToggled}">
     <div fxLayout.lt-sm="row" fxLayoutAlign="space-between center" fxLayoutAlign.lt-md="space-between start"
       fxLayoutGap="2rem">
-      <ul fxLayout="row" fxLayout.lt-md="column" fxLayoutAlign.lt-md="flex-end flex-end" fxFlexALign="flex-end">
+      <ul fxLayout="row" fxLayout.lt-md="column" fxLayoutAlign.lt-md="flex-end flex-end" fxFlexAlign="flex-end"
+        [ngClass.lt-md]="{'minimized': isToggled}">
         <li><a routerLink=''>Home</a></li>
         <li><a routerLink='/about-us'>About Us</a></li>
         <li><a routerLink='/departments'>Department</a></li>
@@ -17,6 +18,14 @@
         <li><a routerLink='/photo-gallery'>Photo Gallery</a></li>
         <li><a routerLink='/contact-us'>Contact Us</a></li>
       </ul>
+      <div class="menu-icons" fxLayout="row" fxLayoutAlign="space-between center">
+        <div class="times" [ngClass]="{'d-none': isToggled}" (click)="setToggled()">
+          <fa-icon class="menu-icon" [icon]="faIcons.faTimes"></fa-icon>
+        </div>
+        <div [ngClass]="{'d-none': !isToggled}" (click)="setToggled()">
+          <fa-icon class="menu-icon" [icon]="faIcons.faBars"></fa-icon>
+        </div>
+      </div>
     </div>
   </div>
 

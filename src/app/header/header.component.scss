@@ -52,6 +52,15 @@
   justify-content: center;
   font-weight: 500;
   z-index: 5000;
+  -webkit-transition: all 500ms ease-in-out 0.3s;
+  -moz-transition: all 500ms ease-in-out 0.3s;
+  -o-transition: all 500ms ease-in-out 0.3s;
+  transition: all 500ms ease-in-out 0.3s;
+
+  &.toggled {
+    background-color: rgba($color: #ffffff, $alpha: 0.15);
+  }
+
   div {
     flex-wrap: wrap;
   }
@@ -105,7 +114,10 @@
     align-items: flex-end;
     display: flex;
     font-weight: 500;
-    padding: 0px 40px 0px 40px;
+    // padding: 0px 40px 0px 40px;
+    padding: 2rem 1rem;
+    margin: 0 2rem;
+    border-radius: 20px;
 
     a {
       font-size: 1rem;
@@ -117,4 +129,24 @@
 
 ul {
   list-style: none;
+  overflow: hidden;
+  max-height: 500px;
+  &.minimized {
+    max-height: 0;
+  }
+}
+
+.menu-icons {
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: 0 4rem;
+  div {
+    color: white !important;
+    cursor: pointer;
+  }
+}
+
+.d-none {
+  opacity: 0;
 }
