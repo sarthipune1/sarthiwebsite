@@ -18,11 +18,11 @@
         <li><a routerLink='/photo-gallery'>Photo Gallery</a></li>
         <li><a routerLink='/contact-us'>Contact Us</a></li>
       </ul>
-      <div class="menu-icons" fxLayout="row" fxLayoutAlign="space-between center">
-        <div class="times" [ngClass]="{'d-none': isToggled}" (click)="setToggled()">
+      <div class="menu-icons" fxLayout="row" fxLayoutAlign="space-between center" ngClass.gt-sm="d-none">
+        <div class="times" fxHide-gt-sm [ngClass]="{'opacity': isToggled}" (click)="setToggled()">
           <fa-icon class="menu-icon" [icon]="faIcons.faTimes"></fa-icon>
         </div>
-        <div [ngClass]="{'d-none': !isToggled}" (click)="setToggled()">
+        <div fxHide-gt-sm [ngClass]="{'opacity': !isToggled}" (click)="setToggled()">
           <fa-icon class="menu-icon" [icon]="faIcons.faBars"></fa-icon>
         </div>
       </div>

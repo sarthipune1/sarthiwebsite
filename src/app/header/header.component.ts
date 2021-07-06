@@ -14,7 +14,7 @@ export class HeaderComponent implements OnInit {
     document.getElementById('myDropdown')?.classList.toggle('show');
   }
 
-  isToggled = false;
+  isToggled = true;
 
   menu = [
     {
