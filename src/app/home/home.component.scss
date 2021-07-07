@@ -32,9 +32,9 @@
 .navItems {
   position: absolute;
   top: 20%;
+  left: 20%;
   z-index: 5000;
   //width: 100%;
-  left: 20%;
   font-weight: 500;
 
   a {
@@ -63,14 +63,14 @@
 
 .header-text {
   line-height: 80px;
-  margin-top: 10vw;
+  // margin-top: 10vw;
   //position: absolute;
   //top: 10vw;
 }
 
 .sub-text {
-  position: absolute;
-  top: 25vw;
+  // position: absolute;
+  // top: 25vw;
 }
 
 .main-container {
@@ -267,7 +267,7 @@
 }
 
 .main-objectives-container {
-  padding: 0 12.5vw 12vw 14.5vw;
+  padding: 4rem 12.5vw 12vw 14.5vw;
 }
 
 .objective-description {
@@ -278,10 +278,16 @@
 }
 
 .skill-container {
-  span {
+  ul {
+    list-style: none;
+  }
+  li {
     font-size: 1.25rem;
     font-weight: 500;
     line-height: 2.5rem;
+    padding-left: 1rem;
+    color: black;
+    text-indent: -0.7em;
 
     &:before {
       content: "\2727";
@@ -289,6 +295,7 @@
       font-weight: 800;
       font-size: 1.5rem;
       margin-right: 5px;
+      display: inline-block;
     }
   }
 }
@@ -322,4 +329,51 @@
 
 div.owl-nav {
   display: none;
+}
+
+@media screen and (max-width: 960px) {
+  .about-title {
+    font-size: 2rem;
+    padding: 16vw 0 0 10vw;
+  }
+  .about-description,
+  .objective-description {
+    font-size: 0.8rem;
+    line-height: 2rem;
+  }
+  .main-objectives {
+    span {
+      font-size: 2rem;
+    }
+  }
+  .skill-container {
+    li {
+      font-size: 1rem;
+    }
+  }
+  .read-button {
+    width: 250px;
+    height: 60px;
+    align-self: center;
+    a {
+      font-size: 1.5rem;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .about-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 1rem;
+  }
+  .read-button {
+    width: 200px;
+    height: 60px;
+    align-self: center;
+    a {
+      font-size: 1.2rem;
+    }
+  }
 }
