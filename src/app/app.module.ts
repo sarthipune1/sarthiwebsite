@@ -35,6 +35,7 @@ import { AccountsModule } from './accounts/accounts.module';
 import { EventsComponent } from './events/events.component';
 
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { NgxChartsModule } from '@swimlane/ngx-charts';
 
 @NgModule({
   declarations: [
@@ -72,6 +73,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     BrowserAnimationsModule,
     CarouselModule,
     FontAwesomeModule,
+    NgxChartsModule,
     RouterModule.forRoot([
       { path: '', component: HomeComponent },
       { path: 'about-us', component: AboutUsComponent },

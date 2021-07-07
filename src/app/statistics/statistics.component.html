@@ -1,7 +1,7 @@
 <div class="navItems" [ngStyle.lt-sm]="{'top':'15%'}" [ngStyle.lt-md]="{'top':'25%'}">
     <div class="header-text" fxLayout="column" fxLayout="column" [ngStyle.lt-md]="{ 'line-height':'0', 'font-size':'2rem', 'margin-bottom':'1rem'}">
         <div>
-            <span [ngStyle.lt-md]="{'font-size':'2rem', 'margin-top':'0', 'line-height':'3rem'}">Administration & Management</span>
+            <span [ngStyle.lt-md]="{'font-size':'2rem', 'margin-top':'0', 'line-height':'3rem'}">Adminission Statistics</span>
         </div>
         <div>
             <img alt="line" src="../../assets/images/line.png ">
@@ -17,10 +17,41 @@
 <div class="container">
     <div class="admin-container" fxLayout='column' fxFlexAlign='center center' [ngStyle.lt-md]="{'padding':'3rem'}" [ngStyle.lt-sm]="{'padding':'1.5rem'}">
         <div class="header" [ngStyle.lt-md]="{'font-size':'1.5rem', 'line-height':'2.5rem'}" fxLayoutAlign.lt-sm='center center' fxLayout.lt-sm='column'>
-            <span>Administration &</span>
+            <span>Admission</span>
         </div>
         <div class="description" [ngStyle.lt-md]="{'font-size':'0.8rem','text-align': 'justify', 'line-height': '1.5rem'}" [ngStyle.lt-sm]="{'font-size':'0.6rem','text-align': 'justify', 'line-height': '1.5rem'}">
-            <div>
+
+
+
+
+
+
+
+
+
+
+
+
+            <ngx-charts-bar-vertical [view]="viewPort" [results]="saleData" [xAxisLabel]="'Months'" [legendTitle]="''" [yAxisLabel]="'Number of Students'" [legend]="true" [showXAxisLabel]="true" [showYAxisLabel]="true" [xAxis]="true" [yAxis]="true" [gradient]="true">
+            </ngx-charts-bar-vertical>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <!-- <div>
                 <span>
                     Chhatrapati Shahu Maharaj Research Training and Human Development Institute (SARTHI),
       Pune is registered under Company Act, 2013 under Section 8 as Non-Profit government company for research, policy advocacy, training etc.
@@ -37,14 +68,14 @@
       Our organisation thrust areas includes research, policy advocacy to government, training etc. and guidance to rural population,
       particularly the farmers whose livelihood is dependent on agriculture.
                 </span>
-            </div>
+            </div> -->
         </div>
     </div>
-    <div class="audit-header" fxLayoutAlign='center center'>
+    <!-- <div class="audit-header" fxLayoutAlign='center center'>
         <span [ngStyle.lt-sm]="{ 'font-size':'1rem'}">Audit Report 2018-2019</span>
-    </div>
+    </div> -->
     <table id="audit-report-table" ngClass.lt-sm='table-small'>
-        <thead>
+        <!-- <thead>
             <tr>
                 <th>Sl.No</th>
                 <th>Title</th>
@@ -73,6 +104,10 @@
                     <a href="#">Download</a>
                 </td>
             </tr>
-        </tbody>
+        </tbody> -->
+        <!-- <td>
+            <ngx-charts-bar-vertical [view]="[1000,400]" [results]="saleData" [xAxisLabel]="'Products'" [legendTitle]="'Product Sale Chart'" [yAxisLabel]="'Sale'" [legend]="true" [showXAxisLabel]="true" [showYAxisLabel]="true" [xAxis]="true" [yAxis]="true" [gradient]="true">
+            </ngx-charts-bar-vertical>
+        </td> -->
     </table>
 </div>
