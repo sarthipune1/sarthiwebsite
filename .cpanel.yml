@@ -1,0 +1,5 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home2/ryanearf/subdomains/sarthiweb.ryanenterprises.in/
+    - /bin/cp -a dist/SarthiWeb/. $DEPLOYPATH
