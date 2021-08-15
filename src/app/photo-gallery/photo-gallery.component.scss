@@ -3,7 +3,7 @@
     top: 20%;
     z-index: 5000;
     //width: 100%;
-    padding: 5vw;
+    padding: 0 5vw;
     font-weight: 500;
     span {
         //font-size: 4.5rem;
@@ -33,6 +33,7 @@
     // max-width: 60%;
     line-height: 2.5rem;
     font-size: 1.5rem;
+    max-width: 60vw;
 }
 
 .container {
@@ -150,4 +151,50 @@
     td {
         font-size: 1rem !important;
     }
+}
+
+.charity {
+    // width: 100vw;
+    .grid {
+        display: grid;
+      padding: 10px;
+      grid-column-gap: 10px;
+        grid-template-columns: auto auto auto auto;
+        div {
+            max-height: 20rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 15rem;
+          text-align: center;
+            img {
+                object-fit: cover;
+              border-radius: 50%;
+              height: 10rem;
+              width: 10rem;
+            }
+        }
+        .solo {
+            max-height: 30rem;
+        }
+    }
+}
+
+mat-card{
+  text-align: center;
+  width: 17rem;
+  height: 20rem;
+
+  *{
+    padding: 10px;
+    line-height: 1.5rem;
+  }
+}
+.mat-card{
+  padding: 0;
+}
+
+.mat-card-avatar {
+  height: 10rem;
+  width: 10rem;
 }

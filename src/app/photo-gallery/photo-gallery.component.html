@@ -1,7 +1,7 @@
 <div class="navItems" [ngStyle.lt-sm]="{'top':'15%'}" [ngStyle.lt-md]="{'top':'25%'}">
     <div class="header-text" fxLayout="column" fxLayout="column" [ngStyle.lt-md]="{ 'line-height':'0', 'font-size':'2rem', 'margin-bottom':'1rem'}">
         <div>
-            <span [ngStyle.lt-md]="{'font-size':'2rem', 'margin-top':'0', 'line-height':'3rem'}">Administration & Management</span>
+            <span [ngStyle.lt-md]="{'font-size':'2rem', 'margin-top':'0', 'line-height':'3rem'}">Photo Gallery</span>
         </div>
         <div>
             <img alt="line" src="../../assets/images/line.png ">
@@ -39,6 +39,52 @@
                 </span>
             </div>
         </div>
+<!--        <section class="charity">-->
+<!--            <div class="grid">-->
+<!--              <div *ngFor="let item of charity.first" class="charity-item">-->
+<!--                    <img [src]="'../../assets/images/'+item+'.png'">-->
+<!--                </div>-->
+<!--                <div *ngFor="let item of charity.nameFirst" class="charity-item">-->
+<!--                    <span>{{item}}</span>-->
+<!--                </div>-->
+<!--              <div *ngFor="let item of charity.designationFirst" class="charity-item">-->
+<!--                    <span>{{item}}</span>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="charity-item grid">-->
+<!--                <div *ngFor="let item of charity.second">-->
+<!--                    <img [src]="'../../assets/images/'+item+'.png'">-->
+<!--                </div>-->
+<!--              <div *ngFor="let item of charity.nameSecond" class="charity-item">-->
+<!--                <span>{{item}}</span>-->
+<!--              </div>-->
+<!--              <div *ngFor="let item of charity.designationSecond" class="charity-item">-->
+<!--                <span>{{item}}</span>-->
+<!--              </div>-->
+<!--            </div><div class="charity-item grid">-->
+<!--                <div *ngFor="let item of charity.third">-->
+<!--                    <img [src]="'../../assets/images/'+item+'.png'">-->
+<!--                </div>-->
+<!--          <div *ngFor="let item of charity.nameThird" class="charity-item">-->
+<!--            <span>{{item}}</span>-->
+<!--          </div>-->
+<!--          <div *ngFor="let item of charity.designationThird" class="charity-item">-->
+<!--            <span>{{item}}</span>-->
+<!--          </div>-->
+<!--            </div>-->
+<!--        </section>-->
+
+      <mat-grid-list cols="4" rowHeight="400px">
+        <mat-grid-tile
+          *ngFor="let tile of bod">
+          <mat-card  class="mat-elevation-z4" fxLayoutAlign="center center" fxLayout="column" >
+            <img mat-card-avatar [src]="'../../assets/images/'+tile.image+'.png'" alt="Photo of board of director"/>
+            <mat-card-title>{{tile.name}}</mat-card-title>
+            <mat-card-subtitle>{{tile.designation}}</mat-card-subtitle>
+          </mat-card>
+        </mat-grid-tile>
+      </mat-grid-list>
+
     </div>
     <div class="audit-header" fxLayoutAlign='center center'>
         <span [ngStyle.lt-sm]="{ 'font-size':'1rem'}">Audit Report 2018-2019</span>

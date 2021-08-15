@@ -36,6 +36,8 @@ import { EventsComponent } from './events/events.component';
 
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
+import {MatGridListModule} from '@angular/material/grid-list';
+import {MatCardModule} from '@angular/material/card';
 
 @NgModule({
   declarations: [
@@ -57,14 +59,8 @@ import { NgxChartsModule } from '@swimlane/ngx-charts';
     BrowserModule,
     AppRoutingModule,
     CommonModule,
-    // HomeModule,
-    // AboutUsModule,
-    // ContactUsModule,
-    // DepartmentsModule,
-    // AccountsModule,
-    // NoticeModule,
-    // PhotoGalleryModule,
-    // StatisticsModule,
+    MatGridListModule,
+    MatCardModule,
     FlexLayoutModule,
     MatToolbarModule,
     MatButtonModule,
