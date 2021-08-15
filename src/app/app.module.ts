@@ -1,16 +1,13 @@
-import { NgModule } from '@angular/core';
+import {
+  CUSTOM_ELEMENTS_SCHEMA,
+  NgModule,
+  NO_ERRORS_SCHEMA,
+} from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { CommonModule } from '@angular/common';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HomeModule } from './home/home.module';
-import { AboutUsModule } from './about-us/about-us.module';
-import { ContactUsModule } from './contact-us/contact-us.module';
-import { DepartmentsModule } from './departments/departments.module';
-import { NoticeModule } from './notice/notice.module';
-import { PhotoGalleryModule } from './photo-gallery/photo-gallery.module';
-import { StatisticsModule } from './statistics/statistics.module';
 
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { FlexLayoutModule } from '@angular/flex-layout';
@@ -31,13 +28,13 @@ import { PhotoGalleryComponent } from './photo-gallery/photo-gallery.component';
 import { StatisticsComponent } from './statistics/statistics.component';
 import { RouterModule } from '@angular/router';
 import { AccountsComponent } from './accounts/accounts.component';
-import { AccountsModule } from './accounts/accounts.module';
 import { EventsComponent } from './events/events.component';
 
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
-import {MatGridListModule} from '@angular/material/grid-list';
-import {MatCardModule} from '@angular/material/card';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatCardModule } from '@angular/material/card';
+import { FormioModule } from '@formio/angular';
 
 @NgModule({
   declarations: [
@@ -61,6 +58,7 @@ import {MatCardModule} from '@angular/material/card';
     CommonModule,
     MatGridListModule,
     MatCardModule,
+    FormioModule,
     FlexLayoutModule,
     MatToolbarModule,
     MatButtonModule,
@@ -85,5 +83,6 @@ import {MatCardModule} from '@angular/material/card';
   providers: [],
   exports: [HeaderComponent],
   bootstrap: [AppComponent],
+  // schemas: [CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA],
 })
 export class AppModule {}
