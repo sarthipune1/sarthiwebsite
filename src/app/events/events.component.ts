@@ -17,10 +17,40 @@ export class EventsComponent implements OnInit {
         input: true,
       },
       {
+        label: 'District',
+        widget: 'choicesjs',
+        placeholder: 'Select district',
+        tableView: true,
+        data: {
+          values: [
+            {
+              label: 'Pune',
+              value: 'pune',
+            },
+            {
+              label: 'Mumbai',
+              value: 'mumbai',
+            },
+            {
+              label: 'Goa',
+              value: 'goa',
+            },
+          ],
+        },
+        selectThreshold: 0.3,
+        validate: {
+          required: true,
+        },
+        errorLabel: 'Please enter the value',
+        key: 'district',
+        type: 'select',
+        input: true,
+      },
+      {
         type: 'button',
         label: 'Submit',
         key: 'submit',
-        disableOnInvalid: true,
+        disableOnInvalid: false,
         input: true,
         tableView: false,
       },
