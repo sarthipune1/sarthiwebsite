@@ -50,6 +50,10 @@ export class HeaderComponent implements OnInit {
       path: '/photo-gallery',
     },
     {
+      name: 'Board of Directors',
+      path: '/board-of-directors',
+    },
+    {
       name: 'Contact Us',
       path: '/contact-us',
     },

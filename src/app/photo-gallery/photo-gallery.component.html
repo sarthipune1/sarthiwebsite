@@ -46,15 +46,6 @@
                 </span>
             </div>
         </div>
-        <div fxLayout="row wrap" fxLayoutAlign="space-around center" style="width: 100%;">
-            <div *ngFor="let tile of bod" class="mat-card mat-elevation-z4 bod_image" fxLayoutAlign="center center" fxLayout="column">
-                <img mat-card-avatar [src]="'../../assets/images/'+tile.image+'.png'" alt="Photo of board of director">
-                <mat-card-title>{{tile.name}}</mat-card-title>
-                <mat-card-subtitle>{{tile.designation}}</mat-card-subtitle>
-            </div>
-        </div>
-
-
     </div>
     <div class="audit-header" fxLayoutAlign='center center'>
         <span [ngStyle.lt-sm]="{ 'font-size':'1rem'}">Audit Report 2018-2019</span>

@@ -35,6 +35,7 @@ import { NgxChartsModule } from '@swimlane/ngx-charts';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatCardModule } from '@angular/material/card';
 import { FormioModule } from '@formio/angular';
+import { BoardOfDirectorsComponent } from './board-of-directors/board-of-directors.component';
 
 @NgModule({
   declarations: [
@@ -51,6 +52,7 @@ import { FormioModule } from '@formio/angular';
     PhotoGalleryComponent,
     ContactUsComponent,
     StatisticsComponent,
+    BoardOfDirectorsComponent,
   ],
   imports: [
     BrowserModule,
@@ -76,6 +78,7 @@ import { FormioModule } from '@formio/angular';
       { path: 'accounts', component: AccountsComponent },
       { path: 'notices', component: NoticeComponent },
       { path: 'photo-gallery', component: PhotoGalleryComponent },
+      { path: 'board-of-directors', component: BoardOfDirectorsComponent },
       { path: 'reports', component: StatisticsComponent },
       { path: 'events', component: EventsComponent },
     ]),

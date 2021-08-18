@@ -1,0 +1,50 @@
+<div class="navItems" [ngStyle.lt-sm]="{'top':'15%'}" [ngStyle.lt-md]="{'top':'25%'}">
+    <div class="header-text" fxLayout="column" fxLayout="column" [ngStyle.lt-md]="{ 'line-height':'0', 'font-size':'2rem', 'margin-bottom':'1rem'}">
+        <div>
+            <span [ngStyle.lt-md]="{'font-size':'2rem', 'margin-top':'0', 'line-height':'3rem'}">Board of Directors</span>
+        </div>
+        <div>
+            <img alt="line" src="../../assets/images/line.png ">
+        </div>
+    </div>
+    <div class="sub-text" [ngStyle.lt-sm]="{ 'line-height':'2rem', 'font-size':'1rem'}">
+        <span>
+            Sed ut perspiciatis omnis iste natus error sit accusantium doloremque Sed ut perspiciatis omnis iste natus error
+      sit
+      accusantium doloremque
+        </span>
+    </div>
+</div>
+
+<!-- <div class="container" fxLayoutAlign='center center'>
+    <div class="admin-container" fxLayout='column' fxFlexAlign='center center' [ngStyle.lt-md]="{'padding':'3rem'}" [ngStyle.lt-sm]="{'padding':'1.5rem'}">
+        <div class="header" [ngStyle.lt-md]="{'font-size':'1.5rem', 'line-height':'2.5rem'}" fxLayoutAlign.lt-sm='center center' fxLayout.lt-sm='column'>
+            <span>Foundation of</span>
+        </div>
+    </div>
+</div>
+<div fxLayout="row wrap" fxLayoutAlign="space-around center" style="width: 100%;">
+    <div *ngFor="let tile of bod" class="mat-card mat-elevation-z4 bod_image" fxLayoutAlign="center center" fxLayout="column">
+        <img mat-card-avatar [src]="'../../assets/images/'+tile.image+'.png'" alt="Photo of board of director">
+        <mat-card-title>{{tile.name}}</mat-card-title>
+        <mat-card-subtitle>{{tile.designation}}</mat-card-subtitle>
+    </div>
+</div> -->
+
+<div #sub_section class="directors-container flex-center flex-column">
+    <div class="directors-board">
+        <span [ngStyle.lt-md]="{'font-size':'2rem', 'line-height': '3rem'}">GR of Board Of</span>
+    </div>
+    <div class="flex-center directors-board-description">
+        <span [ngStyle.lt-md]="{'font-size':'1rem', 'line-height': '2rem'}">
+            I inherited my grandparents house which needed desperate repairs before i could use it or rent it. The ongoing costs even before fixing I inherited my grandparents house which
+        </span>
+    </div>
+    <div fxLayout="row wrap" fxLayoutAlign="space-around center" style="width: 100%;">
+        <div *ngFor="let tile of bod" class="mat-card mat-elevation-z4 bod_image" fxLayoutAlign="center center" fxLayout="column">
+            <img mat-card-avatar [src]="'../../assets/images/'+tile.image+'.png'" alt="Photo of board of director">
+            <mat-card-title>{{tile.name}}</mat-card-title>
+            <mat-card-subtitle>{{tile.designation}}</mat-card-subtitle>
+        </div>
+    </div>
+</div>
