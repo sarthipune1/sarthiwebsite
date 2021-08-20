@@ -41,6 +41,7 @@ import { ResearchDepartmentComponent } from './research-department/research-depa
 import { CompetitiveExaminationDepartmentComponent } from './competitive-examination-department/competitive-examination-department.component';
 import { ItDepartmentComponent } from './it-department/it-department.component';
 import { WomenEmpowermentDepartmentComponent } from './women-empowerment-department/women-empowerment-department.component';
+import { CasteCertificateComponent } from './caste-certificate/caste-certificate.component';
 
 @NgModule({
   declarations: [
@@ -63,6 +64,7 @@ import { WomenEmpowermentDepartmentComponent } from './women-empowerment-departm
     CompetitiveExaminationDepartmentComponent,
     ItDepartmentComponent,
     WomenEmpowermentDepartmentComponent,
+    CasteCertificateComponent,
   ],
   imports: [
     BrowserModule,
@@ -104,6 +106,10 @@ import { WomenEmpowermentDepartmentComponent } from './women-empowerment-departm
       {
         path: 'women-empowerment-department',
         component: WomenEmpowermentDepartmentComponent,
+      },
+      {
+        path: 'caste-certificate',
+        component: CasteCertificateComponent,
       },
     ]),
   ],

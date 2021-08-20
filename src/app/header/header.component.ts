@@ -42,6 +42,10 @@ export class HeaderComponent implements OnInit {
       path: '/reports',
     },
     {
+      name: 'Caste Certificate',
+      path: '/caste-certificate',
+    },
+    {
       name: 'Events',
       path: '/events',
     },
