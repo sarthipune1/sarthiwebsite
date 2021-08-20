@@ -1,0 +1,211 @@
+.navItems {
+    position: absolute;
+    top: 20%;
+    z-index: 5000;
+    //width: 100%;
+    // left: 10%;
+    padding: 0 5vw;
+    font-weight: 500;
+    span {
+        //font-size: 2.5rem;
+        color: white;
+        //font-weight: 700;
+        //line-height: 5vw;
+    }
+    img {
+        width: 150px;
+        padding: 2rem 0 0 0;
+    }
+}
+
+.header-text {
+    line-height: 80px;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    font-weight: 700;
+    font-size: 2.5rem;
+}
+
+.sub-text {
+    //position: relative;
+    // max-width: 60%;
+    line-height: 2.5rem;
+    font-size: 1.5rem;
+    max-width: 60vw;
+}
+
+.container {
+    padding: 5.5vw 9vw;
+    background-color: #e5e5e5;
+}
+
+.header {
+    font-size: 2.5rem;
+    font-weight: 700;
+    padding-bottom: 2vw;
+    line-height: 2rem;
+    &:after {
+        content: "Main Objectives";
+        margin-left: 10px;
+        color: #f67e22;
+    }
+}
+
+.description {
+    font-size: 1rem;
+    color: #808080;
+    font-weight: 400;
+    line-height: 2rem;
+    div {
+        margin-bottom: 2.5rem;
+    }
+}
+
+.admin-container {
+    background-color: white;
+    border-radius: 2rem;
+    padding: 6rem;
+}
+
+.directors-header {
+    background: #344658;
+    // height: 43rem;
+    position: relative;
+}
+
+.style-container {
+    height: 100%;
+    background-repeat: no-repeat;
+    position: absolute;
+    right: 10px;
+    top: 21rem;
+}
+
+.directors-header-description {
+    font-size: 3rem;
+    line-height: 4.5rem;
+    font-weight: 500;
+    color: white;
+    padding: 5.5vw 9vw;
+    // max-width: 90%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+#main-section {
+    height: 5.5rem;
+    width: 17rem;
+    border-radius: 5.5rem;
+    background-color: #f67e22;
+    margin-top: 3rem;
+    a {
+        text-decoration: none;
+        color: white;
+        font-size: 1.6rem;
+        font-weight: 700;
+        cursor: pointer;
+    }
+}
+
+.directors-container {
+    padding: 5.5vw 9vw;
+}
+
+.directors-board {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    // margin-bottom: 1.75rem;
+    span {
+        font-size: 4rem;
+        font-weight: 700;
+        line-height: 8vw;
+        text-align: center;
+        &::after {
+            content: "Directors";
+            color: #f67e22;
+            margin-left: 10px;
+        }
+    }
+}
+
+.directors-board-description {
+    // max-width: 76rem;
+    span {
+        font-size: 1.5rem;
+        font-weight: 400;
+        text-align: center;
+        line-height: 2.8rem;
+        color: #545454;
+        margin-bottom: 2vw;
+    }
+}
+
+.photo-gallery {
+    display: flex;
+    width: 80vw;
+    flex-wrap: wrap;
+}
+
+.photo-gallery-item {
+    background-color: white;
+    height: 24rem;
+    padding: 2vw;
+    text-align: center;
+    // width: 20%;
+    box-shadow: 0px 4px 4px rgb(0 0 0 / 12%);
+    border-radius: 1.2rem;
+    margin: 20px;
+}
+
+.name {
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: #2f2f2f;
+    line-height: 1.8rem;
+    margin: 1rem 0;
+}
+
+.position {
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: #6b6b6b;
+    line-height: 1.8rem;
+}
+
+.btn {
+    text-decoration: none;
+    color: white;
+    background-color: #f67e22;
+    border-radius: 10%;
+    padding: 5px;
+    transition: transform 0.5s;
+    &:hover {
+        background-color: #344658;
+    }
+}
+
+.sublist {
+    li {
+        margin-left: 15px;
+    }
+}
+
+.sub-header {
+    font-size: 1.5rem;
+    font-weight: 500;
+    padding: 2vw;
+    line-height: 2rem;
+    text-align: center;
+    // &:after {
+    //     content: "Main Objectives";
+    //     margin-left: 10px;
+    //     color: #f67e22;
+    // }
+}

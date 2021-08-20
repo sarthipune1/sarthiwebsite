@@ -147,30 +147,3 @@
         font-size: 1rem !important;
     }
 }
-
-.charity {
-    // width: 100vw;
-    .grid {
-        display: grid;
-        padding: 10px;
-        grid-column-gap: 10px;
-        grid-template-columns: auto auto auto auto;
-        div {
-            max-height: 20rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 15rem;
-            text-align: center;
-            img {
-                object-fit: cover;
-                border-radius: 50%;
-                height: 10rem;
-                width: 10rem;
-            }
-        }
-        .solo {
-            max-height: 30rem;
-        }
-    }
-}

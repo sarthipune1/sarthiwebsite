@@ -36,6 +36,11 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { MatCardModule } from '@angular/material/card';
 import { FormioModule } from '@formio/angular';
 import { BoardOfDirectorsComponent } from './board-of-directors/board-of-directors.component';
+import { MainObjectivesComponent } from './main-objectives/main-objectives.component';
+import { ResearchDepartmentComponent } from './research-department/research-department.component';
+import { CompetitiveExaminationDepartmentComponent } from './competitive-examination-department/competitive-examination-department.component';
+import { ItDepartmentComponent } from './it-department/it-department.component';
+import { WomenEmpowermentDepartmentComponent } from './women-empowerment-department/women-empowerment-department.component';
 
 @NgModule({
   declarations: [
@@ -53,6 +58,11 @@ import { BoardOfDirectorsComponent } from './board-of-directors/board-of-directo
     ContactUsComponent,
     StatisticsComponent,
     BoardOfDirectorsComponent,
+    MainObjectivesComponent,
+    ResearchDepartmentComponent,
+    CompetitiveExaminationDepartmentComponent,
+    ItDepartmentComponent,
+    WomenEmpowermentDepartmentComponent,
   ],
   imports: [
     BrowserModule,
@@ -81,6 +91,20 @@ import { BoardOfDirectorsComponent } from './board-of-directors/board-of-directo
       { path: 'board-of-directors', component: BoardOfDirectorsComponent },
       { path: 'reports', component: StatisticsComponent },
       { path: 'events', component: EventsComponent },
+      { path: 'main-objectives', component: MainObjectivesComponent },
+      { path: 'research-department', component: ResearchDepartmentComponent },
+      {
+        path: 'competitive-examination-department',
+        component: CompetitiveExaminationDepartmentComponent,
+      },
+      {
+        path: 'it-department',
+        component: ItDepartmentComponent,
+      },
+      {
+        path: 'women-empowerment-department',
+        component: WomenEmpowermentDepartmentComponent,
+      },
     ]),
   ],
   providers: [],
