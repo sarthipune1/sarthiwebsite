@@ -45,6 +45,9 @@ import { CasteCertificateComponent } from './caste-certificate/caste-certificate
 import { AwardsComponent } from './awards/awards.component';
 import { RtiComponent } from './rti/rti.component';
 
+//CKEditor
+import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -86,6 +89,7 @@ import { RtiComponent } from './rti/rti.component';
     CarouselModule,
     FontAwesomeModule,
     NgxChartsModule,
+    CKEditorModule,
     RouterModule.forRoot([
       { path: '', component: HomeComponent },
       { path: 'about-us', component: AboutUsComponent },
