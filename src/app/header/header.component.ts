@@ -19,7 +19,7 @@ export class HeaderComponent implements OnInit {
   menu = [
     {
       name: 'Home',
-      path: '',
+      path: '/',
     },
     {
       name: 'About Us',

@@ -1,57 +1,27 @@
 <div class="container">
-    <div class="header-container">
-        <img alt="logo" class="header-bg header-logo" src="../../assets/images/logo.png" [ngStyle.lt-sm]="{'padding': '25px'}">
-    </div>
-    <div class="navItems" [ngClass.lt-md]="{'toggled': !isToggled}">
-        <div fxLayout.lt-sm="row" fxLayoutAlign="space-between center" fxLayoutAlign.lt-md="space-between start" fxLayoutGap="2rem">
-            <ul fxLayout="row" fxLayout.lt-md="column" fxLayoutAlign.lt-md="flex-end flex-end" fxFlexAlign="flex-end" [ngClass.lt-md]="{'minimized': isToggled}" (click)="setToggled()">
-                <li>
-                    <a routerLink>Home</a>
-                </li>
-                <li>
-                    <a routerLink='/about-us'>About Us</a>
-                </li>
-                <li>
-                    <a routerLink='/departments'>Department</a>
-                </li>
-                <li>
-                    <a routerLink='/accounts'>Accounts</a>
-                </li>
-                <li>
-                    <a routerLink='/notices'>Notice Board</a>
-                </li>
-                <li>
-                    <a routerLink='/reports'>Reports</a>
-                </li>
-                <li>
-                    <a routerLink='/caste-certificate'>Caste Certificate</a>
-                </li>
-                <li>
-                    <a routerLink='/awards'>Awards</a>
-                </li>
-                <li>
-                    <a routerLink='/events'>Events</a>
-                </li>
-                <li>
-                    <a routerLink='/photo-gallery'>Photo Gallery</a>
-                </li>
-                <li>
-                    <a routerLink='/board-of-directors'>Board of Directors</a>
-                </li>
-                <li>
-                    <a routerLink='/contact-us'>Contact Us</a>
-                </li>
-            </ul>
-            <div class="menu-icons" fxLayout="row" fxLayoutAlign="space-between center" ngClass.gt-sm="d-none">
-                <div class="times" fxHide-gt-sm [ngClass]="{'opacity': isToggled}" (click)="setToggled()">
-                    <fa-icon class="menu-icon" [icon]="faIcons.faTimes"></fa-icon>
-                </div>
-                <div fxHide-gt-sm [ngClass]="{'opacity': !isToggled}" (click)="setToggled()">
-                    <fa-icon class="menu-icon" [icon]="faIcons.faBars"></fa-icon>
-                </div>
-            </div>
+  <div class="header-container">
+    <img alt="logo" class="header-bg header-logo" src="../../assets/images/logo.png"
+      [ngStyle.lt-sm]="{'padding': '25px'}">
+  </div>
+  <div class="navItems" [ngClass.lt-md]="{'toggled': !isToggled}">
+    <div fxLayout.lt-sm="row" fxLayoutAlign="space-between center" fxLayoutAlign.lt-md="space-between start"
+      fxLayoutGap="2rem">
+      <ul fxLayout="row" fxLayout.lt-md="column" fxLayoutAlign.lt-md="flex-end flex-end" fxFlexAlign="flex-end"
+        [ngClass.lt-md]="{'minimized': isToggled}" (click)="setToggled()">
+        <li *ngFor="let item of menu">
+          <a [routerLink]="item.path">{{item.name}}</a>
+        </li>
+      </ul>
+      <div class="menu-icons" fxLayout="row" fxLayoutAlign="space-between center" ngClass.gt-sm="d-none">
+        <div class="times" fxHide-gt-sm [ngClass]="{'opacity': isToggled}" (click)="setToggled()">
+          <fa-icon class="menu-icon" [icon]="faIcons.faTimes"></fa-icon>
         </div>
+        <div fxHide-gt-sm [ngClass]="{'opacity': !isToggled}" (click)="setToggled()">
+          <fa-icon class="menu-icon" [icon]="faIcons.faBars"></fa-icon>
+        </div>
+      </div>
     </div>
+  </div>
 
 
 
