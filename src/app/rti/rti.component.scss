@@ -45,7 +45,7 @@
     padding-bottom: 2vw;
     line-height: 2rem;
     &:after {
-        content: "Appreciation";
+        content: "RTI";
         margin-left: 10px;
         color: #f67e22;
     }
@@ -149,18 +149,5 @@
     th,
     td {
         font-size: 0.6rem !important;
-    }
-}
-
-.download {
-    color: #f67e22 !important;
-    font-size: 1.4rem;
-    font-weight: 500 !important;
-    &:before {
-        content: "\2B73";
-        color: #f67e22;
-        font-size: 1.5rem;
-        font-weight: 800 !important;
-        padding: 15px;
     }
 }
