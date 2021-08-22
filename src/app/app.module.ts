@@ -100,7 +100,7 @@ import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
       { path: 'photo-gallery', component: PhotoGalleryComponent },
       { path: 'board-of-directors', component: BoardOfDirectorsComponent },
       { path: 'reports', component: StatisticsComponent },
-      { path: 'events', component: EventsComponent },
+      // { path: 'events', component: EventsComponent },
       { path: 'main-objectives', component: MainObjectivesComponent },
       { path: 'research-department', component: ResearchDepartmentComponent },
       {
@@ -108,11 +108,11 @@ import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
         component: CompetitiveExaminationDepartmentComponent,
       },
       {
-        path: 'it-department',
+        path: 'department/it',
         component: ItDepartmentComponent,
       },
       {
-        path: 'women-empowerment-department',
+        path: 'department/women-empowerment',
         component: WomenEmpowermentDepartmentComponent,
       },
       {
@@ -127,6 +127,8 @@ import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
         path: 'rti',
         component: RtiComponent,
       },
+      { path: '404', component: HomeComponent },
+      { path: '**', redirectTo: '/' },
     ]),
   ],
   providers: [],

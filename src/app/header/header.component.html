@@ -10,6 +10,11 @@
         [ngClass.lt-md]="{'minimized': isToggled}" (click)="setToggled()">
         <li *ngFor="let item of menu">
           <a [routerLink]="item.path">{{item.name}}</a>
+          <ul *ngIf="item.sublist" class="sublist">
+            <li *ngFor="let subitem of item.sublist">
+              <a [routerLink]="subitem.path">{{subitem.name}}</a>
+            </li>
+          </ul>
         </li>
       </ul>
       <div class="menu-icons" fxLayout="row" fxLayoutAlign="space-between center" ngClass.gt-sm="d-none">
