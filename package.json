@@ -1,6 +1,7 @@
 {
   "name": "sarthi-web",
   "version": "0.0.0",
+  "homepage": "./new",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
