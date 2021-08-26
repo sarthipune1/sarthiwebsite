@@ -32,7 +32,7 @@
 }
 
 .container {
-    padding: 3vw 4vw;
+    padding: 3rem 9rem;
     background-color: #e5e5e5;
 }
 
@@ -93,10 +93,16 @@
 .bod_image {
     border: 3px solid white;
     transition: transform 0.2s;
+    // padding: 10px;
 }
 
 .bod_image:hover {
-    outline: 3px solid #f67e22;
+    // border: 3px solid;
+    // border-image: linear-gradient( 15deg, #ff4e00 0%, #ec9f05 74%);
+    // border-color: linear-gradient(to right, red, orange);
+    border: 3px solid #fb6003;
+    // border-image-slice: 1;
+    // border-image-source: linear-gradient(to right, red, orange);
     transform: scale(1.02);
 }
 

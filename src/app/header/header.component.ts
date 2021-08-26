@@ -1,4 +1,10 @@
-import { Component, HostListener, OnInit } from '@angular/core';
+import {
+  Component,
+  HostListener,
+  Input,
+  OnChanges,
+  OnInit,
+} from '@angular/core';
 import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
@@ -6,8 +12,14 @@ import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss'],
 })
-export class HeaderComponent implements OnInit {
+export class HeaderComponent implements OnInit, OnChanges {
+  @Input() route: string;
+
   constructor() {}
+
+  ngOnChanges(): void {
+    console.log(this.route);
+  }
 
   ngOnInit(): void {}
   myFunction() {
