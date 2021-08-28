@@ -1,16 +1,17 @@
 import { Component, OnInit } from '@angular/core';
+// import * as FullEditor from 'ckeditor5-custom-build-full/build/ckeditor.js';
+import * as FullEditor from 'ckeditor5-custom-build/build/ckeditor.js';
 
 @Component({
   selector: 'app-notice',
   templateUrl: './notice.component.html',
-  styleUrls: ['./notice.component.scss']
+  styleUrls: ['./notice.component.scss'],
 })
 export class NoticeComponent implements OnInit {
+  constructor() {}
+  public Editor = FullEditor;
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
   noticeData = [
     {
       date: {
@@ -47,79 +48,165 @@ export class NoticeComponent implements OnInit {
   ];
   strengthData = [
     {
-      icon: "announcements.png",
+      icon: 'announcements.png',
       title: '6th semester result out!',
-      description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry',
-    },{
-      icon: "announcements.png",
-      title: '6th semester result out!',
-      description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry',
-    },{
-      icon: "announcements.png",
-      title: '6th semester result out!',
-      description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry',
-    },{
-      icon: "announcements.png",
-      title: '6th semester result out!',
-      description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry',
-    },{
-      icon: "announcements.png",
-      title: '6th semester result out!',
-      description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry',
-    },{
-      icon: "announcements.png",
-      title: '6th semester result out!',
-      description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry',
-    },{
-      icon: "announcements.png",
-      title: '6th semester result out!',
-      description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry',
-    },{
-      icon: "announcements.png",
-      title: '6th semester result out!',
-      description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry',
-    },{
-      icon: "announcements.png",
-      title: '6th semester result out!',
-      description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry',
-    },{
-      icon: "announcements.png",
-      title: '6th semester result out!',
-      description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry',
-    },{
-      icon: "announcements.png",
-      title: '6th semester result out!',
-      description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry',
-    },{
-      icon: "announcements.png",
-      title: '6th semester result out!',
-      description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry',
-    },{
-      icon: "announcements.png",
-      title: '6th semester result out!',
-      description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry',
-    },{
-      icon: "announcements.png",
-      title: '6th semester result out!',
-      description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry',
-    },{
-      icon: "announcements.png",
-      title: '6th semester result out!',
-      description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry',
-    },{
-      icon: "announcements.png",
-      title: '6th semester result out!',
-      description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry',
-    },{
-      icon: "announcements.png",
-      title: '6th semester result out!',
-      description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry',
-    },{
-      icon: "announcements.png",
-      title: '6th semester result out!',
-      description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry',
+      description:
+        'Lorem Ipsum is simply dummy text of the printing and typesetting industry',
     },
-
+    {
+      icon: 'announcements.png',
+      title: '6th semester result out!',
+      description:
+        'Lorem Ipsum is simply dummy text of the printing and typesetting industry',
+    },
+    {
+      icon: 'announcements.png',
+      title: '6th semester result out!',
+      description:
+        'Lorem Ipsum is simply dummy text of the printing and typesetting industry',
+    },
+    {
+      icon: 'announcements.png',
+      title: '6th semester result out!',
+      description:
+        'Lorem Ipsum is simply dummy text of the printing and typesetting industry',
+    },
+    {
+      icon: 'announcements.png',
+      title: '6th semester result out!',
+      description:
+        'Lorem Ipsum is simply dummy text of the printing and typesetting industry',
+    },
+    {
+      icon: 'announcements.png',
+      title: '6th semester result out!',
+      description:
+        'Lorem Ipsum is simply dummy text of the printing and typesetting industry',
+    },
+    {
+      icon: 'announcements.png',
+      title: '6th semester result out!',
+      description:
+        'Lorem Ipsum is simply dummy text of the printing and typesetting industry',
+    },
+    {
+      icon: 'announcements.png',
+      title: '6th semester result out!',
+      description:
+        'Lorem Ipsum is simply dummy text of the printing and typesetting industry',
+    },
+    {
+      icon: 'announcements.png',
+      title: '6th semester result out!',
+      description:
+        'Lorem Ipsum is simply dummy text of the printing and typesetting industry',
+    },
+    {
+      icon: 'announcements.png',
+      title: '6th semester result out!',
+      description:
+        'Lorem Ipsum is simply dummy text of the printing and typesetting industry',
+    },
+    {
+      icon: 'announcements.png',
+      title: '6th semester result out!',
+      description:
+        'Lorem Ipsum is simply dummy text of the printing and typesetting industry',
+    },
+    {
+      icon: 'announcements.png',
+      title: '6th semester result out!',
+      description:
+        'Lorem Ipsum is simply dummy text of the printing and typesetting industry',
+    },
+    {
+      icon: 'announcements.png',
+      title: '6th semester result out!',
+      description:
+        'Lorem Ipsum is simply dummy text of the printing and typesetting industry',
+    },
+    {
+      icon: 'announcements.png',
+      title: '6th semester result out!',
+      description:
+        'Lorem Ipsum is simply dummy text of the printing and typesetting industry',
+    },
+    {
+      icon: 'announcements.png',
+      title: '6th semester result out!',
+      description:
+        'Lorem Ipsum is simply dummy text of the printing and typesetting industry',
+    },
+    {
+      icon: 'announcements.png',
+      title: '6th semester result out!',
+      description:
+        'Lorem Ipsum is simply dummy text of the printing and typesetting industry',
+    },
+    {
+      icon: 'announcements.png',
+      title: '6th semester result out!',
+      description:
+        'Lorem Ipsum is simply dummy text of the printing and typesetting industry',
+    },
+    {
+      icon: 'announcements.png',
+      title: '6th semester result out!',
+      description:
+        'Lorem Ipsum is simply dummy text of the printing and typesetting industry',
+    },
   ];
 
+  editorConfig = {
+    toolbar: {
+      items: [
+        'heading',
+        '|',
+        'bold',
+        'italic',
+        'link',
+        'bulletedList',
+        'numberedList',
+        '|',
+        'outdent',
+        'indent',
+        '|',
+        'imageUpload',
+        'blockQuote',
+        'insertTable',
+        'mediaEmbed',
+        'undo',
+        'redo',
+        'CKFinder',
+        'alignment',
+        'fontBackgroundColor',
+        'fontColor',
+        'fontSize',
+        'fontFamily',
+        'highlight',
+        'ChemType',
+        'MathType',
+        'specialCharacters',
+        'strikethrough',
+        'subscript',
+        'superscript',
+        'todoList',
+        'underline',
+      ],
+    },
+    language: 'en',
+    image: {
+      toolbar: ['imageTextAlternative', 'imageStyle:full', 'imageStyle:side'],
+    },
+    table: {
+      contentToolbar: [
+        'tableColumn',
+        'tableRow',
+        'mergeTableCells',
+        'tableCellProperties',
+        'tableProperties',
+      ],
+    },
+    licenseKey: '',
+  };
 }

@@ -1,61 +1,70 @@
 <div class="navItems" [ngStyle.lt-sm]="{'top':'10%'}" [ngStyle.lt-md]="{'top':'10%'}">
-    <div class="header-text" fxLayout="column" fxLayout="column" [ngStyle.lt-md]="{ 'line-height':'0', 'font-size':'2rem', 'margin-bottom':'1rem'}">
-        <div>
-            <span [ngStyle.lt-md]="{'font-size':'2rem', 'margin-top':'0', 'line-height':'3rem'}">Notice Board</span>
-        </div>
-        <div>
-            <img alt="line" src="../../assets/images/line.png ">
-        </div>
-    </div>
-    <div class="sub-text" [ngStyle.lt-sm]="{ 'line-height':'2rem', 'font-size':'1rem', 'max-width':'100%'}">
-        <span>
-            Sed ut perspiciatis omnis iste natus error sit accusantium doloremque Sed ut perspiciatis omnis iste natus error sit
-    accusantium doloremque
-        </span>
-    </div>
+	<div class="header-text" fxLayout="column" fxLayout="column"
+		[ngStyle.lt-md]="{ 'line-height':'0', 'font-size':'2rem', 'margin-bottom':'1rem'}">
+		<div>
+			<span [ngStyle.lt-md]="{'font-size':'2rem', 'margin-top':'0', 'line-height':'3rem'}">Notice Board</span>
+		</div>
+		<div>
+			<img alt="line" src="../../assets/images/line.png ">
+		</div>
+	</div>
+	<div class="sub-text" [ngStyle.lt-sm]="{ 'line-height':'2rem', 'font-size':'1rem', 'max-width':'100%'}">
+		<span>
+			Sed ut perspiciatis omnis iste natus error sit accusantium doloremque Sed ut perspiciatis omnis iste natus
+			error sit
+			accusantium doloremque
+		</span>
+	</div>
 </div>
 <div class="container" [ngStyle.lt-lg]="{'padding':'5.5rem 0 '}" fxLayout="column" fxLayoutAlign="center center">
-    <div class="header" [ngStyle.lt-md]="{'font-size':'2.5rem', 'line-height':'2.5rem'}" fxLayoutAlign.lt-sm='center center' fxLayout.lt-sm='column'>
-        <span>Events &</span>
-    </div>
-    <div [ngStyle.lt-md]="{'height': 'auto', 'width': '85%'}" [ngStyle]="{'height': '40rem'}" class="main-container" fxLayout="row" fxLayout.lt-md="column" fxLayoutAlign="space-evenly center" fxLayoutGap="0px" fxLayoutGap.lt-md="40px">
-        <div class="notice-main-container" fxFlex="45" fxLayout="column">
-            <div class="notice-header">
-                <span>Events</span>
-            </div>
-            <div class="notice-details-container" fxFlex.lt-md="90">
-                <div *ngFor="let notice of noticeData" class="notice-container">
-                    <a fxLayout="row" fxLayoutAlign="flex-start center">
-                        <div class="notice-date" fxLayout="column" fxLayoutAlign="center center">
-                            <span class="month">{{notice.date.month}}</span>
-                            <span class="day">{{notice.date.date}}</span>
-                        </div>
-                        <div class="notice-details" fxLayout="column" fxLayoutAlign="center flex-start ">
-                            <span class="event-details">{{notice.title}}</span>
-                            <span class="event-time">{{notice.time}}</span>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="Announcements-container" fxFlex="45" fxFlex.lt-md="90">
-            <div class="Announcements-header">
-                <span>Announcements</span>
-            </div>
-            <div fxLayout.lt-md="column" fxLayoutGap="50px" class="notice-details-container">
-                <div *ngFor="let strength of strengthData" fxLayout="row" fxLayout.lt-md="column" fxLayoutAlign="flex-start center" fxLayoutGap="20px" class="announcements Announcements-block-container">
-                    <div class="Announcements-description">
-                        <img alt="bg" src="../../assets/images/{{strength.icon}}">
-                    </div>
-                    <div fxLayout="column" class="check-here" fxLayoutGap="20px">
-                        <div>
-                            <span class="Announcements-sub-title">{{strength.title}}</span>
-                            <a href="#">Check Here</a>
-                        </div>
-                        <span class="Announcements-description">{{strength.description}}</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+	<div class="header" [ngStyle.lt-md]="{'font-size':'2.5rem', 'line-height':'2.5rem'}"
+		fxLayoutAlign.lt-sm='center center' fxLayout.lt-sm='column'>
+		<span>Events &</span>
+	</div>
+	<div [ngStyle.lt-md]="{'height': 'auto', 'width': '85%'}" [ngStyle]="{'height': '40rem'}" class="main-container"
+		fxLayout="row" fxLayout.lt-md="column" fxLayoutAlign="space-evenly center" fxLayoutGap="0px"
+		fxLayoutGap.lt-md="40px">
+		<div class="notice-main-container" fxFlex="45" fxLayout="column">
+			<div class="notice-header">
+				<span>Events</span>
+			</div>
+			<div class="notice-details-container" fxFlex.lt-md="90">
+				<div *ngFor="let notice of noticeData" class="notice-container">
+					<a fxLayout="row" fxLayoutAlign="flex-start center">
+						<div class="notice-date" fxLayout="column" fxLayoutAlign="center center">
+							<span class="month">{{notice.date.month}}</span>
+							<span class="day">{{notice.date.date}}</span>
+						</div>
+						<div class="notice-details" fxLayout="column" fxLayoutAlign="center flex-start ">
+							<span class="event-details">{{notice.title}}</span>
+							<span class="event-time">{{notice.time}}</span>
+						</div>
+					</a>
+				</div>
+			</div>
+		</div>
+		<div class="Announcements-container" fxFlex="45" fxFlex.lt-md="90">
+			<div class="Announcements-header">
+				<span>Announcements</span>
+			</div>
+			<div fxLayout.lt-md="column" fxLayoutGap="50px" class="notice-details-container">
+				<div *ngFor="let strength of strengthData" fxLayout="row" fxLayout.lt-md="column"
+					fxLayoutAlign="flex-start center" fxLayoutGap="20px"
+					class="announcements Announcements-block-container">
+					<div class="Announcements-description">
+						<img alt="bg" src="../../assets/images/{{strength.icon}}">
+					</div>
+					<div fxLayout="column" class="check-here" fxLayoutGap="20px">
+						<div>
+							<span class="Announcements-sub-title">{{strength.title}}</span>
+							<a href="#">Check Here</a>
+						</div>
+						<span class="Announcements-description">{{strength.description}}</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<ckeditor [editor]="Editor" [config]="editorConfig"></ckeditor>
 </div>

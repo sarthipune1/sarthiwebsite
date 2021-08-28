@@ -45,6 +45,9 @@ import { CasteCertificateComponent } from './caste-certificate/caste-certificate
 import { AwardsComponent } from './awards/awards.component';
 import { RtiComponent } from './rti/rti.component';
 
+//CKEditor
+import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -86,6 +89,7 @@ import { RtiComponent } from './rti/rti.component';
     CarouselModule,
     FontAwesomeModule,
     NgxChartsModule,
+    CKEditorModule,
     RouterModule.forRoot([
       { path: '', component: HomeComponent },
       { path: 'about-us', component: AboutUsComponent },
@@ -96,7 +100,7 @@ import { RtiComponent } from './rti/rti.component';
       { path: 'photo-gallery', component: PhotoGalleryComponent },
       { path: 'board-of-directors', component: BoardOfDirectorsComponent },
       { path: 'reports', component: StatisticsComponent },
-      { path: 'events', component: EventsComponent },
+      // { path: 'events', component: EventsComponent },
       { path: 'main-objectives', component: MainObjectivesComponent },
       { path: 'research-department', component: ResearchDepartmentComponent },
       {
@@ -104,11 +108,11 @@ import { RtiComponent } from './rti/rti.component';
         component: CompetitiveExaminationDepartmentComponent,
       },
       {
-        path: 'it-department',
+        path: 'department/it',
         component: ItDepartmentComponent,
       },
       {
-        path: 'women-empowerment-department',
+        path: 'department/women-empowerment',
         component: WomenEmpowermentDepartmentComponent,
       },
       {
@@ -123,6 +127,8 @@ import { RtiComponent } from './rti/rti.component';
         path: 'rti',
         component: RtiComponent,
       },
+      { path: '404', component: HomeComponent },
+      { path: '**', redirectTo: '/' },
     ]),
   ],
   providers: [],

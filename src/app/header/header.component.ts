@@ -39,7 +39,16 @@ export class HeaderComponent implements OnInit, OnChanges {
     },
     {
       name: 'Department',
-      path: '/departments',
+      sublist: [
+        {
+          name: 'IT Department',
+          path: '/department/it',
+        },
+        {
+          name: 'Women Enpowerment',
+          path: '/department/women-empowerment',
+        },
+      ],
     },
     {
       name: 'Accounts',
@@ -61,10 +70,10 @@ export class HeaderComponent implements OnInit, OnChanges {
       name: 'Awards',
       path: '/awards',
     },
-    {
-      name: 'Events',
-      path: '/events',
-    },
+    // {
+    //   name: 'Events',
+    //   path: '/events',
+    // },
     {
       name: 'Photo Gallery',
       path: '/photo-gallery',
