@@ -96,13 +96,7 @@ $orange: #f67e22;
             opacity: 0;
         }
         &:hover {
-            &:after {
-                margin-top: 0;
-                opacity: 1;
-            }
-        }
-        .active>a {
-            color: rgb(52, 70, 88);
+            color: #354658;
         }
     }
     span {
@@ -113,6 +107,9 @@ $orange: #f67e22;
     img {
         width: 150px;
         padding: 2rem 0 0 0;
+    }
+    .active>a {
+        color: rgb(52, 70, 88);
     }
 }
 

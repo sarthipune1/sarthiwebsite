@@ -31,7 +31,7 @@ export class HeaderComponent implements OnInit, OnChanges {
   menu = [
     {
       name: 'Home',
-      path: '/',
+      path: '/home',
     },
     {
       name: 'About Us',
@@ -39,6 +39,7 @@ export class HeaderComponent implements OnInit, OnChanges {
     },
     {
       name: 'Department',
+      path: '/department',
       sublist: [
         {
           name: 'IT Department',
