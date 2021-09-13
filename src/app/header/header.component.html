@@ -1,11 +1,15 @@
 <div class="container">
     <div class="header-container">
-        <img alt="logo" class="header-bg header-logo" src="../../assets/images/logo.png" [ngStyle.lt-sm]="{'padding': '25px'}">
+        <img alt="logo" class="header-bg header-logo" src="../../assets/images/logo.png"
+            [ngStyle.lt-sm]="{'padding': '25px'}">
     </div>
     <div class="navItems" [ngClass.lt-md]="{'toggled': !isToggled}">
-        <div fxLayout.lt-sm="row" fxLayoutAlign="space-between center" fxLayoutAlign.lt-md="space-between start" fxLayoutGap="2rem">
-            <ul fxLayout="row" fxLayout.lt-md="column" fxLayoutAlign.lt-md="flex-end flex-end" fxFlexAlign="flex-end" [ngClass.lt-md]="{'minimized': isToggled}" (click)="setToggled()">
-                <li *ngFor="let item of menu" [ngClass]="{'active': item.path===route || route.startsWith(item.path)}">
+        <div fxLayout.lt-sm="row" fxLayoutAlign="space-between center" fxLayoutAlign.lt-md="space-between start"
+            fxLayoutGap="2rem">
+            <ul fxLayout="row" fxLayout.lt-md="column" fxLayoutAlign.lt-md="flex-end flex-end" fxFlexAlign="flex-end"
+                [ngClass.lt-md]="{'minimized': isToggled}" (click)="setToggled()">
+                <li *ngFor="let item of menu"
+                    [ngClass]="{'active': item.path === route || route.startsWith(item.path)}">
                     <a [routerLink]="item.path">{{item.name}}</a>
                     <ul *ngIf="item.sublist" class="sublist">
                         <li *ngFor="let subitem of item.sublist">
