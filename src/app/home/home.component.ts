@@ -93,25 +93,99 @@ export class HomeComponent implements OnInit {
 	mahaGov = [
 		{
 			image: 'chief_minister.jpg',
-			name: 'Shri Uddhav Thakare',
-			position: "Hon'ble Chief Minister",
+			name: {
+				en: 'Shri Uddhav Thakare',
+				mr: 'श्री उद्धवजी ठाकरे',
+			},
+			position: {
+				en: "Hon'ble Chief Minister",
+				mr: 'माननीय मुख्यमंत्री',
+			},
 		},
 		{
 			image: 'deputy_chief_minister.jpg',
-			name: 'Shri Ajit Pawar',
-			position: "Hon'ble Deputy Chief Minister",
+			name: {
+				en: 'Shri Ajit Pawar',
+				mr: 'श्री अजित पवार',
+			},
+			position: {
+				en: "Hon'ble Deputy Chief Minister",
+				mr: 'माननीय उपमुख्यमंत्री',
+			},
 		},
 		{
 			image: '',
-			name: '',
-			position: "Hon'ble Cabinet Minister",
+			name: {
+				en: '',
+				mr: '',
+			},
+			position: {
+				en: "Hon'ble Cabinet Minister",
+				mr: 'माननीय मंत्री',
+			},
 		},
 		{
 			image: '',
-			name: '',
-			position: "Hon'ble Minister of State",
+			name: {
+				en: '',
+				mr: '',
+			},
+			position: {
+				en: "Hon'ble Minister of State",
+				mr: 'माननीय राज्यमंत्री',
+			},
 		},
 	];
+
+	getItem(key: object) {
+		const l = localStorage.getItem('lang');
+		return key[l];
+	}
+
+	content = {
+		about: {
+			en: 'About',
+			mr: 'सारथी',
+		},
+		sarthi: {
+			en: 'SARTHI',
+			mr: 'विषयी',
+		},
+		description: {
+			en: `Chhatrapati Shahu Maharaj Research Training and Human Development Institute (SARTHI), Pune is registered under
+      Company Act, 2013 under Section 8 as Non-Profit government company for research, policy advocacy, training etc.
+      for socio-economic and education
+      development of Maratha, Maratha-Kunbi, Kunbi-Maratha, Kunbi community in Maharashtra State. Our organisation
+      thrust areas includes research, policy advocacy to government, training etc. and guidance to rural population,
+      particularly the farmers
+      whose livelihood is dependent on agriculture.`,
+			mr: `छत्रपती शाहू महाराज संशोधन, प्रशिक्षण व मानव विकास संस्था (सारथी), पुणे ही संस्था कंपनी कायदा, 2013 अंतर्गत कलम 8 अन्वये नॉन-प्रॉफिट सरकारी कंपनी म्हणून स्थापन आहे. सारथीची स्थापना मराठा, मराठा-कुणबी, कुणबी-मराठा, कुणबी समुदाय आणि महाराष्ट्रातील कृषीवर अवलंबून असलेल्या कुटुंबांचे सामाजिक-आर्थिक आणि शैक्षणिक विकास करण्यासाठी आणि आमच्या संस्थेमध्ये जोरदार क्षेत्रांचा समावेश आहे, संशोधन, सरकारची धोरणे, प्रशिक्षण इ. आणि ग्रामीण जनतेस मार्गदर्शन करणे.`,
+		},
+		read_more: {
+			en: 'Read More',
+			mr: 'Read More',
+		},
+		objectives: {
+			desc: {
+				en: `Organizing various competitions and other events for the students of various levels and grant Awards, Prizes,
+            Citations, etc. to the deserving students, with an aim to inspire the youngsters to become better citizens of India.
+            Undertake and implement
+            special and pilot projects such as ‘Kisan Mitra’, Kaushalya Vikas Doot, Tara Doot (Women Empowerment Doot), Sant
+            Gadge Baba Doot (Swacchata & Vyasan Mukti Doot), Sanvidhan Doot, Savitri Doot, etc. from time to time, for creating
+            awareness on various
+            issues.`,
+				mr: `छत्रपती शाहू महाराज संशोधन, प्रशिक्षण व मानव विकास संस्था (सारथी), पुणे ही संस्था कंपनी कायदा, 2013 अंतर्गत कलम 8 अन्वये नॉन-प्रॉफिट सरकारी कंपनी म्हणून स्थापन आहे. सारथीची स्थापना मराठा, मराठा-कुणबी, कुणबी-मराठा, कुणबी समुदाय आणि महाराष्ट्रातील कृषीवर अवलंबून असलेल्या कुटुंबांचे सामाजिक-आर्थिक आणि शैक्षणिक विकास करण्यासाठी आणि आमच्या संस्थेमध्ये जोरदार क्षेत्रांचा समावेश आहे, संशोधन, सरकारची धोरणे, प्रशिक्षण इ. आणि ग्रामीण जनतेस मार्गदर्शन करणे.`,
+			},
+			main: {
+				en: 'Main',
+				mr: 'प्रमुख',
+			},
+			title: {
+				en: 'Objectives',
+				mr: 'उद्दिष्टें',
+			},
+		},
+	};
 
 	constructor() {}
 

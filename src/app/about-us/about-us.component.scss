@@ -1,6 +1,6 @@
 .navItems {
 	position: absolute;
-	top: 30%;
+	top: 45%;
 	z-index: 5000;
 	//width: 100%;
 	// left: 10%;
@@ -20,8 +20,6 @@
 
 .header-text {
 	line-height: 50px;
-	margin-top: 3rem;
-	margin-bottom: 2rem;
 	font-weight: 700;
 	font-size: 2.5rem;
 }
@@ -37,16 +35,9 @@
 	background-color: #e5e5e5;
 }
 
-.header {
-	font-size: 3.4rem;
-	font-weight: 700;
+.header-text {
 	padding-bottom: 2vw;
-	line-height: 5rem;
-	&:after {
-		content: "Sarthi";
-		margin-left: 10px;
-		color: #f67e22;
-	}
+	display: inline-block;
 }
 
 .description {
@@ -182,7 +173,7 @@ html {
 	color: white;
 	background-color: #f67e22;
 	border-radius: 10%;
-	padding: 5px;
+	padding: 8px 20px;
 	transition: transform 0.5s;
 	&:hover {
 		background-color: #344658;

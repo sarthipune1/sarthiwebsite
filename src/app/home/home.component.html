@@ -1,5 +1,5 @@
 <div style="position: relative">
-  <div class="navItems">
+  <div class="navItems d-none">
     <div class="header-text" fxLayout="column">
       <span>
         Skill Development
@@ -32,29 +32,23 @@
   <div *ngFor="let item of mahaGov" class="item" fxLayoutAlign="center center" fxLayout="column">
     <img [src]="'../../assets/images/ministers/' + item.image" [alt]="item.position + ' Image'" />
     <div class="contents" fxLayout="column">
-      <span class="name">{{item.name}}</span>
-      <span class="position">{{item.position}}</span>
+      <span class="name">{{getItem(item.name)}}</span>
+      <span class="position">{{getItem(item.position)}}</span>
     </div>
   </div>
 </div>
 <div class="sub-container">
   <div class="about-container">
     <div class="about-title" fxLayoutGap="15px">
-      <span style="color: white">About</span>
-      <span style="color:#f67e22">SARTHI</span>
+      <span style="color: white">{{getItem(content.about)}}</span>
+      <span style="color:#f67e22">{{getItem(content.sarthi)}}</span>
     </div>
     <div class="about-description">
-      Chhatrapati Shahu Maharaj Research Training and Human Development Institute (SARTHI), Pune is registered under
-      Company Act, 2013 under Section 8 as Non-Profit government company for research, policy advocacy, training etc.
-      for socio-economic and education
-      development of Maratha, Maratha-Kunbi, Kunbi-Maratha, Kunbi community in Maharashtra State. Our organisation
-      thrust areas includes research, policy advocacy to government, training etc. and guidance to rural population,
-      particularly the farmers
-      whose livelihood is dependent on agriculture.
+      {{getItem(content.description)}}
     </div>
     <div class="read-more" fxLayoutAlign="start center">
       <a fxLayoutAlign="center" href="/about-us">
-        Read More
+        {{getItem(content.read_more)}}
       </a>
       <!-- <a href="#" style="color: #f67e22; text-decoration: none">></a> -->
     </div>
@@ -63,7 +57,8 @@
     </div>
   </div>
 </div>
-<div [ngStyle.lt-md]="{'height': 'auto'}" [ngStyle]="{'height': '40rem'}" class="main-container" fxLayout="row"
+<!-- Adding d-none to hide notices -->
+<div [ngStyle.lt-md]="{'height': 'auto'}" [ngStyle]="{'height': '40rem'}" class="main-container d-none" fxLayout="row"
   fxLayout.lt-md="column" fxLayoutAlign="space-evenly center" fxLayoutGap="0px" fxLayoutGap.lt-md="40px">
   <div class="notice-main-container" fxFlex="40" fxFlex.lt-md="90">
     <div class="notice-header">
@@ -84,7 +79,8 @@
       </div>
     </div>
   </div>
-  <div class="strength-container" fxFlex="40" fxFlex.lt-md="90">
+  <!-- Adding d-none to hide strength -->
+  <div class="strength-container d-none" fxFlex="40" fxFlex.lt-md="90">
     <div class="strength-header">
       <span>Our Strength</span>
     </div>
@@ -108,16 +104,11 @@
 </div>
 <div class="main-objectives-container" fxLayout="column" fxLayoutGap="4rem">
   <div class="main-objectives" fxLayoutAlign="center">
-    <span>Main</span>
+    <span>{{getItem(content.objectives.main)}}</span>
+    <span style="margin-left: 1.5vw;color: #f67e22;">{{getItem(content.objectives.title)}}</span>
   </div>
   <div class="objective-description" fxLayout="column">
-    Organizing various competitions and other events for the students of various levels and grant Awards, Prizes,
-    Citations, etc. to the deserving students, with an aim to inspire the youngsters to become better citizens of India.
-    Undertake and implement
-    special and pilot projects such as ‘Kisan Mitra’, Kaushalya Vikas Doot, Tara Doot (Women Empowerment Doot), Sant
-    Gadge Baba Doot (Swacchata & Vyasan Mukti Doot), Sanvidhan Doot, Savitri Doot, etc. from time to time, for creating
-    awareness on various
-    issues.
+    {{getItem(content.objectives.desc)}}
   </div>
   <div class="skill-container" fxFlex="100" fxLayout="row" fxLayoutAlign="space-between"
     fxLayoutAlign.gt-md="space-around center" fxLayout.lt-lg="column" fxLayoutGap.lt-lg="4rem" fxLayoutGap="2rem">
@@ -143,6 +134,56 @@
     </div>
   </div>
   <div class="read-button" fxLayoutAlign="center center">
-    <a href="#">Read More</a>
+    <a href="#">{{getItem(content.read_more)}}</a>
   </div>
 </div>
+<owl-carousel-o [options]="customOptions" fxLayoutAlign="center center" style="margin-bottom: 2rem;">
+  <!-- <div> -->
+  <ng-template carouselSlide>
+    <div fxLayout="row" class="footer-carousel">
+      <div class="footer-c-content" fxLayout="row" fxLayoutAlign="space-between center">
+        <div class="footer-bg-c">
+          <img alt="bg" class="footer-bg" src="../../assets/images/footer-carousel/img1.png ">
+        </div>
+        <div class="footer-bg-c">
+          <img alt="bg" class="footer-bg" src="../../assets/images/footer-carousel/img2.png ">
+        </div>
+        <div class="footer-bg-c">
+          <img alt="bg" class="footer-bg" src="../../assets/images/footer-carousel/img3.png ">
+        </div>
+      </div>
+    </div>
+  </ng-template>
+  <ng-template carouselSlide>
+    <div fxLayout="row" class="footer-carousel">
+      <div class="footer-c-content" fxLayout="row" fxLayoutAlign="space-between center">
+        <div class="footer-bg-c">
+          <img alt="bg" class="footer-bg" src="../../assets/images/footer-carousel/img4.png ">
+        </div>
+        <div class="footer-bg-c">
+          <img alt="bg" class="footer-bg" src="../../assets/images/footer-carousel/img1.png ">
+        </div>
+        <div class="footer-bg-c">
+          <img alt="bg" class="footer-bg" src="../../assets/images/footer-carousel/img2.png ">
+        </div>
+      </div>
+    </div>
+  </ng-template>
+  <ng-template carouselSlide>
+    <div fxLayout="row" class="footer-carousel">
+      <div class="footer-c-content" fxLayout="row" fxLayoutAlign="space-between center">
+        <div class="footer-bg-c">
+          <img alt="bg" class="footer-bg" src="../../assets/images/footer-carousel/img3.png ">
+        </div>
+        <div class="footer-bg-c">
+          <img alt="bg" class="footer-bg" src="../../assets/images/footer-carousel/img4.png ">
+        </div>
+        <div class="footer-bg-c">
+          <img alt="bg" class="footer-bg" src="../../assets/images/footer-carousel/img1.png ">
+        </div>
+      </div>
+    </div>
+  </ng-template>
+
+  <!-- </div> -->
+</owl-carousel-o>

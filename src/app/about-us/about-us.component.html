@@ -1,58 +1,57 @@
 <div class="navItems" [ngStyle.lt-sm]="{'top':'10%'}" [ngStyle.lt-md]="{'top':'15%'}">
-    <div class="header-text" fxLayout="column"
-        [ngStyle.lt-md]="{ 'line-height':'0', 'font-size':'2rem', 'margin-bottom':'1rem'}">
-        <div>
-            <span [ngStyle.lt-md]="{'font-size':'2rem', 'margin-top':'0'}">About Us</span>
-        </div>
-        <div>
-            <img alt="line" src="../../assets/images/line.png ">
-        </div>
+  <div class="header-text" fxLayout="column"
+    [ngStyle.lt-md]="{ 'line-height':'0', 'font-size':'2rem', 'margin-bottom':'1rem'}">
+    <div>
+      <span [ngStyle.lt-md]="{'font-size':'2rem', 'margin-top':'0'}">About Us</span>
     </div>
-    <div class="sub-text" [ngStyle.lt-sm]="{ 'line-height':'2rem', 'font-size':'1rem', 'max-width':'100%'}">
-        <span>
-            Sed ut perspiciatis omnis iste natus error sit accusantium doloremque Sed ut perspiciatis omnis iste natus
-            error sit
-            accusantium doloremque
-        </span>
+    <div>
+      <img alt="line" src="../../assets/images/line.png ">
     </div>
+  </div>
+  <div class="sub-text" [ngStyle.lt-sm]="{ 'line-height':'2rem', 'font-size':'1rem', 'max-width':'100%'}">
+    <span>
+      Sed ut perspiciatis omnis iste natus error sit accusantium doloremque Sed ut perspiciatis omnis iste natus
+      error sit
+      accusantium doloremque
+    </span>
+  </div>
 </div>
 <div class="container">
-    <div class="admin-container" fxLayout='column' fxFlexAlign='center center' [ngStyle.lt-md]="{'padding':'3rem'}"
-        [ngStyle.lt-sm]="{'padding':'1.5rem'}">
-        <div class="header" [ngStyle.lt-md]="{'font-size':'2rem'}" fxLayoutAlign.lt-sm='center center'>
-            <span>About</span>
-        </div>
-        <div class="description body"
-            [ngStyle.lt-md]="{'font-size':'0.8rem','text-align': 'justify', 'line-height': '1.5rem'}"
-            [ngStyle.lt-sm]="{'font-size':'0.6rem','text-align': 'justify', 'line-height': '1.5rem'}">
-            <div>
-                Chhatrapati Shahu Maharaj Research Training and Human Development Institute (SARTHI), Pune is registered
-                under Company Act, 2013 under Section 8 as Non-Profit government company for research, policy advocacy,
-                training etc. for socio-economic and education
-                development of Maratha, Maratha-Kunbi, Kunbi-Maratha, Kunbi community in Maharashtra State. Our
-                organisation thrust areas includes research, policy advocacy to government, training etc. and guidance
-                to rural population, particularly the
-                farmers whose livelihood is dependent on agriculture.
-            </div>
-            <div>
-                <span>
-                    First Appointed Director and Member of the Organization and Articles of Association & Memorandum of
-                    Association:
-                    <a class="btn" href="../../assets/files/AoA and MoA.pdf" download>
-                        View
-                    </a>
-                </span>
-            </div>
-            <div>
-                <span>
-                    GR of Board of Directors:
-                    <a class="btn" href="../../assets/files/Sarthi_Board_of_Directors_GR.pdf" download>
-                        View
-                    </a>
-                </span>
-            </div>
-        </div>
+  <div class="admin-container" fxLayout='column' fxFlexAlign='center center' [ngStyle.lt-md]="{'padding':'3rem'}"
+    [ngStyle.lt-sm]="{'padding':'1.5rem'}">
+    <div fxLayout="row">
+      <span class="header-text" [ngStyle.lt-md]="{'font-size':'2rem'}" fxLayoutAlign.lt-sm='center center'>
+        {{getItem(translations.about)}}
+      </span>
+      <span class="header-text" style="margin-left: 10px;color: #f67e22;" [ngStyle.lt-md]="{'font-size':'2rem'}"
+        fxLayoutAlign.lt-sm='center center'>
+        {{getItem(translations.sarthi)}}
+      </span>
     </div>
+    <div class="description body"
+      [ngStyle.lt-md]="{'font-size':'0.8rem','text-align': 'justify', 'line-height': '1.5rem'}"
+      [ngStyle.lt-sm]="{'font-size':'0.6rem','text-align': 'justify', 'line-height': '1.5rem'}">
+      <div>
+        {{getItem(translations.description)}}
+      </div>
+      <div>
+        <span>
+          {{getItem(translations.first_appointed)}}:
+          <a class="btn" href="../../assets/files/AoA and MoA.pdf" download>
+            {{getItem(translations.view)}}
+          </a>
+        </span>
+      </div>
+      <div>
+        <span>
+          {{getItem(translations.gr_bod)}}:
+          <a class="btn" href="../../assets/files/Sarthi_Board_of_Directors_GR.pdf" download>
+            {{getItem(translations.view)}}
+          </a>
+        </span>
+      </div>
+    </div>
+  </div>
 </div>
 <!-- <div class="directors-header">
     <div>

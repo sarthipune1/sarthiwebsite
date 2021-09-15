@@ -6,6 +6,7 @@ import {
 	OnInit,
 } from '@angular/core';
 import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
+import { faHotjar } from '@fortawesome/free-brands-svg-icons';
 
 @Component({
 	selector: 'app-header',
@@ -28,67 +29,144 @@ export class HeaderComponent implements OnInit, OnChanges {
 
 	isToggled = false;
 
+	setLanguage(language: string) {
+		localStorage.setItem('lang', language);
+	}
+
+	getLanguage(lang: string) {
+		const l = localStorage.getItem('lang');
+		return l === lang;
+	}
+
+	getItem(key: object) {
+		const l = localStorage.getItem('lang');
+		return key[l];
+	}
+
+	content = {
+		title: {
+			en: 'Chhatrapati Shahu Maharaj Research, Training and Human Development Institute',
+			mr: 'छत्रपती शाहू महाराज संशोधन, प्रशिक्षण आणि मानव विकास संस्था',
+		},
+		sarthi: {
+			en: '(SARTHI)',
+			mr: '(सारथी)',
+		},
+	};
+
 	menu = [
 		{
-			name: 'Home',
+			name: {
+				en: 'Home',
+				mr: 'मुख्य पृष्ठ',
+			},
 			path: '/home',
 		},
 		{
-			name: 'About Us',
+			name: {
+				en: 'About Us',
+				mr: 'आमचे विषयी',
+			},
 			path: '/about-us',
 		},
 		{
-			name: 'Department',
+			name: {
+				en: 'Department',
+				mr: 'विभाग',
+			},
 			path: '/department',
 			sublist: [
 				{
-					name: 'IT Department',
+					name: {
+						en: 'IT Department',
+						mr: 'माहिती तंत्रज्ञान विभाग (आयटी)',
+					},
 					path: '/department/it',
 				},
 				{
-					name: 'Women Enpowerment',
-					path: '/department/women-empowerment',
+					name: {
+						en: 'Research',
+						mr: 'संशोधन विभाग',
+					},
+					path: '/department/research',
+				},
+				{
+					name: {
+						en: 'Competitive Examination',
+						mr: 'विविध स्पर्धा परिक्षा पूर्व तयारीसाठी कोचिंग व मार्गदर्शन विभाग',
+					},
+					path: '/department/competitive-exam',
+				},
+				{
+					name: {
+						en: 'Accounts',
+						mr: 'लेखा जोखा',
+					},
+					path: '/department/accounts',
+				},
+				{
+					name: {
+						en: 'Awards',
+						mr: 'पुरस्कार',
+					},
+					path: '/department/awards',
+				},
+				{
+					name: {
+						en: 'Caste Certificate',
+						mr: 'जातीचा दाखला',
+					},
+					path: '/department/caste-certificate',
 				},
 			],
 		},
 		{
-			name: 'Accounts',
-			path: '/accounts',
-		},
-		{
-			name: 'Notice Board',
+			name: {
+				en: 'Notice Board',
+				mr: 'सूचना फलक',
+			},
 			path: '/notices',
 		},
 		{
-			name: 'Reports',
+			name: {
+				en: 'Reports',
+				mr: 'अहवाल',
+			},
 			path: '/reports',
 		},
 		{
-			name: 'Caste Certificate',
-			path: '/caste-certificate',
+			name: {
+				en: 'Gallery',
+				mr: 'छायाचित्रे',
+			},
+			path: '/gallery',
 		},
 		{
-			name: 'Awards',
-			path: '/awards',
-		},
-		// {
-		//   name: 'Events',
-		//   path: '/events',
-		// },
-		{
-			name: 'Photo Gallery',
-			path: '/photo-gallery',
-		},
-		{
-			name: 'RTI',
+			name: {
+				en: 'RTI',
+				mr: 'माहितीचे अधिकार',
+			},
 			path: '/rti',
 		},
 		{
-			name: 'Board of Directors',
+			name: {
+				en: 'Board of Directors',
+				mr: 'संचालक मंडळ',
+			},
 			path: '/board-of-directors',
 		},
 		{
-			name: 'Contact Us',
+			name: {
+				en: 'Interactive E Application',
+				mr: 'इंटरएक्टिव ई एप्लीकेशन',
+			},
+			url: 'http://sarthi-maharashtragov.in/eapp',
+		},
+		{
+			name: {
+				en: 'Contact Us',
+				mr: 'संपर्क',
+			},
 			path: '/contact-us',
 		},
 	];
@@ -96,6 +174,7 @@ export class HeaderComponent implements OnInit, OnChanges {
 	faIcons = {
 		faBars,
 		faTimes,
+		faHotjar,
 	};
 	setToggled() {
 		this.isToggled = !this.isToggled;
