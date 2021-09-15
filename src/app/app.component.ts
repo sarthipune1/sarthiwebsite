@@ -21,7 +21,7 @@ export class AppComponent implements OnInit {
 	}
 	ngOnInit(): void {
 		const l = localStorage.getItem('lang');
-		if (l === undefined) {
+		if (l === undefined || l === null) {
 			localStorage.setItem('lang', 'en');
 		}
 	}
