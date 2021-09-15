@@ -1,137 +1,137 @@
 .navItems {
-    position: absolute;
-    top: 20%;
-    z-index: 5000;
-    //width: 100%;
-    padding: 0 5vw;
-    font-weight: 500;
-    span {
-        //font-size: 2.5rem;
-        color: white;
-        //font-weight: 700;
-        //line-height: 5vw;
-    }
-    img {
-        width: 150px;
-        padding: 2rem 0 0 0;
-    }
+	position: absolute;
+	top: 30%;
+	z-index: 5000;
+	//width: 100%;
+	padding: 0 5vw;
+	font-weight: 500;
+	span {
+		//font-size: 2.5rem;
+		color: white;
+		//font-weight: 700;
+		//line-height: 5vw;
+	}
+	img {
+		width: 150px;
+		padding: 2rem 0 0 0;
+	}
 }
 
 .header-text {
-    line-height: 50px;
-    margin-top: 3rem;
-    margin-bottom: 2rem;
-    font-weight: 700;
-    font-size: 2.5rem;
+	line-height: 50px;
+	margin-top: 3rem;
+	margin-bottom: 2rem;
+	font-weight: 700;
+	font-size: 2.5rem;
 }
 
 .sub-text {
-    line-height: 2.5rem;
-    font-size: 1.5rem;
-    max-width: 60vw;
+	line-height: 2rem;
+	font-size: 1.2rem;
+	max-width: 60vw;
 }
 
 .container {
-    padding: 3vw 9vw;
-    background-color: #e5e5e5;
+	padding: 3vw 9vw;
+	background-color: #e5e5e5;
 }
 
 .header {
-    font-size: 3.4rem;
-    font-weight: 700;
-    line-height: 4rem;
-    text-align: center;
-    &:after {
-        content: "Sarthi";
-        margin-left: 10px;
-        color: #f67e22;
-    }
+	font-size: 3.4rem;
+	font-weight: 700;
+	line-height: 4rem;
+	text-align: center;
+	&:after {
+		content: "Sarthi";
+		margin-left: 10px;
+		color: #f67e22;
+	}
 }
 
 .description {
-    font-size: 1.25rem;
-    color: #808080;
-    font-weight: 400;
-    line-height: 2.5rem;
-    div {
-        margin-bottom: 2.5rem;
-    }
+	font-size: 1.25rem;
+	color: #808080;
+	font-weight: 400;
+	line-height: 2.5rem;
+	div {
+		margin-bottom: 2.5rem;
+	}
 }
 
 .admin-container {
-    background-color: white;
-    border-radius: 2rem;
-    padding: 1rem;
-    width: 50%;
+	background-color: white;
+	border-radius: 2rem;
+	padding: 1rem;
+	width: 50%;
 }
 
 .mat-card {
-    text-align: center;
-    width: 17rem;
-    height: 20rem;
-    border-radius: 10px;
-    margin: 20px;
-    * {
-        padding: 10px;
-        line-height: 1.5rem;
-    }
-    img {
-        border-radius: 50%;
-        object-fit: cover;
-    }
+	text-align: center;
+	width: 17rem;
+	height: 20rem;
+	border-radius: 10px;
+	margin: 20px;
+	* {
+		padding: 10px;
+		line-height: 1.5rem;
+	}
+	img {
+		border-radius: 50%;
+		object-fit: cover;
+	}
 }
 
 .mat-card {
-    padding: 0;
+	padding: 0;
 }
 
 .mat-card-avatar {
-    height: 10rem;
-    width: 10rem;
+	height: 10rem;
+	width: 10rem;
 }
 
 .bod_image {
-    border: 3px solid white;
-    transition: transform 0.2s;
-    // padding: 10px;
+	border: 3px solid white;
+	transition: transform 0.2s;
+	// padding: 10px;
 }
 
 .bod_image:hover {
-    border: 3px solid #fb6003;
-    transform: scale(1.02);
-    transition: transform 0.2s;
+	border: 3px solid #fb6003;
+	transform: scale(1.02);
+	transition: transform 0.2s;
 }
 
 .directors-container {
-    padding: 3.5vw 5vw;
+	padding: 3.5vw 5vw;
 }
 
 .directors-board {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    // margin-bottom: 1.75rem;
-    span {
-        font-size: 4rem;
-        font-weight: 700;
-        line-height: 8vw;
-        text-align: center;
-        &::after {
-            content: "Directors";
-            color: #f67e22;
-            margin-left: 10px;
-        }
-    }
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	// margin-bottom: 1.75rem;
+	span {
+		font-size: 4rem;
+		font-weight: 700;
+		line-height: 8vw;
+		text-align: center;
+		&::after {
+			content: "Directors";
+			color: #f67e22;
+			margin-left: 10px;
+		}
+	}
 }
 
 .directors-board-description {
-    // max-width: 76rem;
-    span {
-        font-size: 1.5rem;
-        font-weight: 400;
-        text-align: center;
-        line-height: 2.8rem;
-        color: #545454;
-        margin-bottom: 2vw;
-    }
+	// max-width: 76rem;
+	span {
+		font-size: 1.5rem;
+		font-weight: 400;
+		text-align: center;
+		line-height: 2.8rem;
+		color: #545454;
+		margin-bottom: 2vw;
+	}
 }
