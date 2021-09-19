@@ -114,25 +114,14 @@ export class HomeComponent implements OnInit {
 			},
 		},
 		{
-			image: '',
+			image: 'pwd_minister.jpg',
 			name: {
-				en: '',
-				mr: '',
+				en: 'Shri Ashok Chavan',
+				mr: 'श्री अशोक चवन',
 			},
 			position: {
-				en: "Hon'ble Cabinet Minister",
-				mr: 'माननीय मंत्री',
-			},
-		},
-		{
-			image: '',
-			name: {
-				en: '',
-				mr: '',
-			},
-			position: {
-				en: "Hon'ble Minister of State",
-				mr: 'माननीय राज्यमंत्री',
+				en: "Hon'ble PWD Minister",
+				mr: 'माननीय पीडब्ल्यूडी मंत्री',
 			},
 		},
 	];

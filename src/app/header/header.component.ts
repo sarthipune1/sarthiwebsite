@@ -46,7 +46,7 @@ export class HeaderComponent implements OnInit, OnChanges {
 	content = {
 		title: {
 			en: 'Chhatrapati Shahu Maharaj Research, Training and Human Development Institute',
-			mr: 'छत्रपती शाहू महाराज संशोधन, प्रशिक्षण आणि मानव विकास संस्था',
+			mr: 'छत्रपती शाहू महाराज संशोधन, प्रशिक्षण व मानव विकास संस्था',
 		},
 		sarthi: {
 			en: '(SARTHI)',
@@ -127,6 +127,14 @@ export class HeaderComponent implements OnInit, OnChanges {
 			},
 			path: '/notices',
 		},
+
+		{
+			name: {
+				en: 'Interactive E Application',
+				mr: 'इंटरएक्टिव ई एप्लीकेशन',
+			},
+			url: 'http://sarthi-maharashtragov.in/eapp',
+		},
 		{
 			name: {
 				en: 'Reports',
@@ -141,26 +149,19 @@ export class HeaderComponent implements OnInit, OnChanges {
 			},
 			path: '/gallery',
 		},
-		{
-			name: {
-				en: 'RTI',
-				mr: 'माहितीचे अधिकार',
-			},
-			path: '/rti',
-		},
+		// {
+		// 	name: {
+		// 		en: 'RTI',
+		// 		mr: 'माहितीचे अधिकार',
+		// 	},
+		// 	path: '/rti',
+		// },
 		{
 			name: {
 				en: 'Board of Directors',
 				mr: 'संचालक मंडळ',
 			},
 			path: '/board-of-directors',
-		},
-		{
-			name: {
-				en: 'Interactive E Application',
-				mr: 'इंटरएक्टिव ई एप्लीकेशन',
-			},
-			url: 'http://sarthi-maharashtragov.in/eapp',
 		},
 		{
 			name: {

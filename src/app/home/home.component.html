@@ -1,189 +1,212 @@
 <div style="position: relative">
-  <div class="navItems d-none">
-    <div class="header-text" fxLayout="column">
-      <span>
-        Skill Development
-        <br>
-        & Training
-      </span>
-      <img alt="line" src="../../assets/images/line.png " fx>
+    <div class="navItems d-none">
+        <div class="header-text" fxLayout="column">
+            <span>
+                Skill Development
+                <br>
+                & Training
+            </span>
+            <img alt="line" src="../../assets/images/line.png " fx>
+        </div>
+        <div class="sub-text">
+            <span style="font-size: 20px;">
+                Simply The Most Featured Rich HTML5 Learning Management System
+            </span>
+        </div>
     </div>
-    <div class="sub-text">
-      <span style="font-size: 20px;">
-        Simply The Most Featured Rich HTML5 Learning Management System
-      </span>
-    </div>
-  </div>
-  <owl-carousel-o [options]="customOptions">
-    <div>
-      <ng-template carouselSlide>
-        <img alt="bg" class="header-bg" src="../../assets/images/bg.png ">
-      </ng-template>
-    </div>
-    <ng-template carouselSlide>
-      <img alt="bg" class="header-bg" src="../../assets/images/bg.png ">
-    </ng-template>
-    <ng-template carouselSlide>
-      <img alt="bg" class="header-bg" src="../../assets/images/bg.png ">
-    </ng-template>
-  </owl-carousel-o>
+    <owl-carousel-o [options]="customOptions">
+        <div>
+            <ng-template carouselSlide>
+                <img alt="bg" class="header-bg" src="../../assets/images/bg.png ">
+            </ng-template>
+        </div>
+        <ng-template carouselSlide>
+            <img alt="bg" class="header-bg" src="../../assets/images/bg.png ">
+        </ng-template>
+        <ng-template carouselSlide>
+            <img alt="bg" class="header-bg" src="../../assets/images/bg.png ">
+        </ng-template>
+    </owl-carousel-o>
 </div>
 <div class="maha-gov" fxLayoutAlign="center center" fxLayout="row" fxLayout.lt-md="column">
-  <div *ngFor="let item of mahaGov" class="item" fxLayoutAlign="center center" fxLayout="column">
-    <img [src]="'../../assets/images/ministers/' + item.image" [alt]="item.position + ' Image'" />
-    <div class="contents" fxLayout="column">
-      <span class="name">{{getItem(item.name)}}</span>
-      <span class="position">{{getItem(item.position)}}</span>
+    <div *ngFor="let item of mahaGov" class="item" fxLayoutAlign="center center" fxLayout="column">
+        <img [src]="'../../assets/images/ministers/' + item.image" [alt]="item.position + ' Image'">
+        <div class="contents" fxLayout="column">
+            <span class="name">{{getItem(item.name)}}</span>
+            <span class="position">{{getItem(item.position)}}</span>
+        </div>
     </div>
-  </div>
 </div>
 <div class="sub-container">
-  <div class="about-container">
-    <div class="about-title" fxLayoutGap="15px">
-      <span style="color: white">{{getItem(content.about)}}</span>
-      <span style="color:#f67e22">{{getItem(content.sarthi)}}</span>
+    <div class="about-container">
+        <div class="about-title" fxLayoutGap="15px">
+            <span style="color: white">{{getItem(content.about)}}</span>
+            <span style="color:#f67e22">{{getItem(content.sarthi)}}</span>
+        </div>
+        <div class="about-description">{{getItem(content.description)}}</div>
+        <div class="read-more" fxLayoutAlign="start center">
+            <a fxLayoutAlign="center" href="/about-us">
+                {{getItem(content.read_more)}}
+            </a>
+            <!-- <a href="#" style="color: #f67e22; text-decoration: none">></a> -->
+        </div>
+        <div class="img-container" fxHide.lt-md>
+            <img alt="logo" src="../../assets/images/canon.png ">
+        </div>
     </div>
-    <div class="about-description">
-      {{getItem(content.description)}}
-    </div>
-    <div class="read-more" fxLayoutAlign="start center">
-      <a fxLayoutAlign="center" href="/about-us">
-        {{getItem(content.read_more)}}
-      </a>
-      <!-- <a href="#" style="color: #f67e22; text-decoration: none">></a> -->
-    </div>
-    <div class="img-container" fxHide.lt-md>
-      <img alt="logo" src="../../assets/images/footerdesign.png ">
-    </div>
-  </div>
 </div>
 <!-- Adding d-none to hide notices -->
-<div [ngStyle.lt-md]="{'height': 'auto'}" [ngStyle]="{'height': '40rem'}" class="main-container d-none" fxLayout="row"
-  fxLayout.lt-md="column" fxLayoutAlign="space-evenly center" fxLayoutGap="0px" fxLayoutGap.lt-md="40px">
-  <div class="notice-main-container" fxFlex="40" fxFlex.lt-md="90">
-    <div class="notice-header">
-      <span>Notice Board</span>
-    </div>
-    <div [ngStyle.lt-md]="{'max-height': '35rem'}" class="notice-details-container">
-      <div *ngFor="let notice of noticeData" class="notice-container">
-        <a fxLayout="row" fxLayoutAlign="flex-start center">
-          <div class="notice-date" fxLayout="column" fxLayoutAlign="center center">
-            <span class="month">{{notice.date.month}}</span>
-            <span class="day">{{notice.date.date}}</span>
-          </div>
-          <div class="notice-details" fxLayout="column" fxLayoutAlign="center flex-start ">
-            <span class="event-details">{{notice.title}}</span>
-            <span class="event-time">{{notice.time}}</span>
-          </div>
-        </a>
-      </div>
-    </div>
-  </div>
-  <!-- Adding d-none to hide strength -->
-  <div class="strength-container d-none" fxFlex="40" fxFlex.lt-md="90">
-    <div class="strength-header">
-      <span>Our Strength</span>
-    </div>
-    <div class="strength-title">
-      <span>
-        Sed ut perspiciatis omnis iste natus error sit accusantium doloremque
-      </span>
-    </div>
-    <div fxLayout.lt-md="column" fxLayoutGap="50px">
-      <div *ngFor="let strength of strengthData" fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="20px">
-        <div class="strength-description">
-          <img alt="bg" src="../../assets/images/{{strength.icon}}">
+<div [ngStyle.lt-md]="{'height': 'auto'}" [ngStyle]="{'height': '40rem'}" class="main-container d-none" fxLayout="row" fxLayout.lt-md="column" fxLayoutAlign="space-evenly center" fxLayoutGap="0px" fxLayoutGap.lt-md="40px">
+    <div class="notice-main-container" fxFlex="40" fxFlex.lt-md="90">
+        <div class="notice-header">
+            <span>Notice Board</span>
         </div>
-        <div fxLayout="column">
-          <span class="strength-sub-title">{{strength.title}}</span>
-          <span class="strength-description">{{strength.description}}</span>
+        <div [ngStyle.lt-md]="{'max-height': '35rem'}" class="notice-details-container">
+            <div *ngFor="let notice of noticeData" class="notice-container">
+                <a fxLayout="row" fxLayoutAlign="flex-start center">
+                    <div class="notice-date" fxLayout="column" fxLayoutAlign="center center">
+                        <span class="month">{{notice.date.month}}</span>
+                        <span class="day">{{notice.date.date}}</span>
+                    </div>
+                    <div class="notice-details" fxLayout="column" fxLayoutAlign="center flex-start ">
+                        <span class="event-details">{{notice.title}}</span>
+                        <span class="event-time">{{notice.time}}</span>
+                    </div>
+                </a>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
+    <!-- Adding d-none to hide strength -->
+    <div class="strength-container d-none" fxFlex="40" fxFlex.lt-md="90">
+        <div class="strength-header">
+            <span>Our Strength</span>
+        </div>
+        <div class="strength-title">
+            <span>
+                Sed ut perspiciatis omnis iste natus error sit accusantium doloremque
+            </span>
+        </div>
+        <div fxLayout.lt-md="column" fxLayoutGap="50px">
+            <div *ngFor="let strength of strengthData" fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="20px">
+                <div class="strength-description">
+                    <img alt="bg" src="../../assets/images/{{strength.icon}}">
+                </div>
+                <div fxLayout="column">
+                    <span class="strength-sub-title">{{strength.title}}</span>
+                    <span class="strength-description">{{strength.description}}</span>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 <div class="main-objectives-container" fxLayout="column" fxLayoutGap="4rem">
-  <div class="main-objectives" fxLayoutAlign="center">
-    <span>{{getItem(content.objectives.main)}}</span>
-    <span style="margin-left: 1.5vw;color: #f67e22;">{{getItem(content.objectives.title)}}</span>
-  </div>
-  <div class="objective-description" fxLayout="column">
-    {{getItem(content.objectives.desc)}}
-  </div>
-  <div class="skill-container" fxFlex="100" fxLayout="row" fxLayoutAlign="space-between"
-    fxLayoutAlign.gt-md="space-around center" fxLayout.lt-lg="column" fxLayoutGap.lt-lg="4rem" fxLayoutGap="2rem">
-    <div fxLayout="row" fxLayout.lt-lg="column" fxFlex="80" fxLayoutAlign="space-between center"
-      fxLayoutAlign.lt-lg="flex-start">
-      <ul>
-        <li>Communication skills</li>
-        <li>Soft skills</li>
-        <li>General awareness</li>
-        <li>
-          Linguistic Competence including Proficiency in English
-        </li>
-      </ul>
-      <ul>
-        <li>Confidence building</li>
-        <li>Career guidance</li>
-        <li>Counselling</li>
-        <li>Skill aptitude</li>
-      </ul>
+    <div class="main-objectives" fxLayoutAlign="center">
+        <span>{{getItem(content.objectives.main)}}</span>
+        <span style="margin-left: 1.5vw;color: #f67e22;">{{getItem(content.objectives.title)}}</span>
     </div>
-    <div fxFlex="20">
-      <img alt="logo" class="information" src="../../assets/images/personal_information.png ">
+    <div class="objective-description" fxLayout="column">
+        {{getItem(content.objectives.desc)}}
     </div>
-  </div>
-  <div class="read-button" fxLayoutAlign="center center">
-    <a href="#">{{getItem(content.read_more)}}</a>
-  </div>
+    <div class="skill-container" fxFlex="100" fxLayout="row" fxLayoutAlign="space-between" fxLayoutAlign.gt-md="space-around center" fxLayout.lt-lg="column" fxLayoutGap.lt-lg="4rem" fxLayoutGap="2rem">
+        <div fxLayout="row" fxLayout.lt-lg="column" fxFlex="80" fxLayoutAlign="space-between center" fxLayoutAlign.lt-lg="flex-start">
+            <ul>
+                <li>Communication skills</li>
+                <li>Soft skills</li>
+                <li>General awareness</li>
+                <li>
+                    Linguistic Competence including Proficiency in English
+                </li>
+            </ul>
+            <ul>
+                <li>Confidence building</li>
+                <li>Career guidance</li>
+                <li>Counselling</li>
+                <li>Skill aptitude</li>
+            </ul>
+        </div>
+        <div fxFlex="20">
+            <img alt="logo" class="information" src="../../assets/images/personal_information.png ">
+        </div>
+    </div>
+    <div class="read-button" fxLayoutAlign="center center">
+        <a href="#">{{getItem(content.read_more)}}</a>
+    </div>
 </div>
 <owl-carousel-o [options]="customOptions" fxLayoutAlign="center center" style="margin-bottom: 2rem;">
-  <!-- <div> -->
-  <ng-template carouselSlide>
-    <div fxLayout="row" class="footer-carousel">
-      <div class="footer-c-content" fxLayout="row" fxLayoutAlign="space-between center">
-        <div class="footer-bg-c">
-          <img alt="bg" class="footer-bg" src="../../assets/images/footer-carousel/img1.png ">
+    <!-- <div> -->
+    <ng-template carouselSlide>
+        <div fxLayout="row" class="footer-carousel">
+            <div class="footer-c-content" fxLayout="row" fxLayoutAlign="space-between center">
+                <a href="https://www.india.gov.in/" target="_blank">
+                    <div class="footer-bg-c">
+                        <img alt="bg" class="footer-bg" src="../../assets/images/footer-carousel/img1.png ">
+                    </div>
+                </a>
+                <a href="https://aaplesarkar.mahaonline.gov.in/en" target="_blank">
+                    <div class="footer-bg-c">
+                        <img alt="bg" class="footer-bg" src="../../assets/images/footer-carousel/img2.png ">
+                    </div>
+                </a>
+                <a href="https://www.maharashtra.gov.in/1145/Government-Resolutions" target="_blank">
+                    <div class="footer-bg-c">
+                        <img alt="bg" class="footer-bg" src="../../assets/images/footer-carousel/img3.png ">
+                    </div>
+                </a>
+            </div>
         </div>
-        <div class="footer-bg-c">
-          <img alt="bg" class="footer-bg" src="../../assets/images/footer-carousel/img2.png ">
+    </ng-template>
+    <ng-template carouselSlide>
+        <div fxLayout="row" class="footer-carousel">
+            <div class="footer-c-content" fxLayout="row" fxLayoutAlign="space-between center">
+                <a href="https://rtionline.gov.in/" target="_blank">
+                    <div class="footer-bg-c">
+                        <img alt="bg" class="footer-bg" src="../../assets/images/footer-carousel/img4.png ">
+                    </div>
+                </a>
+                <a href="https://www.india.gov.in/" target="_blank">
+                    <div class="footer-bg-c">
+                        <img alt="bg" class="footer-bg" src="../../assets/images/footer-carousel/img1.png ">
+                    </div>
+                </a>
+                <a href="https://aaplesarkar.mahaonline.gov.in/en" target="_blank">
+                    <div class="footer-bg-c">
+                        <img alt="bg" class="footer-bg" src="../../assets/images/footer-carousel/img2.png ">
+                    </div>
+                </a>
+            </div>
         </div>
-        <div class="footer-bg-c">
-          <img alt="bg" class="footer-bg" src="../../assets/images/footer-carousel/img3.png ">
+    </ng-template>
+    <ng-template carouselSlide>
+        <div fxLayout="row" class="footer-carousel">
+            <div class="footer-c-content" fxLayout="row" fxLayoutAlign="space-between center">
+                <a href="https://www.maharashtra.gov.in/1145/Government-Resolutions" target="_blank">
+                    <div class="footer-bg-c">
+                        <img alt="bg" class="footer-bg" src="../../assets/images/footer-carousel/img3.png ">
+                    </div>
+                </a>
+                <a href="https://rtionline.gov.in/" target="_blank">
+                    <div class="footer-bg-c">
+                        <img alt="bg" class="footer-bg" src="../../assets/images/footer-carousel/img4.png ">
+                    </div>
+                </a>
+                <a href="https://www.india.gov.in/" target="_blank">
+                    <div class="footer-bg-c">
+                        <img alt="bg" class="footer-bg" src="../../assets/images/footer-carousel/img1.png ">
+                    </div>
+                </a>
+            </div>
         </div>
-      </div>
-    </div>
-  </ng-template>
-  <ng-template carouselSlide>
-    <div fxLayout="row" class="footer-carousel">
-      <div class="footer-c-content" fxLayout="row" fxLayoutAlign="space-between center">
-        <div class="footer-bg-c">
-          <img alt="bg" class="footer-bg" src="../../assets/images/footer-carousel/img4.png ">
-        </div>
-        <div class="footer-bg-c">
-          <img alt="bg" class="footer-bg" src="../../assets/images/footer-carousel/img1.png ">
-        </div>
-        <div class="footer-bg-c">
-          <img alt="bg" class="footer-bg" src="../../assets/images/footer-carousel/img2.png ">
-        </div>
-      </div>
-    </div>
-  </ng-template>
-  <ng-template carouselSlide>
-    <div fxLayout="row" class="footer-carousel">
-      <div class="footer-c-content" fxLayout="row" fxLayoutAlign="space-between center">
-        <div class="footer-bg-c">
-          <img alt="bg" class="footer-bg" src="../../assets/images/footer-carousel/img3.png ">
-        </div>
-        <div class="footer-bg-c">
-          <img alt="bg" class="footer-bg" src="../../assets/images/footer-carousel/img4.png ">
-        </div>
-        <div class="footer-bg-c">
-          <img alt="bg" class="footer-bg" src="../../assets/images/footer-carousel/img1.png ">
-        </div>
-      </div>
-    </div>
-  </ng-template>
+    </ng-template>
 
-  <!-- </div> -->
+
+
+
+
+
+
+
+
+
+
+    <!-- </div> -->
 </owl-carousel-o>
