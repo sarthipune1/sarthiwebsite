@@ -1,55 +1,36 @@
-<div class="navItems" [ngStyle.lt-sm]="{'top':'10%'}" [ngStyle.lt-md]="{'top':'15%'}">
-    <div class="header-text" fxLayout="column"
-        [ngStyle.lt-md]="{ 'line-height':'0', 'font-size':'2rem', 'margin-bottom':'1rem'}">
-        <div>
-            <span [ngStyle.lt-md]="{'font-size':'2rem', 'margin-top':'0'}">Departments</span>
-        </div>
-        <div>
-            <img alt="line" src="../../assets/images/line.png ">
-        </div>
-    </div>
-    <div class="sub-text" [ngStyle.lt-sm]="{ 'line-height':'2rem', 'font-size':'1rem', 'max-width':'100%'}">
-        <span>
-            Sed ut perspiciatis omnis iste natus error sit accusantium doloremque Sed ut perspiciatis omnis iste natus
-            error sit
-            accusantium doloremque
-        </span>
-    </div>
-</div>
 <div class="container">
-    <div class="admin-container" fxLayout='column' fxFlexAlign='center center' [ngStyle.lt-md]="{'padding':'3rem'}"
-        [ngStyle.lt-sm]="{'padding':'1.5rem'}">
-        <div class="header" [ngStyle.lt-md]="{'font-size':'1.5rem', 'line-height':'2.5rem'}"
-            fxLayoutAlign.lt-sm='center center' fxLayout.lt-sm='column'>
-            <span>Department</span>
-        </div>
-        <div class="description"
-            [ngStyle.lt-md]="{'font-size':'0.8rem','text-align': 'justify', 'line-height': '1.5rem'}"
-            [ngStyle.lt-sm]="{'font-size':'0.6rem','text-align': 'justify', 'line-height': '1.5rem'}">
-            <div>
-                <span>
-                    संशोधन विभागामार्फत प्रामुख्याने सद्यस्थिती मध्ये खालीलप्रमाणे उपक्रम राबविण्यात येत आहेत.
-                </span>
-            </div>
-            <div style="font-size: 1.2rem;">अधिछात्रवृत्ती उपक्रम :</div>
-            <div>
-                <span>
-                    मराठा, कुणबी, कुणबी-मराठा, मराठा-कुणबी प्रवर्गातील उच्च शिक्षण घेऊ इच्छिणाऱ्या मेहनती आणि
-                    गुणवत्ताधारक एम.फिल. व पीएच.डी. करणारे उमेदवारांसाठी सारथी मार्फत “छत्रपती शाहू महाराज राष्ट्रीय
-                    संशोधन अधिछात्रवृत्ती (CSMNRF-२०१९) करिता एकूण 357 विद्यार्थ्याची व “मुख्यमंत्री विशेष संशोधन
-                    अधिछात्रवृत्ती (CMSRF-२०१९) करिता एकूण 146 विद्यार्थ्याची अंतिम निवड करण्यात आली असून अधिछात्रवृत्ती
-                    अंतर्गत आर्थिक सहाय्य हे खालील नमूद तक्त्या प्रमाणे देण्यात येते.
-                </span>
-            </div>
-            <div style="font-size: 1.2rem;">
-                उपरोक्त अधिछात्रवृत्ती अंतर्गत आर्थिक सहाय्य -UGC प्रमाणे :-
-            </div>
-        </div>
-        <mat-grid-list cols="3" rowHeight="100px">
-            <mat-grid-tile *ngFor="let tile of tiles" [colspan]="tile.cols" [rowspan]="tile.rows"
-                [style.background]="tile.color">
-                {{tile.text}}
-            </mat-grid-tile>
-        </mat-grid-list>
+  <div class="admin-container" fxLayout='column' fxFlexAlign='center center' [ngStyle.lt-md]="{'padding':'3rem'}"
+    [ngStyle.lt-sm]="{'padding':'1.5rem'}">
+    <div class="header" [ngStyle.lt-md]="{'font-size':'1.5rem', 'line-height':'2.5rem'}"
+      fxLayoutAlign.lt-sm='center center' fxLayout.lt-sm='column'>
+      <span>Department</span>
     </div>
+    <div class="description" [ngStyle.lt-md]="{'font-size':'0.8rem','text-align': 'justify', 'line-height': '1.5rem'}"
+      [ngStyle.lt-sm]="{'font-size':'0.6rem','text-align': 'justify', 'line-height': '1.5rem'}">
+      <div>
+        <span>
+          संशोधन विभागामार्फत प्रामुख्याने सद्यस्थिती मध्ये खालीलप्रमाणे उपक्रम राबविण्यात येत आहेत.
+        </span>
+      </div>
+      <div style="font-size: 1.2rem;">अधिछात्रवृत्ती उपक्रम :</div>
+      <div>
+        <span>
+          मराठा, कुणबी, कुणबी-मराठा, मराठा-कुणबी प्रवर्गातील उच्च शिक्षण घेऊ इच्छिणाऱ्या मेहनती आणि
+          गुणवत्ताधारक एम.फिल. व पीएच.डी. करणारे उमेदवारांसाठी सारथी मार्फत “छत्रपती शाहू महाराज राष्ट्रीय
+          संशोधन अधिछात्रवृत्ती (CSMNRF-२०१९) करिता एकूण 357 विद्यार्थ्याची व “मुख्यमंत्री विशेष संशोधन
+          अधिछात्रवृत्ती (CMSRF-२०१९) करिता एकूण 146 विद्यार्थ्याची अंतिम निवड करण्यात आली असून अधिछात्रवृत्ती
+          अंतर्गत आर्थिक सहाय्य हे खालील नमूद तक्त्या प्रमाणे देण्यात येते.
+        </span>
+      </div>
+      <div style="font-size: 1.2rem;">
+        उपरोक्त अधिछात्रवृत्ती अंतर्गत आर्थिक सहाय्य -UGC प्रमाणे :-
+      </div>
+    </div>
+    <mat-grid-list cols="3" rowHeight="100px">
+      <mat-grid-tile *ngFor="let tile of tiles" [colspan]="tile.cols" [rowspan]="tile.rows"
+        [style.background]="tile.color">
+        {{tile.text}}
+      </mat-grid-tile>
+    </mat-grid-list>
+  </div>
 </div>

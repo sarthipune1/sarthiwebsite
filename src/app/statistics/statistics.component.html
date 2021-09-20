@@ -1,36 +1,16 @@
-<div class="navItems" [ngStyle.lt-sm]="{'top':'10%'}" [ngStyle.lt-md]="{'top':'15%'}">
-    <div class="header-text" fxLayout="column" fxLayout="column"
-        [ngStyle.lt-md]="{ 'line-height':'0', 'font-size':'1.5rem', 'margin-bottom':'1rem'}">
-        <div>
-            <span [ngStyle.lt-md]="{'font-size':'1.5rem', 'margin-top':'0', 'line-height':'3rem'}">Adminission
-                Statistics</span>
-        </div>
-        <div>
-            <img alt="line" src="../../assets/images/line.png ">
-        </div>
-    </div>
-    <div class="sub-text" [ngStyle.lt-sm]="{ 'line-height':'2rem', 'font-size':'1rem', 'max-width':'100%'}">
-        <span>
-            Sed ut perspiciatis omnis iste natus error sit accusantium doloremque Sed ut perspiciatis omnis iste natus
-            error sit
-            accusantium doloremque
-        </span>
-    </div>
-</div>
 <div class="container">
-    <div class="admin-container" fxLayout='column' fxFlexAlign='center center' [ngStyle.lt-md]="{'padding':'3rem'}"
-        [ngStyle.lt-sm]="{'padding':'1.5rem'}">
-        <div class="header" [ngStyle.lt-md]="{'font-size':'1.5rem', 'line-height':'2.5rem'}"
-            fxLayoutAlign.lt-sm='center center' fxLayout.lt-sm='column'>
-            <span>Admission</span>
-        </div>
-        <div class="description"
-            [ngStyle.lt-md]="{'font-size':'0.8rem','text-align': 'justify', 'line-height': '1.5rem'}"
-            [ngStyle.lt-sm]="{'font-size':'0.6rem','text-align': 'justify', 'line-height': '1.5rem'}">
-            <ngx-charts-bar-vertical [view]="viewPort" [results]="saleData" [xAxisLabel]="'Months'" [legendTitle]="''"
-                [yAxisLabel]="'Number of Students'" [legend]="true" [showXAxisLabel]="true" [showYAxisLabel]="true"
-                [xAxis]="true" [yAxis]="true" [gradient]="true">
-            </ngx-charts-bar-vertical>
-        </div>
+  <div class="admin-container" fxLayout='column' fxFlexAlign='center center' [ngStyle.lt-md]="{'padding':'3rem'}"
+    [ngStyle.lt-sm]="{'padding':'1.5rem'}">
+    <div class="header" [ngStyle.lt-md]="{'font-size':'1.5rem', 'line-height':'2.5rem'}"
+      fxLayoutAlign.lt-sm='center center' fxLayout.lt-sm='column'>
+      <span>Admission</span>
     </div>
+    <div class="description" [ngStyle.lt-md]="{'font-size':'0.8rem','text-align': 'justify', 'line-height': '1.5rem'}"
+      [ngStyle.lt-sm]="{'font-size':'0.6rem','text-align': 'justify', 'line-height': '1.5rem'}">
+      <ngx-charts-bar-vertical [view]="viewPort" [results]="saleData" [xAxisLabel]="'Months'" [legendTitle]="''"
+        [yAxisLabel]="'Number of Students'" [legend]="true" [showXAxisLabel]="true" [showYAxisLabel]="true"
+        [xAxis]="true" [yAxis]="true" [gradient]="true">
+      </ngx-charts-bar-vertical>
+    </div>
+  </div>
 </div>

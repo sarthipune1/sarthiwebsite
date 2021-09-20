@@ -1,114 +1,92 @@
-<div class="navItems" [ngStyle.lt-sm]="{'top':'10%'}" [ngStyle.lt-md]="{'top':'15%'}">
-    <div class="header-text" fxLayout="column"
-        [ngStyle.lt-md]="{ 'line-height':'0', 'font-size':'2rem', 'margin-bottom':'1rem'}">
-        <div>
-            <span [ngStyle.lt-md]="{'font-size':'2rem', 'margin-top':'0'}">Departments</span>
-        </div>
-        <div>
-            <img alt="line" src="../../assets/images/line.png ">
-        </div>
-    </div>
-    <div class="sub-text" [ngStyle.lt-sm]="{ 'line-height':'2rem', 'font-size':'1rem', 'max-width':'100%'}">
-        <span>
-            Sed ut perspiciatis omnis iste natus error sit accusantium doloremque Sed ut perspiciatis omnis iste natus
-            error sit
-            accusantium doloremque
-        </span>
-    </div>
-</div>
 <div class="container">
-    <div class="admin-container" fxLayout='column' fxFlexAlign='center center' [ngStyle.lt-md]="{'padding':'3rem'}"
-        [ngStyle.lt-sm]="{'padding':'1.5rem'}">
-        <div class="header" [ngStyle.lt-md]="{'font-size':'1.5rem', 'line-height':'2.5rem'}"
-            fxLayoutAlign.lt-sm='center center' fxLayout.lt-sm='column'>
-            <span>Competitive Examination</span>
-        </div>
-        <div class="description"
-            [ngStyle.lt-md]="{'font-size':'0.8rem','text-align': 'justify', 'line-height': '1.5rem'}"
-            [ngStyle.lt-sm]="{'font-size':'0.6rem','text-align': 'justify', 'line-height': '1.5rem'}">
-            <div>
-                <span>
-                    Chhatrapati Shahu Maharaj Research Training and Human Development Institute (SARTHI), Pune 411004.
-                    Coaching Conducted by Competitive Examination Department and Meritorious Candidates.
-                </span>
-            </div>
-        </div>
-
-        <div class="audit-header" fxLayoutAlign='center center' [ngStyle.lt-md]="{ 'padding':'2px'}">
-            <span [ngStyle.lt-md]="{ 'font-size':'0.8rem', 'line-height':'1.4', 'padding':'10px'}">
-                Coaching Conducted by Competitive Examination Department and Meritorious Candidates
-            </span>
-        </div>
-        <table id="audit-report-table" ngClass.lt-md='table-small'>
-            <thead>
-                <tr>
-                    <th>Sr.No</th>
-                    <th>Coaching / Meritorious Candidates</th>
-                    <th>Download</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>SARTHI-MPSC Competitive Exam Coaching</td>
-                    <td class="download">
-                        <a href="../../assets/files/competitiveExams/SARTHI-MPSC Competitive Exam Coaching.pdf"
-                            download>
-                            Download
-                        </a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>SARTHI-UPSC Competitive Exam Coaching</td>
-                    <td class="download">
-                        <a href="../../assets/files/competitiveExams/SARTHI-UPSC Competitive Exam Coaching.pdf"
-                            download>
-                            Download
-                        </a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>
-                        SARTHI UGC-NET & CSIR-UGC-NET & MH-SET 2019-20
-                    </td>
-                    <td class="download">
-                        <a href="../../assets/files/competitiveExams/SARTHI UGC-NET&CSIR-UGC-NET&MH-SET 2019-20.pdf"
-                            download>
-                            Download
-                        </a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>4</td>
-                    <td>MPSC Merit Congratulatory Letters</td>
-                    <td class="download">
-                        <a href="../../assets/files/competitiveExams/MPSC Merit Congratulatory Letters.pdf" download>
-                            Download
-                        </a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>5</td>
-                    <td>UPSC MPSC Meritorious Candidates</td>
-                    <td class="download">
-                        <a href="../../assets/files/competitiveExams/UPSC MPSC Meritorious Candidates.pdf" download>
-                            Download
-                        </a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>6</td>
-                    <td>UGC NET-MH SET Meritorious Candidates</td>
-                    <td class="download">
-                        <a href="../../assets/files/competitiveExams/UGC NET-MH SET Meritorius Candidates.pdf" download>
-                            Download
-                        </a>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+  <div class="admin-container" fxLayout='column' fxFlexAlign='center center' [ngStyle.lt-md]="{'padding':'3rem'}"
+    [ngStyle.lt-sm]="{'padding':'1.5rem'}">
+    <div class="header" [ngStyle.lt-md]="{'font-size':'1.5rem', 'line-height':'2.5rem'}"
+      fxLayoutAlign.lt-sm='center center' fxLayout.lt-sm='column'>
+      <span>Competitive Examination</span>
     </div>
+    <div class="description" [ngStyle.lt-md]="{'font-size':'0.8rem','text-align': 'justify', 'line-height': '1.5rem'}"
+      [ngStyle.lt-sm]="{'font-size':'0.6rem','text-align': 'justify', 'line-height': '1.5rem'}">
+      <div>
+        <span>
+          Chhatrapati Shahu Maharaj Research Training and Human Development Institute (SARTHI), Pune 411004.
+          Coaching Conducted by Competitive Examination Department and Meritorious Candidates.
+        </span>
+      </div>
+    </div>
+
+    <div class="audit-header" fxLayoutAlign='center center' [ngStyle.lt-md]="{ 'padding':'2px'}">
+      <span [ngStyle.lt-md]="{ 'font-size':'0.8rem', 'line-height':'1.4', 'padding':'10px'}">
+        Coaching Conducted by Competitive Examination Department and Meritorious Candidates
+      </span>
+    </div>
+    <table id="audit-report-table" ngClass.lt-md='table-small'>
+      <thead>
+        <tr>
+          <th>Sr.No</th>
+          <th>Coaching / Meritorious Candidates</th>
+          <th>Download</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>SARTHI-MPSC Competitive Exam Coaching</td>
+          <td class="download">
+            <a href="../../assets/files/competitiveExams/SARTHI-MPSC Competitive Exam Coaching.pdf" download>
+              Download
+            </a>
+          </td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>SARTHI-UPSC Competitive Exam Coaching</td>
+          <td class="download">
+            <a href="../../assets/files/competitiveExams/SARTHI-UPSC Competitive Exam Coaching.pdf" download>
+              Download
+            </a>
+          </td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>
+            SARTHI UGC-NET & CSIR-UGC-NET & MH-SET 2019-20
+          </td>
+          <td class="download">
+            <a href="../../assets/files/competitiveExams/SARTHI UGC-NET&CSIR-UGC-NET&MH-SET 2019-20.pdf" download>
+              Download
+            </a>
+          </td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>MPSC Merit Congratulatory Letters</td>
+          <td class="download">
+            <a href="../../assets/files/competitiveExams/MPSC Merit Congratulatory Letters.pdf" download>
+              Download
+            </a>
+          </td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>UPSC MPSC Meritorious Candidates</td>
+          <td class="download">
+            <a href="../../assets/files/competitiveExams/UPSC MPSC Meritorious Candidates.pdf" download>
+              Download
+            </a>
+          </td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td>UGC NET-MH SET Meritorious Candidates</td>
+          <td class="download">
+            <a href="../../assets/files/competitiveExams/UGC NET-MH SET Meritorius Candidates.pdf" download>
+              Download
+            </a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 
 </div>

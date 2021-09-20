@@ -1,125 +1,106 @@
-<div class="navItems" [ngStyle.lt-sm]="{'top':'10%'}" [ngStyle.lt-md]="{'top':'15%'}">
-    <div class="header-text" fxLayout="column"
-        [ngStyle.lt-md]="{ 'line-height':'0', 'font-size':'2rem', 'margin-bottom':'1rem'}">
-        <div>
-            <span [ngStyle.lt-md]="{'font-size':'2rem', 'margin-top':'0'}">Departments</span>
-        </div>
-        <div>
-            <img alt="line" src="../../assets/images/line.png ">
-        </div>
-    </div>
-    <div class="sub-text" [ngStyle.lt-sm]="{ 'line-height':'2rem', 'font-size':'1rem', 'max-width':'100%'}">
-        <span>
-            Sed ut perspiciatis omnis iste natus error sit accusantium doloremque Sed ut perspiciatis omnis iste natus
-            error sit
-            accusantium doloremque
-        </span>
-    </div>
-</div>
 <div class="container">
-    <div class="admin-container" fxLayout='column' fxFlexAlign='center center' [ngStyle.lt-md]="{'padding':'3rem'}"
-        [ngStyle.lt-sm]="{'padding':'1.5rem'}">
-        <div class="header" [ngStyle.lt-md]="{'font-size':'1.5rem', 'line-height':'2.5rem'}"
-            fxLayoutAlign.lt-sm='center center' fxLayout.lt-sm='column'>
-            <span>Information Technology (IT)</span>
-        </div>
-        <div class="description"
-            [ngStyle.lt-md]="{'font-size':'0.8rem','text-align': 'justify', 'line-height': '1.5rem'}"
-            [ngStyle.lt-sm]="{'font-size':'0.6rem','text-align': 'justify', 'line-height': '1.5rem'}">
-            <div>
-                <span>
-                    Chhatrapati Shahu Maharaj Research Training and Human Development Institute (SARTHI), Pune 411004.
-                    The Following List of items are available under Information Technology (IT) department.
-                </span>
-            </div>
-        </div>
-
-        <div class="audit-header" fxLayoutAlign='center center' [ngStyle.lt-md]="{ 'padding':'2px'}">
-            <span [ngStyle.lt-md]="{ 'font-size':'0.8rem', 'line-height':'1.4', 'padding':'10px'}">
-                Items available under Information Technology (IT) department
-            </span>
-        </div>
-        <table id="audit-report-table" ngClass.lt-md='table-small'>
-            <thead>
-                <tr>
-                    <th>Sr.No</th>
-                    <th>Coaching / Meritorious Candidates</th>
-                    <th>Qty</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>Desktop</td>
-                    <td>52</td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>Lenova Laptop</td>
-                    <td>4</td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>DELL Laptop</td>
-                    <td>1</td>
-                </tr>
-                <tr>
-                    <td>4</td>
-                    <td>Printer (HP)</td>
-                    <td>10</td>
-                </tr>
-                <tr>
-                    <td>5</td>
-                    <td>Printer (Kyocera) Multi-Function</td>
-                    <td>2</td>
-                </tr>
-                <tr>
-                    <td>6</td>
-                    <td>Projector Screen</td>
-                    <td>1</td>
-                </tr>
-                <tr>
-                    <td>7</td>
-                    <td>Projector</td>
-                    <td>1</td>
-                </tr>
-                <tr>
-                    <td>8</td>
-                    <td>Camera</td>
-                    <td>3</td>
-                </tr>
-                <tr>
-                    <td>9</td>
-                    <td>Camera Lens</td>
-                    <td>8</td>
-                </tr>
-                <tr>
-                    <td>10</td>
-                    <td>Hard Disk (Seagate)</td>
-                    <td>9</td>
-                </tr>
-                <tr>
-                    <td>11</td>
-                    <td>Hard Disk (LaCie)</td>
-                    <td>5</td>
-                </tr>
-                <tr>
-                    <td>12</td>
-                    <td>Fire Extinguisher</td>
-                    <td>15</td>
-                </tr>
-                <tr>
-                    <td>13</td>
-                    <td>Biometric Machine</td>
-                    <td>1</td>
-                </tr>
-                <tr>
-                    <td>14</td>
-                    <td>Cctv camera</td>
-                    <td>30</td>
-                </tr>
-            </tbody>
-        </table>
+  <div class="admin-container" fxLayout='column' fxFlexAlign='center center' [ngStyle.lt-md]="{'padding':'3rem'}"
+    [ngStyle.lt-sm]="{'padding':'1.5rem'}">
+    <div class="header" [ngStyle.lt-md]="{'font-size':'1.5rem', 'line-height':'2.5rem'}"
+      fxLayoutAlign.lt-sm='center center' fxLayout.lt-sm='column'>
+      <span>Information Technology (IT)</span>
     </div>
+    <div class="description" [ngStyle.lt-md]="{'font-size':'0.8rem','text-align': 'justify', 'line-height': '1.5rem'}"
+      [ngStyle.lt-sm]="{'font-size':'0.6rem','text-align': 'justify', 'line-height': '1.5rem'}">
+      <div>
+        <span>
+          Chhatrapati Shahu Maharaj Research Training and Human Development Institute (SARTHI), Pune 411004.
+          The Following List of items are available under Information Technology (IT) department.
+        </span>
+      </div>
+    </div>
+
+    <div class="audit-header" fxLayoutAlign='center center' [ngStyle.lt-md]="{ 'padding':'2px'}">
+      <span [ngStyle.lt-md]="{ 'font-size':'0.8rem', 'line-height':'1.4', 'padding':'10px'}">
+        Items available under Information Technology (IT) department
+      </span>
+    </div>
+    <table id="audit-report-table" ngClass.lt-md='table-small'>
+      <thead>
+        <tr>
+          <th>Sr.No</th>
+          <th>Coaching / Meritorious Candidates</th>
+          <th>Qty</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>Desktop</td>
+          <td>52</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Lenova Laptop</td>
+          <td>4</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>DELL Laptop</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>Printer (HP)</td>
+          <td>10</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>Printer (Kyocera) Multi-Function</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td>Projector Screen</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td>Projector</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>8</td>
+          <td>Camera</td>
+          <td>3</td>
+        </tr>
+        <tr>
+          <td>9</td>
+          <td>Camera Lens</td>
+          <td>8</td>
+        </tr>
+        <tr>
+          <td>10</td>
+          <td>Hard Disk (Seagate)</td>
+          <td>9</td>
+        </tr>
+        <tr>
+          <td>11</td>
+          <td>Hard Disk (LaCie)</td>
+          <td>5</td>
+        </tr>
+        <tr>
+          <td>12</td>
+          <td>Fire Extinguisher</td>
+          <td>15</td>
+        </tr>
+        <tr>
+          <td>13</td>
+          <td>Biometric Machine</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>14</td>
+          <td>Cctv camera</td>
+          <td>30</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 
 </div>

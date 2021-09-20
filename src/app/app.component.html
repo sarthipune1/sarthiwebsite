@@ -1,6 +1,6 @@
 <app-header [route]="currentRoute"></app-header>
 <!-- <app-home></app-home> -->
-<app-subheader *ngIf="notHomeComponent"></app-subheader>
+<app-subheader *ngIf="notHomeComponent" [route]="currentRoute"></app-subheader>
 <router-outlet></router-outlet>
 <!-- <app-about-us></app-about-us> -->
 <app-footer></app-footer>
