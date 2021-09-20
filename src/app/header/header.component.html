@@ -1,93 +1,95 @@
 <div class="container">
-    <div class="language-banner" fxLayout="row" fxLayoutAlign="end center">
-        <span>Language:</span>
-        <a (click)="setLanguage('en')" [ngClass]="{'selected': getLanguage('en')}">
-            English
-        </a>
-        <a (click)="setLanguage('mr')" [ngClass]="{'selected': getLanguage('mr')}">
-            Marathi
-        </a>
+  <div class="language-banner" fxLayout="row" fxLayoutAlign="end center">
+    <span>Language:</span>
+    <a (click)="setLanguage('en')" [ngClass]="{'selected': getLanguage('en')}">
+      English
+    </a>
+    <a (click)="setLanguage('mr')" [ngClass]="{'selected': getLanguage('mr')}">
+      Marathi
+    </a>
+  </div>
+  <div class="m-header" fxHide.gt-sm>
+    <div class="icon-c" fxLayout="row" fxLayoutAlign="end center" ngClass.gt-sm="d-none">
+      <div class="menu-icon" (click)="setToggled()" [ngClass]="{'opacity': isToggled}">
+        <fa-icon class="icon" [icon]="faIcons.faBars"></fa-icon>
+      </div>
     </div>
-    <div class="m-header">
-        <div class="icon-c" fxLayout="row" fxLayoutAlign="end center" ngClass.gt-sm="d-none">
-            <div class="menu-icon" (click)="setToggled()" [ngClass]="{'opacity': isToggled}">
-                <fa-icon class="icon" [icon]="faIcons.faBars"></fa-icon>
-            </div>
+
+    <div class="m-header-container" [ngClass]="{'toggled': !isToggled}">
+      <div class="icon-c" fxLayout="row" fxLayoutAlign="end center" ngClass.gt-sm="d-none">
+        <div class="menu-icon" (click)="setToggled()">
+          <fa-icon class="icon orange" [icon]="faIcons.faTimes"></fa-icon>
         </div>
-
-
-
-        <div class="m-header-container" [ngClass]="{'toggled': !isToggled}">
-            <div class="icon-c" fxLayout="row" fxLayoutAlign="end center" ngClass.gt-sm="d-none">
-                <div class="menu-icon" (click)="setToggled()">
-                    <fa-icon class="icon" [icon]="faIcons.faTimes"></fa-icon>
-                </div>
-            </div>
-            <ul fxLayout="column" fxLayoutAlign="end end" (click)="setToggled()">
-                <li *ngFor="let item of menu" [ngClass]="{'active': item.path === route || route.startsWith(item.path)}">
-                    <a [routerLink]="item.path">{{getItem(item.name)}}</a>
-                    <ul *ngIf="item.sublist" class="sublist">
-                        <li *ngFor="let subitem of item.sublist">
-                            <a [routerLink]="subitem.path">{{getItem(subitem.name)}}</a>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
-        </div>
+      </div>
+      <ul fxLayout="column" fxLayoutAlign="end end" (click)="setToggled()">
+        <li *ngFor="let item of menu" [ngClass]="{'active': item.path === route || route.startsWith(item.path)}">
+          <a [routerLink]="item.path">{{getItem(item.name)}}</a>
+          <ul *ngIf="item.sublist" class="sublist">
+            <li *ngFor="let subitem of item.sublist">
+              <a [routerLink]="subitem.path">{{getItem(subitem.name)}}</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
     </div>
-    <div class="header-container" fxLayout.gt-sm="row" fxLayout="column">
-        <img alt="logo" class="header-bg header-logo" src="../../assets/images/emblem.png" [ngStyle.lt-sm]="{'padding': '25px'}">
-        <div fxLayout="column" style="width: 100%;">
-            <span class="banner-text" ngStyle.lt-md="color: #ff4e00;font-size: 1.2rem;line-height: 2rem;">
-                {{getItem(content.title)}}
-                <br>
-                <span ngStyle.lt-md="color: #ff4e00;font-size: 1.2rem;line-height: 2rem;">{{getItem(content.sarthi)}}</span>
-            </span>
-            <div class="blinking-lights">
-                शाहू विचारांना देवूया गती, साधूया सर्वांगीण प्रगती
-            </div>
-        </div>
-        <img alt="logo" class="header-bg header-logo" src="../../assets/images/sarthi_logo.png" [ngStyle.lt-sm]="{'padding': '25px'}">
+  </div>
+  <div class="header-container" fxLayout.gt-sm="row" fxLayout="column">
+    <img alt="logo" class="header-bg header-logo" src="../../assets/images/emblem.png"
+      [ngStyle.lt-sm]="{'padding': '25px'}">
+    <div fxLayout="column" style="width: 100%;">
+      <span class="banner-text" ngStyle.lt-md="color: #ff4e00;font-size: 1.2rem;line-height: 2rem;">
+        {{getItem(content.title)}}
+        <br>
+        <span ngStyle.lt-md="color: #ff4e00;font-size: 1.2rem;line-height: 2rem;">{{getItem(content.sarthi)}}</span>
+      </span>
+      <div class="blinking-lights">
+        शाहू विचारांना देवूया गती, साधूया सर्वांगीण प्रगती
+      </div>
     </div>
-    <div class="marquee">
-        <fa-icon class="icon" [icon]="faIcons.faHotjar"></fa-icon>
-        <a>
-            सारथी संस्था - भविष्यकालीन योजनांचा आराखडा ( व्हिजन
+    <img alt="logo" class="header-bg header-logo" src="../../assets/images/sarthi_logo.png"
+      [ngStyle.lt-sm]="{'padding': '25px'}">
+  </div>
+  <div class="marquee">
+    <fa-icon class="icon" [icon]="faIcons.faHotjar"></fa-icon>
+    <a>
+      सारथी संस्था - भविष्यकालीन योजनांचा आराखडा ( व्हिजन
       डॉक्यूमेंट ) २०३० तयार करण्याबाबतची प्रश्नावली
-        </a>
-        <fa-icon class="icon" [icon]="faIcons.faHotjar"></fa-icon>
-        <a>
-            MAHARASHTRA ENGINEERING SERVICES (MES) 2021 PROGRAM
+    </a>
+    <fa-icon class="icon" [icon]="faIcons.faHotjar"></fa-icon>
+    <a>
+      MAHARASHTRA ENGINEERING SERVICES (MES) 2021 PROGRAM
       मुदतवाढ
-        </a>
-        <fa-icon class="icon" [icon]="faIcons.faHotjar"></fa-icon>
-        <a>
-            CJJD & JMFC, MPSC (Non-Gazetted) & SSC (Non- Gazetted)
+    </a>
+    <fa-icon class="icon" [icon]="faIcons.faHotjar"></fa-icon>
+    <a>
+      CJJD & JMFC, MPSC (Non-Gazetted) & SSC (Non- Gazetted)
       Coaching Program मुदतवाढ
-        </a>
-        <fa-icon class="icon" [icon]="faIcons.faHotjar"></fa-icon>
-        <a>
-            UPSC (Civil Services) 2022 Competitive Exam
+    </a>
+    <fa-icon class="icon" [icon]="faIcons.faHotjar"></fa-icon>
+    <a>
+      UPSC (Civil Services) 2022 Competitive Exam
       Coaching
-        </a>
+    </a>
+  </div>
+  <div class="navItems" fxHide.lt-md>
+    <div fxLayout.lt-sm="row" fxLayoutAlign="space-between center" fxLayoutAlign.lt-md="space-between start"
+      fxLayoutGap="2rem">
+      <ul class="d-flex" fxFlex="100" fxLayout="row" fxLayout.lt-md="column" fxLayoutAlign.lt-md="flex-end flex-end"
+        fxFlexAlign="flex-end">
+        <li *ngFor="let item of menu" [ngClass]="{'active': item.path === route || route.startsWith(item.path)}">
+          <a *ngIf="item.path" [routerLink]="item.path">
+            {{getItem(item.name)}}
+          </a>
+          <a *ngIf="item.url" [href]="item.url" target="_blank">
+            {{getItem(item.name)}}
+          </a>
+          <ul *ngIf="item.sublist" class="sublist">
+            <li *ngFor="let subitem of item.sublist">
+              <a [routerLink]="subitem.path">{{getItem(subitem.name)}}</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
     </div>
-    <div class="navItems" fxHide.lt-md>
-        <div fxLayout.lt-sm="row" fxLayoutAlign="space-between center" fxLayoutAlign.lt-md="space-between start" fxLayoutGap="2rem">
-            <ul fxLayout="row" fxLayout.lt-md="column" fxLayoutAlign.lt-md="flex-end flex-end" fxFlexAlign="flex-end">
-                <li *ngFor="let item of menu" [ngClass]="{'active': item.path === route || route.startsWith(item.path)}">
-                    <a *ngIf="item.path" [routerLink]="item.path">
-                        {{getItem(item.name)}}
-                    </a>
-                    <a *ngIf="item.url" [href]="item.url" target="_blank">
-                        {{getItem(item.name)}}
-                    </a>
-                    <ul *ngIf="item.sublist" class="sublist">
-                        <li *ngFor="let subitem of item.sublist">
-                            <a [routerLink]="subitem.path">{{getItem(subitem.name)}}</a>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
-        </div>
-    </div>
+  </div>
 </div>

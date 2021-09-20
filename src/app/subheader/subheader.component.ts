@@ -24,7 +24,6 @@ export class SubheaderComponent implements OnInit, OnChanges {
 	};
 	constructor() {}
 	ngOnChanges(changes: SimpleChanges): void {
-		console.log('Subheader', changes.route);
 		this.currentRoute = changes.route.currentValue;
 
 		if (this.currentRoute !== undefined) {
@@ -39,8 +38,6 @@ export class SubheaderComponent implements OnInit, OnChanges {
 				this.pageStats = currPageData;
 			});
 		}
-
-		console.log('Current Page Data', this.pageStats);
 	}
 
 	navBar = {
