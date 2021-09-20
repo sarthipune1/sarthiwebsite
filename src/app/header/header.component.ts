@@ -78,39 +78,68 @@ export class HeaderComponent implements OnInit, OnChanges {
 			sublist: [
 				{
 					name: {
+						en: 'Administration And Management',
+						mr: 'आस्थापना',
+					},
+					path: '/department/administration-and-management',
+				},
+				{
+					name: {
 						en: 'IT Department',
-						mr: 'माहिती तंत्रज्ञान विभाग (आयटी)',
+						mr: 'संगणक विभाग',
 					},
 					path: '/department/it',
 				},
 				{
 					name: {
-						en: 'Research',
-						mr: 'संशोधन विभाग',
+						en: 'Education Department',
+						mr: 'शिक्षण विभाग',
 					},
-					path: '/department/research',
+					path: '/department/education-department',
 				},
 				{
 					name: {
-						en: 'Competitive Examination',
-						mr: 'विविध स्पर्धा परिक्षा पूर्व तयारीसाठी कोचिंग व मार्गदर्शन विभाग',
+						en: 'Department of Coaching & Guidance of Various Competitive Examination',
+						mr: 'स्पर्धा परिक्षा विभाग',
 					},
 					path: '/department/competitive-exam',
 				},
 				{
 					name: {
+						en: 'Library Department',
+						mr: 'ग्रंथालय विभाग',
+					},
+					path: '/department/library-department',
+				},
+				{
+					name: {
 						en: 'Accounts',
-						mr: 'लेखा जोखा',
+						mr: 'लेखा / वित्त विभाग',
 					},
 					path: '/department/accounts',
 				},
 				{
 					name: {
-						en: 'Awards',
-						mr: 'पुरस्कार',
+						en: 'Statistical Department',
+						mr: 'सांख्यिकी विभाग',
 					},
-					path: '/department/awards',
+					path: '/department/statistics',
 				},
+				{
+					name: {
+						en: 'Research/Fellowship Department',
+						mr: 'संशोधन/अधिछात्रवृत्ती विभाग',
+					},
+					path: '/department/research',
+				},
+				{
+					name: {
+						en: 'Skill Developement Department',
+						mr: 'कौशल्य विकास विभाग',
+					},
+					path: '/department/skill-developement-department',
+				},
+
 				{
 					name: {
 						en: 'Caste Certificate',
@@ -127,7 +156,6 @@ export class HeaderComponent implements OnInit, OnChanges {
 			},
 			path: '/notices',
 		},
-
 		{
 			name: {
 				en: 'Interactive E Application',
@@ -137,14 +165,29 @@ export class HeaderComponent implements OnInit, OnChanges {
 		},
 		{
 			name: {
-				en: 'Reports',
-				mr: 'अहवाल',
+				en: 'Memebership Login',
+				mr: 'सदस्यता लॉगिन',
 			},
-			path: '/reports',
+			url: 'http://sarthi-maharashtragov.in/eapp',
 		},
 		{
 			name: {
-				en: 'Gallery',
+				en: 'Awards',
+				mr: 'पुरस्कार',
+			},
+			path: '/awards',
+		},
+		{
+			name: {
+				en: 'Tender',
+				mr: 'निविदा',
+			},
+			path: '/awards',
+		},
+
+		{
+			name: {
+				en: 'Videos & Photo Gallery',
 				mr: 'छायाचित्रे',
 			},
 			path: '/gallery',
@@ -156,13 +199,13 @@ export class HeaderComponent implements OnInit, OnChanges {
 		// 	},
 		// 	path: '/rti',
 		// },
-		{
-			name: {
-				en: 'Board of Directors',
-				mr: 'संचालक मंडळ',
-			},
-			path: '/board-of-directors',
-		},
+		// {
+		// 	name: {
+		// 		en: 'Board of Directors',
+		// 		mr: 'संचालक मंडळ',
+		// 	},
+		// 	path: '/board-of-directors',
+		// },
 		{
 			name: {
 				en: 'Contact Us',

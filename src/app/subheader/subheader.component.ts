@@ -54,9 +54,21 @@ export class SubheaderComponent implements OnInit, OnChanges {
 				title: 'Research',
 				description: 'All the research goes here',
 			},
+			'administration-and-management': {
+				title: 'Administration And Management',
+				description: 'All the management stuffs here',
+			},
 			'competitive-exam': {
 				title: 'Competitive Exam',
 				description: 'All content about exams are below',
+			},
+			'education-department': {
+				title: 'Education Department',
+				description: 'All content about education are below',
+			},
+			'library-department': {
+				title: 'library-department',
+				description: 'All content about library are below',
 			},
 			accounts: {
 				title: 'Accounts',
@@ -75,9 +87,13 @@ export class SubheaderComponent implements OnInit, OnChanges {
 			title: 'Notices',
 			description: 'This will show notice description',
 		},
-		reports: {
-			title: 'Reports',
-			description: 'All the reports will be shown',
+		statistics: {
+			title: 'Statistics Department',
+			description: 'All the statistics will be shown',
+		},
+		'skill-developement-department': {
+			title: 'Skill Developement Department',
+			description: 'All the skill developement will be shown',
 		},
 		gallery: {
 			title: 'Gallery',

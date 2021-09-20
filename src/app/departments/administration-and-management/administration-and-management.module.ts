@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FlexModule, FlexLayoutModule } from '@angular/flex-layout';
 
 @NgModule({
-  declarations: [],
-  imports: [CommonModule, FlexLayoutModule, FlexModule],
+	declarations: [],
+	imports: [CommonModule, FlexLayoutModule, FlexModule],
 })
-export class DepartmentsModule {}
+export class AdministrationAndManagementModule {}

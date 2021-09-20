@@ -22,12 +22,11 @@ import { SubheaderComponent } from './subheader/subheader.component';
 import { HomeComponent } from './home/home.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
-import { DepartmentsComponent } from './departments/departments.component';
 import { NoticeComponent } from './notice/notice.component';
 import { PhotoGalleryComponent } from './photo-gallery/photo-gallery.component';
-import { StatisticsComponent } from './statistics/statistics.component';
+import { StatisticsComponent } from './departments/statistics/statistics.component';
 import { RouterModule } from '@angular/router';
-import { AccountsComponent } from './accounts/accounts.component';
+import { AccountsComponent } from './departments/accounts/accounts.component';
 import { EventsComponent } from './events/events.component';
 
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
@@ -37,16 +36,20 @@ import { MatCardModule } from '@angular/material/card';
 import { FormioModule } from '@formio/angular';
 import { BoardOfDirectorsComponent } from './board-of-directors/board-of-directors.component';
 import { MainObjectivesComponent } from './main-objectives/main-objectives.component';
-import { ResearchDepartmentComponent } from './research-department/research-department.component';
-import { CompetitiveExaminationDepartmentComponent } from './competitive-examination-department/competitive-examination-department.component';
-import { ItDepartmentComponent } from './it-department/it-department.component';
-import { WomenEmpowermentDepartmentComponent } from './women-empowerment-department/women-empowerment-department.component';
+import { ResearchDepartmentComponent } from './departments/research-department/research-department.component';
+import { CompetitiveExaminationDepartmentComponent } from './departments/competitive-examination-department/competitive-examination-department.component';
+import { ItDepartmentComponent } from './departments/it-department/it-department.component';
+import { WomenEmpowermentDepartmentComponent } from './departments/women-empowerment-department/women-empowerment-department.component';
 import { CasteCertificateComponent } from './caste-certificate/caste-certificate.component';
 import { AwardsComponent } from './awards/awards.component';
 import { RtiComponent } from './rti/rti.component';
+import { AdministrationAndManagementComponent } from './departments/administration-and-management/administration-and-management.component';
 
 //CKEditor
 import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
+import { EducationDepartmentComponent } from './departments/education-department/education-department.component';
+import { LibraryDepartmentComponent } from './departments/library-department/library-department.component';
+import { SkillDevelopementDepartmentComponent } from './departments/skill-developement-department/skill-developement-department.component';
 
 @NgModule({
 	declarations: [
@@ -58,7 +61,6 @@ import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
 		SubheaderComponent,
 		EventsComponent,
 		AboutUsComponent,
-		DepartmentsComponent,
 		NoticeComponent,
 		PhotoGalleryComponent,
 		ContactUsComponent,
@@ -72,6 +74,10 @@ import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
 		CasteCertificateComponent,
 		AwardsComponent,
 		RtiComponent,
+		AdministrationAndManagementComponent,
+		EducationDepartmentComponent,
+		LibraryDepartmentComponent,
+		SkillDevelopementDepartmentComponent,
 	],
 	imports: [
 		BrowserModule,
@@ -94,19 +100,26 @@ import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
 			{ path: '', component: HomeComponent },
 			{ path: 'about-us', component: AboutUsComponent },
 			{ path: 'contact-us', component: ContactUsComponent },
-			{ path: 'departments', component: DepartmentsComponent },
 			{ path: 'notices', component: NoticeComponent },
 			{ path: 'gallery', component: PhotoGalleryComponent },
 			{
 				path: 'board-of-directors',
 				component: BoardOfDirectorsComponent,
 			},
-			{ path: 'reports', component: StatisticsComponent },
+			{ path: 'department/statistics', component: StatisticsComponent },
 			// { path: 'events', component: EventsComponent },
 			{ path: 'main-objectives', component: MainObjectivesComponent },
 			{
 				path: 'department/it',
 				component: ItDepartmentComponent,
+			},
+			{
+				path: 'department/library-department',
+				component: LibraryDepartmentComponent,
+			},
+			{
+				path: 'department/administration-and-management',
+				component: AdministrationAndManagementComponent,
 			},
 			{
 				path: 'department/research',
@@ -121,12 +134,20 @@ import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
 				component: AccountsComponent,
 			},
 			{
+				path: 'department/skill-developement-department',
+				component: SkillDevelopementDepartmentComponent,
+			},
+			{
 				path: 'department/awards',
 				component: AwardsComponent,
 			},
 			{
 				path: 'department/caste-certificate',
 				component: CasteCertificateComponent,
+			},
+			{
+				path: 'department/education-department',
+				component: EducationDepartmentComponent,
 			},
 			{
 				path: 'rti',
