@@ -199,13 +199,13 @@ export class HeaderComponent implements OnInit, OnChanges {
 		// 	},
 		// 	path: '/rti',
 		// },
-		// {
-		// 	name: {
-		// 		en: 'Board of Directors',
-		// 		mr: 'संचालक मंडळ',
-		// 	},
-		// 	path: '/board-of-directors',
-		// },
+		{
+			name: {
+				en: 'Board of Directors',
+				mr: 'संचालक मंडळ',
+			},
+			path: '/board-of-directors',
+		},
 		{
 			name: {
 				en: 'Contact Us',
