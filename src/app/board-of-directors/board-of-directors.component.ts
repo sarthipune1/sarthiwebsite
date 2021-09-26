@@ -9,7 +9,7 @@ export class BoardOfDirectorsComponent implements OnInit {
 	bod = [
 		{
 			image: 'photo',
-			name: 'Shri. Ajit Nimbalkar (IAS)',
+			name: 'Shri. Ajit Nimbalkar (RETD)',
 			designation: 'Chairman',
 		},
 		{
@@ -19,12 +19,12 @@ export class BoardOfDirectorsComponent implements OnInit {
 		},
 		{
 			image: 'photo2',
-			name: 'Shri. Umakant Dangat (IAS)',
+			name: 'Shri. Umakant Dangat (RETD)',
 			designation: 'Director',
 		},
 		{
 			image: 'photo3',
-			name: 'Shri. Navnath Pasalkar (IAS)',
+			name: 'Shri. Navnath Pasalkar',
 			designation: 'Director',
 		},
 		{
