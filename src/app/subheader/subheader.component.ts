@@ -74,14 +74,15 @@ export class SubheaderComponent implements OnInit, OnChanges {
 				title: 'Accounts',
 				description: 'Accounts section below',
 			},
-			awards: {
-				title: 'Awards',
-				description: 'All the awards given',
-			},
 			'caste-certificate': {
 				title: 'Caste Certificate',
 				description: 'Details about caste certificate are added below',
 			},
+		},
+
+		awards: {
+			title: 'Awards',
+			description: 'All the awards given',
 		},
 		notices: {
 			title: 'Notices',

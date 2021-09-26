@@ -1,45 +1,43 @@
 <div class="container">
-  <div class="admin-container" fxLayout='column' fxFlexAlign='center center' [ngStyle.lt-md]="{'padding':'3rem'}"
-    [ngStyle.lt-sm]="{'padding':'1.5rem'}">
-    <div class="header" [ngStyle.lt-md]="{'font-size':'1.5rem', 'line-height':'2.5rem'}"
-      fxLayoutAlign.lt-sm='center center' fxLayout.lt-sm='column'>
-      <span>Caste</span>
+    <div class="admin-container" fxLayout='column' fxFlexAlign='center center' [ngStyle.lt-md]="{'padding':'3rem'}" [ngStyle.lt-sm]="{'padding':'1.5rem'}">
+        <div class="header" [ngStyle.lt-md]="{'font-size':'1.5rem', 'line-height':'2.5rem'}" fxLayoutAlign.lt-sm='center center' fxLayout.lt-sm='column'>
+            <span>Caste Certificate</span>
+        </div>
+        <div class="audit-header" fxLayoutAlign='center center' [ngStyle.lt-md]="{ 'padding':'2px'}">
+            <span [ngStyle.lt-md]="{ 'font-size':'0.6rem', 'line-height':'1.4', 'padding':'10px'}">
+                Information to obtained Maratha, Kunbi, Kunbi-Maratha, Maratha-Kunbi Caste Certificate
+            </span>
+        </div>
+        <table id="audit-report-table" ngClass.lt-md='table-small'>
+            <thead>
+                <tr>
+                    <th>Sr.No</th>
+                    <th>Title</th>
+                    <th>Link for Information</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>
+                        B Maratha, Kunbi, Kunbi-Maratha, Maratha-Kunbi Caste Certificate
+                    </td>
+                    <td class="download">
+                        <a href="../../assets/files/casteCertificate/Maratha-Caste-Certificate_02_07_2020_0.pdf" download>
+                            Download
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Other Certificates</td>
+                    <td class="download">
+                        <a href="../../assets/files/casteCertificate/Other-Certificates_02_07_2020_0.pdf" download>
+                            Download
+                        </a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
     </div>
-    <div class="audit-header" fxLayoutAlign='center center' [ngStyle.lt-md]="{ 'padding':'2px'}">
-      <span [ngStyle.lt-md]="{ 'font-size':'0.6rem', 'line-height':'1.4', 'padding':'10px'}">
-        Information to obtained Maratha, Kunbi, Kunbi-Maratha, Maratha-Kunbi Caste Certificate
-      </span>
-    </div>
-    <table id="audit-report-table" ngClass.lt-md='table-small'>
-      <thead>
-        <tr>
-          <th>Sr.No</th>
-          <th>Title</th>
-          <th>Link for Information</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>1</td>
-          <td>
-            B Maratha, Kunbi, Kunbi-Maratha, Maratha-Kunbi Caste Certificate
-          </td>
-          <td class="download">
-            <a href="../../assets/files/casteCertificate/Maratha-Caste-Certificate_02_07_2020_0.pdf" download>
-              Download
-            </a>
-          </td>
-        </tr>
-        <tr>
-          <td>2</td>
-          <td>Other Certificates</td>
-          <td class="download">
-            <a href="../../assets/files/casteCertificate/Other-Certificates_02_07_2020_0.pdf" download>
-              Download
-            </a>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
 </div>

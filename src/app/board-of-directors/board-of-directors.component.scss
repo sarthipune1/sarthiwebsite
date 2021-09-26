@@ -116,11 +116,7 @@
         font-weight: 700;
         line-height: 8vw;
         text-align: center;
-        &::after {
-            content: "Directors";
-            color: #f67e22;
-            margin-left: 10px;
-        }
+        color: #f67e22;
     }
 }
 

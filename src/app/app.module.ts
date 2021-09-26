@@ -138,16 +138,16 @@ import { SkillDevelopementDepartmentComponent } from './departments/skill-develo
 				component: SkillDevelopementDepartmentComponent,
 			},
 			{
-				path: 'department/awards',
-				component: AwardsComponent,
-			},
-			{
 				path: 'department/caste-certificate',
 				component: CasteCertificateComponent,
 			},
 			{
 				path: 'department/education-department',
 				component: EducationDepartmentComponent,
+			},
+			{
+				path: 'awards',
+				component: AwardsComponent,
 			},
 			{
 				path: 'rti',
