@@ -52,6 +52,10 @@ export class HeaderComponent implements OnInit, OnChanges {
 			en: '(SARTHI)',
 			mr: '(सारथी)',
 		},
+		slogan: {
+			en: '(An Autonomous Institute of Govt. of Maharashtra)',
+			mr: '(महाराष्ट्र शासनाची स्वायत्त संस्था)',
+		},
 	};
 
 	menu = [

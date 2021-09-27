@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { OwlOptions } from 'ngx-owl-carousel-o';
 
 @Component({
@@ -7,6 +7,7 @@ import { OwlOptions } from 'ngx-owl-carousel-o';
 	styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements OnInit {
+	videoPlayerEnded: boolean = false;
 	customOptions: OwlOptions = {
 		loop: true,
 		mouseDrag: true,
@@ -19,6 +20,7 @@ export class HomeComponent implements OnInit {
 		fluidSpeed: true,
 		lazyLoad: true,
 		navText: ['', ''],
+		animateOut: 'fadeOut',
 		responsive: {
 			0: {
 				items: 1,
@@ -175,6 +177,18 @@ export class HomeComponent implements OnInit {
 			},
 		},
 	};
+
+	@ViewChild('videoPlayer') videoplayer: ElementRef;
+
+	toggleVideo(event: any) {
+		this.videoplayer.nativeElement.play();
+	}
+
+	hideVideo() {
+		console.log('hidevideo');
+
+		this.videoPlayerEnded = true;
+	}
 
 	constructor() {}
 
