@@ -100,7 +100,6 @@
 				color: white;
 			}
 			.event-time {
-				//background-color: #F3F3F31F;
 				background-color: rgba(243, 243, 243, 0.12);
 			}
 		}
@@ -133,8 +132,8 @@
 
 .notice-date {
 	background-color: white;
-	height: 119px;
-	width: 128px;
+	height: 100px;
+	width: 100px;
 	border-radius: 10px;
 	margin-right: 20px;
 	line-height: 40px;
@@ -159,8 +158,8 @@
 
 .event-details {
 	font-weight: 600;
-	font-size: 22px;
-	padding: 10px;
+	font-size: 1rem;
+	padding: 10px 0;
 	line-height: 30px;
 }
 
@@ -243,15 +242,14 @@
 }
 
 .main-objectives {
-	margin-bottom: 4rem;
 	span {
-		font-size: 4rem;
+		font-size: 3rem;
 		font-weight: 700;
 	}
 }
 
 .main-objectives-container {
-	padding: 4rem 12.5vw 6vw 14.5vw;
+	padding: 2rem 12.5vw 6vw 14.5vw;
 }
 
 .objective-description {
@@ -419,7 +417,7 @@ div.owl-nav {
 	border: #c0c0c033 solid 1px;
 	border-radius: 15px;
 	box-shadow: 0px 10px 15px 5px #e5e5e5;
-	// padding: 1rem 3.5rem;
+	padding: 20px;
 	height: 100%;
 	img {
 		width: 8.5rem;

@@ -117,7 +117,7 @@ export class HomeComponent implements OnInit {
 			image: 'pwd_minister.jpg',
 			name: {
 				en: 'Shri Ashok Chavan',
-				mr: 'श्री अशोक चवन',
+				mr: 'श्री अशोक चव्हाण',
 			},
 			position: {
 				en: "Hon'ble PWD Minister",

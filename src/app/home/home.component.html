@@ -79,8 +79,7 @@
 <div class="sub-container">
   <div class="about-container">
     <div class="about-title" fxLayoutGap="15px">
-      <span style="color: white">{{getItem(content.about)}}</span>
-      <span style="color:#f67e22">{{getItem(content.sarthi)}}</span>
+      <span style="color: #f67e22">{{getItem(content.about)}} {{getItem(content.sarthi)}}</span>
     </div>
     <div class="about-description">{{getItem(content.description)}}</div>
     <div class="read-more" fxLayoutAlign="start center">
@@ -95,8 +94,8 @@
   </div>
 </div>
 <!-- Adding d-none to hide notices -->
-<div [ngStyle.lt-md]="{'height': 'auto', 'width': '85%'}" [ngStyle]="{'height': '40rem'}" class="main-container"
-  fxLayout="row" fxLayout.lt-md="column" fxLayoutAlign="space-evenly center" fxLayoutGap="0px" fxLayoutGap.lt-md="40px">
+<div [ngStyle.lt-md]="{'height': 'auto'}" [ngStyle]="{'height': '40rem'}" class="main-container" fxLayout="row"
+  fxLayout.lt-md="column" fxLayoutAlign="space-evenly center" fxLayoutGap="0px" fxLayoutGap.lt-md="40px">
   <div class="notice-main-container" fxFlex="45" fxLayout="column">
     <div class="notice-header">
       <span>Events</span>
@@ -117,7 +116,7 @@
     </div>
   </div>
   <div class="Announcements-container" fxFlex="45" fxFlex.lt-md="90">
-    <div class="Announcements-header">
+    <div class="notice-header">
       <span>Announcements</span>
     </div>
     <div fxLayout.lt-md="column" fxLayoutGap="50px" class="notice-details-container">
@@ -137,7 +136,7 @@
     </div>
   </div>
 </div>
-<div class="main-objectives-container" fxLayout="column" fxLayoutGap="4rem">
+<div class="main-objectives-container" fxLayout="column" fxLayoutGap="3rem">
   <div class="main-objectives" fxLayoutAlign="center">
     <span>{{getItem(content.objectives.main)}}</span>
     <span style="margin-left: 1.5vw;color: #f67e22;">{{getItem(content.objectives.title)}}</span>

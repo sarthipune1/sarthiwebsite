@@ -45,8 +45,8 @@ export class HeaderComponent implements OnInit, OnChanges {
 
 	content = {
 		title: {
-			en: 'Chhatrapati Shahu Maharaj Research, Training and Human Development Institute',
-			mr: 'छत्रपती शाहू महाराज संशोधन, प्रशिक्षण व मानव विकास संस्था',
+			en: 'Chhatrapati Shahu Maharaj Research, Training and Human Development Institute (SARTHI)',
+			mr: 'छत्रपती शाहू महाराज संशोधन, प्रशिक्षण व मानव विकास संस्था (सारथी)',
 		},
 		sarthi: {
 			en: '(SARTHI)',
