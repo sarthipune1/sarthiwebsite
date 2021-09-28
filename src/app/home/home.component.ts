@@ -22,6 +22,7 @@ import {
 	faTimes,
 } from '@fortawesome/free-solid-svg-icons';
 import { faPhoenixFramework } from '@fortawesome/free-brands-svg-icons';
+import obj from '../../assets/data/objectives';
 @Component({
 	selector: 'app-home',
 	templateUrl: './home.component.html',
@@ -200,7 +201,7 @@ export class HomeComponent implements OnInit {
 		{
 			icon: faSchool,
 			name: {
-				en: 'Education,',
+				en: 'Education',
 				mr: 'शिक्षण',
 			},
 		},
@@ -228,7 +229,7 @@ export class HomeComponent implements OnInit {
 		{
 			icon: faChild,
 			name: {
-				en: 'Youth Leadership/ Development',
+				en: 'Youth Leadership / Development',
 				mr: 'युवा नेतृत्व/ विकास',
 			},
 		},
@@ -289,76 +290,12 @@ export class HomeComponent implements OnInit {
 			},
 		},
 	];
-	objectiveContents = {
-		'Accounts & Finance': [
-			`To study and understand the issues related to social, educational & economic
-            development of the members/ families of Maratha, Kunbi, Kunbi Maratha,
-            Maratha Kunbi (herein after referred to as ‘the Target Groups’) and to
-            suggest various measures for the same to the government; to develop and
-            maintain the Chhatrapati Shahu Maharaj Research, Training and Human
-            Development Institute (SARTHI) as a premier research, training and human
-            development institute in India and to undertake various research, training,
-            human development and other activities for social, educational, economic and
-            cultural development of the Target Groups.`,
-			`To study and understand the issues related to social, educational & economic
-            development of the members/ families of Maratha, Kunbi, Kunbi Maratha,
-            Maratha Kunbi (herein after referred to as ‘the Target Groups’) and to
-            suggest various measures for the same to the government; to develop and
-            maintain the Chhatrapati Shahu Maharaj Research, Training and Human
-            Development Institute (SARTHI) as a premier research, training and human
-            development institute in India and to undertake various research, training,
-            human development and other activities for social, educational, economic and
-            cultural development of the Target Groups.`,
-			`To study and understand the issues related to social, educational & economic
-            development of the members/ families of Maratha, Kunbi, Kunbi Maratha,
-            Maratha Kunbi (herein after referred to as ‘the Target Groups’) and to
-            suggest various measures for the same to the government; to develop and
-            maintain the Chhatrapati Shahu Maharaj Research, Training and Human
-            Development Institute (SARTHI) as a premier research, training and human
-            development institute in India and to undertake various research, training,
-            human development and other activities for social, educational, economic and
-            cultural development of the Target Groups.`,
-			`To study and understand the issues related to social, educational & economic
-            development of the members/ families of Maratha, Kunbi, Kunbi Maratha,
-            Maratha Kunbi (herein after referred to as ‘the Target Groups’) and to
-            suggest various measures for the same to the government; to develop and
-            maintain the Chhatrapati Shahu Maharaj Research, Training and Human
-            Development Institute (SARTHI) as a premier research, training and human
-            development institute in India and to undertake various research, training,
-            human development and other activities for social, educational, economic and
-            cultural development of the Target Groups.`,
-			`To study and understand the issues related to social, educational & economic
-            development of the members/ families of Maratha, Kunbi, Kunbi Maratha,
-            Maratha Kunbi (herein after referred to as ‘the Target Groups’) and to
-            suggest various measures for the same to the government; to develop and
-            maintain the Chhatrapati Shahu Maharaj Research, Training and Human
-            Development Institute (SARTHI) as a premier research, training and human
-            development institute in India and to undertake various research, training,
-            human development and other activities for social, educational, economic and
-            cultural development of the Target Groups.`,
-			`To study and understand the issues related to social, educational & economic
-            development of the members/ families of Maratha, Kunbi, Kunbi Maratha,
-            Maratha Kunbi (herein after referred to as ‘the Target Groups’) and to
-            suggest various measures for the same to the government; to develop and
-            maintain the Chhatrapati Shahu Maharaj Research, Training and Human
-            Development Institute (SARTHI) as a premier research, training and human
-            development institute in India and to undertake various research, training,
-            human development and other activities for social, educational, economic and
-            cultural development of the Target Groups.`,
-			`To study and understand the issues related to social, educational & economic
-            development of the members/ families of Maratha, Kunbi, Kunbi Maratha,
-            Maratha Kunbi (herein after referred to as ‘the Target Groups’) and to
-            suggest various measures for the same to the government; to develop and
-            maintain the Chhatrapati Shahu Maharaj Research, Training and Human
-            Development Institute (SARTHI) as a premier research, training and human
-            development institute in India and to undertake various research, training,
-            human development and other activities for social, educational, economic and
-            cultural development of the Target Groups.`,
-		],
-	};
 
 	getObjectiveContent() {
-		return this.objectiveContents[this.currentObjective];
+		const objectives = obj[this.currentObjective];
+		console.log(objectives);
+
+		return objectives;
 	}
 
 	setCurrentObjectives(key: string) {
@@ -414,8 +351,12 @@ export class HomeComponent implements OnInit {
 		},
 	};
 
+	openModal(key: string) {
+		this.currentObjective = key;
+		this.toggleModal();
+	}
+
 	toggleModal() {
-		console.log('Toggling');
 		this.modalVisible = !this.modalVisible;
 	}
 
@@ -426,12 +367,12 @@ export class HomeComponent implements OnInit {
 	}
 
 	hideVideo() {
-		console.log('hidevideo');
-
 		this.videoPlayerEnded = true;
 	}
 
 	constructor() {}
 
-	ngOnInit(): void {}
+	ngOnInit(): void {
+		console.log(obj);
+	}
 }

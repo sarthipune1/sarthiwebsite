@@ -490,23 +490,63 @@ div.owl-nav {
     z-index: 9999;
     height: 100vh;
     width: 100vw;
+    transform: scale(0);
+    transition: all 0.5s ease;
     background-color: rgba($color: #000000, $alpha: 0.6);
+    &.active {
+        transform: scale(1);
+    }
     .modal-body {
         position: relative;
         height: 90vh;
         width: 80vw;
-        background-color: #f67e22;
-        padding: 2rem;
+        background-color: white;
+        padding: 3rem;
         border-radius: 20px;
-        color: white;
+        text-align: justify;
+        color: #f67e22;
         overflow: scroll;
         h1 {
             margin-bottom: 20px;
             font-weight: bold;
+            font-size: 2.5rem;
         }
         .rules {
             font-size: 1.2rem;
-            line-height: 2rem;
+            line-height: 1.8rem;
+            font-weight: 400;
+            color: #3e5063;
         }
     }
+}
+
+.objectives-card {
+    margin: 2rem 0;
+    transition: all 0.1s ease-in-out !important;
+    .item {
+        padding: 20px;
+        height: 100%;
+        margin: 30px;
+        border-radius: 10px;
+        color: #f67e22;
+        // color: rgba($color: #f67e22, $alpha: 1);
+        box-shadow: 0px 2px 4px -1px rgb(0 0 0 / 20%), 0px 4px 5px 0px rgb(0 0 0 / 14%), 0px 1px 10px 0px rgb(0 0 0 / 12%);
+        &:hover {
+            border: 2px solid #fb6003;
+            transform: scale(1.02);
+            transition: transform 0.2s;
+        }
+        .icon {
+            color: #f67e22;
+            margin-bottom: 10px;
+        }
+    }
+}
+
+.cross-icon {
+    position: fixed;
+    top: 7vh;
+    right: 11vw;
+    font-size: 2rem;
+    color: #f67e22;
 }

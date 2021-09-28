@@ -160,8 +160,8 @@
     <div class="objective-description" fxLayout="column">
         {{getItem(content.objectives.desc)}}
     </div>
-    <div class="maha-gov" fxLayout="row wrap" fxLayoutAlign="center center" fxLayout.lt-md="column">
-        <a (click)="toggleModal()" *ngFor="let item of objectives" class="item" style="width: 16rem;height: 7.5rem; cursor: pointer;" fxLayoutAlign="center center" fxLayout="column">
+    <div class="objectives-card " fxLayout="row wrap" fxLayoutAlign="center center" fxLayout.lt-md="column">
+        <a *ngFor="let item of objectives" (click)="openModal(item.name.en)" class="item" style="width: 17rem;height: 8.5rem; cursor: pointer;" fxLayoutAlign="center center" fxLayout="column">
             <fa-icon class="icon" [icon]="item.icon"></fa-icon>
             <div class="contents" fxLayout="column">
                 <span class="name">{{getItem(item.name)}}</span>
@@ -238,14 +238,14 @@
         </div>
     </ng-template>
 </owl-carousel-o>
-<div [ngStyle]="{'display': modalVisible ? 'flex' : 'none'}" class="modal-container" fxLayoutAlign="center center">
+<div [class.active]="modalVisible" class="modal-container" fxLayoutAlign="center center">
     <div class="modal-body" fxLayout="column" fxLayoutAlign="start center">
         <h1>{{currentObjective}}</h1>
         <div class="rules" style="margin-bottom: 2rem;" *ngFor="let item of getObjectiveContent()">
             {{item}}
         </div>
         <a (click)="toggleModal()" style="cursor: pointer;">
-            <fa-icon style="position: absolute;top:15px; right:15px ; font-size: 2rem;" [icon]="faIcons.faTimes"></fa-icon>
+            <fa-icon class="cross-icon" [icon]="faIcons.faTimes"></fa-icon>
         </a>
     </div>
 </div>
