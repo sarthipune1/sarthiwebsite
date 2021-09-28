@@ -298,12 +298,22 @@ export class HomeComponent implements OnInit {
 		return objectives;
 	}
 
+	isArray() {
+		const isArray = Array.isArray(this.getObjectiveContent());
+		console.log('isArray', isArray);
+		return isArray;
+	}
+
 	setCurrentObjectives(key: string) {
 		this.currentObjective = key;
 	}
-	getItem(key: object) {
+	getItem(key: object): string {
 		const l = localStorage.getItem('lang');
 		return key[l];
+	}
+
+	getObjectKeys(obj: object): string[] {
+		return Object.keys(obj);
 	}
 
 	content = {
