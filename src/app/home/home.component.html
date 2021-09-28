@@ -160,30 +160,17 @@
     <div class="objective-description " fxLayout="column ">
         {{getItem(content.objectives.desc)}}
     </div>
-    <div class="skill-container " fxFlex="100 " fxLayout="row " fxLayoutAlign="space-between " fxLayoutAlign.gt-md="space-around center " fxLayout.lt-lg="column " fxLayoutGap.lt-lg="4rem " fxLayoutGap="2rem ">
-        <div fxLayout="row " fxLayout.lt-lg="column " fxFlex="80 " fxLayoutAlign="space-between center " fxLayoutAlign.lt-lg="flex-start ">
-            <ul>
-                <li>Communication skills</li>
-                <li>Soft skills</li>
-                <li>General awareness</li>
-                <li>
-                    Linguistic Competence including Proficiency in English
-                </li>
-            </ul>
-            <ul>
-                <li>Confidence building</li>
-                <li>Career guidance</li>
-                <li>Counselling</li>
-                <li>Skill aptitude</li>
-            </ul>
-        </div>
-        <div fxFlex="20 ">
-            <img alt="logo " class="information " src="../../assets/images/personal_information.png ">
-        </div>
+    <div class="maha-gov " fxLayout="row wrap" fxLayoutAlign="center center " fxLayout.lt-md="column ">
+        <a (click)="toggleModal()" *ngFor="let item of objectives " class="item " style="width: 16rem;height: 7.5rem; cursor: pointer;" fxLayoutAlign="center center " fxLayout="column ">
+            <fa-icon class="icon" [icon]="item.icon"></fa-icon>
+            <div class="contents " fxLayout="column ">
+                <span class="name ">{{getItem(item.name)}}</span>
+            </div>
+        </a>
     </div>
-    <div class="read-button " fxLayoutAlign="center center ">
+    <!-- <div class="read-button " fxLayoutAlign="center center ">
         <a href="# ">{{getItem(content.read_more)}}</a>
-    </div>
+    </div> -->
 </div>
 <owl-carousel-o [options]="customOptions " fxLayoutAlign="center " style="height: 12rem; overflow: hidden; ">
     <!-- <div> -->
@@ -251,3 +238,14 @@
         </div>
     </ng-template>
 </owl-carousel-o>
+<div [ngStyle]="{'display': modalVisible ? 'flex' : 'none'}" class="modal-container" fxLayoutAlign="center center">
+    <div class="modal-body" fxLayout="column" fxLayoutAlign="start center">
+        <h1>{{currentObjective}}</h1>
+        <div class="rules" style="margin-bottom: 2rem;" *ngFor="let item of getObjectiveContent() ">
+            {{item}}
+        </div>
+        <a (click)="toggleModal()" style="cursor: pointer;">
+            <fa-icon style="position: absolute;top:15px; right:15px ; font-size: 2rem;" [icon]="faIcons.faTimes"></fa-icon>
+        </a>
+    </div>
+</div>

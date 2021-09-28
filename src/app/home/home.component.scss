@@ -231,6 +231,10 @@
     }
 }
 
+.icon {
+    font-size: 3rem;
+}
+
 .img-container {
     position: absolute;
     right: 0;
@@ -254,7 +258,7 @@
 }
 
 .main-objectives-container {
-    padding: 2rem 12.5vw 6vw 14.5vw;
+    padding: 2rem 10.5vw 6vw 10.5vw;
 }
 
 .objective-description {
@@ -474,5 +478,35 @@ div.owl-nav {
         font-weight: 600;
         font-size: 1.25rem;
         margin-left: 10px;
+    }
+}
+
+.modal-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9999;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba($color: #000000, $alpha: 0.6);
+    .modal-body {
+        position: relative;
+        height: 90vh;
+        width: 80vw;
+        background-color: #f67e22;
+        padding: 2rem;
+        border-radius: 20px;
+        color: white;
+        overflow: scroll;
+        h1 {
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+        .rules {
+            font-size: 1.2rem;
+            line-height: 2rem;
+        }
     }
 }

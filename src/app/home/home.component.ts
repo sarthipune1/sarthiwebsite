@@ -1,12 +1,35 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { OwlOptions } from 'ngx-owl-carousel-o';
-
+import {
+	faFileInvoiceDollar,
+	faUserLock,
+	faTractor,
+	faLayerGroup,
+	faUsers,
+	faBook,
+	faSchool,
+	faSearchDollar,
+	faBookOpen,
+	faFemale,
+	faChild,
+	faBookReader,
+	faUpload,
+	faHandHoldingHeart,
+	faBuilding,
+	faSign,
+	faAd,
+	faDharmachakra,
+	faTimes,
+} from '@fortawesome/free-solid-svg-icons';
+import { faPhoenixFramework } from '@fortawesome/free-brands-svg-icons';
 @Component({
 	selector: 'app-home',
 	templateUrl: './home.component.html',
 	styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements OnInit {
+	modalVisible: boolean = false;
+	currentObjective: string = 'Accounts & Finance';
 	videoPlayerEnded: boolean = false;
 	customOptions: OwlOptions = {
 		loop: true,
@@ -127,7 +150,220 @@ export class HomeComponent implements OnInit {
 		// 	},
 		// },
 	];
+	faIcons = {
+		faTimes,
+	};
 
+	objectives = [
+		{
+			icon: faFileInvoiceDollar,
+			name: {
+				en: 'Accounts & Finance',
+				mr: 'लेखा आणि वित्त',
+			},
+		},
+		{
+			icon: faUserLock,
+			name: {
+				en: 'Administration',
+				mr: 'प्रशासन',
+			},
+		},
+		{
+			icon: faTractor,
+			name: {
+				en: 'Agricultural',
+				mr: 'कृषी',
+			},
+		},
+		{
+			icon: faLayerGroup,
+			name: {
+				en: 'Skill Development',
+				mr: 'कौशल्य विकास',
+			},
+		},
+		{
+			icon: faUsers,
+			name: {
+				en: 'CSR',
+				mr: 'CSR',
+			},
+		},
+		{
+			icon: faBook,
+			name: {
+				en: 'Knowledge Bank',
+				mr: 'नॉलेज बँक',
+			},
+		},
+		{
+			icon: faSchool,
+			name: {
+				en: 'Education,',
+				mr: 'शिक्षण',
+			},
+		},
+		{
+			icon: faSearchDollar,
+			name: {
+				en: 'Research',
+				mr: 'संशोधन',
+			},
+		},
+		{
+			icon: faBookOpen,
+			name: {
+				en: 'Competative Exam',
+				mr: 'स्पर्धा परीक्षा',
+			},
+		},
+		{
+			icon: faFemale,
+			name: {
+				en: 'Women Empowernment',
+				mr: 'महिला सबलीकरण',
+			},
+		},
+		{
+			icon: faChild,
+			name: {
+				en: 'Youth Leadership/ Development',
+				mr: 'युवा नेतृत्व/ विकास',
+			},
+		},
+		{
+			icon: faFileInvoiceDollar,
+			name: {
+				en: 'Accounts & Finance',
+				mr: 'लेखा आणि वित्त',
+			},
+		},
+		{
+			icon: faFileInvoiceDollar,
+			name: {
+				en: 'Accounts & Finance',
+				mr: 'लेखा आणि वित्त',
+			},
+		},
+		{
+			icon: faFileInvoiceDollar,
+			name: {
+				en: 'Accounts & Finance',
+				mr: 'लेखा आणि वित्त',
+			},
+		},
+		{
+			icon: faFileInvoiceDollar,
+			name: {
+				en: 'Accounts & Finance',
+				mr: 'लेखा आणि वित्त',
+			},
+		},
+		{
+			icon: faFileInvoiceDollar,
+			name: {
+				en: 'Accounts & Finance',
+				mr: 'लेखा आणि वित्त',
+			},
+		},
+		{
+			icon: faFileInvoiceDollar,
+			name: {
+				en: 'Accounts & Finance',
+				mr: 'लेखा आणि वित्त',
+			},
+		},
+		{
+			icon: faFileInvoiceDollar,
+			name: {
+				en: 'Accounts & Finance',
+				mr: 'लेखा आणि वित्त',
+			},
+		},
+		{
+			icon: faFileInvoiceDollar,
+			name: {
+				en: 'Accounts & Finance',
+				mr: 'लेखा आणि वित्त',
+			},
+		},
+	];
+	objectiveContents = {
+		'Accounts & Finance': [
+			`To study and understand the issues related to social, educational & economic
+            development of the members/ families of Maratha, Kunbi, Kunbi Maratha,
+            Maratha Kunbi (herein after referred to as ‘the Target Groups’) and to
+            suggest various measures for the same to the government; to develop and
+            maintain the Chhatrapati Shahu Maharaj Research, Training and Human
+            Development Institute (SARTHI) as a premier research, training and human
+            development institute in India and to undertake various research, training,
+            human development and other activities for social, educational, economic and
+            cultural development of the Target Groups.`,
+			`To study and understand the issues related to social, educational & economic
+            development of the members/ families of Maratha, Kunbi, Kunbi Maratha,
+            Maratha Kunbi (herein after referred to as ‘the Target Groups’) and to
+            suggest various measures for the same to the government; to develop and
+            maintain the Chhatrapati Shahu Maharaj Research, Training and Human
+            Development Institute (SARTHI) as a premier research, training and human
+            development institute in India and to undertake various research, training,
+            human development and other activities for social, educational, economic and
+            cultural development of the Target Groups.`,
+			`To study and understand the issues related to social, educational & economic
+            development of the members/ families of Maratha, Kunbi, Kunbi Maratha,
+            Maratha Kunbi (herein after referred to as ‘the Target Groups’) and to
+            suggest various measures for the same to the government; to develop and
+            maintain the Chhatrapati Shahu Maharaj Research, Training and Human
+            Development Institute (SARTHI) as a premier research, training and human
+            development institute in India and to undertake various research, training,
+            human development and other activities for social, educational, economic and
+            cultural development of the Target Groups.`,
+			`To study and understand the issues related to social, educational & economic
+            development of the members/ families of Maratha, Kunbi, Kunbi Maratha,
+            Maratha Kunbi (herein after referred to as ‘the Target Groups’) and to
+            suggest various measures for the same to the government; to develop and
+            maintain the Chhatrapati Shahu Maharaj Research, Training and Human
+            Development Institute (SARTHI) as a premier research, training and human
+            development institute in India and to undertake various research, training,
+            human development and other activities for social, educational, economic and
+            cultural development of the Target Groups.`,
+			`To study and understand the issues related to social, educational & economic
+            development of the members/ families of Maratha, Kunbi, Kunbi Maratha,
+            Maratha Kunbi (herein after referred to as ‘the Target Groups’) and to
+            suggest various measures for the same to the government; to develop and
+            maintain the Chhatrapati Shahu Maharaj Research, Training and Human
+            Development Institute (SARTHI) as a premier research, training and human
+            development institute in India and to undertake various research, training,
+            human development and other activities for social, educational, economic and
+            cultural development of the Target Groups.`,
+			`To study and understand the issues related to social, educational & economic
+            development of the members/ families of Maratha, Kunbi, Kunbi Maratha,
+            Maratha Kunbi (herein after referred to as ‘the Target Groups’) and to
+            suggest various measures for the same to the government; to develop and
+            maintain the Chhatrapati Shahu Maharaj Research, Training and Human
+            Development Institute (SARTHI) as a premier research, training and human
+            development institute in India and to undertake various research, training,
+            human development and other activities for social, educational, economic and
+            cultural development of the Target Groups.`,
+			`To study and understand the issues related to social, educational & economic
+            development of the members/ families of Maratha, Kunbi, Kunbi Maratha,
+            Maratha Kunbi (herein after referred to as ‘the Target Groups’) and to
+            suggest various measures for the same to the government; to develop and
+            maintain the Chhatrapati Shahu Maharaj Research, Training and Human
+            Development Institute (SARTHI) as a premier research, training and human
+            development institute in India and to undertake various research, training,
+            human development and other activities for social, educational, economic and
+            cultural development of the Target Groups.`,
+		],
+	};
+
+	getObjectiveContent() {
+		return this.objectiveContents[this.currentObjective];
+	}
+
+	setCurrentObjectives(key: string) {
+		this.currentObjective = key;
+	}
 	getItem(key: object) {
 		const l = localStorage.getItem('lang');
 		return key[l];
@@ -177,6 +413,11 @@ export class HomeComponent implements OnInit {
 			},
 		},
 	};
+
+	toggleModal() {
+		console.log('Toggling');
+		this.modalVisible = !this.modalVisible;
+	}
 
 	@ViewChild('videoPlayer') videoplayer: ElementRef;
 
