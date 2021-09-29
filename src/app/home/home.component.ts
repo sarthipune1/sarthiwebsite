@@ -296,7 +296,6 @@ export class HomeComponent implements OnInit {
 
 	getObjectiveContent() {
 		const objectives = obj[this.currentObjective];
-		console.log(objectives);
 
 		return objectives;
 	}
@@ -386,6 +385,6 @@ export class HomeComponent implements OnInit {
 	constructor() {}
 
 	ngOnInit(): void {
-		setTimeout(() => this.hideVideo(), 28 * 1000);
+		setTimeout(() => this.hideVideo(), 26 * 1000);
 	}
 }

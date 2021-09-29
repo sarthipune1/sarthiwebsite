@@ -30,11 +30,11 @@ $orange: #f67e22;
     align-items: center;
     justify-content: center;
     transition: 0.5s;
-    padding: 1rem 0;
+    padding: 0.5rem 0;
 }
 
 .header-bg {
-    height: 10rem;
+    height: 7rem;
     object-fit: contain;
 }
 
@@ -255,7 +255,7 @@ ul {
 .blinking-lights {
     text-align: center;
     font-size: 1.5rem;
-    margin-top: 1rem;
+    margin-top: 0.8rem;
     padding: 0 10px;
     animation: color-change 1s infinite;
     &::before {
@@ -269,7 +269,7 @@ ul {
 .slogan {
     text-align: center;
     font-size: 1.5rem;
-    margin-top: 1.5rem;
+    margin-top: 0.8rem;
     padding: 0 10px;
     color: #354658;
     font-weight: 600;
