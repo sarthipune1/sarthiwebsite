@@ -67,7 +67,7 @@ export class SubheaderComponent implements OnInit, OnChanges {
 				description: 'All content about education are below',
 			},
 			'library-department': {
-				title: 'library-department',
+				title: 'Library Department',
 				description: 'All content about library are below',
 			},
 			accounts: {
@@ -107,6 +107,10 @@ export class SubheaderComponent implements OnInit, OnChanges {
 		'contact-us': {
 			title: 'Contact Us',
 			description: 'Please contact us',
+		},
+		ebooks: {
+			title: 'E-Books',
+			description: 'E-Books listed below',
 		},
 	};
 

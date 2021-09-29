@@ -16,11 +16,16 @@
   </div>
   <div>
     <div style="width: 100vw; background-color: black; position:absolute; z-index: 100;" [hidden]="videoPlayerEnded">
-      <video (ended)="hideVideo()" height="80vh" class="video" autoplay="true" muted (click)="toggleVideo($event)"
+      <!-- <video (ended)="hideVideo()" height="80vh" class="video" autoplay="true" muted (click)="toggleVideo($event)"
         #videoPlayer>
         <source src="../../assets/images/logo-video.mp4" type="video/mp4">
         Browser not supported
-      </video>
+      </video> -->
+      <iframe width="100vw" height="80vh"
+        src="https://www.youtube.com/embed/PtBmbnnKP9A?autoplay=1&mute=1&controls=0&showinfo=0"
+        title="Sarthi Pune Logo Intro" frameborder="0" style="width: 100vw;height: 80vh;"
+        allow="accelerometer; autoplay; mute; loop; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
     </div>
     <div>
       <owl-carousel-o [options]="customOptions">
@@ -105,8 +110,10 @@
       <!-- <a href="#" style="color: #f67e22; text-decoration: none">></a> -->
     </div>
     <div class="img-container" fxHide.lt-md>
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/NwqPV75Afbs" title="YouTube video player"
-        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      <iframe width="400" height="250"
+        src="https://www.youtube.com/embed/NwqPV75Afbs?autoplay=1&mute=1&controls=0&showinfo=0&loop=1"
+        title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; mute; loop; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowfullscreen></iframe>
     </div>
   </div>
@@ -250,14 +257,14 @@
       </li>
     </ul>
     <div *ngIf="!isArray()">
-      <div *ngFor="let key of getObjectKeys(getObjectiveContent())">
+      <!-- <div *ngFor="let key of getObjectKeys(getObjectiveContent())">
         <h2>{{key}}</h2>
         <ul>
           <li class="rules" *ngFor="let item of getObjectiveContent()[key]">
             {{item}}
           </li>
         </ul>
-      </div>
+      </div> -->
     </div>
     <a (click)="toggleModal()" style="cursor: pointer;">
       <fa-icon class="cross-icon" [icon]="faIcons.faTimes"></fa-icon>

@@ -50,6 +50,7 @@ import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
 import { EducationDepartmentComponent } from './departments/education-department/education-department.component';
 import { LibraryDepartmentComponent } from './departments/library-department/library-department.component';
 import { SkillDevelopementDepartmentComponent } from './departments/skill-developement-department/skill-developement-department.component';
+import { EbookComponent } from './ebook/ebook.component';
 
 @NgModule({
 	declarations: [
@@ -78,6 +79,7 @@ import { SkillDevelopementDepartmentComponent } from './departments/skill-develo
 		EducationDepartmentComponent,
 		LibraryDepartmentComponent,
 		SkillDevelopementDepartmentComponent,
+		EbookComponent,
 	],
 	imports: [
 		BrowserModule,
@@ -152,6 +154,10 @@ import { SkillDevelopementDepartmentComponent } from './departments/skill-develo
 			{
 				path: 'rti',
 				component: RtiComponent,
+			},
+			{
+				path: 'ebooks',
+				component: EbookComponent,
 			},
 			{ path: '404', component: HomeComponent },
 			{ path: '**', redirectTo: '/' },

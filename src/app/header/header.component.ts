@@ -188,7 +188,27 @@ export class HeaderComponent implements OnInit, OnChanges {
 			},
 			path: '/awards',
 		},
-
+		{
+			name: {
+				en: 'Success Stories',
+				mr: 'निविदा',
+			},
+			path: '/success-stories',
+		},
+		{
+			name: {
+				en: 'Gr & Circulars',
+				mr: 'निविदा',
+			},
+			path: '/gr-circulars',
+		},
+		{
+			name: {
+				en: 'E-Books',
+				mr: 'निविदा',
+			},
+			path: '/ebooks',
+		},
 		{
 			name: {
 				en: 'Videos & Photo Gallery',

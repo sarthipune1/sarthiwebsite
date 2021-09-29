@@ -236,56 +236,56 @@ export class HomeComponent implements OnInit {
 		{
 			icon: faFileInvoiceDollar,
 			name: {
-				en: 'Accounts & Finance',
+				en: 'Library',
 				mr: 'लेखा आणि वित्त',
 			},
 		},
 		{
 			icon: faFileInvoiceDollar,
 			name: {
-				en: 'Accounts & Finance',
+				en: 'Production & Publication',
 				mr: 'लेखा आणि वित्त',
 			},
 		},
 		{
 			icon: faFileInvoiceDollar,
 			name: {
-				en: 'Accounts & Finance',
+				en: 'Senior Citizen Care',
 				mr: 'लेखा आणि वित्त',
 			},
 		},
 		{
 			icon: faFileInvoiceDollar,
 			name: {
-				en: 'Accounts & Finance',
+				en: 'Infrastructure Development',
 				mr: 'लेखा आणि वित्त',
 			},
 		},
 		{
 			icon: faFileInvoiceDollar,
 			name: {
-				en: 'Accounts & Finance',
+				en: 'Human Resource / Establishment',
 				mr: 'लेखा आणि वित्त',
 			},
 		},
 		{
 			icon: faFileInvoiceDollar,
 			name: {
-				en: 'Accounts & Finance',
+				en: 'Advertisement & Publicity',
 				mr: 'लेखा आणि वित्त',
 			},
 		},
 		{
 			icon: faFileInvoiceDollar,
 			name: {
-				en: 'Accounts & Finance',
+				en: 'Pilot Projects',
 				mr: 'लेखा आणि वित्त',
 			},
 		},
 		{
 			icon: faFileInvoiceDollar,
 			name: {
-				en: 'Accounts & Finance',
+				en: 'Defence & Judiciary Coaching',
 				mr: 'लेखा आणि वित्त',
 			},
 		},
@@ -383,6 +383,6 @@ export class HomeComponent implements OnInit {
 	constructor() {}
 
 	ngOnInit(): void {
-		console.log(obj);
+		setTimeout(() => this.hideVideo(), 28 * 1000);
 	}
 }

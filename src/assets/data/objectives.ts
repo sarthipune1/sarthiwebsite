@@ -32,24 +32,23 @@ const obj = {
 		'To evolve, develop and update Knowledge Bank through institutional networking, data mining, conferences, workshops, seminars, discussions, symposia, visits, study tours, surveys, etc. and to use the Knowledge Bank for guidance and counselling to the members of the Target Groups',
 		'To establish, develop and maintain databank of the individuals and families of the Target Groups and other families for evolving ideas and better planning etc. for the development of the Target Groups',
 	],
-	Education: {
-		School: [
-			'To undertake various programs including communication skills, soft skills, general awareness, linguistic competence including proficiency in English, confidence building, career guidance, counselling, skill, aptitude, etc. for the students of SSC, HSC and graduate and higher level.',
-			'To undertake scheme/drive for sponsoring special tutorial/coaching, to the students of the Target Groups in Classes 9, 10, 11 and 12 to enable them score better at academic examinations.',
-			'To undertake various educational and awareness programs using various prints, audio visuals, electronic and other media including social media, trainings, etc. on above fields.',
-			'To institute, offer and grant prizes, awards, fellowships, scholarships, stipends, etc. and other form of monitory or material assistance to the Taget Groups’ students and scholars; especially the women candidates, from SSC to post graduate and higher level.',
-		],
-		College: [
-			'To undertake various programs including communication skills, soft skills, general awareness, linguistic competence including proficiency in English, confidence building, career guidance, counselling, skill, aptitude, etc. for the students of SSC, HSC and graduate and higher level.',
-			'To undertake various educational and awareness programs using various prints, audio visuals, electronic and other media including social media, trainings, etc. on above fields.',
-			'To institute, offer and grant prizes, awards, fellowships, scholarships, stipends, etc. and other form of monitory or material assistance to the Taget Groups’ students and scholars; especially the women candidates, from SSC to post graduate and higher level.',
-		],
-		PG: [
-			'To undertake various educational and awareness programs using various prints, audio visuals, electronic and other media including social media, trainings, etc. on above fields.',
-			'To institute, offer and grant prizes, awards, fellowships, scholarships, stipends, etc. and other form of monitory or material assistance to the Taget Groups’ students and scholars; especially the women candidates, from SSC to post graduate and higher level.',
-			'To foster academic contacts within India as well as other countries through exchange of personnel of the Target Groups and research materials.',
-		],
-	},
+	Education: [
+		'School: ',
+		'To undertake various programs including communication skills, soft skills, general awareness, linguistic competence including proficiency in English, confidence building, career guidance, counselling, skill, aptitude, etc. for the students of SSC, HSC and graduate and higher level.',
+		'To undertake scheme/drive for sponsoring special tutorial/coaching, to the students of the Target Groups in Classes 9, 10, 11 and 12 to enable them score better at academic examinations.',
+		'To undertake various educational and awareness programs using various prints, audio visuals, electronic and other media including social media, trainings, etc. on above fields.',
+		'To institute, offer and grant prizes, awards, fellowships, scholarships, stipends, etc. and other form of monitory or material assistance to the Taget Groups’ students and scholars; especially the women candidates, from SSC to post graduate and higher level.',
+
+		'College: ',
+		'To undertake various programs including communication skills, soft skills, general awareness, linguistic competence including proficiency in English, confidence building, career guidance, counselling, skill, aptitude, etc. for the students of SSC, HSC and graduate and higher level.',
+		'To undertake various educational and awareness programs using various prints, audio visuals, electronic and other media including social media, trainings, etc. on above fields.',
+		'To institute, offer and grant prizes, awards, fellowships, scholarships, stipends, etc. and other form of monitory or material assistance to the Taget Groups’ students and scholars; especially the women candidates, from SSC to post graduate and higher level.',
+
+		'PG: ',
+		'To undertake various educational and awareness programs using various prints, audio visuals, electronic and other media including social media, trainings, etc. on above fields.',
+		'To institute, offer and grant prizes, awards, fellowships, scholarships, stipends, etc. and other form of monitory or material assistance to the Taget Groups’ students and scholars; especially the women candidates, from SSC to post graduate and higher level.',
+		'To foster academic contacts within India as well as other countries through exchange of personnel of the Target Groups and research materials.',
+	],
 	Research: [
 		'To undertake various activities, projects, programs, schemes, etc. on its own or in collaboration with government agencies, semi-government agencies, private organisations, etc. for the purposes which are conducive to its objects.',
 		'To serve as the apex institute for the collection and dissemination of information regarding research on social, educational and economic development of various communities of the Target Groups.',

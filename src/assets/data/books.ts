@@ -1,5 +1,5 @@
 type Book = {
-	sr_no: number;
+	sr_no: number | string;
 	name: string;
 	author: string;
 	count: number;
