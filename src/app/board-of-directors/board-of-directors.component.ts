@@ -55,7 +55,7 @@ export class BoardOfDirectorsComponent implements OnInit {
 		},
 		{
 			image: 'photo9',
-			name: 'Shri. Tumod Sir (IAS)',
+			name: 'Dr.Hanmanlu Piraji Tummod (IAS)',
 			designation: 'Dairy Development Commissioner, Mumbai',
 		},
 		{

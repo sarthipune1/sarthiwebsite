@@ -17,11 +17,14 @@ import {
 	faHandHoldingHeart,
 	faBuilding,
 	faSign,
-	faAd,
+	faSplotch,
 	faDharmachakra,
 	faTimes,
 } from '@fortawesome/free-solid-svg-icons';
-import { faPhoenixFramework } from '@fortawesome/free-brands-svg-icons';
+import {
+	faPhoenixFramework,
+	faAdversal,
+} from '@fortawesome/free-brands-svg-icons';
 import obj from '../../assets/data/objectives';
 @Component({
 	selector: 'app-home',
@@ -215,14 +218,14 @@ export class HomeComponent implements OnInit {
 		{
 			icon: faBookOpen,
 			name: {
-				en: 'Competative Exam',
+				en: 'Competitive Exam',
 				mr: 'स्पर्धा परीक्षा',
 			},
 		},
 		{
 			icon: faFemale,
 			name: {
-				en: 'Women Empowernment',
+				en: 'Women Empowerment',
 				mr: 'महिला सबलीकरण',
 			},
 		},
@@ -234,56 +237,56 @@ export class HomeComponent implements OnInit {
 			},
 		},
 		{
-			icon: faFileInvoiceDollar,
+			icon: faBookReader,
 			name: {
 				en: 'Library',
 				mr: 'लेखा आणि वित्त',
 			},
 		},
 		{
-			icon: faFileInvoiceDollar,
+			icon: faUpload,
 			name: {
 				en: 'Production & Publication',
 				mr: 'लेखा आणि वित्त',
 			},
 		},
 		{
-			icon: faFileInvoiceDollar,
+			icon: faHandHoldingHeart,
 			name: {
 				en: 'Senior Citizen Care',
 				mr: 'लेखा आणि वित्त',
 			},
 		},
 		{
-			icon: faFileInvoiceDollar,
+			icon: faBuilding,
 			name: {
 				en: 'Infrastructure Development',
 				mr: 'लेखा आणि वित्त',
 			},
 		},
 		{
-			icon: faFileInvoiceDollar,
+			icon: faSign,
 			name: {
 				en: 'Human Resource / Establishment',
 				mr: 'लेखा आणि वित्त',
 			},
 		},
 		{
-			icon: faFileInvoiceDollar,
+			icon: faAdversal,
 			name: {
 				en: 'Advertisement & Publicity',
 				mr: 'लेखा आणि वित्त',
 			},
 		},
 		{
-			icon: faFileInvoiceDollar,
+			icon: faPhoenixFramework,
 			name: {
 				en: 'Pilot Projects',
 				mr: 'लेखा आणि वित्त',
 			},
 		},
 		{
-			icon: faFileInvoiceDollar,
+			icon: faDharmachakra,
 			name: {
 				en: 'Defence & Judiciary Coaching',
 				mr: 'लेखा आणि वित्त',

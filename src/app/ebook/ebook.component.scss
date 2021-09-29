@@ -1,79 +1,82 @@
 $orange: #f67e22;
 $blue: #344658;
-
 .container {
-	margin: 2rem 0;
+    margin: 2rem 0;
 }
 
 .table-container {
-	height: 80vh;
-	overflow: scroll;
-	width: 80%;
+    height: 80vh;
+    overflow: scroll;
+    width: 80%;
+    a {
+        margin-right: 20px;
+        font-size: 1.5rem;
+    }
 }
 
 #books {
-	border-collapse: collapse;
-	width: 100%;
-	background-color: white;
-	td,
-	th {
-		height: 4.5rem;
-	}
-	th {
-		font-size: 1.25rem;
-		font-weight: 600;
-		padding-top: 12px;
-		padding-bottom: 12px;
-		text-align: center;
-		color: #404040;
-		padding: 0 10px;
-	}
-	td {
-		font-size: 1rem;
-		font-weight: 400;
-		padding-top: 12px;
-		padding-bottom: 12px;
-		text-align: center;
-		color: #7a7a7a;
-	}
-	tr {
-		padding-top: 12px;
-		padding-bottom: 12px;
-		text-align: center;
-		color: #7a7a7a;
-		border: solid #e8e6e6 1px;
-		&:last-child {
-			td {
-				font-weight: bold !important;
-				color: #404040;
-				font-size: 1.2rem;
-			}
-		}
-	}
-	a {
-		text-decoration: none;
-		color: #f67e22;
-	}
+    border-collapse: collapse;
+    width: 100%;
+    background-color: white;
+    td,
+    th {
+        height: 4.5rem;
+    }
+    th {
+        font-size: 1.25rem;
+        font-weight: 600;
+        padding-top: 12px;
+        padding-bottom: 12px;
+        text-align: center;
+        color: #404040;
+        padding: 0 10px;
+    }
+    td {
+        font-size: 1rem;
+        font-weight: 400;
+        padding-top: 12px;
+        padding-bottom: 12px;
+        text-align: center;
+        color: #7a7a7a;
+    }
+    tr {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        text-align: center;
+        color: #7a7a7a;
+        border: solid #e8e6e6 1px;
+        &:last-child {
+            td {
+                font-weight: bold !important;
+                color: #404040;
+                font-size: 1.2rem;
+            }
+        }
+    }
+    a {
+        text-decoration: none;
+        color: #f67e22;
+    }
 }
 
 .table-small {
-	th,
-	td {
-		font-size: 0.6rem !important;
-	}
+    th,
+    td {
+        font-size: 0.6rem !important;
+    }
 }
 
 .table-header {
-	background: #3e4350;
-	padding: 1rem 4.4rem;
-	line-height: 1.8rem;
-	border-top-left-radius: 1.5rem;
-	border-top-right-radius: 1.5rem;
-	text-align: center;
-	width: 80%;
-	span {
-		color: white;
-		font-size: 1.2rem;
-		font-weight: 500;
-	}
+    background: #3e4350;
+    padding: 1rem 4.4rem;
+    line-height: 1.8rem;
+    border-top-left-radius: 1.5rem;
+    border-top-right-radius: 1.5rem;
+    text-align: center;
+    width: 80%;
+    span {
+        color: white;
+        font-size: 1.2rem;
+        font-weight: 500;
+    }
 }
