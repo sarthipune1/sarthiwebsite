@@ -51,6 +51,7 @@ import { EducationDepartmentComponent } from './departments/education-department
 import { LibraryDepartmentComponent } from './departments/library-department/library-department.component';
 import { SkillDevelopementDepartmentComponent } from './departments/skill-developement-department/skill-developement-department.component';
 import { EbookComponent } from './ebook/ebook.component';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
 
 @NgModule({
 	declarations: [
@@ -98,6 +99,7 @@ import { EbookComponent } from './ebook/ebook.component';
 		FontAwesomeModule,
 		NgxChartsModule,
 		CKEditorModule,
+		MatProgressBarModule,
 		RouterModule.forRoot([
 			{ path: '', component: HomeComponent },
 			{ path: 'about-us', component: AboutUsComponent },

@@ -14,11 +14,6 @@
                 <fa-icon class="icon" [icon]="faIcons.faBars"></fa-icon>
             </div>
         </div>
-
-
-
-
-
         <div class="m-header-container" [ngClass]="{'toggled': !isToggled}">
             <div class="icon-c" fxLayout="row" fxLayoutAlign="end center" ngClass.gt-sm="d-none">
                 <div class="menu-icon" (click)="setToggled()">
@@ -75,8 +70,8 @@
         </a>
     </div>
     <div class="navItems" fxHide.lt-md>
-        <div fxLayout.lt-sm="row" fxLayoutAlign="space-between center" fxLayoutAlign.lt-md="space-between start" fxLayoutGap="2rem">
-            <ul class="d-flex" fxFlex="100" fxLayout="row" fxLayout.lt-md="column" fxLayoutAlign.lt-md="flex-end flex-end" fxFlexAlign="flex-end">
+        <div fxLayout="row" fxLayoutAlign="space-between center" fxLayoutAlign.lt-md="space-between start" fxLayoutGap="2rem">
+            <ul class="d-flex" fxFlex="100" fxLayout="row wrap" fxLayout.lt-md="column" fxLayoutAlign.lt-md="flex-end flex-end" fxLayoutAlign="center center">
                 <li *ngFor="let item of menu" [ngClass]="{'active': item.path === route || route.startsWith(item.path)}">
                     <a *ngIf="item.path" [routerLink]="item.path">
                         {{getItem(item.name)}}

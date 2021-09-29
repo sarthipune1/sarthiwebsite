@@ -31,6 +31,18 @@ export class CompetitiveExaminationDepartmentComponent implements OnInit {
 		{
 			name: 'महाराष्ट्र राज्यसेवा आयोग  मार्फत महाराष्ट्र न्यायिक सेवा -दिवाणी न्यायाधीश कनिष्ठ स्तर व न्यायदंडाधिकारी प्रथम वर्ग  (Civil Judge Junior Division & Judicial Magistrate First Class- CJJD & JMFC) स्पर्धा परीक्षा कोचिंग',
 		},
+		{
+			name: 'UGC-NET/CSIR-UGC-NET/MH-SET निःशुल्क ऑनलाईन प्रशिक्षण उपक्रम',
+		},
+		{
+			name: 'महाराष्ट्र लोकसेवा आयोगाची महाराष्ट्र दुय्यम सेवा गट ब (अराजपत्रित) (पूर्व) व (मुख्य) परीक्षा - MPSC Subordinate Services (Non-gazetted) Group-B (PSI, STI,ASO) नि:शुल्क ऑनलाईन प्रशिक्षण',
+		},
+		{
+			name: 'कर्मचारी निवड आयोग (Staff Selection Commission) मार्फत आयोजित अराजपत्रित (Non Gazetted) स्पर्धा परीक्षा पूर्व  नि:शुल्क ऑनलाईन प्रशिक्षण उपक्रम',
+		},
+		{
+			name: 'पोलीस भरतीपूर्व लेखी परीक्षा नि:शुल्क ऑनलाईन कोचिंग',
+		},
 	];
 	faIcons = {
 		faTimes,
