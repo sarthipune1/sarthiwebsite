@@ -111,8 +111,8 @@
 
 .notice-date {
     background-color: white;
-    height: 119px;
-    width: 128px;
+    height: 100px;
+    width: 100px;
     border-radius: 10px;
     margin-right: 20px;
     line-height: 40px;
@@ -137,8 +137,8 @@
 
 .event-details {
     font-weight: 600;
-    font-size: 22px;
-    padding: 10px;
+    font-size: 1rem;
+    padding: 10px 0;
     line-height: 30px;
 }
 
@@ -177,8 +177,9 @@
 
 .Announcements-sub-title {
     margin-bottom: 15px;
-    font-size: 1.3rem;
+    font-size: 1rem;
     font-weight: 500;
+    line-height: 2rem;
 }
 
 .Announcements-description {
@@ -188,7 +189,7 @@
     img {
         height: 4rem;
         width: 4rem;
-        padding: 5px;
+        // padding: 5px;
     }
 }
 
@@ -196,7 +197,7 @@
     margin-bottom: 3.5%;
     border-radius: 15px;
     margin: 30px;
-    padding: 25px;
+    padding: 22px;
     box-shadow: 0px 10px 15px 5px #eeeeee;
 }
 

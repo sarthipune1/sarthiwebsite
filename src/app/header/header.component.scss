@@ -303,6 +303,9 @@ div.marquee {
         margin-left: 1rem;
         color: red;
     }
+    &:hover {
+        animation-play-state: paused;
+    }
 }
 
 @keyframes marquee {

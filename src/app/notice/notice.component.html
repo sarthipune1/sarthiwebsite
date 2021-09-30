@@ -23,7 +23,7 @@
             </div>
         </div>
         <div class="Announcements-container" fxFlex="45" fxFlex.lt-md="90">
-            <div class="Announcements-header">
+            <div class="notice-header">
                 <span>Announcements</span>
             </div>
             <div fxLayout.lt-md="column" fxLayoutGap="50px" class="notice-details-container">
@@ -33,15 +33,23 @@
                     </div>
                     <div fxLayout="column" class="check-here" fxLayoutGap="20px">
                         <div>
-                            <span class="Announcements-sub-title">{{strength.title}}</span>
-                            <a href="#">Check Here</a>
+                            <span class="Announcements-sub-title">
+                                {{strength.title}}
+                                <br>
+                            </span>
+                            <a href={{strength.link}} target="_blank">
+                                Check Here
+                            </a>
                         </div>
-                        <span class="Announcements-description">{{strength.description}}</span>
+                        <!-- <span class="Announcements-description">{{strength.description}}</span> -->
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
+
+
 
 
 

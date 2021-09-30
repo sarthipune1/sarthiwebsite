@@ -48,26 +48,18 @@
         <img alt="logo" class="header-bg header-logo" src="../../assets/images/main-logo.png" [ngStyle.lt-sm]="{'padding': '25px'}">
     </div>
     <div class="marquee">
-        <fa-icon class="icon" [icon]="faIcons.faHotjar"></fa-icon>
-        <a>
-            सारथी संस्था - भविष्यकालीन योजनांचा आराखडा ( व्हिजन
-      डॉक्यूमेंट ) २०३० तयार करण्याबाबतची प्रश्नावली
-        </a>
-        <fa-icon class="icon" [icon]="faIcons.faHotjar"></fa-icon>
-        <a>
-            MAHARASHTRA ENGINEERING SERVICES (MES) 2021 PROGRAM
-      मुदतवाढ
-        </a>
-        <fa-icon class="icon" [icon]="faIcons.faHotjar"></fa-icon>
-        <a>
-            CJJD & JMFC, MPSC (Non-Gazetted) & SSC (Non- Gazetted)
-      Coaching Program मुदतवाढ
-        </a>
-        <fa-icon class="icon" [icon]="faIcons.faHotjar"></fa-icon>
-        <a>
-            UPSC (Civil Services) 2022 Competitive Exam
-      Coaching
-        </a>
+        <span *ngFor="let item of marque">
+            <fa-icon
+                class="icon"
+                [icon]="faIcons.faHotjar"
+            ></fa-icon>
+            <a
+                href={{item.link}}
+                target="_blank"
+            >
+                {{item.title}}
+            </a>
+        </span>
     </div>
     <div class="navItems" fxHide.lt-md>
         <div fxLayout="row" fxLayoutAlign="space-between center" fxLayoutAlign.lt-md="space-between start" fxLayoutGap="2rem">
