@@ -1,4 +1,18 @@
 const obj = {
+	'Accounts & Finance': [
+		' appeal and apply for funds, etc. in the furtherance of the objects of the Company and to accept and utilize grants, subscriptions, donations, gifts, bequests, etc. from Government Corporations / Trusts / Societies, State Government, Central Government, Private or Non-Government Organizations/ Trust/ Societies/ Agencies, etc. or any person for fulfillment of the objects of the Company.',
+		' extend financial aid to institutions propagating memory of Rajarshi Shahu by constructing Community Halls, Bhawans, Libraries etc.',
+		' institute and grant Rajarshi Shahu National Awards, with the objective to encourage individuals and organizations involved in one or more of above activities, by awarding Rajarshi Shahu National Award of Rs. 10.00 Lakhs, annually with citations, mementoes, etc.',
+		' borrow or raise money that may be required by the Company upon such terms as may be advisable or by mortgage or charge of all or any part of the property of the Company for the promotion and furtherance of its objects.',
+		' draw, make, accept, endorse, execute and issue promissory notes, bills of exchange and other negotiable or transferable instruments, for the promotion or furtherance of the objects of the Company.',
+		' enter into any agreement for partnerships or joint ventures or collaborations with any party either Indian or foreign in connection with the attainment of the objectives of the Company',
+		' open banking accounts in the name of the Company with Indian banks and foreign banks or any other financial institution or organization, subject to applicable Rules and Regulations.',
+		' establish, run, undertake, execute any trust and / or society which may seem to the Company desirable and to undertake and execute various programs, activities, projects, special projects, etc. as may be desired by the Company from time to time to achieve its objectives and incur all types of expenses for the same.',
+		' collaborate with Institutions engaged in similar activities in India and abroad with a view to further the aims and objects of the Company.',
+		'To help, assist any government, semi-government and non-government organization working in the fields of interest of the Company.',
+		'To pay, out of the funds of the Company, all costs, charges and expenses incurred / incidental to the promotion, formation, registration, advertisement and establishment of the Company, also all expenses attending the issue of any circular or notice and the printing; stamping and circulating of proxies and forms to be filled up by the members of the Company and to pay fully to any person, agency, institution, organization, firm or Company for services rendered in introducing any property or clients to the Company',
+		'To establish and manage Educational Institutions for providing quality education and vocational training in various disciplines to the members of the Target group and also members of other weaker sections of the Society, especially in low literacy areas.',
+	],
 	Administration: [
 		'To make rules, regulations, and by-laws for the conduct of affairs of the Company and to add or rescind the same from time to time.',
 		'To evolve, develop and function as national level modal institute, working for the cause of development of the Target Groups',
