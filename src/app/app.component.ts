@@ -9,6 +9,7 @@ import {
 	NavigationCancel,
 	NavigationError,
 } from '@angular/router';
+import { faTimes } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
 	selector: 'app-root',
@@ -19,7 +20,13 @@ export class AppComponent implements OnInit {
 	title = 'SarthiWeb';
 	notHomeComponent: boolean = true;
 	currentRoute: string = '';
-	loading = true;
+	loading = false;
+
+	isBannerVisible = false;
+	bannerDelayTime = 27;
+	faIcons = {
+		faTimes,
+	};
 	constructor(private router: Router) {
 		this.router.events.subscribe((ev: RouterEvent) => {
 			this.navigationInterceptor(ev);
@@ -35,6 +42,10 @@ export class AppComponent implements OnInit {
 		if (l === undefined || l === null) {
 			localStorage.setItem('lang', 'en');
 		}
+		setTimeout(
+			() => (this.isBannerVisible = true),
+			this.bannerDelayTime * 1000
+		);
 	}
 	// Shows and hides the loading spinner during RouterEvent changes
 	navigationInterceptor(event: RouterEvent): void {
@@ -52,5 +63,9 @@ export class AppComponent implements OnInit {
 		if (event instanceof NavigationError) {
 			this.loading = false;
 		}
+	}
+
+	toggleModal() {
+		this.isBannerVisible = false;
 	}
 }

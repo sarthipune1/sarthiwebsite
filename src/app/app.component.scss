@@ -1,3 +1,5 @@
+$orange: #f67e22;
+
 //:host ::ng-deep app-header {
 //  .nav-items {
 //    a {
@@ -17,3 +19,77 @@
 //    }
 //  }
 //}
+
+.sarthi-banner {
+	width: 100vw;
+	height: 100vh;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 9999;
+	transform: scale(0);
+	opacity: 0;
+	transition: all 0.5s ease-in-out;
+	padding-top: 2vh;
+	&.active {
+		transform: scale(1);
+		opacity: 1;
+	}
+	.inner {
+		width: 90vw;
+		height: 90vh;
+		img {
+			height: 100%;
+			object-fit: contain;
+			border-radius: 10px;
+			box-shadow: 0px 9px 4px -1px rgb(0 0 0 / 20%),
+				0px 4px 5px 0px rgb(0 0 0 / 14%),
+				0px 1px 10px 0px rgb(0 0 0 / 50%);
+		}
+
+		a {
+			position: relative;
+			top: 0.5rem;
+			right: 2rem;
+			font-size: 1.5rem;
+			align-self: flex-start;
+		}
+	}
+
+	.btn-close {
+		padding: 10px 20px;
+		font-size: 1rem;
+		border-radius: 5px;
+		color: white;
+		background-color: $orange;
+		margin: auto;
+		cursor: pointer;
+	}
+}
+
+.loading-overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 9999;
+	opacity: 0;
+	transition: all 0.5s ease-in-out;
+	&.active {
+		opacity: 1;
+	}
+	.img-container {
+		height: 200px;
+		width: 200px;
+		object-fit: contain;
+		border-radius: 50%;
+		background-color: white;
+		img {
+			height: 100%;
+			width: 100%;
+		}
+	}
+}
