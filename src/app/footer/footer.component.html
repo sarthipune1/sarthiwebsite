@@ -13,9 +13,9 @@
                 </div>
                 <div class="footer-text " fxFlex="50 " fxFlex.lt-md="100 ">
                     <span style="max-width: 50%; text-align: center; ">
-                        Balchitravani, C T Survey Number 173, B/1,
+                        {{getItem(content.address)}}
                         <br>
-                        Gopal Ganesh Agarkar Road, Pune 411 004
+                        {{getItem(content.content)}}
                     </span>
                 </div>
                 <div class="nav-items " fxLayout="row " fxLayout.lt-sm="column " fxLayoutAlign="space-around flex-start " ngStyle.lt-md="width: 100%; " fxLayoutGap.gt-md="1rem ">
@@ -51,7 +51,21 @@
             </div>
         </div>
     </div>
-    <div class="copyright " fxLayoutAlign="center center ">
+    <div class="copyright " fxLayoutAlign="center center " fxLayout="column">
         Copyright © 2021 SARTHI, Pune. All Rights Reserved
+        <a href="http://supersapiens.in/" target="_blank">
+            <div *ngIf="getCurrentLang()=='en' then superSapiensEn else superSapiensMr"></div>
+            <ng-template #superSapiensEn>
+                <div class="superSapiens">
+                    {{content.sapiens.en}}
+                    <img alt="logo " src="../../assets/images/logo-1.png ">
+                </div>
+            </ng-template>
+            <ng-template #superSapiensMr>
+                <div class="superSapiens">
+                    <img alt="logo " src="../../assets/images/logo-1.png "> {{content.sapiens.mr}}
+                </div>
+            </ng-template>
+        </a>
     </div>
 </div>

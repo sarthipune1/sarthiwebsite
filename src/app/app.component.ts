@@ -42,10 +42,12 @@ export class AppComponent implements OnInit {
 		if (l === undefined || l === null) {
 			localStorage.setItem('lang', 'en');
 		}
-		setTimeout(
-			() => (this.isBannerVisible = true),
-			this.bannerDelayTime * 1000
-		);
+		if (!window.location.hostname.includes('localhost')) {
+			setTimeout(
+				() => (this.isBannerVisible = true),
+				this.bannerDelayTime * 1000
+			);
+		} else console.log('Banner Disabled');
 	}
 	// Shows and hides the loading spinner during RouterEvent changes
 	navigationInterceptor(event: RouterEvent): void {
