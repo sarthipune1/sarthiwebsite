@@ -67,34 +67,34 @@ export class HomeComponent implements OnInit {
 	noticeData = [
 		{
 			date: {
-				month: 'May',
-				date: 31,
+				month: 'October',
+				date: 2,
 			},
-			title: 'Memorial day holiday 2021',
+			title: 'Mahatma Gandhi Jayanti',
 			time: '12:00 AM',
 		},
 		{
 			date: {
-				month: 'June',
-				date: 11,
+				month: 'October',
+				date: 15,
 			},
-			title: 'Summer A 2021 classes (4 & 8 week) begins',
+			title: 'Dussehra (Vijay Dashmi)',
 			time: '12:00 AM',
 		},
 		{
 			date: {
-				month: 'Sep',
+				month: 'November',
+				date: 4,
+			},
+			title: 'Diwali (Deepavali)',
+			time: '12:00 AM',
+		},
+		{
+			date: {
+				month: 'December',
 				date: 25,
 			},
-			title: 'Summer A 2022',
-			time: '12:00 AM',
-		},
-		{
-			date: {
-				month: 'May',
-				date: 31,
-			},
-			title: 'Memorial day holiday 2021',
+			title: 'Christmas Day',
 			time: '12:00 AM',
 		},
 	];
