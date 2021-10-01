@@ -247,56 +247,56 @@ export class HomeComponent implements OnInit {
 			icon: faBookReader,
 			name: {
 				en: 'Library',
-				mr: 'लेखा आणि वित्त',
+				mr: 'ग्रंथालय',
 			},
 		},
 		{
 			icon: faUpload,
 			name: {
 				en: 'Production & Publication',
-				mr: 'लेखा आणि वित्त',
+				mr: 'उत्पादन आणि प्रकाशन',
 			},
 		},
 		{
 			icon: faHandHoldingHeart,
 			name: {
 				en: 'Senior Citizen Care',
-				mr: 'लेखा आणि वित्त',
+				mr: 'ज्येष्ठ नागरिक काळजी',
 			},
 		},
 		{
 			icon: faBuilding,
 			name: {
 				en: 'Infrastructure Development',
-				mr: 'लेखा आणि वित्त',
+				mr: 'पायाभूत सुविधा विकास',
 			},
 		},
 		{
 			icon: faSign,
 			name: {
 				en: 'Human Resource / Establishment',
-				mr: 'लेखा आणि वित्त',
+				mr: 'मानव संसाधन / आस्थापना',
 			},
 		},
 		{
 			icon: faAdversal,
 			name: {
 				en: 'Advertisement & Publicity',
-				mr: 'लेखा आणि वित्त',
+				mr: 'जाहिरात आणि प्रसिद्धी',
 			},
 		},
 		{
 			icon: faPhoenixFramework,
 			name: {
 				en: 'Pilot Projects',
-				mr: 'लेखा आणि वित्त',
+				mr: 'पायलट प्रकल्प',
 			},
 		},
 		{
 			icon: faDharmachakra,
 			name: {
 				en: 'Defence & Judiciary Coaching',
-				mr: 'लेखा आणि वित्त',
+				mr: 'संरक्षण आणि न्यायिक प्रशिक्षण',
 			},
 		},
 	];

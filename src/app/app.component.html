@@ -3,16 +3,18 @@
 <router-outlet></router-outlet>
 <app-footer></app-footer>
 <!-- <div class="loading-overlay" fxLayoutAlign="center center" [class.active]="loading">
-  <div class="img-container">
-    <img src="../assets/images/main-logo.png" />
-  </div>
+    <div class="img-container">
+        <img src="../assets/images/loaders.gif">
+    </div>
 </div> -->
 <div class="sarthi-banner" fxLayout="column" fxLayoutAlign="center center" [class.active]="isBannerVisible">
-  <div class="inner" fxLayoutAlign="center center">
-    <img src="../assets/images/sarthi-banner.jpg" />
-    <a (click)="toggleModal()" style="cursor: pointer;">
-      <fa-icon class="cross-icon" [icon]="faIcons.faTimes"></fa-icon>
+    <div class="inner" fxLayoutAlign="center center">
+        <img src="../assets/images/sarthi-banner.jpg">
+        <a (click)="toggleModal()" style="cursor: pointer;">
+            <fa-icon class="cross-icon" [icon]="faIcons.faTimes"></fa-icon>
+        </a>
+    </div>
+    <a class="btn-close" (click)="toggleModal()">
+        Close
     </a>
-  </div>
-  <a class="btn-close" (click)="toggleModal()">Close</a>
 </div>

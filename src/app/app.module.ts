@@ -52,6 +52,9 @@ import { LibraryDepartmentComponent } from './departments/library-department/lib
 import { SkillDevelopementDepartmentComponent } from './departments/skill-developement-department/skill-developement-department.component';
 import { EbookComponent } from './ebook/ebook.component';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { SuccessComponent } from './success/success.component';
+import { GrComponent } from './gr/gr.component';
+import { TenderComponent } from './tender/tender.component';
 
 @NgModule({
 	declarations: [
@@ -81,6 +84,9 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
 		LibraryDepartmentComponent,
 		SkillDevelopementDepartmentComponent,
 		EbookComponent,
+		SuccessComponent,
+		GrComponent,
+		TenderComponent,
 	],
 	imports: [
 		BrowserModule,
@@ -154,12 +160,24 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
 				component: AwardsComponent,
 			},
 			{
+				path: 'tender',
+				component: TenderComponent,
+			},
+			{
 				path: 'rti',
 				component: RtiComponent,
 			},
 			{
 				path: 'ebooks',
 				component: EbookComponent,
+			},
+			{
+				path: 'success',
+				component: SuccessComponent,
+			},
+			{
+				path: 'gr',
+				component: GrComponent,
 			},
 			{ path: '404', component: HomeComponent },
 			{ path: '**', redirectTo: '/' },
