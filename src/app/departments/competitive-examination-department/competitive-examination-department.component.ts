@@ -50,7 +50,6 @@ export class CompetitiveExaminationDepartmentComponent implements OnInit {
 
 	isArray() {
 		const isArray = Array.isArray(this.getObjectiveContent());
-		console.log('isArray', isArray);
 		return isArray;
 	}
 
