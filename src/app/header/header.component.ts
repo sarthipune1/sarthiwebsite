@@ -46,23 +46,23 @@ export class HeaderComponent implements OnInit, OnChanges {
 	marque = [
 		{
 			title: 'UPSC (Civil Services) 2022 Competitive Exam Coaching मुदतवाढ',
-			link: 'http://sarthi-maharashtragov.in/en/form/online-application-form-for-cse',
+			link: 'http://old.sarthi-maharashtragov.in/en/form/online-application-form-for-cse',
 		},
 		{
 			title: 'MAHARASHTRA ENGINEERING SERVICES (MES) 2021 PROGRAM मुदतवाढ',
-			link: 'http://sarthi-maharashtragov.in/en/form/online-application-form-for-mes',
+			link: 'http://old.sarthi-maharashtragov.in/en/form/online-application-form-for-mes',
 		},
 		{
 			title: 'Civil Judge Junior Division & Judicial Magistrate First Class Coaching  2021  मुदतवाढ',
-			link: 'http://sarthi-maharashtragov.in/en/form/online-application-form-for-cjjd',
+			link: 'http://old.sarthi-maharashtragov.in/en/form/online-application-form-for-cjjd',
 		},
 		{
 			title: 'MPSC Subordinate Services (Non-gazetted)Group -B Combined (PSI,ASO,STI) Exam Coaching 2021 मुदतवाढ',
-			link: 'http://sarthi-maharashtragov.in/en/form/online-application-form-for-mpsc',
+			link: 'http://old.sarthi-maharashtragov.in/en/form/online-application-form-for-mpsc',
 		},
 		{
 			title: 'Staff Selection Commission Non Gazetted  Posts Examination Coaching 2021  मुदतवाढ',
-			link: 'http://sarthi-maharashtragov.in/en/webform/online_application_form_for_staf',
+			link: 'http://old.sarthi-maharashtragov.in/en/webform/online_application_form_for_staf',
 		},
 	];
 
@@ -188,14 +188,14 @@ export class HeaderComponent implements OnInit, OnChanges {
 				en: 'Interactive E Application',
 				mr: 'इंटरएक्टिव ई एप्लीकेशन',
 			},
-			url: 'http://sarthi-maharashtragov.in/eapp',
+			url: 'http://eapp.sarthi-maharashtragov.in/',
 		},
 		{
 			name: {
 				en: 'Memebership Login',
 				mr: 'सदस्यता लॉगिन',
 			},
-			url: 'https://sarthiadmin.ryanenterprises.in',
+			url: 'https://admin.sarthi-maharashtragov.in',
 		},
 		{
 			name: {
