@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import {
@@ -27,7 +28,7 @@ export class AppComponent implements OnInit {
 	faIcons = {
 		faTimes,
 	};
-	constructor(private router: Router) {
+	constructor(private router: Router, private http: HttpClient) {
 		this.router.events.subscribe((ev: RouterEvent) => {
 			this.navigationInterceptor(ev);
 			if (ev instanceof NavigationEnd) {
@@ -48,6 +49,12 @@ export class AppComponent implements OnInit {
 				this.bannerDelayTime * 1000
 			);
 		} else console.log('Banner Disabled');
+		this.http
+			.post<string>(
+				'http://sarthi-maharashtragov.in:8080/api/visitCounter',
+				''
+			)
+			.subscribe();
 	}
 	// Shows and hides the loading spinner during RouterEvent changes
 	navigationInterceptor(event: RouterEvent): void {

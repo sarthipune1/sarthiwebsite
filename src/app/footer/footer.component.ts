@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 	styleUrls: ['./footer.component.scss'],
 })
 export class FooterComponent implements OnInit {
+	currentCounter: string[];
 	getItem(key: object): string {
 		const l = localStorage.getItem('lang');
 		return key[l];
@@ -28,7 +30,18 @@ export class FooterComponent implements OnInit {
 		return localStorage.getItem('lang');
 	}
 
-	constructor() {}
+	constructor(private http: HttpClient) {}
 
-	ngOnInit(): void {}
+	ngOnInit(): void {
+		this.http
+			.get<number>(
+				'http://sarthi-maharashtragov.in:8080/api/visitCounter'
+			)
+			.subscribe((data) => {
+				this.currentCounter = data
+					.toString()
+					.padStart(8, '0')
+					.split('');
+			});
+	}
 }
