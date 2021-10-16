@@ -100,8 +100,8 @@ export class HomeComponent implements OnInit {
 	];
 	strengthData = [
 		{
-			icon: 'horn.png',
-			title: 'MPSC MAINS 2020 Sponsorship (for MPSC Prelims 2020 Pass Candidates)',
+			icon: 'new.png',
+			title: '(Date Extended till 18th Oct 2021) MPSC MAINS 2020 Sponsorship (for MPSC Prelims 2020 Pass Candidates)',
 			link: 'https://docs.google.com/forms/d/e/1FAIpQLSd5XH-nTUNGJWGcaDtvl_19oTi5ex1n6THwh8klH3oc3y0bdA/viewform?usp=sf_link',
 		},
 		{

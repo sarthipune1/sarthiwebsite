@@ -65,7 +65,7 @@ export class HeaderComponent implements OnInit, OnChanges {
 			link: 'http://old.sarthi-maharashtragov.in/en/webform/online_application_form_for_staf',
 		},
 		{
-			title: 'MPSC MAINS 2020 Sponsorship (for MPSC Prelims 2020 Pass Candidates)',
+			title: '(Date Extended till 18th Oct 2021) MPSC MAINS 2020 Sponsorship (for MPSC Prelims 2020 Pass Candidates)',
 			link: 'https://docs.google.com/forms/d/e/1FAIpQLSd5XH-nTUNGJWGcaDtvl_19oTi5ex1n6THwh8klH3oc3y0bdA/viewform?usp=sf_link',
 		},
 	];
