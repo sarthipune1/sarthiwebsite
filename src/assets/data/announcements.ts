@@ -7,6 +7,11 @@ export type Announcements = {
 const announcements: Announcements[] = [
 	{
 		icon: 'new.png',
+		title: 'All E-tenders of Competitive Department Bid Submission - Date extended',
+		link: 'assets/files/E_tender_extended_date_letter.pdf',
+	},
+	{
+		icon: 'new.png',
 		title: 'MPSC MAINS 2020 Sponsorship (for MPSC Prelims 2020 Pass Candidates) - मुदतवाढ  दि.18.10.2021',
 		link: 'assets/files/MPSC MAINS 2020.pdf',
 	},
