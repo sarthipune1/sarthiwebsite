@@ -199,7 +199,7 @@ export class HeaderComponent implements OnInit, OnChanges {
 				en: 'Memebership Login',
 				mr: 'सदस्यता लॉगिन',
 			},
-			url: 'https://admin.sarthi-maharashtragov.in',
+			url: 'http://admin.sarthi-maharashtragov.in',
 		},
 		{
 			name: {
