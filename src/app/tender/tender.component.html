@@ -1,1 +1,28 @@
-<p>tender works!</p>
+<div [ngStyle.lt-md]="{ 'height': 'auto'}" [ngStyle]="{ 'height': '40rem'}" class="main-container" fxLayout="row"
+  fxLayout.lt-md="column" fxLayoutAlign="space-evenly center" fxLayoutGap="0px" fxLayoutGap.lt-md="40px">
+  <div class="Announcements-container" fxFlex="45" fxFlex.lt-md="90">
+    <div class="notice-header">
+      <span>Announcements</span>
+    </div>
+    <div fxLayout.lt-md="column" fxLayoutGap="50px" class="notice-details-container">
+      <div *ngFor="let strength of strengthData" fxLayout="row" fxLayout.lt-md="column"
+        fxLayoutAlign="flex-start center" fxLayoutGap="20px" class="announcements Announcements-block-container">
+        <div class="Announcements-description">
+          <img alt="bg" src="../../assets/images/{{strength.icon}}">
+        </div>
+        <div fxLayout="column" class="check-here" fxLayoutGap="20px">
+          <div>
+            <span class="Announcements-sub-title">
+              {{strength.title}}
+              <br>
+            </span>
+            <a href={{strength.link}} target="_blank">
+              Check Here
+            </a>
+          </div>
+          <!-- <span class="Announcements-description">{{strength.description}}</span> -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

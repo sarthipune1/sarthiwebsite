@@ -40,11 +40,6 @@ const announcements: Announcements[] = [
 		title: 'छत्रपती शाहू महाराज राष्ट्रीय संशोधन अधिछात्रवृत्ती (CSMNRF -2021) CHHATRAPATI SHAHU MAHARAJ NATIONAL RESEARCH FELLOWSHIP - Character Certificate',
 		link: 'assets/files/6.Character Certificate.pdf',
 	},
-	{
-		icon: 'new.png',
-		title: 'All E-tenders of Competitive Department Technical & commercial Bid Submission date extended to 01/11/2021 (17.00 hrs)',
-		link: 'assets/files/E_tender_extended_date_letter.pdf',
-	},
 
 	{
 		icon: 'horn.png',

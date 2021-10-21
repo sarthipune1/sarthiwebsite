@@ -84,6 +84,10 @@ export class SubheaderComponent implements OnInit, OnChanges {
 			title: 'Awards',
 			description: 'All the awards given',
 		},
+		tender: {
+			title: 'Tender',
+			description: 'All the tenders passed.',
+		},
 		notices: {
 			title: 'Notices',
 			description: 'This will show notice description',
