@@ -1,26 +1,40 @@
-<div [ngStyle.lt-md]="{ 'height': 'auto'}" [ngStyle]="{ 'height': '40rem'}" class="main-container" fxLayout="row"
-  fxLayout.lt-md="column" fxLayoutAlign="space-evenly center" fxLayoutGap="0px" fxLayoutGap.lt-md="40px">
-  <div class="Announcements-container" fxFlex="45" fxFlex.lt-md="90">
-    <div class="notice-header">
-      <span>Announcements</span>
+<div class="container">
+  <div class="admin-container" fxLayout='column' fxFlexAlign='center center' [ngStyle.lt-md]="{'padding':'3rem'}"
+    [ngStyle.lt-sm]="{'padding':'1.5rem'}">
+    <div class="header" [ngStyle.lt-md]="{'font-size':'1.5rem', 'line-height':'2.5rem'}"
+      fxLayoutAlign.lt-sm='center center' fxLayout.lt-sm='column'>
+      <span>Tendor Notice and Announcements</span>
     </div>
-    <div fxLayout.lt-md="column" fxLayoutGap="50px" class="notice-details-container">
-      <div *ngFor="let strength of strengthData" fxLayout="row" fxLayout.lt-md="column"
-        fxLayoutAlign="flex-start center" fxLayoutGap="20px" class="announcements Announcements-block-container">
-        <div class="Announcements-description">
-          <img alt="bg" src="../../assets/images/{{strength.icon}}">
+
+
+    <div>E-procurement website - <a
+        href="https://mahatenders.gov.in/nicgep/app">https://mahatenders.gov.in/nicgep/app</a>
+    </div>
+    <div [ngStyle.lt-md]="{ 'height': 'auto'}" [ngStyle]="{ 'height': '40rem'}" class="main-container" fxLayout="row"
+      fxLayout.lt-md="column" fxLayoutAlign="space-evenly center" fxLayoutGap="0px" fxLayoutGap.lt-md="40px">
+      <div class="Announcements-container" fxFlex="80" fxFlex.lt-md="90">
+        <div class="notice-header">
+          <span>Tendor Notice and Announcements</span>
         </div>
-        <div fxLayout="column" class="check-here" fxLayoutGap="20px">
-          <div>
-            <span class="Announcements-sub-title">
-              {{strength.title}}
-              <br>
-            </span>
-            <a href={{strength.link}} target="_blank">
-              Check Here
-            </a>
+        <div fxLayout.lt-md="column" fxLayoutGap="50px" class="notice-details-container">
+          <div *ngFor="let strength of strengthData" fxLayout="row" fxLayout.lt-md="column"
+            fxLayoutAlign="flex-start center" fxLayoutGap="20px" class="announcements Announcements-block-container">
+            <div class="Announcements-description">
+              <img alt="bg" src="../../assets/images/{{strength.icon}}">
+            </div>
+            <div fxLayout="column" class="check-here" fxLayoutGap="20px">
+              <div>
+                <span class="Announcements-sub-title">
+                  {{strength.title}}
+                  <br>
+                </span>
+                <a href={{strength.link}} target="_blank">
+                  Check Here
+                </a>
+              </div>
+              <!-- <span class="Announcements-description">{{strength.description}}</span> -->
+            </div>
           </div>
-          <!-- <span class="Announcements-description">{{strength.description}}</span> -->
         </div>
       </div>
     </div>
