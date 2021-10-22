@@ -5,6 +5,41 @@ export type Announcements = {
 };
 
 const announcements: Announcements[] = [
+	// {
+	// 	icon: 'new.png',
+	// 	title: '',
+	// 	link: 'assets/files/',
+	// },
+	{
+		icon: 'new.png',
+		title: 'MPSC (STATE SERVICES) 2021-22 COACHING FIRST WAITING LIST',
+		link: 'http://old.sarthi-maharashtragov.in/en/node/4',
+	},
+	{
+		icon: 'new.png',
+		title: 'UPSC (Civil Services) 2022 Competitive Exam Coaching मुदतवाढ',
+		link: 'assets/files/UPSC 2022.pdf',
+	},
+	{
+		icon: 'new.png',
+		title: 'MAHARASHTRA ENGINEERING SERVICES (MES) 2021 PROGRAM मुदतवाढ',
+		link: 'assets/files/CJJD & JMFC.pdf',
+	},
+	{
+		icon: 'new.png',
+		title: 'Civil Judge Junior Division & Judicial Magistrate First Class Coaching  2021  मुदतवाढ',
+		link: 'assets/files/MPSC MES.pdf',
+	},
+	{
+		icon: 'new.png',
+		title: 'MPSC Subordinate Services (Non-gazetted)Group -B Combined (PSI,ASO,STI) Exam Coaching 2021 मुदतवाढ',
+		link: 'assets/files/SSC.pdf',
+	},
+	{
+		icon: 'new.png',
+		title: 'Staff Selection Commission Non Gazetted  Posts Examination Coaching 2021 मुदतवाढ',
+		link: 'assets/files/MPSC Group B.pdf',
+	},
 	{
 		icon: 'new.png',
 		title: 'MPSC (STATE SERVICES) 2021-22 COACHING - ELIGIBLE LIST OF CANDIDATES ',
