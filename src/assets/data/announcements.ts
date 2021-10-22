@@ -7,6 +7,26 @@ export type Announcements = {
 const announcements: Announcements[] = [
 	{
 		icon: 'new.png',
+		title: 'MPSC (STATE SERVICES) 2021-22 COACHING - ELIGIBLE LIST OF CANDIDATES ',
+		link: 'http://old.sarthi-maharashtragov.in/sites/default/files/inline-files/MPSC%20STATE%20SERVICE%20-%20Eligible%20Candidates%20List.pdf',
+	},
+	{
+		icon: 'new.png',
+		title: 'MPSC (STATE SERVICES) 2021-22 COACHING - NOT ELIGIBLE LIST OF CANDIDATES',
+		link: 'http://old.sarthi-maharashtragov.in/sites/default/files/inline-files/NOT%20ELIGIBLE%20%282%29.pdf',
+	},
+	{
+		icon: 'new.png',
+		title: 'MPSC (STATE SERVICES) 2021-22 COACHING - FINAL CALL FOR DOCUMENT   new VERIFICATION',
+		link: 'http://old.sarthi-maharashtragov.in/sites/default/files/inline-files/Final%20Call%20For%20Doc%20Vertification.pdf',
+	},
+	{
+		icon: 'new.png',
+		title: 'छत्रपती  शाहू  महाराज राष्ट्रीय  संशोधन अधिछात्रवृत्ती (CSMNRF ) - 2020 Annexure Format',
+		link: 'assets/files/csmnrf2020annexure.zip',
+	},
+	{
+		icon: 'new.png',
 		title: ' छत्रपती  शाहू  महाराज राष्ट्रीय  संशोधन अधिछात्रवृत्ती (CSMNRF ) - 2019 Annexure Format',
 		link: 'assets/files/CSMNRF  2019 Annexure Format.zip',
 	},
@@ -18,35 +38,35 @@ const announcements: Announcements[] = [
 	{
 		icon: 'new.png',
 		title: 'विविध समारंभ / कार्यक्रम व्यवस्थापन () एजन्सी निवड करणेकरिता दरपत्रके मागविण्यात येत आहेत. - Call for Quotation for Selection of Event Management Agency in Pune District (Including PCMC) for various Programs organized by SARTHI, Pune.',
-		link: 'assets/files/Event Management Quotation.pdf',
+		link: 'assets/files/Events Management Agency Quotation.pdf',
 	},
 	{
-		icon: 'new.png',
+		icon: 'horn.png',
 		title: 'छत्रपती शाहू महाराज राष्ट्रीय संशोधन अधिछात्रवृत्ती (CSMNRF -2021) CHHATRAPATI SHAHU MAHARAJ NATIONAL RESEARCH FELLOWSHIP - छत्रपती शाहू महाराज राष्ट्रीय संशोधन अधिछात्रवृत्ती (CSMNRF -2021)  घोषणा new परीपूर्ण अर्जाची यादी, आक्षेप (त्रुटीची पूर्तता करण्याकरीता) यादी व रद्द करण्यात आलेल्या अर्जाची यादी',
 		link: 'assets/files/1.CSMNRF - 2021 आक्षेप  यादी  Final ..pdf',
 	},
 	{
-		icon: 'new.png',
+		icon: 'horn.png',
 		title: 'छत्रपती शाहू महाराज राष्ट्रीय संशोधन अधिछात्रवृत्ती (CSMNRF -2021) CHHATRAPATI SHAHU MAHARAJ NATIONAL RESEARCH FELLOWSHIP - Advertisement',
 		link: 'assets/files/2.CSMNRF-2021 जाहीरात.pdf',
 	},
 	{
-		icon: 'new.png',
+		icon: 'horn.png',
 		title: 'छत्रपती शाहू महाराज राष्ट्रीय संशोधन अधिछात्रवृत्ती (CSMNRF -2021) CHHATRAPATI SHAHU MAHARAJ NATIONAL RESEARCH FELLOWSHIP - Guidelines ',
 		link: 'assets/files/3.CSMNRF - 2021 Guidelines Final_0.pdf',
 	},
 	{
-		icon: 'new.png',
+		icon: 'horn.png',
 		title: 'छत्रपती शाहू महाराज राष्ट्रीय संशोधन अधिछात्रवृत्ती (CSMNRF -2021) CHHATRAPATI SHAHU MAHARAJ NATIONAL RESEARCH FELLOWSHIP - Instructions, Terms & Conditions',
 		link: 'assets/files/4.Instructions Fellowship - CSMNRF - 2021...pdf',
 	},
 	{
-		icon: 'new.png',
+		icon: 'horn.png',
 		title: 'छत्रपती शाहू महाराज राष्ट्रीय संशोधन अधिछात्रवृत्ती (CSMNRF -2021) CHHATRAPATI SHAHU MAHARAJ NATIONAL RESEARCH FELLOWSHIP - .CSMNRF- 2021 Frequently asked question (FAQ)',
 		link: 'assets/files/5. FAQ.pdf',
 	},
 	{
-		icon: 'new.png',
+		icon: 'horn.png',
 		title: 'छत्रपती शाहू महाराज राष्ट्रीय संशोधन अधिछात्रवृत्ती (CSMNRF -2021) CHHATRAPATI SHAHU MAHARAJ NATIONAL RESEARCH FELLOWSHIP - Character Certificate',
 		link: 'assets/files/6.Character Certificate.pdf',
 	},
