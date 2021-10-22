@@ -7,6 +7,16 @@ export type Announcements = {
 const announcements: Announcements[] = [
 	{
 		icon: 'new.png',
+		title: ' छत्रपती  शाहू  महाराज राष्ट्रीय  संशोधन अधिछात्रवृत्ती (CSMNRF ) - 2019 Annexure Format',
+		link: 'assets/files/CSMNRF  2019 Annexure Format.zip',
+	},
+	{
+		icon: 'new.png',
+		title: 'मुख्यमंत्री विशेष संशोधन अधिछात्रवृत्ती (CMSRF) -2019 Annexure Format',
+		link: 'assets/files/CMSRF -2019 Annexure Format.zip',
+	},
+	{
+		icon: 'new.png',
 		title: 'विविध समारंभ / कार्यक्रम व्यवस्थापन () एजन्सी निवड करणेकरिता दरपत्रके मागविण्यात येत आहेत. - Call for Quotation for Selection of Event Management Agency in Pune District (Including PCMC) for various Programs organized by SARTHI, Pune.',
 		link: 'assets/files/Event Management Quotation.pdf',
 	},
