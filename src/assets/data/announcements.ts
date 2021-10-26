@@ -14,6 +14,19 @@ const announcements: Announcements[] = [
 	// },
 	{
 		icon: 'new.png',
+		category: 'Booklet दरपत्रके अटी व शर्ती',
+		title: 'Booklet दरपत्रके अटी व शर्ती',
+		link: 'assets/files/Booklet दरपत्रके अटी व शर्ती.pdf',
+	},
+	{
+		icon: 'new.png',
+		category:
+			'ADVERTISE booklet तयार करून छपाई करणेकरिता IN PUNE DISTRICTS (INCLUDING PCMC) दरपत्रके मागविण्यात येत आहेत',
+		title: 'ADVERTISE booklet तयार करून छपाई करणेकरिता IN PUNE DISTRICTS (INCLUDING PCMC) दरपत्रके मागविण्यात येत आहेत',
+		link: 'assets/files/ADVERTISE booklet तयार करून छपाई करणेकरिता IN PUNE DISTRICTS (INCLUDING PCMC) दरपत्रके मागविण्यात येत आहेत.pdf',
+	},
+	{
+		icon: 'new.png',
 		category: 'MPSC (STATE SERVICES) 2021-22 COACHING FIRST WAITING LIST',
 		title: 'MPSC (STATE SERVICES) 2021-22 COACHING FIRST WAITING LIST',
 		link: 'http://old.sarthi-maharashtragov.in/en/node/4',
@@ -21,35 +34,36 @@ const announcements: Announcements[] = [
 	{
 		icon: 'new.png',
 		category:
-			'UPSC (Civil Services) 2022 Competitive Exam Coaching मुदतवाढ',
-		title: 'UPSC (Civil Services) 2022 Competitive Exam Coaching मुदतवाढ',
+			'UPSC (Civil Services) 2022 Competitive Exam Coaching मुदतवाढ तारीख - 20.11.2021',
+		title: 'UPSC (Civil Services) 2022 Competitive Exam Coaching मुदतवाढ तारीख - 20.11.2021',
 		link: 'assets/files/UPSC 2022.pdf',
 	},
 	{
 		icon: 'new.png',
-		category: 'MAHARASHTRA ENGINEERING SERVICES (MES) 2021 PROGRAM मुदतवाढ',
-		title: 'MAHARASHTRA ENGINEERING SERVICES (MES) 2021 PROGRAM मुदतवाढ',
+		category:
+			'MAHARASHTRA ENGINEERING SERVICES (MES) 2021 PROGRAM मुदतवाढ तारीख - 20.11.2021',
+		title: 'MAHARASHTRA ENGINEERING SERVICES (MES) 2021 PROGRAM मुदतवाढ तारीख - 20.11.2021',
 		link: 'assets/files/CJJD & JMFC.pdf',
 	},
 	{
 		icon: 'new.png',
 		category:
-			'Civil Judge Junior Division & Judicial Magistrate First Class Coaching  2021  मुदतवाढ',
-		title: 'Civil Judge Junior Division & Judicial Magistrate First Class Coaching  2021  मुदतवाढ',
+			'Civil Judge Junior Division & Judicial Magistrate First Class Coaching  2021  मुदतवाढ तारीख - 20.11.2021',
+		title: 'Civil Judge Junior Division & Judicial Magistrate First Class Coaching  2021  मुदतवाढ तारीख - 20.11.2021',
 		link: 'assets/files/MPSC MES.pdf',
 	},
 	{
 		icon: 'new.png',
 		category:
-			'MPSC Subordinate Services (Non-gazetted)Group -B Combined (PSI,ASO,STI) Exam Coaching 2021 मुदतवाढ',
-		title: 'MPSC Subordinate Services (Non-gazetted)Group -B Combined (PSI,ASO,STI) Exam Coaching 2021 मुदतवाढ',
+			'MPSC Subordinate Services (Non-gazetted)Group -B Combined (PSI,ASO,STI) Exam Coaching 2021 मुदतवाढ तारीख - 20.11.2021',
+		title: 'MPSC Subordinate Services (Non-gazetted)Group -B Combined (PSI,ASO,STI) Exam Coaching 2021 मुदतवाढ तारीख - 20.11.2021',
 		link: 'assets/files/SSC.pdf',
 	},
 	{
 		icon: 'new.png',
 		category:
-			'Staff Selection Commission Non Gazetted  Posts Examination Coaching 2021 मुदतवाढ',
-		title: 'Staff Selection Commission Non Gazetted  Posts Examination Coaching 2021 मुदतवाढ',
+			'Staff Selection Commission Non Gazetted  Posts Examination Coaching 2021 मुदतवाढ तारीख - 20.11.2021',
+		title: 'Staff Selection Commission Non Gazetted  Posts Examination Coaching 2021 मुदतवाढ तारीख - 20.11.2021',
 		link: 'assets/files/MPSC Group B.pdf',
 	},
 	{
