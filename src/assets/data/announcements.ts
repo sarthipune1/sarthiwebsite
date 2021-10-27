@@ -115,28 +115,28 @@ const announcements: Announcements[] = [
 		icon: 'horn.png',
 		category:
 			'छत्रपती शाहू महाराज राष्ट्रीय संशोधन अधिछात्रवृत्ती (CSMNRF -2021) CHHATRAPATI SHAHU MAHARAJ NATIONAL RESEARCH FELLOWSHIP',
-		title: 'त्रपती शाहू महाराज राष्ट्रीय संशोधन अधिछात्रवृत्ती (CSMNRF -2021)  घोषणा new परीपूर्ण अर्जाची यादी, आक्षेप (त्रुटीची पूर्तता करण्याकरीता) यादी व रद्द करण्यात आलेल्या अर्जाची यादी',
+		title: 'छत्रपती शाहू महाराज राष्ट्रीय संशोधन अधिछात्रवृत्ती (CSMNRF -2021)  घोषणा new परीपूर्ण अर्जाची यादी, आक्षेप (त्रुटीची पूर्तता करण्याकरीता) यादी व रद्द करण्यात आलेल्या अर्जाची यादी',
 		link: 'assets/files/1.CSMNRF - 2021 आक्षेप  यादी  Final ..pdf',
 	},
 	{
 		icon: 'horn.png',
 		category:
 			'छत्रपती शाहू महाराज राष्ट्रीय संशोधन अधिछात्रवृत्ती (CSMNRF -2021) CHHATRAPATI SHAHU MAHARAJ NATIONAL RESEARCH FELLOWSHIP',
-		title: 'dvertisement',
+		title: 'Advertisement',
 		link: 'assets/files/2.CSMNRF-2021 जाहीरात.pdf',
 	},
 	{
 		icon: 'horn.png',
 		category:
 			'छत्रपती शाहू महाराज राष्ट्रीय संशोधन अधिछात्रवृत्ती (CSMNRF -2021) CHHATRAPATI SHAHU MAHARAJ NATIONAL RESEARCH FELLOWSHIP',
-		title: 'uidelines ',
+		title: 'Guidelines ',
 		link: 'assets/files/3.CSMNRF - 2021 Guidelines Final_0.pdf',
 	},
 	{
 		icon: 'horn.png',
 		category:
 			'छत्रपती शाहू महाराज राष्ट्रीय संशोधन अधिछात्रवृत्ती (CSMNRF -2021) CHHATRAPATI SHAHU MAHARAJ NATIONAL RESEARCH FELLOWSHIP',
-		title: 'nstructions, Terms & Conditions',
+		title: 'Instructions, Terms & Conditions',
 		link: 'assets/files/4.Instructions Fellowship - CSMNRF - 2021...pdf',
 	},
 	{
@@ -150,7 +150,7 @@ const announcements: Announcements[] = [
 		icon: 'horn.png',
 		category:
 			'छत्रपती शाहू महाराज राष्ट्रीय संशोधन अधिछात्रवृत्ती (CSMNRF -2021) CHHATRAPATI SHAHU MAHARAJ NATIONAL RESEARCH FELLOWSHIP',
-		title: 'haracter Certificate',
+		title: 'Character Certificate',
 		link: 'assets/files/6.Character Certificate.pdf',
 	},
 
