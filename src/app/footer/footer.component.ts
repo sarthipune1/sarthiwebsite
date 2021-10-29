@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { apiUrl } from 'assets/data/environment';
 
 @Component({
 	selector: 'app-footer',
@@ -33,15 +34,8 @@ export class FooterComponent implements OnInit {
 	constructor(private http: HttpClient) {}
 
 	ngOnInit(): void {
-		this.http
-			.get<number>(
-				'http://sarthi-maharashtragov.in:8080/api/visitCounter'
-			)
-			.subscribe((data) => {
-				this.currentCounter = data
-					.toString()
-					.padStart(8, '0')
-					.split('');
-			});
+		this.http.get<number>(apiUrl + '/visitCounter').subscribe((data) => {
+			this.currentCounter = data.toString().padStart(8, '0').split('');
+		});
 	}
 }

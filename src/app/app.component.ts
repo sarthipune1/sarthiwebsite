@@ -11,6 +11,7 @@ import {
 	NavigationError,
 } from '@angular/router';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
+import { apiUrl } from 'assets/data/environment';
 
 @Component({
 	selector: 'app-root',
@@ -49,12 +50,7 @@ export class AppComponent implements OnInit {
 				this.bannerDelayTime * 1000
 			);
 		} else console.log('Banner Disabled');
-		this.http
-			.post<string>(
-				'http://sarthi-maharashtragov.in:8080/api/visitCounter',
-				''
-			)
-			.subscribe();
+		this.http.post<string>(apiUrl + '/visitCounter', '').subscribe();
 	}
 	// Shows and hides the loading spinner during RouterEvent changes
 	navigationInterceptor(event: RouterEvent): void {

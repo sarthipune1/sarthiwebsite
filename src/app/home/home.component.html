@@ -121,8 +121,8 @@
   </div>
 </div>
 <!-- Adding d-none to hide notices -->
-<div [ngStyle.lt-md]="{ 'height': 'auto'}" [ngStyle]="{ 'height': '40rem'}" class="main-container" fxLayout="row"
-  fxLayout.lt-md="column" fxLayoutAlign="space-evenly center" fxLayoutGap="0px" fxLayoutGap.lt-md="40px">
+<!-- <div [ngStyle.lt-md]="{ 'height': 'auto'}" [ngStyle]="{ 'height': '40rem'}" class="main-container"
+  fxLayout="row" fxLayout.lt-md="column" fxLayoutAlign="space-evenly center" fxLayoutGap="0px" fxLayoutGap.lt-md="40px">
   <div class="notice-main-container" fxFlex="45" fxLayout="column">
     <div class="notice-header">
       <span>Events</span>
@@ -162,12 +162,12 @@
               Check Here
             </a>
           </div>
-          <!-- <span class="Announcements-description">{{strength.description}}</span> -->
         </div>
       </div>
     </div>
   </div>
-</div>
+</div> -->
+<app-notice [isHome]="true"></app-notice>
 <div class="main-objectives-container" fxLayout="column" fxLayoutGap="3rem">
   <div class="main-objectives" fxLayoutAlign="center">
     <span>{{getItem(content.objectives.main)}}</span>

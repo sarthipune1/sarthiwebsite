@@ -1,8 +1,29 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 // import * as FullEditor from 'ckeditor5-custom-build-full/build/ckeditor.js';
 import * as FullEditor from 'ckeditor5-custom-build/build/ckeditor.js';
-import announcements from 'assets/data/announcements';
+// import announcements from 'assets/data/announcements';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
+import { HttpClient } from '@angular/common/http';
+import { apiUrl } from 'assets/data/environment';
+
+interface NoticeCategory {
+	id: number;
+	title: string;
+}
+
+export interface INotice {
+	id: number;
+	title: string;
+	link: string;
+	url: string;
+	expiry: string;
+	category: NoticeCategory;
+	categoryTitle: string;
+	createdAt: string;
+	updatedAt: string;
+}
+
+type INoticeStatus = 'new.png' | 'closed.png' | 'horn.png';
 
 @Component({
 	selector: 'app-notice',
@@ -10,39 +31,58 @@ import { faTimes } from '@fortawesome/free-solid-svg-icons';
 	styleUrls: ['./notice.component.scss'],
 })
 export class NoticeComponent implements OnInit {
+	constructor(private http: HttpClient) {}
+
+	@Input('isHome') isHome: boolean = false;
+	ngOnInit(): void {
+		this.getCategory();
+	}
 	modalVisible: boolean = false;
 
 	currentCategory: string = '';
-	getCategoryContent = [
-		{
-			icon: 'new.png',
-			category:
-				'MPSC (STATE SERVICES) 2021-22 COACHING FIRST WAITING LIST',
-			title: 'MPSC (STATE SERVICES) 2021-22 COACHING FIRST WAITING LIST',
-			link: 'http://old.sarthi-maharashtragov.in/en/node/4',
-		},
-		{
-			icon: 'new.png',
-			category:
-				'UPSC (Civil Services) 2022 Competitive Exam Coaching मुदतवाढ',
-			title: 'UPSC (Civil Services) 2022 Competitive Exam Coaching मुदतवाढ',
-			link: 'assets/files/UPSC 2022.pdf',
-		},
-		{
-			icon: 'new.png',
-			category:
-				'MAHARASHTRA ENGINEERING SERVICES (MES) 2021 PROGRAM मुदतवाढ',
-			title: 'MAHARASHTRA ENGINEERING SERVICES (MES) 2021 PROGRAM मुदतवाढ',
-			link: 'assets/files/CJJD & JMFC.pdf',
-		},
-	];
 	faIcons = {
 		faTimes,
 	};
-	constructor() {}
 	public Editor = FullEditor;
 
-	ngOnInit(): void {}
+	public readonly apiUrl: string = apiUrl;
+
+	baseUrl: string = apiUrl + '/notices';
+	// baseUrl: string = 'http://localhost:3001/api/notices';
+	categories: NoticeCategory[];
+	notices: INotice[];
+
+	getCategory() {
+		this.http
+			.get<NoticeCategory[]>(`${this.baseUrl}/category`)
+			.subscribe((data) => {
+				this.categories = data;
+			});
+	}
+
+	getNoticeStatus(createdDate: string, expiryDate: string): INoticeStatus {
+		const currentDate = new Date();
+
+		if (expiryDate !== null) {
+			const created = new Date(createdDate);
+			const expired = new Date(expiryDate);
+
+			if (this.getNoOfDays(currentDate, expired) >= 0) {
+				if (this.getNoOfDays(currentDate, created) <= 7) {
+					return 'new.png';
+				}
+			} else {
+				return 'closed.png';
+			}
+		}
+
+		return 'horn.png';
+	}
+
+	getNoOfDays(date1: Date, date2: Date): number {
+		const diff = Math.abs(date1.getTime() - date2.getTime());
+		return diff / (1000 * 60 * 60 * 24);
+	}
 	noticeData = [
 		{
 			date: {
@@ -85,9 +125,19 @@ export class NoticeComponent implements OnInit {
 	openCategory(category: string) {
 		this.currentCategory = category;
 		// HTTP call to fetch notices
+		this.http
+			.get<INotice[]>(`${this.baseUrl}?category=${category}`)
+			.subscribe((data) => {
+				this.notices = data.map((v) => {
+					return {
+						...v,
+						categoryTitle: v.category.title,
+					};
+				});
+			});
 		this.toggleModal();
 	}
-	strengthData = announcements;
+	// strengthData = announcements;
 
 	editorConfig = {
 		toolbar: {

@@ -36,7 +36,6 @@
 }
 
 .container {
-	background-color: #e5e5e5;
 	padding: 2rem 0;
 }
 
@@ -68,6 +67,7 @@
 
 .main-container {
 	margin: 50px 0;
+	width: 100%;
 }
 
 .notice-header {
@@ -229,9 +229,9 @@
 	.modal-body {
 		position: relative;
 		height: 90vh;
-		width: 80vw;
+		min-width: 95vw;
 		background-color: white;
-		padding: 3rem;
+		padding: 2rem 1rem;
 		border-radius: 20px;
 		text-align: justify;
 		color: #f67e22;
@@ -290,7 +290,7 @@
 .cross-icon {
 	position: fixed;
 	top: 7vh;
-	right: 11vw;
+	right: 3rem;
 	font-size: 2rem;
 	color: #f67e22;
 }
