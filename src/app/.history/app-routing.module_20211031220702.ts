@@ -10,7 +10,7 @@ const routes: Routes = [
 	},
 	{ path: 'notices', component: NoticeComponent },
 	{
-		path: 'pages',
+		path: '',
 		loadChildren: () =>
 			import('./pages/pages.module').then((m) => m.PagesModule),
 	},

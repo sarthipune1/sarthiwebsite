@@ -8,6 +8,7 @@ import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
 
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { FlexLayoutModule } from '@angular/flex-layout';
@@ -16,20 +17,16 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CarouselModule } from 'ngx-owl-carousel-o';
+import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
+import { HomeComponent } from './home/home.component';
+import { AccountsComponent } from './departments/accounts/accounts.component';
 
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatCardModule } from '@angular/material/card';
 import { FormioModule } from '@formio/angular';
-
-//Components
-import { AppComponent } from './app.component';
-import { HeaderComponent } from './header/header.component';
-import { FooterComponent } from './footer/footer.component';
-import { HomeComponent } from './home/home.component';
-import { NoticeComponent } from './notice/notice.component';
-import { SubheaderComponent } from './subheader/subheader.component';
 
 //CKEditor
 import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
@@ -38,11 +35,10 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
 @NgModule({
 	declarations: [
 		AppComponent,
+		AccountsComponent,
 		HomeComponent,
 		HeaderComponent,
 		FooterComponent,
-		NoticeComponent,
-		SubheaderComponent,
 	],
 	imports: [
 		BrowserModule,

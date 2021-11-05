@@ -105,7 +105,7 @@ export class HeaderComponent implements OnInit, OnChanges {
 				en: 'Department',
 				mr: 'विभाग',
 			},
-			path: '/department/administration-and-management',
+			path: '/department',
 			sublist: [
 				{
 					name: {

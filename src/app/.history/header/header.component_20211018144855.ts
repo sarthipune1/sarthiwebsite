@@ -98,14 +98,14 @@ export class HeaderComponent implements OnInit, OnChanges {
 				en: 'About Us',
 				mr: 'आमचे विषयी',
 			},
-			path: '/pages/about-us',
+			path: '/about-us',
 		},
 		{
 			name: {
 				en: 'Department',
 				mr: 'विभाग',
 			},
-			path: '/department/administration-and-management',
+			path: '/department',
 			sublist: [
 				{
 					name: {
@@ -206,42 +206,42 @@ export class HeaderComponent implements OnInit, OnChanges {
 				en: 'Awards',
 				mr: 'पुरस्कार',
 			},
-			path: '/pages/awards',
+			path: '/awards',
 		},
 		{
 			name: {
 				en: 'Tender',
 				mr: 'निविदा',
 			},
-			path: '/pages/tender',
+			path: '/tender',
 		},
 		{
 			name: {
 				en: 'Success Stories',
 				mr: 'यशोगाथा',
 			},
-			path: '/pages/success',
+			path: '/success',
 		},
 		{
 			name: {
 				en: 'Gr & Circulars',
 				mr: 'GR आणि परिपत्रक',
 			},
-			path: '/pages/gr',
+			path: '/gr',
 		},
 		{
 			name: {
 				en: 'E-Books',
 				mr: 'ई-बुक',
 			},
-			path: '/pages/ebooks',
+			path: '/ebooks',
 		},
 		{
 			name: {
 				en: 'Videos & Photo Gallery',
 				mr: 'छायाचित्रे',
 			},
-			path: '/pages/gallery',
+			path: '/gallery',
 		},
 		// {
 		// 	name: {
@@ -255,14 +255,14 @@ export class HeaderComponent implements OnInit, OnChanges {
 				en: 'Board of Directors',
 				mr: 'संचालक मंडळ',
 			},
-			path: '/pages/board-of-directors',
+			path: '/board-of-directors',
 		},
 		{
 			name: {
 				en: 'Contact Us',
 				mr: 'संपर्क',
 			},
-			path: '/pages/contact-us',
+			path: '/contact-us',
 		},
 	];
 
