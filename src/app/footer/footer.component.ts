@@ -34,8 +34,13 @@ export class FooterComponent implements OnInit {
 	constructor(private http: HttpClient) {}
 
 	ngOnInit(): void {
-		this.http.get<number>(apiUrl + '/visitCounter').subscribe((data) => {
-			this.currentCounter = data.toString().padStart(8, '0').split('');
-		});
+		this.http
+			.get<number>(apiUrl + '/visitCounter')
+			.subscribe((data: number) => {
+				this.currentCounter = data
+					.toString()
+					.padStart(8, '0')
+					.split('');
+			});
 	}
 }

@@ -50,7 +50,13 @@ export class AppComponent implements OnInit {
 				this.bannerDelayTime * 1000
 			);
 		} else console.log('Banner Disabled');
-		this.http.post<string>(apiUrl + '/visitCounter', '').subscribe();
+		this.http
+			.post<string>(apiUrl + '/visitCounter', '', {
+				headers: {
+					'Content-Type': 'text/plain; charset=utf-8',
+				},
+			})
+			.subscribe();
 	}
 	// Shows and hides the loading spinner during RouterEvent changes
 	navigationInterceptor(event: RouterEvent): void {
