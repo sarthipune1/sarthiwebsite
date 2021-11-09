@@ -6,9 +6,12 @@ import { faTimes } from '@fortawesome/free-solid-svg-icons';
 import { HttpClient } from '@angular/common/http';
 import { apiUrl } from 'assets/data/environment';
 
-interface NoticeCategory {
+export interface NoticeCategory {
 	id: number;
 	title: string;
+	expiry: string;
+	createdAt: string;
+	updatedAt: string;
 }
 
 export interface INotice {
@@ -23,7 +26,7 @@ export interface INotice {
 	updatedAt: string;
 }
 
-type INoticeStatus = 'new.png' | 'closed.png' | 'horn.png';
+export type INoticeStatus = 'new.png' | 'closed.png' | 'horn.png';
 
 @Component({
 	selector: 'app-notice',
@@ -48,7 +51,6 @@ export class NoticeComponent implements OnInit {
 	public readonly apiUrl: string = apiUrl;
 
 	baseUrl: string = apiUrl + '/notices';
-	// baseUrl: string = 'http://localhost:3001/api/notices';
 	categories: NoticeCategory[];
 	notices: INotice[];
 

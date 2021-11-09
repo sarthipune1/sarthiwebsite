@@ -82,10 +82,12 @@
 	margin-bottom: 0px !important;
 	font-size: 1.5rem;
 	font-weight: 600;
+	width: 100vw;
 }
 .center {
 	text-align: center;
-	margin: 20px auto;
+	margin: 20px;
+	width: 100vw;
 	span {
 		display: inline-block;
 		padding: 10px;
