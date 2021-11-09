@@ -11,7 +11,7 @@ import { DepartmentsRoutingModule } from './departments-routing.module';
 import { AccountsComponent } from './accounts/accounts.component';
 import { ResearchDepartmentComponent } from './research-department/research-department.component';
 import { CompetitiveExaminationDepartmentComponent } from './competitive-examination-department/competitive-examination-department.component';
-import { ItDepartmentComponent } from './it-department/it-department.component';
+// import { ItDepartmentComponent } from './it-department/it-department.component';
 import { WomenEmpowermentDepartmentComponent } from './women-empowerment-department/women-empowerment-department.component';
 import { CasteCertificateComponent } from '../caste-certificate/caste-certificate.component';
 import { EducationDepartmentComponent } from './education-department/education-department.component';
@@ -25,7 +25,7 @@ import { AdministrationAndManagementComponent } from './administration-and-manag
 		AccountsComponent,
 		ResearchDepartmentComponent,
 		CompetitiveExaminationDepartmentComponent,
-		ItDepartmentComponent,
+		// ItDepartmentComponent,
 		WomenEmpowermentDepartmentComponent,
 		CasteCertificateComponent,
 		EducationDepartmentComponent,

@@ -6,7 +6,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AccountsComponent } from './accounts/accounts.component';
 import { ResearchDepartmentComponent } from './research-department/research-department.component';
 import { CompetitiveExaminationDepartmentComponent } from './competitive-examination-department/competitive-examination-department.component';
-import { ItDepartmentComponent } from './it-department/it-department.component';
+// import { ItDepartmentComponent } from './it-department/it-department.component';
 import { CasteCertificateComponent } from '../caste-certificate/caste-certificate.component';
 import { EducationDepartmentComponent } from './education-department/education-department.component';
 import { LibraryDepartmentComponent } from './library-department/library-department.component';
@@ -16,10 +16,10 @@ import { AdministrationAndManagementComponent } from './administration-and-manag
 
 const routes: Routes = [
 	{ path: 'statistics', component: StatisticsComponent },
-	{
-		path: 'it',
-		component: ItDepartmentComponent,
-	},
+	// {
+	// 	path: 'it',
+	// 	component: ItDepartmentComponent,
+	// },
 	{
 		path: 'library-department',
 		component: LibraryDepartmentComponent,
