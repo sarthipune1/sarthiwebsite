@@ -114,13 +114,13 @@ export class HeaderComponent implements OnInit, OnChanges {
 					},
 					path: '/department/administration-and-management',
 				},
-				{
-					name: {
-						en: 'IT Department',
-						mr: 'संगणक विभाग',
-					},
-					path: '/department/it',
-				},
+				// {
+				// 	name: {
+				// 		en: 'IT Department',
+				// 		mr: 'संगणक विभाग',
+				// 	},
+				// 	path: '/department/it',
+				// },
 				{
 					name: {
 						en: 'Education Department',

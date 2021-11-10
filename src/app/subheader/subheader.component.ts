@@ -51,7 +51,7 @@ export class SubheaderComponent implements OnInit, OnChanges {
 				description: 'Something regarding Information Technology',
 			},
 			research: {
-				title: 'Research',
+				title: 'Research / Fellowship department',
 				description: 'All the research goes here',
 			},
 			'administration-and-management': {
@@ -87,6 +87,14 @@ export class SubheaderComponent implements OnInit, OnChanges {
 		tender: {
 			title: 'Tender',
 			description: 'All the tenders passed.',
+		},
+		success: {
+			title: 'Success Stories',
+			description: 'All the sucess stories here.',
+		},
+		gr: {
+			title: 'GR & CIRCULARS',
+			description: 'All the GR & CIRCULARS here.',
 		},
 		notices: {
 			title: 'Notices',
