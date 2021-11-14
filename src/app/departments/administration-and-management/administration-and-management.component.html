@@ -1,33 +1,75 @@
 <div class="container">
-    <div class="admin-container" fxLayout='column' fxFlexAlign='center center' [ngStyle.lt-md]="{'padding':'3rem'}" [ngStyle.lt-sm]="{'padding':'1.5rem'}">
-        <div class="header" [ngStyle.lt-md]="{'font-size':'1.5rem', 'line-height':'2.5rem'}" fxLayoutAlign.lt-sm='center center' fxLayout.lt-sm='column'>
-            <span>Department Management</span>
-        </div>
-        <div class="description" [ngStyle.lt-md]="{'font-size':'0.8rem','text-align': 'justify', 'line-height': '1.5rem'}" [ngStyle.lt-sm]="{'font-size':'0.6rem','text-align': 'justify', 'line-height': '1.5rem'}">
-            <div>
-                <span>
-                    Chhatrapati Shahu Maharaj Research Training and Human Development Institute (SARTHI),
-          Pune is registered under Company Act, 2013 under Section 8 as Non-Profit government company for
-          research, policy advocacy, training etc.
-          for socio-economic and education development of Maratha, Maratha-Kunbi, Kunbi-Maratha, Kunbi
-          community in Maharashtra State.
-          Our organisation thrust areas includes research, policy advocacy to government, training etc. and
-          guidance to rural population,
-          particularly the farmers whose livelihood is dependent on agriculture.
-                </span>
-            </div>
-            <div>
-                <span>
-                    Chhatrapati Shahu Maharaj Research Training and Human Development Institute (SARTHI),
-          Pune is registered under Company Act, 2013 under Section 8 as Non-Profit government company for
-          research, policy advocacy, training etc.
-          for socio-economic and education development of Maratha, Maratha-Kunbi, Kunbi-Maratha, Kunbi
-          community in Maharashtra State.
-          Our organisation thrust areas includes research, policy advocacy to government, training etc. and
-          guidance to rural population,
-          particularly the farmers whose livelihood is dependent on agriculture.
-                </span>
-            </div>
-        </div>
+  <div class="admin-container" fxLayout='column' fxFlexAlign='center center' [ngStyle.lt-md]="{'padding':'3rem'}"
+    [ngStyle.lt-sm]="{'padding':'1.5rem'}">
+    <div class="header" [ngStyle.lt-md]="{'font-size':'1.5rem', 'line-height':'2.5rem'}"
+      fxLayoutAlign.lt-sm='center center' fxLayout.lt-sm='column'>
+      <span>Administration Department</span>
     </div>
+    <div class="description" [ngStyle.lt-md]="{'font-size':'0.8rem','text-align': 'justify', 'line-height': '1.5rem'}"
+      [ngStyle.lt-sm]="{'font-size':'0.6rem','text-align': 'justify', 'line-height': '1.5rem'}">
+      <div>
+        <span>
+          Chhatrapati Shahu Maharaj Research Training and Human Development Institute (SARTHI), Pune 411004.
+          Coaching Conducted by Competitive Examination Department and Meritorious Candidates.
+        </span>
+      </div>
+    </div>
+    <div class="topics">
+      <div *ngFor="let item of exams" (click)="openModal(item)">
+        {{item.title}}
+      </div>
+    </div>
+  </div>
+</div>
+<!-- <div [class.active]="modalVisible" class="modal-container" fxLayoutAlign="center center">
+    <div class="modal-body" fxLayout="column" fxLayoutAlign="start center">
+        <h1 class="title">{{currentObjective}}</h1>
+        <ul *ngIf="isArray()">
+            <li class="rules" *ngFor="let item of getObjectiveContent()">
+                {{item}}
+            </li>
+        </ul>
+        <div *ngIf="!isArray()">
+            <div *ngFor="let key of getObjectKeys(getObjectiveContent())">
+                <div *ngIf="key !== 'table';then normalItem else table"></div>
+                <ng-template #normalItem>
+                    <h2>{{key}}</h2>
+                    <ul>
+                        <li class="rules" *ngFor="let item of getObjectiveContent()[key]">
+                            {{item}}
+                        </li>
+                    </ul>
+                </ng-template>
+                <ng-template #table>
+                    <div class="table-header" fxLayoutAlign='center center' [ngStyle.lt-md]="{ 'padding':'2px'}">
+                        <span [ngStyle.lt-md]="{ 'font-size':'0.8rem', 'line-height':'1.4', 'padding':'10px'}" *ngFor="let header of getObjectiveContent()[key].header">
+                            {{header}}
+                        </span>
+                    </div>
+                    <table>
+                        <tbody>
+                            <tr *ngFor="let rows of getObjectiveContent()[key].tbody">
+                                <td>{{rows.sr_no}}</td>
+                                <td>{{rows.type}}</td>
+                                <td>{{rows.details}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </ng-template>
+            </div>
+        </div>
+        <a (click)="toggleModal()" style="cursor: pointer;">
+            <fa-icon class="cross-icon" [icon]="faIcons.faTimes"></fa-icon>
+        </a>
+    </div>
+</div> -->
+
+<div class="view-modal-container" [class.active]="modalVisible">
+  <div class="view-modal">
+    <h1 class="title">{{selectedExam?.title}}</h1>
+    <div class="content" [innerHTML]="selectedExam?.content"></div>
+  </div>
+  <a (click)="toggleModal()" style="cursor: pointer;">
+    <fa-icon class="cross-icon" [icon]="faIcons.faTimes"></fa-icon>
+  </a>
 </div>
