@@ -1,15 +1,51 @@
 import { Component, OnInit } from '@angular/core';
+import { faTimes } from '@fortawesome/free-solid-svg-icons';
+import { HttpClient } from '@angular/common/http';
+import { apiUrl } from 'assets/data/environment';
+export interface Tile {
+	text: string;
+	sr: number;
+	download: any;
+}
+
+interface Exam {
+	id: number;
+	title: string;
+	content: string;
+}
 
 @Component({
-  selector: 'app-accounts',
-  templateUrl: './accounts.component.html',
-  styleUrls: ['./accounts.component.scss']
+	selector: 'app-accounts',
+	templateUrl: './accounts.component.html',
+	styleUrls: ['./accounts.component.scss'],
 })
 export class AccountsComponent implements OnInit {
+	modalVisible: boolean = false;
+	selectedExam: Exam;
+	exams: Exam[] = [];
+	baseUrl: string = apiUrl + '/department/accounts';
+	faIcons = {
+		faTimes,
+	};
 
-  constructor() { }
+	openModal(exam: Exam) {
+		this.selectedExam = exam;
+		this.toggleModal();
+	}
 
-  ngOnInit(): void {
-  }
+	toggleModal() {
+		this.modalVisible = !this.modalVisible;
+	}
 
+	constructor(private http: HttpClient) {}
+
+	ngOnInit(): void {
+		this.getExams();
+	}
+
+	getExams() {
+		this.http.get<Exam[]>(this.baseUrl).subscribe((data) => {
+			this.exams = data;
+		});
+	}
 }

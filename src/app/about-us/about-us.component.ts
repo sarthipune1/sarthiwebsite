@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { RouteService } from 'app/services/route.service';
+import { Subheader } from 'app/subheader/subheader.component';
 
 @Component({
 	selector: 'app-about-us',
@@ -6,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 	styleUrls: ['./about-us.component.scss'],
 })
 export class AboutUsComponent implements OnInit {
-	constructor() {}
+	constructor(private routeService: RouteService) {}
+	pageStats: Subheader;
 
-	ngOnInit(): void {}
+	ngOnInit(): void {
+		this.routeService.onGetData.subscribe((pageStats: Subheader) => {
+			this.pageStats = pageStats;
+		});
+	}
 
 	scroll(el: HTMLElement) {
 		el.scrollIntoView();

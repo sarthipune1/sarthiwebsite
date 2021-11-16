@@ -1,41 +1,40 @@
 <div class="container">
-    <div class="admin-container" fxLayout='column' fxFlexAlign='center center' [ngStyle.lt-md]="{'padding':'3rem'}" [ngStyle.lt-sm]="{'padding':'1.5rem'}">
-        <div fxLayout="row" style="color: #f67e22;">
-            <span class="header-text" [ngStyle.lt-md]="{'font-size':'2rem'}" fxLayoutAlign.lt-sm='center center'>
-                {{getItem(translations.about)}}
-            </span>
-            <span class="header-text" style="margin-left: 10px;" [ngStyle.lt-md]="{'font-size':'2rem'}" fxLayoutAlign.lt-sm='center center'>
-                {{getItem(translations.sarthi)}}
-            </span>
-        </div>
-        <div class="description body" [ngStyle.lt-md]="{'font-size':'0.8rem','text-align': 'justify', 'line-height': '1.5rem'}" [ngStyle.lt-sm]="{'font-size':'0.6rem','text-align': 'justify', 'line-height': '1.5rem'}">
-            <div>{{getItem(translations.description)}}</div>
-            <div>
-                <span>
-                    {{getItem(translations.first_appointed)}}:
-                    <a
-                        class="btn"
-                        href="../../assets/files/AoA and MoA.pdf"
-                        download
-                    >
-                        {{getItem(translations.view)}}
-                    </a>
-                </span>
-            </div>
-            <div>
-                <span>
-                    {{getItem(translations.gr_bod)}}:
-                    <a
-                        class="btn"
-                        href="../../assets/files/Sarthi_Board_of_Directors_GR.pdf"
-                        download
-                    >
-                        {{getItem(translations.view)}}
-                    </a>
-                </span>
-            </div>
-        </div>
+  <div class="admin-container" fxLayout='column' fxFlexAlign='center center' [ngStyle.lt-md]="{'padding':'3rem'}"
+    [ngStyle.lt-sm]="{'padding':'1.5rem'}">
+    <div fxLayout="row" style="color: #f67e22;">
+      <span class="header-text" [ngStyle.lt-md]="{'font-size':'2rem'}" fxLayoutAlign.lt-sm='center center'>
+        <!-- {{getItem(translations.about)}} -->
+        {{pageStats?.bodyTitle}}
+      </span>
+      <!-- <span class="header-text" style="margin-left: 10px;" [ngStyle.lt-md]="{'font-size':'2rem'}"
+        fxLayoutAlign.lt-sm='center center'>
+        {{getItem(translations.sarthi)}}
+      </span> -->
     </div>
+    <div class="description body"
+      [ngStyle.lt-md]="{'font-size':'0.8rem','text-align': 'justify', 'line-height': '1.5rem'}"
+      [ngStyle.lt-sm]="{'font-size':'0.6rem','text-align': 'justify', 'line-height': '1.5rem'}">
+      <!-- {{getItem(translations.description)}} -->
+      <!-- {{pageStats?.bodyTitle}} -->
+      <div [innerHTML]="pageStats?.bodyContent"></div>
+      <div>
+        <span>
+          {{getItem(translations.first_appointed)}}:
+          <a class="btn" href="../../assets/files/AoA and MoA.pdf" download>
+            {{getItem(translations.view)}}
+          </a>
+        </span>
+      </div>
+      <div>
+        <span>
+          {{getItem(translations.gr_bod)}}:
+          <a class="btn" href="../../assets/files/Sarthi_Board_of_Directors_GR.pdf" download>
+            {{getItem(translations.view)}}
+          </a>
+        </span>
+      </div>
+    </div>
+  </div>
 </div>
 <!-- <div class="directors-header">
     <div>

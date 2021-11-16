@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import {
 	Component,
 	Input,
@@ -5,40 +6,55 @@ import {
 	OnInit,
 	SimpleChanges,
 } from '@angular/core';
+import { apiUrl } from 'assets/data/environment';
 type PageNavItem = {
 	title: string;
 	description: string;
 };
+
+export interface Subheader {
+	id: number;
+	header: string;
+	headerKey: string;
+	subheaderContent: string;
+	bodyTitle: string;
+	bodyContent: string;
+}
 
 @Component({
 	selector: 'app-subheader',
 	templateUrl: './subheader.component.html',
 	styleUrls: ['./subheader.component.scss'],
 })
-export class SubheaderComponent implements OnInit, OnChanges {
+export class SubheaderComponent implements OnInit {
 	@Input() route: string = '';
+	baseUrl: string = apiUrl + '/subheader';
 	currentRoute: string = '';
-	pageStats: PageNavItem = {
-		title: '',
-		description: '',
-	};
-	constructor() {}
-	ngOnChanges(changes: SimpleChanges): void {
-		this.currentRoute = changes.route.currentValue;
+	@Input() pageStats: Subheader;
+	constructor(private http: HttpClient) {}
+	// ngOnChanges(changes: SimpleChanges): void {
+	// 	this.currentRoute = changes.route.currentValue;
 
-		if (this.currentRoute !== undefined) {
-			const pageKey = this.currentRoute.split('/');
-			let currPageData: PageNavItem;
-			pageKey.forEach((key) => {
-				currPageData =
-					currPageData !== undefined
-						? currPageData[key]
-						: this.navBar[key];
+	// 	if (this.currentRoute !== undefined) {
+	// 		const pageKey = this.currentRoute.replace('/pages/', '');
+	// 		let currPageData: PageNavItem;
+	// 		console.log('Page Key', pageKey);
+	// 		// pageKey.forEach((key) => {
+	// 		// 	currPageData =
+	// 		// 		currPageData !== undefined
+	// 		// 			? currPageData[key]
+	// 		// 			: this.navBar[key];
 
-				this.pageStats = currPageData;
-			});
-		}
-	}
+	// 		// 	this.pageStats = currPageData;
+	// 		// });
+
+	// 		this.http
+	// 			.get(this.baseUrl + '/pages/' + pageKey)
+	// 			.subscribe((data: Subheader) => {
+	// 				this.pageStats = data;
+	// 			});
+	// 	}
+	// }
 
 	navBar = {
 		'about-us': {

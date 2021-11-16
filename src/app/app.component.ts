@@ -11,6 +11,8 @@ import {
 	NavigationError,
 } from '@angular/router';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
+import { RouteService } from 'app/services/route.service';
+import { Subheader } from 'app/subheader/subheader.component';
 import { apiUrl } from 'assets/data/environment';
 
 @Component({
@@ -22,6 +24,8 @@ export class AppComponent implements OnInit {
 	title = 'SarthiWeb';
 	notHomeComponent: boolean = true;
 	currentRoute: string = '';
+	subheaderUrl: string = apiUrl + '/subheader';
+	pageStats: Subheader;
 	loading = false;
 
 	isBannerVisible = false;
@@ -29,13 +33,18 @@ export class AppComponent implements OnInit {
 	faIcons = {
 		faTimes,
 	};
-	constructor(private router: Router, private http: HttpClient) {
+	constructor(
+		private router: Router,
+		private http: HttpClient,
+		private routeService: RouteService
+	) {
 		this.router.events.subscribe((ev: RouterEvent) => {
 			this.navigationInterceptor(ev);
 			if (ev instanceof NavigationEnd) {
 				/* Your code goes here on every router change */
 				this.notHomeComponent = window.location.pathname !== '/';
 				this.currentRoute = window.location.pathname;
+				this.getPageStats(this.currentRoute.replace('/pages', ''));
 			}
 		});
 	}
@@ -78,5 +87,21 @@ export class AppComponent implements OnInit {
 
 	toggleModal() {
 		this.isBannerVisible = false;
+	}
+
+	getPageStats(route: string) {
+		this.http
+			.get<Subheader>(this.subheaderUrl + '/pages' + route)
+			.subscribe((data: Subheader) => {
+				console.log('Page Stats Data', data);
+				this.pageStats = data;
+				this.routeService.setPageStats(this.pageStats);
+			});
+	}
+
+	onOutletLoaded(component: any) {
+		console.log('Component', component);
+
+		component.pageStats = this.pageStats;
 	}
 }

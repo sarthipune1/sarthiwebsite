@@ -1,5 +1,5 @@
 <app-header [route]="currentRoute"></app-header>
-<app-subheader *ngIf="notHomeComponent" [route]="currentRoute"></app-subheader>
+<app-subheader *ngIf="notHomeComponent" [pageStats]="pageStats"></app-subheader>
 <router-outlet></router-outlet>
 <app-footer></app-footer>
 <!-- <div class="loading-overlay" fxLayoutAlign="center center" [class.active]="loading">
@@ -8,13 +8,13 @@
     </div>
 </div> -->
 <div class="sarthi-banner" fxLayout="column" fxLayoutAlign="center center" [class.active]="isBannerVisible">
-    <div class="inner" fxLayoutAlign="center center">
-        <img src="../assets/images/sarthi-banner.jpg">
-        <a (click)="toggleModal()" style="cursor: pointer;">
-            <fa-icon class="cross-icon" [icon]="faIcons.faTimes"></fa-icon>
-        </a>
-    </div>
-    <a class="btn-close" (click)="toggleModal()">
-        Close
+  <div class="inner" fxLayoutAlign="center center">
+    <img src="../assets/images/sarthi-banner.jpg">
+    <a (click)="toggleModal()" style="cursor: pointer;">
+      <fa-icon class="cross-icon" [icon]="faIcons.faTimes"></fa-icon>
     </a>
+  </div>
+  <a class="btn-close" (click)="toggleModal()">
+    Close
+  </a>
 </div>
