@@ -40,7 +40,7 @@ export class StatisticsComponent implements OnInit {
 	modalVisible: boolean = false;
 	selectedExam: Exam;
 	exams: Exam[] = [];
-	baseUrl: string = apiUrl + '/department/accounts';
+	baseUrl: string = apiUrl + '/department/statistics';
 	faIcons = {
 		faTimes,
 	};

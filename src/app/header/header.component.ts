@@ -110,7 +110,7 @@ export class HeaderComponent implements OnInit, OnChanges {
 				{
 					name: {
 						en: 'Administration And Management',
-						mr: 'आस्थापना',
+						mr: 'आस्थापना व मानव विकास विभाग',
 					},
 					path: '/department/administration-and-management',
 				},

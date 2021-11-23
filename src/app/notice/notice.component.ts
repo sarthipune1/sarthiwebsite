@@ -66,13 +66,13 @@ export class NoticeComponent implements OnInit {
 		const currentDate = new Date();
 
 		if (expiryDate !== null) {
-			const created = new Date(createdDate);
+			// const created = new Date(createdDate);
+			const created = new Date();
 			const expired = new Date(expiryDate);
+			console.log(this.getNoOfDays(expired, currentDate));
 
-			if (this.getNoOfDays(currentDate, expired) >= 0) {
-				if (this.getNoOfDays(currentDate, created) <= 7) {
-					return 'new.png';
-				}
+			if (this.getNoOfDays(expired, currentDate) >= 0) {
+				return 'new.png';
 			} else {
 				return 'closed.png';
 			}
@@ -82,7 +82,7 @@ export class NoticeComponent implements OnInit {
 	}
 
 	getNoOfDays(date1: Date, date2: Date): number {
-		const diff = Math.abs(date1.getTime() - date2.getTime());
+		const diff = date1.getTime() - date2.getTime();
 		return diff / (1000 * 60 * 60 * 24);
 	}
 	noticeData = [

@@ -34,7 +34,7 @@
         <div *ngFor="let category of categories" fxLayout="row" fxLayout.lt-md="column"
           fxLayoutAlign="flex-start center" fxLayoutGap="20px" class="announcements Announcements-block-container">
           <div class="Announcements-description">
-            <img alt="bg" src="../../assets/images/new.png">
+            <img alt="bg" [src]="'../../assets/images/'+getNoticeStatus(category.createdAt, category.expiry)">
           </div>
           <div fxLayout="column" class="check-here" fxLayoutGap="20px">
             <div>

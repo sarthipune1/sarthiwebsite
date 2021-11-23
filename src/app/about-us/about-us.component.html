@@ -4,6 +4,7 @@
     <div fxLayout="row" style="color: #f67e22;">
       <span class="header-text" [ngStyle.lt-md]="{'font-size':'2rem'}" fxLayoutAlign.lt-sm='center center'>
         <!-- {{getItem(translations.about)}} -->
+        <!-- add this line                                                                                            -->
         {{pageStats?.bodyTitle}}
       </span>
       <!-- <span class="header-text" style="margin-left: 10px;" [ngStyle.lt-md]="{'font-size':'2rem'}"
@@ -16,6 +17,7 @@
       [ngStyle.lt-sm]="{'font-size':'0.6rem','text-align': 'justify', 'line-height': '1.5rem'}">
       <!-- {{getItem(translations.description)}} -->
       <!-- {{pageStats?.bodyTitle}} -->
+      <!-- add this line                                                                                            -->
       <div [innerHTML]="pageStats?.bodyContent"></div>
       <div>
         <span>

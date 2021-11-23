@@ -8,10 +8,12 @@ import { Subheader } from 'app/subheader/subheader.component';
 	styleUrls: ['./about-us.component.scss'],
 })
 export class AboutUsComponent implements OnInit {
-	constructor(private routeService: RouteService) {}
+	// add this line
+	constructor(private routeService: RouteService) {} // add this line
 	pageStats: Subheader;
 
 	ngOnInit(): void {
+		// add this line
 		this.routeService.onGetData.subscribe((pageStats: Subheader) => {
 			this.pageStats = pageStats;
 		});
