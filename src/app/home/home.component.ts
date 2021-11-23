@@ -342,6 +342,22 @@ export class HomeComponent implements OnInit {
 				mr: 'उद्दिष्टें',
 			},
 		},
+		hq_video: {
+			en: 'Sarthi HQ Proposed building',
+			mr: 'सारथी मुख्यालय प्रस्तावित इमारत',
+		},
+		interactiveEApplication: {
+			en: 'Interactive E Application',
+			mr: 'इंटरएक्टिव ई एप्लीकेशन',
+		},
+		membershipLogin: {
+			en: 'Memebership Login',
+			mr: 'सदस्यता लॉगिन',
+		},
+		tender: {
+			en: 'Tender',
+			mr: 'निविदा',
+		},
 	};
 
 	openModal(key: string) {

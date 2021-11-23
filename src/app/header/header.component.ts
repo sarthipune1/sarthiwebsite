@@ -187,20 +187,20 @@ export class HeaderComponent implements OnInit, OnChanges {
 			},
 			path: '/notices',
 		},
-		{
-			name: {
-				en: 'Interactive E Application',
-				mr: 'इंटरएक्टिव ई एप्लीकेशन',
-			},
-			url: 'http://eapp.sarthi-maharashtragov.in/',
-		},
-		{
-			name: {
-				en: 'Memebership Login',
-				mr: 'सदस्यता लॉगिन',
-			},
-			url: 'http://admin.sarthi-maharashtragov.in',
-		},
+		// {
+		// 	name: {
+		// 		en: 'Interactive E Application',
+		// 		mr: 'इंटरएक्टिव ई एप्लीकेशन',
+		// 	},
+		// 	url: 'http://eapp.sarthi-maharashtragov.in/',
+		// },
+		// {
+		// 	name: {
+		// 		en: 'Memebership Login',
+		// 		mr: 'सदस्यता लॉगिन',
+		// 	},
+		// 	url: 'http://admin.sarthi-maharashtragov.in',
+		// },
 		{
 			name: {
 				en: 'Awards',
@@ -208,13 +208,13 @@ export class HeaderComponent implements OnInit, OnChanges {
 			},
 			path: '/pages/awards',
 		},
-		{
-			name: {
-				en: 'Tender',
-				mr: 'निविदा',
-			},
-			path: '/pages/tender',
-		},
+		// {
+		// 	name: {
+		// 		en: 'Tender',
+		// 		mr: 'निविदा',
+		// 	},
+		// 	path: '/pages/tender',
+		// },
 		{
 			name: {
 				en: 'Success Stories',
@@ -224,8 +224,8 @@ export class HeaderComponent implements OnInit, OnChanges {
 		},
 		{
 			name: {
-				en: 'Gr & Circulars',
-				mr: 'GR आणि परिपत्रक',
+				en: 'Circulars',
+				mr: 'परिपत्रक',
 			},
 			path: '/pages/gr',
 		},

@@ -15,12 +15,12 @@ export class FooterComponent implements OnInit {
 	}
 	content = {
 		address: {
-			en: `Secretary's Office Address`,
-			mr: 'सचिव कार्यालय ऑफ़ीस पत्ता',
+			en: `Sarthi Office Address`,
+			mr: 'सारथी कार्यालय पत्ता',
 		},
 		content: {
-			en: 'Planning Department, Government of Maharashtra, Mumbai-32',
-			mr: 'नियोजन विभाग, महाराष्ट्र शासन , मंत्रालय , मुबंई-32',
+			en: 'Balchitravani, C T Survey Number 173, B/1, Gopal Ganesh Agarkar Road, Pune 411 004',
+			mr: 'बालचित्रावानी, सीटी सर्वे नंबर 173, बी/1, गोपाल गणेश आगरकर रोड, पुणे - 411 004',
 		},
 		sapiens: {
 			en: 'Developed with 🧡 for community by Supersapiens',

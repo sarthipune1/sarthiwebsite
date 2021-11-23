@@ -383,7 +383,7 @@ div.owl-nav {
 			box-shadow: 0 12px 20px #ff4e00, inset 0 0 20px #ec9f05;
 		}
 		img {
-			height: 20rem;
+			width: 100%;
 		}
 	}
 	.contents {
@@ -555,4 +555,23 @@ div.owl-nav {
 	right: 11vw;
 	font-size: 2rem;
 	color: #f67e22;
+}
+
+.imp-text-container {
+	height: 100%;
+	.imp-text {
+		border: #f67e22 solid 1px;
+		text-align: center;
+		border-radius: 0.5rem;
+		background-color: #f67e22;
+		padding: 1rem 0;
+		cursor: pointer;
+
+		a {
+			text-decoration: none;
+			color: white;
+			font-weight: bold;
+			font-size: 1rem;
+		}
+	}
 }

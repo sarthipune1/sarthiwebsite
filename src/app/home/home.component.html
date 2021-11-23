@@ -25,12 +25,33 @@
     </div>
   </div> -->
 </div>
-<div class="maha-gov" fxLayoutAlign="center center" fxLayout="row" fxLayout.lt-md="column" fxLayoutGap="30px">
-  <div *ngFor="let item of mahaGov" class="item" fxLayoutAlign="center center" fxLayout="column">
-    <img [src]=" '../../assets/images/ministers/' + item.image" [alt]="item.position + ' Image'">
-    <div class="contents" fxLayout="column">
-      <span class="name">{{getItem(item.name)}}</span>
-      <span class="position">{{getItem(item.position)}}</span>
+<div class="maha-gov" fxLayout="row" fxLayoutGap="30px" style="justify-content: space-between; margin: 2rem;">
+  <div fxFlex="20" fxLayout="column" fxLayoutGap="2rem" class="imp-text-container">
+    <div class="imp-text">
+      <a href="http://eapp.sarthi-maharashtragov.in/" target="_blank">{{getItem(content.interactiveEApplication)}}</a>
+    </div>
+    <div class="imp-text">
+      <a href="http://admin.sarthi-maharashtragov.in/" target="_blank">{{getItem(content.membershipLogin)}}</a>
+    </div>
+    <div class="imp-text">
+      <a href="/pages/tender">{{getItem(content.tender)}}</a>
+    </div>
+  </div>
+  <div fxFlex="60" style="width: 100%; background-color: black;">
+    <iframe width="100%" height="100%"
+      src="https://www.youtube.com/embed/oCqQV_E1tZY?version=3&autoplay=1&mute=1&controls=0&showinfo=0&loop=1&playlist=oCqQV_E1tZY"
+      title="Sarthi Pune Logo Intro" frameborder="0" style="width: 100%;"
+      allow="accelerometer; autoplay; mute; loop; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen></iframe>
+  </div>
+  <div fxFlex="20">
+    <div *ngFor="let item of mahaGov" class="item" fxLayoutAlign="center center" fxLayout="column"
+      style="height: 'fit-content';margin-bottom: 20px !important;">
+      <img [src]=" '../../assets/images/ministers/' + item.image" [alt]="item.position + ' Image'">
+      <div class="contents" fxLayout="column">
+        <span class="name">{{getItem(item.name)}}</span>
+        <span class="position">{{getItem(item.position)}}</span>
+      </div>
     </div>
   </div>
 </div>
@@ -47,16 +68,77 @@
         {{getItem(content.read_more)}}
       </a>
     </div>
-    <div class="img-container" fxHide.lt-sm fxLayoutAlign="center center">
+    <div class="img-container" fxLayout="column" fxHide.lt-sm fxLayoutAlign="center center">
       <iframe width="400" height="250"
         src="https://www.youtube.com/embed/Ur7ci_1kppw?version=3&autoplay=1&mute=1&controls=0&showinfo=0&playlist=Ur7ci_1kppw&loop=1"
         title="YouTube video player" frameborder="0"
         allow="accelerometer; autoplay; mute; loop; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowfullscreen></iframe>
+      <span style="color: white; margin-top: 2rem; font-size: 1.2rem; line-height: 1.5rem;">
+        {{getItem(content.hq_video)}}
+      </span>
     </div>
   </div>
 </div>
 <app-notice [isHome]="true"></app-notice>
+<div>
+  <owl-carousel-o [options]="customOptions">
+    <ng-template carouselSlide>
+      <img alt="bg" class="header-bg" src="../../assets/images/carousel/19.jpeg">
+    </ng-template>
+    <ng-template carouselSlide>
+      <img alt="bg" class="header-bg" src="../../assets/images/carousel/18.jpeg">
+    </ng-template>
+    <ng-template carouselSlide>
+      <img alt="bg" class="header-bg" src="../../assets/images/carousel/2.jpeg">
+    </ng-template>
+    <ng-template carouselSlide>
+      <img alt="bg" class="header-bg" src="../../assets/images/carousel/3.jpeg">
+    </ng-template>
+    <!-- <ng-template carouselSlide>
+            <img alt="bg" class="header-bg" src="../../assets/images/carousel/4.jpeg">
+        </ng-template> -->
+    <ng-template carouselSlide>
+      <img alt="bg" class="header-bg" src="../../assets/images/carousel/5.jpeg">
+    </ng-template>
+    <!-- <ng-template carouselSlide>
+          <img alt="bg" class="header-bg" src="../../assets/images/carousel/6.jpeg">
+        </ng-template> -->
+    <ng-template carouselSlide>
+      <img alt="bg" class="header-bg" src="../../assets/images/carousel/7.jpeg">
+    </ng-template>
+    <!-- <ng-template carouselSlide>
+            <img alt="bg" class="header-bg" src="../../assets/images/carousel/8.jpeg">
+        </ng-template> -->
+    <!-- <ng-template carouselSlide>
+            <img alt="bg" class="header-bg" src="../../assets/images/carousel/9.jpeg">
+        </ng-template> -->
+    <!-- <ng-template carouselSlide>
+            <img alt="bg" class="header-bg" src="../../assets/images/carousel/10.jpeg">
+        </ng-template> -->
+    <ng-template carouselSlide>
+      <img alt="bg" class="header-bg" src="../../assets/images/carousel/11.jpeg">
+    </ng-template>
+    <ng-template carouselSlide>
+      <img alt="bg" class="header-bg" src="../../assets/images/carousel/12.jpeg">
+    </ng-template>
+    <ng-template carouselSlide>
+      <img alt="bg" class="header-bg" src="../../assets/images/carousel/13.jpeg">
+    </ng-template>
+    <!-- <ng-template carouselSlide>
+          <img alt="bg" class="header-bg" src="../../assets/images/carousel/14.jpeg">
+        </ng-template> -->
+    <!-- <ng-template carouselSlide>
+          <img alt="bg" class="header-bg" src="../../assets/images/carousel/15.jpeg">
+        </ng-template>
+        <ng-template carouselSlide>
+          <img alt="bg" class="header-bg" src="../../assets/images/carousel/16.jpeg">
+        </ng-template> -->
+    <ng-template carouselSlide>
+      <img alt="bg" class="header-bg" src="../../assets/images/carousel/17.jpeg">
+    </ng-template>
+  </owl-carousel-o>
+</div>
 <div class="main-objectives-container" fxLayout="column" fxLayoutGap="3rem">
   <div class="main-objectives" fxLayoutAlign="center">
     <span>{{getItem(content.objectives.main)}}</span>
