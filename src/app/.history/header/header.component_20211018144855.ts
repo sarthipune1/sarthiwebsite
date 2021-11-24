@@ -224,8 +224,8 @@ export class HeaderComponent implements OnInit, OnChanges {
 		},
 		{
 			name: {
-				en: 'Gr & Circulars',
-				mr: 'GR आणि परिपत्रक',
+				en: 'Circulars',
+				mr: 'परिपत्रक',
 			},
 			path: '/gr',
 		},

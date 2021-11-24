@@ -45,28 +45,28 @@ export class HeaderComponent implements OnInit, OnChanges {
 
 	marque = [
 		{
-			title: 'UPSC (Civil Services) 2022 Competitive Exam Coaching मुदतवाढ',
-			link: 'http://old.sarthi-maharashtragov.in/en/form/online-application-form-for-cse',
+			title: 'छत्रपती शाहू महाराज राष्ट्रीय संशोधन अधिछात्रवृत्ती (CSMNRF -2021)',
+			link: 'https://api.sarthi-maharashtragov.in/notice-data/CSMNRF%20-%202021%20Ghoshnaaaa.pdf',
 		},
 		{
-			title: 'MAHARASHTRA ENGINEERING SERVICES (MES) 2021 PROGRAM मुदतवाढ',
-			link: 'http://old.sarthi-maharashtragov.in/en/form/online-application-form-for-mes',
+			title: '250 Candidates eligible through Document Verification for MPSC ( State Services) - 2021-22 Coaching Program',
+			link: 'https://api.sarthi-maharashtragov.in/notice-data/Final%20250%20Candidate%20-%20MPSC%20State%20Service%202021%20-22-%20website.pdf',
 		},
 		{
-			title: 'Civil Judge Junior Division & Judicial Magistrate First Class Coaching  2021  मुदतवाढ',
-			link: 'http://old.sarthi-maharashtragov.in/en/form/online-application-form-for-cjjd',
+			title: 'UPSC (Civil Services) Mains 2021 Sponsorship Programme – APPLY HERE',
+			link: 'https://forms.gle/uwKHzgXNbuYVPCFZA',
 		},
 		{
-			title: 'MPSC Subordinate Services (Non-gazetted)Group -B Combined (PSI,ASO,STI) Exam Coaching 2021 मुदतवाढ',
-			link: 'http://old.sarthi-maharashtragov.in/en/form/online-application-form-for-mpsc',
+			title: 'MPSC (Maharashtra Engineering Services) Mains 2020 Sponsorship Programme – APPLY HERE',
+			link: 'https://forms.gle/pRV1RpiSraTPfbKt7',
 		},
 		{
-			title: 'Staff Selection Commission Non Gazetted  Posts Examination Coaching 2021  मुदतवाढ',
-			link: 'http://old.sarthi-maharashtragov.in/en/webform/online_application_form_for_staf',
+			title: 'MPSC MAINS 2020 - Eligible Candidate 1st and 2nd List',
+			link: 'https://api.sarthi-maharashtragov.in/notice-data/MPSC%20MAINS%202020%20-%20Eligible%20Candidate%201st%20List.pdf',
 		},
 		{
-			title: '(Date Extended till 18th Oct 2021) MPSC MAINS 2020 Sponsorship (for MPSC Prelims 2020 Pass Candidates)',
-			link: 'https://docs.google.com/forms/d/e/1FAIpQLSd5XH-nTUNGJWGcaDtvl_19oTi5ex1n6THwh8klH3oc3y0bdA/viewform?usp=sf_link',
+			title: 'SARTHI- MPSC MAINS 2020 SPONSORSHIP PROGRAM - Pending Documents Candidates list',
+			link: 'https://api.sarthi-maharashtragov.in/notice-data/file_23CQWIIN.pdf',
 		},
 	];
 

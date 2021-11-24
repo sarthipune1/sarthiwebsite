@@ -47,3 +47,5 @@ package-lock.json
 yarn.lock
 
 target/**
+.history/**
+src/app/.history/**

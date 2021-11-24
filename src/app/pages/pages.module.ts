@@ -6,6 +6,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatCardModule } from '@angular/material/card';
+import { LightgalleryModule } from 'lightgallery/angular';
 
 //Components
 import { AboutUsComponent } from '../about-us/about-us.component';
@@ -43,6 +44,7 @@ console.warn('Pages Loaded');
 		NgxChartsModule,
 		MatGridListModule,
 		MatCardModule,
+		LightgalleryModule,
 	],
 })
 export class PagesModule {}

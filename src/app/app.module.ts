@@ -23,6 +23,8 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { MatCardModule } from '@angular/material/card';
 import { FormioModule } from '@formio/angular';
 
+import { LightgalleryModule } from 'lightgallery/angular';
+
 //Components
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -63,6 +65,7 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
 		CKEditorModule,
 		MatProgressBarModule,
 		HttpClientModule,
+		LightgalleryModule,
 	],
 	providers: [],
 	exports: [HeaderComponent],
