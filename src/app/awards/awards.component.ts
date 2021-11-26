@@ -8,9 +8,9 @@ import { Subheader } from 'app/subheader/subheader.component';
 	styleUrls: ['./awards.component.scss'],
 })
 export class AwardsComponent implements OnInit {
-	pageStats: Subheader;
 	constructor(private routeService: RouteService) {}
 
+	pageStats: Subheader;
 	ngOnInit(): void {
 		this.routeService.onGetData.subscribe((pageStats: Subheader) => {
 			this.pageStats = pageStats;

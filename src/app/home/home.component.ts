@@ -29,6 +29,20 @@ import obj from '../../assets/data/objectives';
 import announcements from 'assets/data/announcements';
 import { BeforeSlideDetail } from 'lightgallery/lg-events';
 import lgZoom from 'lightgallery/plugins/zoom';
+import { RouteService } from 'app/services/route.service';
+import { Subheader } from 'app/subheader/subheader.component';
+import { HttpClient } from '@angular/common/http';
+import { apiUrl } from 'assets/data/environment';
+
+export interface IGallery {
+	id: number;
+	filename: string;
+	originalName: string;
+	type: string;
+	createdAt: Date;
+	updatedAt: Date;
+}
+
 @Component({
 	selector: 'app-home',
 	templateUrl: './home.component.html',
@@ -37,6 +51,8 @@ import lgZoom from 'lightgallery/plugins/zoom';
 export class HomeComponent implements OnInit {
 	modalVisible: boolean = false;
 	currentObjective: string = 'Accounts & Finance';
+	photoGallery: IGallery[] = [];
+	apiUrl = apiUrl;
 	videoPlayerEnded: boolean = false;
 	customOptions: OwlOptions = {
 		loop: true,
@@ -377,10 +393,26 @@ export class HomeComponent implements OnInit {
 		this.videoPlayerEnded = true;
 	}
 
-	constructor() {}
+	constructor(private http: HttpClient, private routeService: RouteService) {}
+
+	pageStats: Subheader;
 
 	ngOnInit(): void {
+		// add this line
+		this.routeService.onGetData.subscribe((pageStats: Subheader) => {
+			this.pageStats = pageStats;
+		});
+		this.getPhotoGallery();
 		setTimeout(() => this.hideVideo(), 26 * 1000);
+	}
+
+	getPhotoGallery() {
+		this.http
+			.get<IGallery[]>(`${this.apiUrl}/gallery`)
+			.subscribe((data) => {
+				console.log(data);
+				this.photoGallery = data;
+			});
 	}
 
 	//Lightbox

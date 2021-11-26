@@ -1,5 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { RouteService } from 'app/services/route.service';
+import { Subheader } from 'app/subheader/subheader.component';
 import { apiUrl } from 'assets/data/environment';
 
 @Component({
@@ -31,9 +33,14 @@ export class FooterComponent implements OnInit {
 		return localStorage.getItem('lang');
 	}
 
-	constructor(private http: HttpClient) {}
+	constructor(private http: HttpClient, private routeService: RouteService) {}
+
+	pageStats: Subheader;
 
 	ngOnInit(): void {
+		this.routeService.onGetData.subscribe((pageStats: Subheader) => {
+			this.pageStats = pageStats;
+		});
 		this.http
 			.get<number>(apiUrl + '/visitCounter')
 			.subscribe((data: number) => {

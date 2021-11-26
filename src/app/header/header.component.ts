@@ -7,6 +7,8 @@ import {
 } from '@angular/core';
 import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
 import { faHotjar } from '@fortawesome/free-brands-svg-icons';
+import { RouteService } from 'app/services/route.service';
+import { Subheader } from 'app/subheader/subheader.component';
 
 @Component({
 	selector: 'app-header',
@@ -16,13 +18,19 @@ import { faHotjar } from '@fortawesome/free-brands-svg-icons';
 export class HeaderComponent implements OnInit, OnChanges {
 	@Input() route: string;
 
-	constructor() {}
+	constructor(private routeService: RouteService) {}
 
 	ngOnChanges(): void {
 		console.log(this.route);
 	}
 
-	ngOnInit(): void {}
+	pageStats: Subheader;
+
+	ngOnInit(): void {
+		this.routeService.onGetData.subscribe((pageStats: Subheader) => {
+			this.pageStats = pageStats;
+		});
+	}
 	myFunction() {
 		document.getElementById('myDropdown')?.classList.toggle('show');
 	}

@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
 import { HttpClient } from '@angular/common/http';
 import { apiUrl } from 'assets/data/environment';
+import { RouteService } from 'app/services/route.service';
+import { Subheader } from 'app/subheader/subheader.component';
 export interface Tile {
 	text: string;
 	sr: number;
@@ -37,9 +39,14 @@ export class AccountsComponent implements OnInit {
 		this.modalVisible = !this.modalVisible;
 	}
 
-	constructor(private http: HttpClient) {}
+	constructor(private http: HttpClient, private routeService: RouteService) {}
 
+	pageStats: Subheader;
 	ngOnInit(): void {
+		this.routeService.onGetData.subscribe((pageStats: Subheader) => {
+			this.pageStats = pageStats;
+		});
+
 		this.getExams();
 	}
 

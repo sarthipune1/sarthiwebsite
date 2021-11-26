@@ -6,6 +6,8 @@ import {
 	INoticeStatus,
 	NoticeCategory,
 } from 'app/notice/notice.component';
+import { RouteService } from 'app/services/route.service';
+import { Subheader } from 'app/subheader/subheader.component';
 import { apiUrl } from 'assets/data/environment';
 import tender from 'assets/data/tender';
 
@@ -26,9 +28,15 @@ export class TenderComponent implements OnInit {
 	categories: NoticeCategory[];
 	tenders: INotice[];
 
-	constructor(private http: HttpClient) {}
+	constructor(private http: HttpClient, private routeService: RouteService) {}
+
+	pageStats: Subheader;
 
 	ngOnInit(): void {
+		// add this line
+		this.routeService.onGetData.subscribe((pageStats: Subheader) => {
+			this.pageStats = pageStats;
+		});
 		this.getCategory();
 	}
 

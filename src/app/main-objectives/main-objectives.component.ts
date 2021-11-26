@@ -1,14 +1,23 @@
 import { Component, OnInit } from '@angular/core';
+import { RouteService } from 'app/services/route.service';
+import { Subheader } from 'app/subheader/subheader.component';
 
 @Component({
-  selector: 'app-main-objectives',
-  templateUrl: './main-objectives.component.html',
-  styleUrls: ['./main-objectives.component.scss'],
+	selector: 'app-main-objectives',
+	templateUrl: './main-objectives.component.html',
+	styleUrls: ['./main-objectives.component.scss'],
 })
 export class MainObjectivesComponent implements OnInit {
-  objectives: [{ title: 'ABC' }];
+	objectives: [{ title: 'ABC' }];
 
-  constructor() {}
+	constructor(private routeService: RouteService) {}
 
-  ngOnInit(): void {}
+	pageStats: Subheader;
+
+	ngOnInit(): void {
+		// add this line
+		this.routeService.onGetData.subscribe((pageStats: Subheader) => {
+			this.pageStats = pageStats;
+		});
+	}
 }

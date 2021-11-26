@@ -156,19 +156,17 @@
       </div>
     </a>
   </div>
-  <div fxLayout="row">
+  <div fxLayout="row" fxLayoutAlign="space-around center">
     <iframe
       src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fsarthimaharashtra%2F&tabs=timeline&width=500&height=700&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId"
       width="500" height="700" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true"
       allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
-    <lightgallery [settings]="settings" [onBeforeSlide]="onBeforeSlide">
-      <a href="img/img1.jpg">
-        <img alt=".." src="img/thumb1.jpg" />
+    <!-- <lightgallery [settings]="settings" [onBeforeSlide]="onBeforeSlide">
+      <a *ngFor="let gallery of photoGallery" [href]="apiUrl + '/' + gallery.filename">
+        <img [alt]="gallery.originalName" [src]="apiUrl + '/' + gallery.filename" />
       </a>
-      <a href="img/img1.jpg">
-        <img alt=".." src="img/thumb1.jpg" />
-      </a>
-    </lightgallery>
+    </lightgallery> -->
+    <app-photo-gallery [isHome]="true"></app-photo-gallery>
   </div>
 </div>
 <owl-carousel-o [options]="customOptions" fxLayoutAlign="center" style="height: 12rem; overflow: hidden;">

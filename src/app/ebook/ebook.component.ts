@@ -12,6 +12,8 @@ import {
 	INoticeStatus,
 	NoticeCategory,
 } from 'app/notice/notice.component';
+import { Subheader } from 'app/subheader/subheader.component';
+import { RouteService } from 'app/services/route.service';
 
 @Component({
 	selector: 'app-ebook',
@@ -19,9 +21,15 @@ import {
 	styleUrls: ['./ebook.component.scss'],
 })
 export class EbookComponent implements OnInit {
-	constructor(private http: HttpClient) {}
+	constructor(private http: HttpClient, private routeService: RouteService) {}
+
+	pageStats: Subheader;
 
 	ngOnInit(): void {
+		// add this line
+		this.routeService.onGetData.subscribe((pageStats: Subheader) => {
+			this.pageStats = pageStats;
+		});
 		this.getCategory();
 	}
 	faIcons = {

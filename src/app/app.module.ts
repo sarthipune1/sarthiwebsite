@@ -32,6 +32,7 @@ import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
 import { NoticeComponent } from './notice/notice.component';
 import { SubheaderComponent } from './subheader/subheader.component';
+import { PhotoGalleryComponent } from 'app/photo-gallery/photo-gallery.component';
 
 //CKEditor
 import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
@@ -45,6 +46,7 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
 		FooterComponent,
 		NoticeComponent,
 		SubheaderComponent,
+		PhotoGalleryComponent,
 	],
 	imports: [
 		BrowserModule,

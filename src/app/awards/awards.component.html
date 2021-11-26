@@ -1,159 +1,159 @@
 <div class="container">
-    <div class="admin-container" fxLayout='column' fxFlexAlign='center center' [ngStyle.lt-md]="{'padding':'3rem'}" [ngStyle.lt-sm]="{'padding':'1.5rem'}">
-        <div class="header" [ngStyle.lt-md]="{'font-size':'1.5rem', 'line-height':'2.5rem'}" fxLayoutAlign.lt-sm='center center' fxLayout.lt-sm='column'>
-            <span>Awards and Appreciation</span>
-        </div>
-        <div class="description" [ngStyle.lt-md]="{'font-size':'0.8rem','text-align': 'justify', 'line-height': '1.5rem'}" [ngStyle.lt-sm]="{'font-size':'0.6rem','text-align': 'justify', 'line-height': '1.5rem'}">
-            <div>
-                <span>
-                    Chhatrapati Shahu Maharaj Research Training and Human Development Institute (SARTHI), Pune 411004.
-          Congratulations to Candidates for Notable Success in MPSC 2019 State Services Examination.
-                </span>
-            </div>
-        </div>
-
-
-        <div class="audit-header" fxLayoutAlign='center center' [ngStyle.lt-md]="{ 'padding':'2px'}">
-            <span [ngStyle.lt-md]="{ 'font-size':'0.8rem', 'line-height':'1.4', 'padding':'10px'}">
-                Congratulations to Candidates for Notable Success in MPSC 2019 State Services Examination
-            </span>
-        </div>
-        <table id="audit-report-table" ngClass.lt-md='table-small'>
-            <thead>
-                <tr>
-                    <th>Sr.No</th>
-                    <th>Candidate Name</th>
-                    <th>Appreciation Letter</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>Ajay Kokate</td>
-                    <td class="download">
-                        <a href="../../assets/files/awards/Ajay Kokate.pdf" download>
-                            Download
-                        </a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>Ajay Patil</td>
-                    <td class="download">
-                        <a href="../../assets/files/awards/Ajay Patil.pdf">Download</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>Bhagirathi Pawar</td>
-                    <td class="download">
-                        <a href="../../assets/files/awards/Bhagirathi Pawar.pdf" download>
-                            Download
-                        </a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>4</td>
-                    <td>Jyotsana Mulik</td>
-                    <td class="download">
-                        <a href="../../assets/files/awards/Jyotsana Mulik.pdf" download>
-                            Download
-                        </a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>5</td>
-                    <td>Manasi Patil</td>
-                    <td class="download">
-                        <a href="../../assets/files/awards/Manasi Patil.pdf" download>
-                            Download
-                        </a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>6</td>
-                    <td>Nitesh Kadam</td>
-                    <td class="download">
-                        <a href="../../assets/files/awards/Nitesh Kadam.pdf" download>
-                            Download
-                        </a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>7</td>
-                    <td>Nutan Patil</td>
-                    <td class="download">
-                        <a href="../../assets/files/awards/Nutan Patil.pdf" download>
-                            Download
-                        </a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>8</td>
-                    <td>Pramod Sawant</td>
-                    <td class="download">
-                        <a href="../../assets/files/awards/Pramod Sawant.pdf" download>
-                            Download
-                        </a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>9</td>
-                    <td>Prashant Nalawade</td>
-                    <td class="download">
-                        <a href="../../assets/files/awards/Prashant Nalawade.pdf" download>
-                            Download
-                        </a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>10</td>
-                    <td>Ravindra Shelke</td>
-                    <td class="download">
-                        <a href="../../assets/files/awards/Ravindra Shelke.pdf" download>
-                            Download
-                        </a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>11</td>
-                    <td>Sagar Pawar</td>
-                    <td class="download">
-                        <a href="../../assets/files/awards/Sagar Pawar.pdf" download>
-                            Download
-                        </a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>12</td>
-                    <td>Samadhan Patil</td>
-                    <td class="download">
-                        <a href="../../assets/files/awards/Samadhan Patil.pdf" download>
-                            Download
-                        </a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>13</td>
-                    <td>Shubham Bahakar</td>
-                    <td class="download">
-                        <a href="../../assets/files/awards/Shubham Bahakar.pdf" download>
-                            Download
-                        </a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>14</td>
-                    <td>Vijay Sawade</td>
-                    <td class="download">
-                        <a href="../../assets/files/awards/Vijay Sawade.pdf" download>
-                            Download
-                        </a>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+  <div class="admin-container" fxLayout='column' fxFlexAlign='center center' [ngStyle.lt-md]="{'padding':'3rem'}"
+    [ngStyle.lt-sm]="{'padding':'1.5rem'}">
+    <div class="header" [ngStyle.lt-md]="{'font-size':'1.5rem', 'line-height':'2.5rem'}"
+      fxLayoutAlign.lt-sm='center center' fxLayout.lt-sm='column'>
+      <span>{{pageStats?.bodyTitle}}</span>
     </div>
+    <div class="description" [ngStyle.lt-md]="{'font-size':'0.8rem','text-align': 'justify', 'line-height': '1.5rem'}"
+      [ngStyle.lt-sm]="{'font-size':'0.6rem','text-align': 'justify', 'line-height': '1.5rem'}">
+      <div>
+        <div [innerHTML]="pageStats?.bodyContent"></div>
+      </div>
+    </div>
+
+
+    <div class="audit-header" fxLayoutAlign='center center' [ngStyle.lt-md]="{ 'padding':'2px'}">
+      <span [ngStyle.lt-md]="{ 'font-size':'0.8rem', 'line-height':'1.4', 'padding':'10px'}">
+        Congratulations to Candidates for Notable Success in MPSC 2019 State Services Examination
+      </span>
+    </div>
+    <table id="audit-report-table" ngClass.lt-md='table-small'>
+      <thead>
+        <tr>
+          <th>Sr.No</th>
+          <th>Candidate Name</th>
+          <th>Appreciation Letter</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>Ajay Kokate</td>
+          <td class="download">
+            <a href="../../assets/files/awards/Ajay Kokate.pdf" download>
+              Download
+            </a>
+          </td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Ajay Patil</td>
+          <td class="download">
+            <a href="../../assets/files/awards/Ajay Patil.pdf">Download</a>
+          </td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Bhagirathi Pawar</td>
+          <td class="download">
+            <a href="../../assets/files/awards/Bhagirathi Pawar.pdf" download>
+              Download
+            </a>
+          </td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>Jyotsana Mulik</td>
+          <td class="download">
+            <a href="../../assets/files/awards/Jyotsana Mulik.pdf" download>
+              Download
+            </a>
+          </td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>Manasi Patil</td>
+          <td class="download">
+            <a href="../../assets/files/awards/Manasi Patil.pdf" download>
+              Download
+            </a>
+          </td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td>Nitesh Kadam</td>
+          <td class="download">
+            <a href="../../assets/files/awards/Nitesh Kadam.pdf" download>
+              Download
+            </a>
+          </td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td>Nutan Patil</td>
+          <td class="download">
+            <a href="../../assets/files/awards/Nutan Patil.pdf" download>
+              Download
+            </a>
+          </td>
+        </tr>
+        <tr>
+          <td>8</td>
+          <td>Pramod Sawant</td>
+          <td class="download">
+            <a href="../../assets/files/awards/Pramod Sawant.pdf" download>
+              Download
+            </a>
+          </td>
+        </tr>
+        <tr>
+          <td>9</td>
+          <td>Prashant Nalawade</td>
+          <td class="download">
+            <a href="../../assets/files/awards/Prashant Nalawade.pdf" download>
+              Download
+            </a>
+          </td>
+        </tr>
+        <tr>
+          <td>10</td>
+          <td>Ravindra Shelke</td>
+          <td class="download">
+            <a href="../../assets/files/awards/Ravindra Shelke.pdf" download>
+              Download
+            </a>
+          </td>
+        </tr>
+        <tr>
+          <td>11</td>
+          <td>Sagar Pawar</td>
+          <td class="download">
+            <a href="../../assets/files/awards/Sagar Pawar.pdf" download>
+              Download
+            </a>
+          </td>
+        </tr>
+        <tr>
+          <td>12</td>
+          <td>Samadhan Patil</td>
+          <td class="download">
+            <a href="../../assets/files/awards/Samadhan Patil.pdf" download>
+              Download
+            </a>
+          </td>
+        </tr>
+        <tr>
+          <td>13</td>
+          <td>Shubham Bahakar</td>
+          <td class="download">
+            <a href="../../assets/files/awards/Shubham Bahakar.pdf" download>
+              Download
+            </a>
+          </td>
+        </tr>
+        <tr>
+          <td>14</td>
+          <td>Vijay Sawade</td>
+          <td class="download">
+            <a href="../../assets/files/awards/Vijay Sawade.pdf" download>
+              Download
+            </a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 
 
 </div>

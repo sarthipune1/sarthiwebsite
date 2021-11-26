@@ -5,6 +5,8 @@ import * as FullEditor from 'ckeditor5-custom-build/build/ckeditor.js';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
 import { HttpClient } from '@angular/common/http';
 import { apiUrl } from 'assets/data/environment';
+import { RouteService } from 'app/services/route.service';
+import { Subheader } from 'app/subheader/subheader.component';
 
 export interface NoticeCategory {
 	id: number;
@@ -34,10 +36,16 @@ export type INoticeStatus = 'new.png' | 'closed.png' | 'horn.png';
 	styleUrls: ['./notice.component.scss'],
 })
 export class NoticeComponent implements OnInit {
-	constructor(private http: HttpClient) {}
+	constructor(private http: HttpClient, private routeService: RouteService) {}
 
 	@Input('isHome') isHome: boolean = false;
+	pageStats: Subheader;
+
 	ngOnInit(): void {
+		// add this line
+		this.routeService.onGetData.subscribe((pageStats: Subheader) => {
+			this.pageStats = pageStats;
+		});
 		this.getCategory();
 	}
 	modalVisible: boolean = false;
@@ -69,7 +77,6 @@ export class NoticeComponent implements OnInit {
 			// const created = new Date(createdDate);
 			const created = new Date();
 			const expired = new Date(expiryDate);
-			console.log(this.getNoOfDays(expired, currentDate));
 
 			if (this.getNoOfDays(expired, currentDate) >= 0) {
 				return 'new.png';

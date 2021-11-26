@@ -6,6 +6,7 @@ import {
 	OnInit,
 	SimpleChanges,
 } from '@angular/core';
+import { RouteService } from 'app/services/route.service';
 import { apiUrl } from 'assets/data/environment';
 type PageNavItem = {
 	title: string;
@@ -31,7 +32,14 @@ export class SubheaderComponent implements OnInit {
 	baseUrl: string = apiUrl + '/subheader';
 	currentRoute: string = '';
 	@Input() pageStats: Subheader;
-	constructor(private http: HttpClient) {}
+	constructor(private http: HttpClient, private routeService: RouteService) {}
+
+	ngOnInit(): void {
+		// add this line
+		// this.routeService.onGetData.subscribe((pageStats: Subheader) => {
+		// 	this.pageStats = pageStats;
+		// });
+	}
 	// ngOnChanges(changes: SimpleChanges): void {
 	// 	this.currentRoute = changes.route.currentValue;
 
@@ -141,6 +149,4 @@ export class SubheaderComponent implements OnInit {
 			description: 'E-Books listed below',
 		},
 	};
-
-	ngOnInit(): void {}
 }

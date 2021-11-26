@@ -11,7 +11,7 @@ import { LightgalleryModule } from 'lightgallery/angular';
 //Components
 import { AboutUsComponent } from '../about-us/about-us.component';
 import { ContactUsComponent } from '../contact-us/contact-us.component';
-import { PhotoGalleryComponent } from '../photo-gallery/photo-gallery.component';
+// import { PhotoGalleryComponent } from '../photo-gallery/photo-gallery.component';
 import { BoardOfDirectorsComponent } from '../board-of-directors/board-of-directors.component';
 import { MainObjectivesComponent } from '../main-objectives/main-objectives.component';
 import { AwardsComponent } from '../awards/awards.component';
@@ -26,7 +26,7 @@ console.warn('Pages Loaded');
 	declarations: [
 		AboutUsComponent,
 		ContactUsComponent,
-		PhotoGalleryComponent,
+		// PhotoGalleryComponent,
 		BoardOfDirectorsComponent,
 		MainObjectivesComponent,
 		AwardsComponent,

@@ -3,6 +3,8 @@ import obj from '../../../assets/data/exam';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
 import { HttpClient } from '@angular/common/http';
 import { apiUrl } from 'assets/data/environment';
+import { Subheader } from 'app/subheader/subheader.component';
+import { RouteService } from 'app/services/route.service';
 
 export interface Tile {
 	text: string;
@@ -38,9 +40,15 @@ export class EducationDepartmentComponent implements OnInit {
 		this.modalVisible = !this.modalVisible;
 	}
 
-	constructor(private http: HttpClient) {}
+	constructor(private http: HttpClient, private routeService: RouteService) {}
+
+	pageStats: Subheader;
 
 	ngOnInit(): void {
+		// add this line
+		this.routeService.onGetData.subscribe((pageStats: Subheader) => {
+			this.pageStats = pageStats;
+		});
 		this.getExams();
 	}
 
