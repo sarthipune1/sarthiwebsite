@@ -4,7 +4,7 @@ import * as FullEditor from 'ckeditor5-custom-build/build/ckeditor.js';
 // import announcements from 'assets/data/announcements';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
 import { HttpClient } from '@angular/common/http';
-import { apiUrl } from 'assets/data/environment';
+import { environment } from '../../environments/environment';
 import { RouteService } from 'app/services/route.service';
 import { Subheader } from 'app/subheader/subheader.component';
 
@@ -56,9 +56,9 @@ export class NoticeComponent implements OnInit {
 	};
 	public Editor = FullEditor;
 
-	public readonly apiUrl: string = apiUrl;
+	public readonly apiUrl: string = environment.apiUrl;
 
-	baseUrl: string = apiUrl + '/notices';
+	baseUrl: string = environment.apiUrl + '/notices';
 	categories: NoticeCategory[];
 	notices: INotice[];
 

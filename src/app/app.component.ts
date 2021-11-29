@@ -13,7 +13,7 @@ import {
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
 import { RouteService } from 'app/services/route.service';
 import { Subheader } from 'app/subheader/subheader.component';
-import { apiUrl } from 'assets/data/environment';
+import { environment } from '../environments/environment';
 
 @Component({
 	selector: 'app-root',
@@ -24,7 +24,7 @@ export class AppComponent implements OnInit {
 	title = 'SarthiWeb';
 	notHomeComponent: boolean = true;
 	currentRoute: string = '';
-	subheaderUrl: string = apiUrl + '/subheader';
+	subheaderUrl: string = environment.apiUrl + '/subheader';
 	pageStats: Subheader;
 	loading = false;
 
@@ -60,7 +60,7 @@ export class AppComponent implements OnInit {
 			);
 		} else console.log('Banner Disabled');
 		this.http
-			.post<string>(apiUrl + '/visitCounter', '', {
+			.post<string>(environment.apiUrl + '/visitCounter', '', {
 				headers: {
 					'Content-Type': 'text/plain; charset=utf-8',
 				},

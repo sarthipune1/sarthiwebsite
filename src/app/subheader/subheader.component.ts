@@ -7,7 +7,7 @@ import {
 	SimpleChanges,
 } from '@angular/core';
 import { RouteService } from 'app/services/route.service';
-import { apiUrl } from 'assets/data/environment';
+import { environment } from '../../environments/environment';
 type PageNavItem = {
 	title: string;
 	description: string;
@@ -29,7 +29,7 @@ export interface Subheader {
 })
 export class SubheaderComponent implements OnInit {
 	@Input() route: string = '';
-	baseUrl: string = apiUrl + '/subheader';
+	baseUrl: string = environment.apiUrl + '/subheader';
 	currentRoute: string = '';
 	@Input() pageStats: Subheader;
 	constructor(private http: HttpClient, private routeService: RouteService) {}

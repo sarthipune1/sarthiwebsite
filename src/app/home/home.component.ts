@@ -32,7 +32,7 @@ import lgZoom from 'lightgallery/plugins/zoom';
 import { RouteService } from 'app/services/route.service';
 import { Subheader } from 'app/subheader/subheader.component';
 import { HttpClient } from '@angular/common/http';
-import { apiUrl } from 'assets/data/environment';
+import { environment } from '../../environments/environment';
 
 export interface IGallery {
 	id: number;
@@ -52,7 +52,7 @@ export class HomeComponent implements OnInit {
 	modalVisible: boolean = false;
 	currentObjective: string = 'Accounts & Finance';
 	photoGallery: IGallery[] = [];
-	apiUrl = apiUrl;
+	apiUrl = environment.apiUrl;
 	videoPlayerEnded: boolean = false;
 	customOptions: OwlOptions = {
 		loop: true,
@@ -65,7 +65,7 @@ export class HomeComponent implements OnInit {
 		navSpeed: 100,
 		fluidSpeed: true,
 		lazyLoad: true,
-		navText: ['', ''],
+		navText: ['&#8249', '&#8250;'],
 		animateOut: 'fadeOut',
 		responsive: {
 			0: {
@@ -79,6 +79,40 @@ export class HomeComponent implements OnInit {
 			},
 			940: {
 				items: 1,
+			},
+		},
+		nav: true,
+	};
+	customOptionsBrand: OwlOptions = {
+		loop: true,
+		mouseDrag: true,
+		touchDrag: true,
+		pullDrag: true,
+		dots: false,
+		autoplay: true,
+		autoplayTimeout: 3000,
+		navSpeed: 100,
+		fluidSpeed: true,
+		lazyLoad: true,
+		navText: [
+			'<img src="../../assets/images/chevron-left.svg" />',
+			'<img src="../../assets/images/chevron-right.svg" />',
+		],
+		navText: ['&#8249', '&#8250;'],
+		animateOut: 'fadeOut',
+		items: 3,
+		responsive: {
+			0: {
+				items: 1,
+			},
+			400: {
+				items: 2,
+			},
+			740: {
+				items: 3,
+			},
+			940: {
+				items: 3,
 			},
 		},
 		nav: true,
@@ -118,6 +152,25 @@ export class HomeComponent implements OnInit {
 		},
 	];
 	strengthData = announcements;
+
+	brandsCarousel = [
+		{
+			url: 'https://www.india.gov.in/',
+			image: 'img1.png',
+		},
+		{
+			url: 'https://aaplesarkar.mahaonline.gov.in/en',
+			image: 'img2.png',
+		},
+		{
+			url: 'https://www.maharashtra.gov.in/1145/Government-Resolutions',
+			image: 'img3.png',
+		},
+		{
+			url: 'https://rtionline.gov.in/',
+			image: 'img4.png',
+		},
+	];
 
 	mahaGov = [
 		{
@@ -408,7 +461,7 @@ export class HomeComponent implements OnInit {
 
 	getPhotoGallery() {
 		this.http
-			.get<IGallery[]>(`${this.apiUrl}/gallery`)
+			.get<IGallery[]>(`${environment.apiUrl}/gallery`)
 			.subscribe((data) => {
 				console.log(data);
 				this.photoGallery = data;

@@ -6,7 +6,7 @@ import {
 	faTimes,
 } from '@fortawesome/free-solid-svg-icons';
 import { HttpClient } from '@angular/common/http';
-import { apiUrl } from 'assets/data/environment';
+import { environment } from '../../environments/environment';
 import {
 	INotice,
 	INoticeStatus,
@@ -39,9 +39,9 @@ export class EbookComponent implements OnInit {
 	};
 	modalVisible: boolean = false;
 	currentCategory: string = '';
-	public readonly apiUrl: string = apiUrl;
+	public readonly apiUrl: string = environment.apiUrl;
 
-	baseUrl: string = apiUrl + '/department/library';
+	baseUrl: string = environment.apiUrl + '/department/library';
 	categories: NoticeCategory[];
 	ebooks: INotice[];
 

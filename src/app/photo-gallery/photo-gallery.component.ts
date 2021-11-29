@@ -3,7 +3,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { IGallery } from 'app/home/home.component';
 import { RouteService } from 'app/services/route.service';
 import { Subheader } from 'app/subheader/subheader.component';
-import { apiUrl } from 'assets/data/environment';
+import { environment } from '../../environments/environment';
 
 @Component({
 	selector: 'app-photo-gallery',
@@ -14,7 +14,7 @@ export class PhotoGalleryComponent implements OnInit {
 	slideIndex: any = 0;
 	@Input('isHome') isHome: boolean = false;
 	photoGallery: IGallery[] = [];
-	apiUrl = apiUrl;
+	apiUrl = environment.apiUrl;
 
 	carousel() {
 		var i: number;
@@ -74,7 +74,7 @@ export class PhotoGalleryComponent implements OnInit {
 
 	getPhotoGallery() {
 		this.http
-			.get<IGallery[]>(`${this.apiUrl}/gallery`)
+			.get<IGallery[]>(`${environment.apiUrl}/gallery`)
 			.subscribe((data) => {
 				this.photoGallery = data;
 				this.carousel();

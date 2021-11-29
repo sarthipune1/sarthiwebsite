@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { RouteService } from 'app/services/route.service';
 import { Subheader } from 'app/subheader/subheader.component';
-import { apiUrl } from 'assets/data/environment';
+import { environment } from '../../environments/environment';
 
 @Component({
 	selector: 'app-footer',
@@ -42,7 +42,7 @@ export class FooterComponent implements OnInit {
 			this.pageStats = pageStats;
 		});
 		this.http
-			.get<number>(apiUrl + '/visitCounter')
+			.get<number>(environment.apiUrl + '/visitCounter')
 			.subscribe((data: number) => {
 				this.currentCounter = data
 					.toString()

@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { EventEmitter, Injectable, OnInit } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
 import { Subheader } from 'app/subheader/subheader.component';
-import { apiUrl } from 'assets/data/environment';
+import { environment } from '../../environments/environment';
 
 @Injectable({
 	providedIn: 'root',

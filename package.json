@@ -31,6 +31,7 @@
     "@fortawesome/free-regular-svg-icons": "^5.15.3",
     "@fortawesome/free-solid-svg-icons": "^5.15.3",
     "@swimlane/ngx-charts": "^18.0.1",
+    "animate.css": "^4.1.1",
     "ckeditor5-custom-build": "https://github.com/akshay2796/CKEditor5.git",
     "ckeditor5-custom-build-full": "^1.0.0",
     "formiojs": "^4.13.4",

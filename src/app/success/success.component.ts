@@ -8,7 +8,7 @@ import {
 } from 'app/notice/notice.component';
 import { RouteService } from 'app/services/route.service';
 import { Subheader } from 'app/subheader/subheader.component';
-import { apiUrl } from 'assets/data/environment';
+import { environment } from '../../environments/environment';
 import tender from 'assets/data/tender';
 
 @Component({
@@ -23,8 +23,8 @@ export class SuccessComponent implements OnInit {
 	faIcons = {
 		faTimes,
 	};
-	public readonly apiUrl: string = apiUrl;
-	baseUrl: string = apiUrl + '/success';
+	public readonly apiUrl: string = environment.apiUrl;
+	baseUrl: string = environment.apiUrl + '/success';
 	categories: NoticeCategory[];
 	tenders: INotice[];
 

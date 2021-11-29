@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import obj from '../../../assets/data/exam';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
 import { HttpClient } from '@angular/common/http';
-import { apiUrl } from 'assets/data/environment';
+import { environment } from '../../../environments/environment';
 import { RouteService } from 'app/services/route.service';
 import { Subheader } from 'app/subheader/subheader.component';
 
@@ -26,7 +26,7 @@ export class CompetitiveExaminationDepartmentComponent implements OnInit {
 	modalVisible: boolean = false;
 	selectedExam: Exam;
 	exams: Exam[] = [];
-	baseUrl: string = apiUrl + '/department/exams';
+	baseUrl: string = environment.apiUrl + '/department/exams';
 	faIcons = {
 		faTimes,
 	};
