@@ -188,13 +188,13 @@ export class HeaderComponent implements OnInit, OnChanges {
 				},
 			],
 		},
-		{
-			name: {
-				en: 'Notice Board',
-				mr: 'सूचना फलक',
-			},
-			path: '/notices',
-		},
+		// {
+		// 	name: {
+		// 		en: 'Notice Board',
+		// 		mr: 'सूचना फलक',
+		// 	},
+		// 	path: '/notices',
+		// },
 		// {
 		// 	name: {
 		// 		en: 'Interactive E Application',

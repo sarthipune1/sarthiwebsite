@@ -4,16 +4,12 @@
     [ngStyle.lt-sm]="{'padding':'1.5rem'}">
     <div class="header" [ngStyle.lt-md]="{'font-size':'1.5rem', 'line-height':'2.5rem'}"
       fxLayoutAlign='center flex-start' fxLayoutAlign.lt-sm='center center' fxLayout.lt-sm='column' *ngIf="!isHome">
-      <span>Photo Gallery</span>
+      <span>{{pageStats?.bodyTitle}}</span>
     </div>
-    <div class="w3-content w3-section" style="max-width:500px" fxLayoutAlign="center center">
-      <!-- <img class="mySlides" src="../../assets/images/photoGallery/Shahu_Maharaj_1_1.jpg" style="width:100%">
-      <img class="mySlides" src="../../assets/images/photoGallery/Shahu_Maharaj_2_1.jpg" style="width:100%">
-      <img class="mySlides" src="../../assets/images/photoGallery/Shahu_Maharaj_3_1.jpg" style="width:100%">
-      <img class="mySlides" src="../../assets/images/photoGallery/Shahu_Maharaj_4_1.jpg" style="width:100%">
-      <img class="mySlides" src="../../assets/images/photoGallery/Shahu_Maharaj_5_1.jpg" style="width:100%"> -->
-      <img *ngFor="let gallery of photoGallery" class="mySlides" style="width:100%" [alt]="gallery.originalName"
-        [src]="apiUrl + '/' + gallery.filename" />
+    <div [innerHTML]="pageStats?.bodyContent"></div>
+    <div class="w3-content w3-section" style=" height:65vh; max-width: 10vw; " fxLayoutAlign="center center">
+      <img *ngFor="let gallery of photoGallery" class="mySlides" style="height:100%; width:100%; object-fit: contain;"
+        [alt]="gallery.originalName" [src]="apiUrl + '/' + gallery.filename" />
     </div>
     <div class="w3-center" fxLayoutAlign="center center" fxLayout="column">
       <span style="    padding: 10px; font-size: 1rem;" id="count">

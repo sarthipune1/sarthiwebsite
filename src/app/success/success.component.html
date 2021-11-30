@@ -1,79 +1,74 @@
 <div class="container">
-    <div class="admin-container" fxLayout='column' fxFlexAlign='center center' [ngStyle.lt-md]="{'padding':'3rem'}"
-        [ngStyle.lt-sm]="{'padding':'1.5rem'}">
-        <div class="header" [ngStyle.lt-md]="{'font-size':'1.5rem', 'line-height':'2.5rem'}"
-            fxLayoutAlign.lt-sm='center center' fxLayout.lt-sm='column'>
-            <span>SARTHI Success Stories</span>
-        </div>
-        <!-- <div>E-procurement website - <a href="https://mahatenders.gov.in/nicgep/app"
+  <div class="admin-container" fxLayout='column' fxFlexAlign='center center' [ngStyle.lt-md]="{'padding':'3rem'}"
+    [ngStyle.lt-sm]="{'padding':'1.5rem'}">
+    <div class="header" [ngStyle.lt-md]="{'font-size':'1.5rem', 'line-height':'2.5rem'}"
+      fxLayoutAlign.lt-sm='center center' fxLayout.lt-sm='column'>
+      <span>{{pageStats?.bodyTitle}}</span>
+    </div>
+    <!-- <div>E-procurement website - <a href="https://mahatenders.gov.in/nicgep/app"
         target="_blank">https://mahatenders.gov.in/nicgep/app</a>
     </div> -->
-        <div [ngStyle.lt-md]="{ 'height': 'auto'}" [ngStyle]="{ 'height': '40rem'}" class="main-container"
-            fxLayout="row" fxLayout.lt-md="column" fxLayoutAlign="space-evenly start" fxLayoutGap="0px"
-            fxLayoutGap.lt-md="40px">
-            <div class="Announcements-container" fxFlex="100" fxFlex.lt-md="90">
-                <div class="notice-header">
-                    <span>Success Stories</span>
-                </div>
-                <div fxLayout.lt-md="column" fxLayoutGap="50px" class="notice-details-container">
-                    <div *ngFor="let category of categories" fxLayout="row" fxLayout.lt-md="column"
-                        fxLayoutAlign="flex-start center" fxLayoutGap="20px"
-                        class="announcements Announcements-block-container">
-                        <div class="Announcements-description">
-                            <img alt="bg"
-                                [src]="'../../assets/images/' + getTenderStatus(category.createdAt, category.expiry)">
-                        </div>
-                        <div fxLayout="column" class="check-here" fxLayoutGap="20px">
-                            <div>
-                                <span class="Announcements-sub-title">
-                                    {{category.title}}
-                                    <br>
-                                </span>
-                                <a (click)="openCategory(category.title)" target="_blank" class="cursor-pointer">
-                                    Check Here
-                                </a>
-                            </div>
-                            <!-- <span class="Announcements-description">{{strength.description}}</span> -->
-                        </div>
-                    </div>
-                </div>
+    <div [ngStyle.lt-md]="{ 'height': 'auto'}" [ngStyle]="{ 'height': '40rem'}" class="main-container" fxLayout="row"
+      fxLayout.lt-md="column" fxLayoutAlign="space-evenly start" fxLayoutGap="0px" fxLayoutGap.lt-md="40px">
+      <div class="Announcements-container" fxFlex="100" fxFlex.lt-md="90">
+        <div [innerHTML]="pageStats?.bodyContent"></div>
+        <div fxLayout.lt-md="column" fxLayoutGap="50px" class="notice-details-container">
+          <div *ngFor="let category of categories" fxLayout="row" fxLayout.lt-md="column"
+            fxLayoutAlign="flex-start center" fxLayoutGap="20px" class="announcements Announcements-block-container">
+            <div class="Announcements-description">
+              <img alt="bg" [src]="'../../assets/images/' + getTenderStatus(category.createdAt, category.expiry)">
             </div>
+            <div fxLayout="column" class="check-here" fxLayoutGap="20px">
+              <div>
+                <span class="Announcements-sub-title">
+                  {{category.title}}
+                  <br>
+                </span>
+                <a (click)="openCategory(category.title)" target="_blank" class="cursor-pointer">
+                  Check Here
+                </a>
+              </div>
+              <!-- <span class="Announcements-description">{{strength.description}}</span> -->
+            </div>
+          </div>
         </div>
+      </div>
     </div>
+  </div>
 </div>
 <div [class.active]="modalVisible" class="modal-container" fxLayoutAlign="center center">
-    <div class="modal-body" fxLayout="column" fxLayoutAlign="start center">
-        <h1 class="title">{{currentCategory}}</h1>
+  <div class="modal-body" fxLayout="column" fxLayoutAlign="start center">
+    <h1 class="title">{{currentCategory}}</h1>
 
-        <table>
-            <tbody>
-                <tr *ngFor="let rows of tenders; let i=index">
-                    <td>{{i+1}}</td>
-                    <td>
-                        <div class="Announcements-description">
-                            <img alt="bg" [src]="'../../assets/images/' + getTenderStatus(rows.createdAt, rows.expiry)">
-                        </div>
-                    </td>
-                    <td>{{rows.title | titlecase}}</td>
-                    <td>
-                        <div style="margin-bottom: 1rem;">Published On:</div>
-                        <div style="font-weight: 600;">{{rows.createdAt | date}}</div>
-                    </td>
-                    <td *ngIf="rows.link !== null && rows.link !== ''">
-                        <a [href]="apiUrl + '/' + rows.link" target="_blank">
-                            Download
-                        </a>
-                    </td>
-                    <td *ngIf="rows.url !== null && rows.url !== ''">
-                        <a [href]="rows.url" target="_blank">
-                            Apply
-                        </a>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-        <a (click)="toggleModal()" style="cursor: pointer;">
-            <fa-icon class="cross-icon" [icon]="faIcons.faTimes"></fa-icon>
-        </a>
-    </div>
+    <table>
+      <tbody>
+        <tr *ngFor="let rows of tenders; let i=index">
+          <td>{{i+1}}</td>
+          <td>
+            <div class="Announcements-description">
+              <img alt="bg" [src]="'../../assets/images/' + getTenderStatus(rows.createdAt, rows.expiry)">
+            </div>
+          </td>
+          <td>{{rows.title | titlecase}}</td>
+          <td>
+            <div style="margin-bottom: 1rem;">Published On:</div>
+            <div style="font-weight: 600;">{{rows.createdAt | date}}</div>
+          </td>
+          <td *ngIf="rows.link !== null && rows.link !== ''">
+            <a [href]="apiUrl + '/' + rows.link" target="_blank">
+              Download
+            </a>
+          </td>
+          <td *ngIf="rows.url !== null && rows.url !== ''">
+            <a [href]="rows.url" target="_blank">
+              Apply
+            </a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <a (click)="toggleModal()" style="cursor: pointer;">
+      <fa-icon class="cross-icon" [icon]="faIcons.faTimes"></fa-icon>
+    </a>
+  </div>
 </div>

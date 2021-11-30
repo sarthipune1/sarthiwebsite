@@ -94,10 +94,6 @@ export class HomeComponent implements OnInit {
 		navSpeed: 100,
 		fluidSpeed: true,
 		lazyLoad: true,
-		navText: [
-			'<img src="../../assets/images/chevron-left.svg" />',
-			'<img src="../../assets/images/chevron-right.svg" />',
-		],
 		navText: ['&#8249', '&#8250;'],
 		animateOut: 'fadeOut',
 		items: 3,
@@ -424,6 +420,10 @@ export class HomeComponent implements OnInit {
 		tender: {
 			en: 'Tender',
 			mr: 'निविदा',
+		},
+		notices: {
+			en: 'Notice Board',
+			mr: 'सूचना फलक',
 		},
 	};
 

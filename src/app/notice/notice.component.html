@@ -1,97 +1,96 @@
 <div class="container" [ngStyle.lt-lg]="{'padding': isHome ? '0' : '5.5rem 0'}" fxLayout="column"
-    [ngStyle]="{'background-color': isHome ? 'white' : '#e5e5e5'}" fxLayoutAlign="center center">
-    <div class="header" [ngStyle.lt-md]="{'font-size':'2.5rem', 'line-height':'2.5rem'}"
-        fxLayoutAlign.lt-sm='center center' fxLayout.lt-sm='column' [ngStyle]="{'display': isHome ? 'none' : 'flex'}">
-        <span>Events & Announcements</span>
-    </div>
-    <div [ngStyle.lt-md]="{'height': 'auto', 'width': '85%'}" [ngStyle]="{'height': '40rem'}" class="main-container"
-        fxLayout="row" fxLayout.lt-md="column" fxLayoutAlign="space-evenly center" fxLayoutGap="0px"
-        fxLayoutGap.lt-md="40px">
-        <div class="notice-main-container" fxFlex="45" fxLayout="column">
-            <div class="notice-header">
-                <span>Events</span>
+  [ngStyle]="{'background-color': isHome ? 'white' : '#e5e5e5'}" fxLayoutAlign="center center">
+  <div class="header" [ngStyle.lt-md]="{'font-size':'2.5rem', 'line-height':'2.5rem'}"
+    fxLayoutAlign.lt-sm='center center' fxLayout.lt-sm='column' [ngStyle]="{'display': isHome ? 'none' : 'flex'}">
+    <span>{{pageStats?.bodyTitle}}</span>
+  </div>
+  <div [innerHTML]="pageStats?.bodyContent"></div>
+  <div [ngStyle.lt-md]="{'height': 'auto', 'width': '85%'}" [ngStyle]="{'height': '40rem'}" class="main-container"
+    fxLayout="row" fxLayout.lt-md="column" fxLayoutAlign="space-evenly center" fxLayoutGap="0px"
+    fxLayoutGap.lt-md="40px">
+    <div class="notice-main-container" fxFlex="45" fxLayout="column">
+      <div class="notice-header">
+        <span>Events</span>
+      </div>
+      <div class="notice-details-container" fxFlex.lt-md="90">
+        <div *ngFor="let notice of noticeData" class="notice-container">
+          <a fxLayout="row" fxLayoutAlign="flex-start center">
+            <div class="notice-date" fxLayout="column" fxLayoutAlign="center center">
+              <span class="month">{{notice.date.month}}</span>
+              <span class="day">{{notice.date.date}}</span>
             </div>
-            <div class="notice-details-container" fxFlex.lt-md="90">
-                <div *ngFor="let notice of noticeData" class="notice-container">
-                    <a fxLayout="row" fxLayoutAlign="flex-start center">
-                        <div class="notice-date" fxLayout="column" fxLayoutAlign="center center">
-                            <span class="month">{{notice.date.month}}</span>
-                            <span class="day">{{notice.date.date}}</span>
-                        </div>
-                        <div class="notice-details" fxLayout="column" fxLayoutAlign="center flex-start ">
-                            <span class="event-details">{{notice.title}}</span>
-                            <span class="event-time">{{notice.time}}</span>
-                        </div>
-                    </a>
-                </div>
+            <div class="notice-details" fxLayout="column" fxLayoutAlign="center flex-start ">
+              <span class="event-details">{{notice.title}}</span>
+              <span class="event-time">{{notice.time}}</span>
             </div>
+          </a>
         </div>
-        <div class="Announcements-container" fxFlex="45" fxFlex.lt-md="90">
-            <div class="notice-header">
-                <span>Announcements</span>
-            </div>
-            <div fxLayout.lt-md="column" fxLayoutGap="50px" class="notice-details-container">
-                <div *ngFor="let category of categories" fxLayout="row" fxLayout.lt-md="column"
-                    fxLayoutAlign="flex-start center" fxLayoutGap="20px"
-                    class="announcements Announcements-block-container">
-                    <div class="Announcements-description">
-                        <img alt="bg"
-                            [src]="'../../assets/images/'+getNoticeStatus(category.createdAt, category.expiry)">
-                    </div>
-                    <div fxLayout="column" class="check-here" fxLayoutGap="20px">
-                        <div>
-                            <span class="Announcements-sub-title">
-                                {{category.title}}
-                            </span>
-                            <br>
-                            <!-- <span class="Announcements-sub-title">
+      </div>
+    </div>
+    <div class="Announcements-container" fxFlex="45" fxFlex.lt-md="90">
+      <div class="notice-header">
+        <span>Announcements</span>
+      </div>
+      <div fxLayout.lt-md="column" fxLayoutGap="50px" class="notice-details-container">
+        <div *ngFor="let category of categories" fxLayout="row" fxLayout.lt-md="column"
+          fxLayoutAlign="flex-start center" fxLayoutGap="20px" class="announcements Announcements-block-container">
+          <div class="Announcements-description">
+            <img alt="bg" [src]="'../../assets/images/'+getNoticeStatus(category.createdAt, category.expiry)">
+          </div>
+          <div fxLayout="column" class="check-here" fxLayoutGap="20px">
+            <div>
+              <span class="Announcements-sub-title">
+                {{category.title}}
+              </span>
+              <br>
+              <!-- <span class="Announcements-sub-title">
                 {{strength.title}}
                 <br>
               </span> -->
-                            <a (click)="openCategory(category.title)" style="cursor: pointer;">
-                                Check Here
-                            </a>
-                        </div>
-                        <!-- <span class="Announcements-description">{{strength.description}}</span> -->
-                    </div>
-                </div>
+              <a (click)="openCategory(category.title)" style="cursor: pointer;">
+                Check Here
+              </a>
             </div>
+            <!-- <span class="Announcements-description">{{strength.description}}</span> -->
+          </div>
         </div>
+      </div>
     </div>
+  </div>
 </div>
 <div [class.active]="modalVisible" class="modal-container" fxLayoutAlign="center center">
-    <div class="modal-body" fxLayout="column" fxLayoutAlign="start center">
-        <h1 class="title">{{currentCategory}}</h1>
+  <div class="modal-body" fxLayout="column" fxLayoutAlign="start center">
+    <h1 class="title">{{currentCategory}}</h1>
 
-        <table>
-            <tbody>
-                <tr *ngFor="let rows of notices; let i=index">
-                    <td>{{i+1}}</td>
-                    <td>
-                        <div class="Announcements-description">
-                            <img alt="bg" [src]="'../../assets/images/' + getNoticeStatus(rows.createdAt, rows.expiry)">
-                        </div>
-                    </td>
-                    <td>{{rows.title}}</td>
-                    <td>
-                        <div style="margin-bottom: 1rem;">Published On:</div>
-                        <div style="font-weight: 600;">{{rows.createdAt | date}}</div>
-                    </td>
-                    <td *ngIf="rows.link !== null && rows.link !== ''">
-                        <a [href]="apiUrl + '/' + rows.link" target="_blank">
-                            Download
-                        </a>
-                    </td>
-                    <td *ngIf="rows.url !== null && rows.url !== ''">
-                        <a [href]="rows.url" target="_blank">
-                            Apply
-                        </a>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-        <a (click)="toggleModal()" style="cursor: pointer;">
-            <fa-icon class="cross-icon" [icon]="faIcons.faTimes"></fa-icon>
-        </a>
-    </div>
+    <table>
+      <tbody>
+        <tr *ngFor="let rows of notices; let i=index">
+          <td>{{i+1}}</td>
+          <td>
+            <div class="Announcements-description">
+              <img alt="bg" [src]="'../../assets/images/' + getNoticeStatus(rows.createdAt, rows.expiry)">
+            </div>
+          </td>
+          <td>{{rows.title}}</td>
+          <td>
+            <div style="margin-bottom: 1rem;">Published On:</div>
+            <div style="font-weight: 600;">{{rows.createdAt | date}}</div>
+          </td>
+          <td *ngIf="rows.link !== null && rows.link !== ''">
+            <a [href]="apiUrl + '/' + rows.link" target="_blank">
+              Download
+            </a>
+          </td>
+          <td *ngIf="rows.url !== null && rows.url !== ''">
+            <a [href]="rows.url" target="_blank">
+              Apply
+            </a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <a (click)="toggleModal()" style="cursor: pointer;">
+      <fa-icon class="cross-icon" [icon]="faIcons.faTimes"></fa-icon>
+    </a>
+  </div>
 </div>

@@ -1,12 +1,9 @@
 <div #sub_section class="directors-container flex-center flex-column">
   <div class="directors-board">
-    <span [ngStyle.lt-md]="{'font-size':'2rem', 'line-height': '3rem'}">Board Of Directors</span>
+    <span [ngStyle.lt-md]="{'font-size':'2rem', 'line-height': '3rem'}">{{pageStats?.bodyTitle}}</span>
   </div>
   <div class="flex-center directors-board-description">
-    <!-- <span [ngStyle.lt-md]="{'font-size':'1rem', 'line-height': '2rem'}">
-            I inherited my grandparents house which needed desperate repairs before i could use it or rent it. The ongoing
-      costs even before fixing I inherited my grandparents house which
-        </span> -->
+    <div [innerHTML]="pageStats?.bodyContent"></div>
   </div>
   <div fxLayout="row wrap" fxLayoutAlign="space-around center" style="width: 100%;">
     <div *ngFor="let tile of bod" class="mat-card mat-elevation-z4 bod_image" fxLayoutAlign="center center"
