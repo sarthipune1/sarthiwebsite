@@ -421,6 +421,10 @@ export class HomeComponent implements OnInit {
 			en: 'Tender',
 			mr: 'निविदा',
 		},
+		success: {
+			en: 'Success Stories',
+			mr: 'यशोगाथा',
+		},
 		notices: {
 			en: 'Notice Board',
 			mr: 'सूचना फलक',

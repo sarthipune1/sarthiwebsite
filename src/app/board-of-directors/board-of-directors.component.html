@@ -5,8 +5,13 @@
   <div class="flex-center directors-board-description">
     <div [innerHTML]="pageStats?.bodyContent"></div>
   </div>
+  <div class="mat-card mat-elevation-z4 bod_image" fxLayoutAlign="center center" fxLayout="column">
+    <img mat-card-avatar [src]="'../../assets/images/bod/'+bod[0].image+'.png'" alt="Photo of board of director">
+    <mat-card-title>{{bod[0].name}}</mat-card-title>
+    <mat-card-subtitle>{{bod[0].designation}}</mat-card-subtitle>
+  </div>
   <div fxLayout="row wrap" fxLayoutAlign="space-around center" style="width: 100%;">
-    <div *ngFor="let tile of bod" class="mat-card mat-elevation-z4 bod_image" fxLayoutAlign="center center"
+    <div *ngFor="let tile of bods" class="mat-card mat-elevation-z4 bod_image" fxLayoutAlign="center center"
       fxLayout="column">
       <img mat-card-avatar [src]="'../../assets/images/bod/'+tile.image+'.png'" alt="Photo of board of director">
       <mat-card-title>{{tile.name}}</mat-card-title>

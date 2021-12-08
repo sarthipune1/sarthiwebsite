@@ -20,6 +20,8 @@ import { RtiComponent } from '../rti/rti.component';
 import { EbookComponent } from '../ebook/ebook.component';
 import { SuccessComponent } from '../success/success.component';
 import { GrComponent } from '../gr/gr.component';
+import { VisionComponent } from 'app/vision/vision.component';
+import { MissionComponent } from 'app/mission/mission.component';
 
 console.warn('Pages Loaded');
 @NgModule({
@@ -35,6 +37,8 @@ console.warn('Pages Loaded');
 		EbookComponent,
 		SuccessComponent,
 		GrComponent,
+		VisionComponent,
+		MissionComponent,
 	],
 	imports: [
 		PagesRoutingModule,

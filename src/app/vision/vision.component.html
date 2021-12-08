@@ -1,0 +1,28 @@
+<div class="container">
+  <div class="admin-container" fxLayout='column' fxFlexAlign='center center' [ngStyle.lt-md]="{'padding':'3rem'}"
+    [ngStyle.lt-sm]="{'padding':'1.5rem'}">
+    <div class="header" [ngStyle.lt-md]="{'font-size':'1.5rem', 'line-height':'2.5rem'}"
+      fxLayoutAlign.lt-sm='center center' fxLayout.lt-sm='column'>
+      <span>{{pageStats?.bodyTitle}}</span>
+    </div>
+    <div class="description" [ngStyle.lt-md]="{'font-size':'0.8rem','text-align': 'justify', 'line-height': '1.5rem'}"
+      [ngStyle.lt-sm]="{'font-size':'0.6rem','text-align': 'justify', 'line-height': '1.5rem'}">
+      <div [innerHTML]="pageStats?.bodyContent"></div>
+    </div>
+    <div class="topics">
+      <div *ngFor="let item of exams" (click)="openModal(item)">
+        {{item.title}}
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="view-modal-container" [class.active]="modalVisible">
+  <div class="view-modal">
+    <h1 class="title">{{selectedExam?.title}}</h1>
+    <div class="content" [innerHTML]="selectedExam?.content"></div>
+  </div>
+  <a (click)="toggleModal()" style="cursor: pointer;">
+    <fa-icon class="cross-icon" [icon]="faIcons.faTimes"></fa-icon>
+  </a>
+</div>

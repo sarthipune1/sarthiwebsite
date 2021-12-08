@@ -71,6 +71,7 @@ export class BoardOfDirectorsComponent implements OnInit {
 			designation: 'Managing Director, SARTHI, Pune',
 		},
 	];
+	bods = this.bod.slice(1);
 
 	constructor(private routeService: RouteService) {}
 

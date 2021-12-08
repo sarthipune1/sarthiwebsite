@@ -12,6 +12,8 @@ import { RtiComponent } from '../rti/rti.component';
 import { EbookComponent } from '../ebook/ebook.component';
 import { SuccessComponent } from '../success/success.component';
 import { GrComponent } from '../gr/gr.component';
+import { VisionComponent } from 'app/vision/vision.component';
+import { MissionComponent } from 'app/mission/mission.component';
 
 const routes: Routes = [
 	{
@@ -48,6 +50,14 @@ const routes: Routes = [
 	{
 		path: 'gr',
 		component: GrComponent,
+	},
+	{
+		path: 'vision',
+		component: VisionComponent,
+	},
+	{
+		path: 'mission',
+		component: MissionComponent,
 	},
 ];
 

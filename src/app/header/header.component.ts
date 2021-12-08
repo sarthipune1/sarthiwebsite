@@ -103,11 +103,32 @@ export class HeaderComponent implements OnInit, OnChanges {
 		},
 		{
 			name: {
-				en: 'About Us',
-				mr: 'आमचे विषयी',
+				en: 'Board of Directors',
+				mr: 'संचालक मंडळ',
 			},
-			path: '/pages/about-us',
+			path: '/pages/board-of-directors',
 		},
+		{
+			name: {
+				en: 'Vision',
+				mr: 'स्वप्नवत',
+			},
+			path: '/pages/vision',
+		},
+		{
+			name: {
+				en: 'Misssion',
+				mr: 'शिष्टमंडळ',
+			},
+			path: '/pages/mission',
+		},
+		// {
+		// 	name: {
+		// 		en: 'About Us',
+		// 		mr: 'आमचे विषयी',
+		// 	},
+		// 	path: '/pages/about-us',
+		// },
 		{
 			name: {
 				en: 'Department',
@@ -209,13 +230,7 @@ export class HeaderComponent implements OnInit, OnChanges {
 		// 	},
 		// 	url: 'http://admin.sarthi-maharashtragov.in',
 		// },
-		{
-			name: {
-				en: 'Awards',
-				mr: 'पुरस्कार',
-			},
-			path: '/pages/awards',
-		},
+
 		// {
 		// 	name: {
 		// 		en: 'Tender',
@@ -223,16 +238,16 @@ export class HeaderComponent implements OnInit, OnChanges {
 		// 	},
 		// 	path: '/pages/tender',
 		// },
+		// {
+		// 	name: {
+		// 		en: 'Success Stories',
+		// 		mr: 'यशोगाथा',
+		// 	},
+		// 	path: '/pages/success',
+		// },
 		{
 			name: {
-				en: 'Success Stories',
-				mr: 'यशोगाथा',
-			},
-			path: '/pages/success',
-		},
-		{
-			name: {
-				en: 'Circulars',
+				en: 'Important Circulars',
 				mr: 'परिपत्रक',
 			},
 			path: '/pages/gr',
@@ -251,6 +266,13 @@ export class HeaderComponent implements OnInit, OnChanges {
 			},
 			path: '/pages/gallery',
 		},
+		{
+			name: {
+				en: 'Awards',
+				mr: 'पुरस्कार',
+			},
+			path: '/pages/awards',
+		},
 		// {
 		// 	name: {
 		// 		en: 'RTI',
@@ -258,13 +280,7 @@ export class HeaderComponent implements OnInit, OnChanges {
 		// 	},
 		// 	path: '/rti',
 		// },
-		{
-			name: {
-				en: 'Board of Directors',
-				mr: 'संचालक मंडळ',
-			},
-			path: '/pages/board-of-directors',
-		},
+
 		{
 			name: {
 				en: 'Contact Us',
