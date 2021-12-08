@@ -27,7 +27,7 @@
         </tr>
       </thead>
       <tbody>
-        <tr>
+        <!-- <tr>
           <td>1</td>
           <td>Ajay Kokate</td>
           <td class="download">
@@ -150,7 +150,18 @@
               Download
             </a>
           </td>
-        </tr>
+        </tr> -->
+        <tr *ngFor="let award of awards; let i = index">
+          <td>{{i+1}}</td>
+          <td>{{award.title}}</td>
+          <td class="download">
+            <a [href]="url +  award.link" *ngIf="award.link !== null" download>
+              Download
+            </a>
+            <a [href]="award.url" *ngIf="award.url !== null" download>
+              Download
+            </a>
+          </td>
       </tbody>
     </table>
   </div>
