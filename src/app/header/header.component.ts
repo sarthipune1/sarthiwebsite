@@ -298,4 +298,9 @@ export class HeaderComponent implements OnInit, OnChanges {
 	setToggled() {
 		this.isToggled = !this.isToggled;
 	}
+
+	increaseFont(zoomVal: number) {
+		const zoom: any = document.getElementsByTagName('body')[0];
+		zoom.style.zoom = zoomVal;
+	}
 }

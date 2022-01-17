@@ -1,5 +1,17 @@
 <div class="container">
   <div class="language-banner" fxLayout="row" fxLayoutAlign="end center">
+    <div class="zommButtons">
+      <button mat-icon-button (click)="increaseFont(0.9)">
+        <span class="zoomText">A<sup>-</sup></span>
+      </button>
+      <button mat-icon-button (click)="increaseFont(1)">
+        <span class="zoomText">A<sup> </sup></span>
+      </button>
+      <button mat-icon-button (click)="increaseFont(1.1)">
+        <span class="zoomText">A<sup>+</sup></span>
+      </button>
+    </div>
+
     <span>Language:</span>
     <a (click)="setLanguage('en')" [ngClass]="{'selected': getLanguage('en')}">
       English
