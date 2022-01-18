@@ -37,6 +37,7 @@ import { PhotoGalleryComponent } from 'app/photo-gallery/photo-gallery.component
 //CKEditor
 import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { NgxMarqueeModule } from 'ngx-marquee';
 
 @NgModule({
 	declarations: [
@@ -68,6 +69,7 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
 		MatProgressBarModule,
 		HttpClientModule,
 		LightgalleryModule,
+		NgxMarqueeModule,
 	],
 	providers: [],
 	exports: [HeaderComponent],

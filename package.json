@@ -36,6 +36,7 @@
     "ckeditor5-custom-build-full": "^1.0.0",
     "formiojs": "^4.13.4",
     "lightgallery": "^2.3.0",
+    "ngx-marquee": "^1.2.0",
     "ngx-owl-carousel-o": "^5.0.0",
     "rxjs": "~6.6.0",
     "script-loader": "^0.7.2",
