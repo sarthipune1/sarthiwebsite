@@ -20,7 +20,8 @@
     </div>
   </div> -->
 </div>
-<div class="maha-gov" fxLayout="row" fxLayoutGap="30px" style="justify-content: space-between; margin: 2rem;">
+<div class="maha-gov" fxLayout="row" fxLayoutGap="30px"
+  style="justify-content: space-between; margin: 2rem; height: 65%">
   <div fxFlex="20" fxLayout="column" fxLayoutGap="2rem" class="imp-text-container">
     <div class="imp-text">
       <a href="/notices">{{getItem(content.notices)}}</a>
@@ -46,7 +47,7 @@
       allowfullscreen></iframe>
   </div>
   <div fxFlex="15">
-    <div *ngFor="let item of mahaGov" class="item" fxLayoutAlign="center center" fxLayout="column"
+    <div *ngFor="let item of mahaGov" class="item" fxLayoutAlign="center center" fxLayout="row"
       style="height: 'fit-content';margin-bottom: 20px !important;">
       <img [src]=" '../../assets/images/ministers/' + item.image" [alt]="item.position + ' Image'">
       <div class="contents" fxLayout="column">

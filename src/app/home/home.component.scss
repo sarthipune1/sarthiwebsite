@@ -371,7 +371,7 @@ div.owl-nav {
 	margin: 2rem 0;
 	transition: all 0.1s ease-in-out !important;
 	.item {
-		padding: 20px;
+		padding: 15px;
 		background-color: rgba($color: #f67e22, $alpha: 1);
 		height: 100%;
 		border-radius: 10px;
@@ -383,7 +383,9 @@ div.owl-nav {
 			box-shadow: 0 12px 20px #ff4e00, inset 0 0 20px #ec9f05;
 		}
 		img {
-			width: 100%;
+			width: 70%;
+			height: 10rem;
+			margin-right: 5px;
 		}
 	}
 	.contents {
