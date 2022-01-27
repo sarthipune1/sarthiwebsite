@@ -11,6 +11,7 @@ import {
 	NavigationError,
 } from '@angular/router';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
+import { IGallery } from 'app/home/home.component';
 import { RouteService } from 'app/services/route.service';
 import { Subheader } from 'app/subheader/subheader.component';
 import { environment } from '../environments/environment';
@@ -30,6 +31,9 @@ export class AppComponent implements OnInit {
 
 	isBannerVisible = false;
 	bannerDelayTime = 27;
+	banner: IGallery;
+
+	apiUrl = environment.apiUrl;
 	faIcons = {
 		faTimes,
 	};
@@ -54,10 +58,10 @@ export class AppComponent implements OnInit {
 			localStorage.setItem('lang', 'en');
 		}
 		if (!window.location.hostname.includes('localhost')) {
-			setTimeout(
-				() => (this.isBannerVisible = true),
-				this.bannerDelayTime * 1000
-			);
+			setTimeout(() => {
+				this.isBannerVisible = true;
+				console.log('Banner Visible');
+			}, this.bannerDelayTime * 1000);
 		} else console.log('Banner Disabled');
 		this.http
 			.post<string>(environment.apiUrl + '/visitCounter', '', {
@@ -66,6 +70,7 @@ export class AppComponent implements OnInit {
 				},
 			})
 			.subscribe();
+		this.getBanner();
 	}
 	// Shows and hides the loading spinner during RouterEvent changes
 	navigationInterceptor(event: RouterEvent): void {
@@ -103,5 +108,13 @@ export class AppComponent implements OnInit {
 		console.log('Component', component);
 
 		component.pageStats = this.pageStats;
+	}
+
+	getBanner() {
+		this.http
+			.get<IGallery>(environment.apiUrl + '/banner/default')
+			.subscribe((data: any) => {
+				this.banner = data;
+			});
 	}
 }

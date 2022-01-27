@@ -9,7 +9,7 @@
 </div> -->
 <div class="sarthi-banner" fxLayout="column" fxLayoutAlign="center center" [class.active]="isBannerVisible">
   <div class="inner" fxLayoutAlign="center center">
-    <img src="../assets/images/sarthi-banner.jpg">
+    <img [src]="apiUrl + '/' + banner.filename" alt="{{banner.originalName}}">
     <a (click)="toggleModal()" style="cursor: pointer;">
       <fa-icon class="cross-icon" [icon]="faIcons.faTimes"></fa-icon>
     </a>
