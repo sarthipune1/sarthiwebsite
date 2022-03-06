@@ -273,6 +273,7 @@ ul {
 	padding: 0 10px;
 	color: #354658;
 	font-weight: 600;
+  line-height: 1.7rem;
 }
 
 @keyframes color-change {
@@ -295,7 +296,8 @@ div.marquee {
 	max-width: 100vw;
 	animation: marquee linear 15s infinite;
 	a {
-		color: red;
+		color: #A73333;
+;
 		font-size: 1.2rem;
 		font-weight: 600;
 		text-decoration: none;
@@ -336,4 +338,20 @@ div.marquee {
 	button {
 		width: inherit;
 	}
+}
+
+.header-small{
+  display: flex;
+  flex-direction: column !important;
+}
+
+@media screen and (max-width: 960px) {
+	.language-banner{
+		padding-left: 5rem;
+	}
+  .marquee{
+    a{
+      background-color:#FFF3E9;
+    }
+  }
 }

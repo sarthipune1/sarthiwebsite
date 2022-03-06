@@ -411,8 +411,8 @@ export class HomeComponent implements OnInit {
 			mr: 'सारथी मुख्यालय प्रस्तावित इमारत',
 		},
 		interactiveEApplication: {
-			en: 'Interactive E Application',
-			mr: 'इंटरएक्टिव ई एप्लीकेशन',
+			en: 'Interactive E-App',
+			mr: 'इंटरएक्टिव ई एप्',
 		},
 		membershipLogin: {
 			en: 'Memebership Login',

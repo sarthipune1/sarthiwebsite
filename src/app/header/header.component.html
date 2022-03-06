@@ -1,50 +1,53 @@
 <div class="container">
-  <div class="language-banner" fxLayout="row" fxLayoutAlign="end center">
-    <div class="zoomButtons">
-      <button mat-icon-button (click)="increaseFont(0.9)">
-        <span class="zoomText">A<sup>-</sup></span>
-      </button>
-      <button mat-icon-button (click)="increaseFont(1)">
-        <span class="zoomText">A<sup> </sup></span>
-      </button>
-      <button mat-icon-button (click)="increaseFont(1.1)">
-        <span class="zoomText">A<sup>+</sup></span>
-      </button>
-    </div>
-
-    <span>Language:</span>
-    <a (click)="setLanguage('en')" [ngClass]="{'selected': getLanguage('en')}">
-      English
-    </a>
-    <a (click)="setLanguage('mr')" [ngClass]="{'selected': getLanguage('mr')}">
-      Marathi
-    </a>
-  </div>
-  <div class="m-header" fxHide.gt-sm>
-    <div class="icon-c" fxLayout="row" fxLayoutAlign="end center" ngClass.gt-sm="d-none">
-      <div class="menu-icon" (click)="setToggled()" [ngClass]="{'opacity': isToggled}">
-        <fa-icon class="icon" [icon]="faIcons.faBars"></fa-icon>
+  <div fxLayout.lt-md="row" style="width: 100%;" >
+    <div class="language-banner" fxLayout="row" fxLayout.lt-md="column" fxLayoutAlign="end center" fxFlex.lt-md="90">
+      <div class="zoomButtons">
+        <button mat-icon-button (click)="increaseFont(0.9)">
+          <span class="zoomText">A<sup>-</sup></span>
+        </button>
+        <button mat-icon-button (click)="increaseFont(1)">
+          <span class="zoomText">A<sup> </sup></span>
+        </button>
+        <button mat-icon-button (click)="increaseFont(1.1)">
+          <span class="zoomText">A<sup>+</sup></span>
+        </button>
+      </div>
+      <div>
+        <span>Language:</span>
+        <a (click)="setLanguage('en')" [ngClass]="{'selected': getLanguage('en')}">
+          English
+        </a>
+        <a (click)="setLanguage('mr')" [ngClass]="{'selected': getLanguage('mr')}">
+          Marathi
+        </a>
       </div>
     </div>
-    <div class="m-header-container" [ngClass]="{'toggled': !isToggled}">
+    <div class="m-header" fxHide.gt-sm fxFlex.lt-md="10">
       <div class="icon-c" fxLayout="row" fxLayoutAlign="end center" ngClass.gt-sm="d-none">
-        <div class="menu-icon" (click)="setToggled()">
-          <fa-icon class="icon orange" [icon]="faIcons.faTimes"></fa-icon>
+        <div class="menu-icon" (click)="setToggled()" [ngClass]="{'opacity': isToggled}">
+          <fa-icon class="icon" [icon]="faIcons.faBars"></fa-icon>
         </div>
       </div>
-      <ul fxLayout="column" fxLayoutAlign="end end" (click)="setToggled()">
-        <li *ngFor="let item of menu" [ngClass]="{'active': item.path === route || route.startsWith(item.path)}">
-          <a [routerLink]="item.path">{{getItem(item.name)}}</a>
-          <ul *ngIf="item.sublist" class="sublist">
-            <li *ngFor="let subitem of item.sublist">
-              <a [routerLink]="subitem.path">{{getItem(subitem.name)}}</a>
-            </li>
-          </ul>
-        </li>
-      </ul>
+      <div class="m-header-container" [ngClass]="{'toggled': !isToggled}">
+        <div class="icon-c" fxLayout="row" fxLayoutAlign="end center" ngClass.gt-sm="d-none">
+          <div class="menu-icon" (click)="setToggled()">
+            <fa-icon class="icon orange" [icon]="faIcons.faTimes"></fa-icon>
+          </div>
+        </div>
+        <ul fxLayout="column" fxLayoutAlign="end end" (click)="setToggled()">
+          <li *ngFor="let item of menu" [ngClass]="{'active': item.path === route || route.startsWith(item.path)}">
+            <a [routerLink]="item.path">{{getItem(item.name)}}</a>
+            <ul *ngIf="item.sublist" class="sublist">
+              <li *ngFor="let subitem of item.sublist">
+                <a [routerLink]="subitem.path">{{getItem(subitem.name)}}</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
-  <div class="header-container" fxLayout.gt-sm="row" fxLayout="column" fxLayout.lt-md="1rem">
+  <div class="header-container" fxLayout.gt-sm="row" fxLayout="column" fxLayout.lt-md="1rem" fxHide.lt-md>
     <img alt="logo" class="header-bg header-logo" src="../../assets/images/emblem.png"
       [ngStyle.lt-sm]="{'padding': '25px'}">
     <div fxLayout="column" style="width: 100%;">
@@ -60,6 +63,22 @@
     </div>
     <img alt="logo" class="header-bg header-logo" src="../../assets/images/sarthi_logo.png"
       [ngStyle.lt-sm]="{'padding': '25px'}">
+  </div>
+  <div class="header-container header-small" fxLayout.lt-md="column" fxLayout="column" fxLayout.lt-md="1rem" fxHide.gt-sm ngClass.gt-sm="d-none">
+   <div fxLayout="row" style="margin-bottom: 15px;">
+      <img alt="logo" class="header-bg header-logo" src="../../assets/images/emblem.png"
+        [ngStyle.lt-sm]="{'padding': '25px'}">
+      <div fxLayout="row" style="width: 100%;">
+        <img alt="logo" class="header-bg header-logo" src="../../assets/images/sarthi_logo.png"
+          [ngStyle.lt-sm]="{'padding': '25px'}">
+      </div>
+   </div>
+    <div fxLayout="column" fxLayoutGap="8px">
+      <span class="banner-text" ngStyle.lt-md="color: #ff4e00;font-size: 1rem;line-height: 1.5rem;">
+        {{getItem(content.title)}}
+      </span>
+      <div class="slogan" ngStyle.lt-md="font-size: 1rem;line-height: 1.5rem;">{{getItem(content.slogan)}}</div>
+    </div>
   </div>
   <div class="navItems" fxHide.lt-md>
     <div fxLayout="row" fxLayoutAlign="space-between center" fxLayoutAlign.lt-md="space-between start"
@@ -90,13 +109,5 @@
       </a>
     </span>
   </div>
-  <!-- <ngx-marquee>
-    <mark class="ticker-custom" *ngFor="let item of marque">
-      <fa-icon class="icon" [icon]="faIcons.faHotjar"></fa-icon>
-      <a href={{item.link}} target="_blank">
-        {{item.title}}
-      </a>
-    </mark>
-  </ngx-marquee> -->
 
 </div>

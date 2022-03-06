@@ -9,19 +9,9 @@
       <img alt="line" src="../../assets/images/line.png" fx>
     </div>
   </div>
-  <!-- <div>
-    <div style="width: 100vw; height: 60vh; background-color: black; position:absolute; z-index: 100;"
-      [hidden]="videoPlayerEnded">
-      <iframe width="100vw" height="60vh"
-        src="https://www.youtube.com/embed/PtBmbnnKP9A?autoplay=1&mute=1&controls=0&showinfo=0"
-        title="Sarthi Pune Logo Intro" frameborder="0" style="width: 100vw;height: 60vh;"
-        allow="accelerometer; autoplay; mute; loop; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen></iframe>
-    </div>
-  </div> -->
 </div>
 <div class="maha-gov" fxLayout="row" fxLayoutGap="30px"
-  style="justify-content: space-between; margin: 2rem; height: 65%">
+  style="justify-content: space-between; margin: 2rem; height: 65%" fxHide.lt-md>
   <div fxFlex="20" fxLayout="column" fxLayoutGap="2rem" class="imp-text-container">
     <div class="imp-text">
       <a href="/notices">{{getItem(content.notices)}}</a>
@@ -56,6 +46,47 @@
       </div>
     </div>
   </div>
+</div>
+<!-- Mobile view for ministers -->
+
+<div class="maha-gov-small" fxLayout="column" fxLayoutGap="30px" fxHide.gt-sm
+  style="justify-content: space-between; margin: 1rem; ">
+    <div fxFlex="15" fxLayout="row">
+      <div *ngFor="let item of mahaGov" class="item" fxLayoutAlign="center center" fxLayout="column"
+        style="height: 'fit-content';margin-bottom: 20px !important; width: fit-content;">
+        <img  style="width: auto !important;" [src]=" '../../assets/images/ministers/' + item.image" [alt]="item.position + ' Image'">
+        <div class="contents" fxLayout="column">
+          <span class="name">{{getItem(item.name)}}</span>
+          <span class="position">{{getItem(item.position)}}</span>
+        </div>
+      </div>
+    </div>
+    <div fxFlex="65" style="width: 100%; background-color: black;">
+        <iframe width="100%" height="100%"
+          src="https://www.youtube.com/embed/oCqQV_E1tZY?version=3&autoplay=1&mute=1&controls=0&showinfo=0&loop=1&playlist=oCqQV_E1tZY"
+          title="Sarthi Pune Logo Intro" frameborder="0" style="width: 100%;"
+          allow="accelerometer; autoplay; mute; loop; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe>
+      </div>
+  <div fxFlex="20" fxLayout="column"  fxLayout.lt-md="row" fxLayoutGap="1rem" fxLayoutGap.lt-md="0.3rem" class="imp-text-container" fxLayoutAlign.lt-md="center center">
+    <div class="imp-text">
+      <a href="/notices">{{getItem(content.notices)}}</a>
+    </div>
+    <div class="imp-text">
+      <a href="http://eapp.sarthi-maharashtragov.in/" target="_blank">{{getItem(content.interactiveEApplication)}}</a>
+    </div>
+    <div class="imp-text">
+      <a href="http://admin.sarthi-maharashtragov.in/" target="_blank">{{getItem(content.membershipLogin)}}</a>
+    </div>
+    <div class="imp-text">
+      <a href="/pages/tender">{{getItem(content.tender)}}</a>
+    </div>
+    <div class="imp-text">
+      <a href="/pages/success">{{getItem(content.success)}}</a>
+    </div>
+  </div>
+
+
 </div>
 <div class="sub-container">
   <div class="about-container">
