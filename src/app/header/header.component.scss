@@ -291,9 +291,7 @@ ul {
 div.marquee {
 	padding: 0.5rem 0;
 	margin-bottom: 0.5rem;
-	white-space: nowrap;
-	display: inline-block;
-	width: 100%;
+
 	animation: marquee linear 15s infinite;
 	a {
 		color: #a73333;
