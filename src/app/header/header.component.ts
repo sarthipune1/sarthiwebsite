@@ -106,7 +106,7 @@ export class HeaderComponent implements OnInit, OnChanges {
 		},
 		{
 			name: {
-				en: 'Misssion',
+				en: 'Mission ',
 				mr: 'शिष्टमंडळ',
 			},
 			path: '/pages/mission',

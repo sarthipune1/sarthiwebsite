@@ -188,7 +188,7 @@ export class HomeComponent implements OnInit {
 				mr: 'श्री उद्धवजी ठाकरे',
 			},
 			position: {
-				en: "Hon'ble Chief Minister",
+				en: "Hon'ble Chief Minister of Maharashtra",
 				mr: 'माननीय मुख्यमंत्री',
 			},
 		},
