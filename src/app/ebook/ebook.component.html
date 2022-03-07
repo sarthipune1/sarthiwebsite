@@ -1,38 +1,59 @@
-<div class="container" fxFlex="100" fxLayout="column" fxLayoutAlign="center center">
-  <div [innerHTML]="pageStats?.bodyContent"></div>
-  <div class="table-header" fxLayoutAlign='center center' [ngStyle.lt-md]="{ 'padding':'2px'}">
-    <span
-      [ngStyle.lt-md]="{ 'font-size':'0.8rem', 'line-height':'1.4', 'padding':'10px'}">{{pageStats?.bodyTitle}}</span>
-  </div>
-  <div class="table-container">
-    <table id="books">
-      <thead>
-        <tr>
-          <th>Sr. No.</th>
-          <th>Name</th>
-          <th>Author</th>
-          <th>Count</th>
-          <th>View/Download</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr *ngFor="let book of books">
-          <td>{{book.sr_no}}</td>
-          <td>{{book.name}}</td>
-          <td>{{book.author}}</td>
-          <td>{{book.count}}</td>
-          <td>
-            <a style="cursor: pointer;">
-              <fa-icon class="cross-icon" [icon]="faIcons.faEye"></fa-icon>
-            </a>
-            <a style="cursor: pointer;">
-              <fa-icon class="cross-icon" [icon]="faIcons.faArrowAltCircleDown"></fa-icon>
-            </a>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
+<div
+	class="container"
+	fxFlex="100"
+	fxLayout="column"
+	fxLayoutAlign="center center"
+>
+	<div [innerHTML]="pageStats?.bodyContent"></div>
+	<div
+		class="table-header"
+		fxLayoutAlign="center center"
+		[ngStyle.lt-md]="{ padding: '2px' }"
+	>
+		<span
+			[ngStyle.lt-md]="{
+				'font-size': '0.8rem',
+				'line-height': '1.4',
+				padding: '10px'
+			}"
+			>{{ pageStats?.bodyTitle }}</span
+		>
+	</div>
+	<div class="table-container">
+		<table id="books">
+			<thead>
+				<tr>
+					<th>Sr. No.</th>
+					<th>Name</th>
+					<th>Author</th>
+					<th>Count</th>
+					<th>View/Download</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr *ngFor="let book of books">
+					<td>{{ book.sr_no }}</td>
+					<td>{{ book.name }}</td>
+					<td>{{ book.author }}</td>
+					<td>{{ book.count }}</td>
+					<td>
+						<a style="cursor: pointer">
+							<fa-icon
+								class="cross-icon"
+								[icon]="faIcons.faEye"
+							></fa-icon>
+						</a>
+						<a style="cursor: pointer">
+							<fa-icon
+								class="cross-icon"
+								[icon]="faIcons.faArrowAltCircleDown"
+							></fa-icon>
+						</a>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
 </div>
 
 <!-- <div class="container">
@@ -58,7 +79,7 @@
                   <br>
                 </span>
                 <a (click)="openCategory(category.title)" target="_blank" class="cursor-pointer">
-                  Check Here
+                  Click Here
                 </a>
               </div>
             </div>
