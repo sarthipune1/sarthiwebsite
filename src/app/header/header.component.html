@@ -7,7 +7,14 @@
 			fxLayoutAlign="end center"
 			fxFlex.lt-md="100"
 		>
-			<div class="zoomButtons" fxHide.xs fxHide.lg fxHide.md fxHide.sm>
+			<div
+				class="zoomButtons"
+				fxHide.xs
+				fxHide.lg
+				fxHide.md
+				fxHide.sm
+				fxHide
+			>
 				<button mat-icon-button (click)="increaseFont(0.9)">
 					<span class="zoomText">A<sup>-</sup></span>
 				</button>
@@ -18,7 +25,10 @@
 					<span class="zoomText">A<sup>+</sup></span>
 				</button>
 			</div>
-			<div class="" style="white-space: nowrap; display: inline-block">
+			<div
+				class=""
+				style="white-space: nowrap; display: inline-block; padding: 8px"
+			>
 				<span>Language:</span>
 				<a
 					(click)="setLanguage('en')"
@@ -105,7 +115,7 @@
 		<div fxLayout="column" style="width: 100%">
 			<span
 				class="banner-text"
-				ngStyle.lt-md="color: #ff4e00;font-size: 1.2rem;line-height: 2rem;"
+				ngStyle.lt-md="color: #ff4e00;font-size: 1.2rem; "
 			>
 				{{ getItem(content.title) }}
 				<!-- <br> -->
@@ -131,7 +141,7 @@
 		fxHide.gt-sm
 		ngClass.gt-sm="d-none"
 	>
-		<div fxLayout="row" style="margin-bottom: 15px">
+		<div fxLayout="row" style="margin-bottom: 1px">
 			<img
 				alt="logo"
 				class="header-bg header-logo"

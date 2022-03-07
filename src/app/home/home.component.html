@@ -1,283 +1,508 @@
 <div style="position: relative">
-  <div class="navItems d-none">
-    <div class="header-text" fxLayout="column">
-      <span>
-        Skill Development
-        <br>
-        & Training
-      </span>
-      <img alt="line" src="../../assets/images/line.png" fx>
-    </div>
-  </div>
+	<div class="navItems d-none">
+		<div class="header-text" fxLayout="column">
+			<span>
+				Skill Development
+				<br />
+				& Training
+			</span>
+			<img alt="line" src="../../assets/images/line.png" fx />
+		</div>
+	</div>
 </div>
-<div class="maha-gov" fxLayout="row" fxLayoutGap="30px"
-  style="justify-content: space-between; margin: 2rem; height: 65%" fxHide.lt-md>
-  <div fxFlex="20" fxLayout="column" fxLayoutGap="2rem" class="imp-text-container">
-    <div class="imp-text">
-      <a href="/notices">{{getItem(content.notices)}}</a>
-    </div>
-    <div class="imp-text">
-      <a href="http://eapp.sarthi-maharashtragov.in/" target="_blank">{{getItem(content.interactiveEApplication)}}</a>
-    </div>
-    <div class="imp-text">
-      <a href="http://admin.sarthi-maharashtragov.in/" target="_blank">{{getItem(content.membershipLogin)}}</a>
-    </div>
-    <div class="imp-text">
-      <a href="/pages/tender">{{getItem(content.tender)}}</a>
-    </div>
-    <div class="imp-text">
-      <a href="/pages/success">{{getItem(content.success)}}</a>
-    </div>
-  </div>
-  <div fxFlex="65" style="width: 100%; background-color: black;">
-    <iframe width="100%" height="100%"
-      src="https://www.youtube.com/embed/oCqQV_E1tZY?version=3&autoplay=1&mute=1&controls=0&showinfo=0&loop=1&playlist=oCqQV_E1tZY"
-      title="Sarthi Pune Logo Intro" frameborder="0" style="width: 100%;"
-      allow="accelerometer; autoplay; mute; loop; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-      allowfullscreen></iframe>
-  </div>
-  <div fxFlex="15">
-    <div *ngFor="let item of mahaGov" class="item" fxLayoutAlign="center center" fxLayout="row"
-      style="height: 'fit-content';margin-bottom: 20px !important;">
-      <img [src]=" '../../assets/images/ministers/' + item.image" [alt]="item.position + ' Image'">
-      <div class="contents" fxLayout="column">
-        <span class="name">{{getItem(item.name)}}</span>
-        <span class="position">{{getItem(item.position)}}</span>
-      </div>
-    </div>
-  </div>
+<div
+	class="maha-gov"
+	fxLayout="row"
+	fxLayoutGap="30px"
+	style="justify-content: space-between; margin: 0.5rem; height: 65%"
+	fxHide.lt-md
+>
+	<div
+		fxFlex="20"
+		fxLayout="column"
+		fxLayoutGap="2rem"
+		class="imp-text-container"
+	>
+		<div class="imp-text">
+			<a href="/notices">{{ getItem(content.notices) }}</a>
+		</div>
+		<div class="imp-text">
+			<a href="http://eapp.sarthi-maharashtragov.in/" target="_blank">{{
+				getItem(content.interactiveEApplication)
+			}}</a>
+		</div>
+		<div class="imp-text">
+			<a href="http://admin.sarthi-maharashtragov.in/" target="_blank">{{
+				getItem(content.membershipLogin)
+			}}</a>
+		</div>
+		<div class="imp-text">
+			<a href="/pages/tender">{{ getItem(content.tender) }}</a>
+		</div>
+		<div class="imp-text">
+			<a href="/pages/success">{{ getItem(content.success) }}</a>
+		</div>
+	</div>
+	<div fxFlex="65" style="width: 100%; background-color: black">
+		<iframe
+			width="100%"
+			height="100%"
+			src="https://www.youtube.com/embed/oCqQV_E1tZY?version=3&autoplay=1&mute=1&controls=0&showinfo=0&loop=1&playlist=oCqQV_E1tZY"
+			title="Sarthi Pune Logo Intro"
+			frameborder="0"
+			style="width: 100%"
+			allow="accelerometer; autoplay; mute; loop; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+			allowfullscreen
+		></iframe>
+	</div>
+	<div fxFlex="15">
+		<div
+			*ngFor="let item of mahaGov"
+			class="item"
+			fxLayoutAlign="center center"
+			fxLayout="row"
+			style="height: 'fit-content'; margin-bottom: 20px !important"
+		>
+			<img
+				[src]="'../../assets/images/ministers/' + item.image"
+				[alt]="item.position + ' Image'"
+			/>
+			<div class="contents" fxLayout="column">
+				<span class="name">{{ getItem(item.name) }}</span>
+				<span class="position">{{ getItem(item.position) }}</span>
+			</div>
+		</div>
+	</div>
 </div>
 <!-- Mobile view for ministers -->
 
-<div class="maha-gov-small" fxLayout="column" fxLayoutGap="30px" fxHide.gt-sm fxLayoutAlign.lt-md="center center"
-  style="justify-content: space-between; margin: 1rem; ">
-    <div fxFlex="15" fxLayout="row">
-      <div *ngFor="let item of mahaGov" class="item" fxLayoutAlign="center center" fxLayout="column"
-        style="height: 'fit-content';margin-bottom: 20px !important; width: fit-content;">
-        <img  style="width: auto !important;" [src]=" '../../assets/images/ministers/' + item.image" [alt]="item.position + ' Image'">
-        <div class="contents" fxLayout="column">
-          <span class="name">{{getItem(item.name)}}</span>
-          <span class="position">{{getItem(item.position)}}</span>
-        </div>
-      </div>
-    </div>
-    <div fxFlex="65" style="width: 100%; background-color: black;">
-        <iframe width="100%" height="100%"
-          src="https://www.youtube.com/embed/oCqQV_E1tZY?version=3&autoplay=1&mute=1&controls=0&showinfo=0&loop=1&playlist=oCqQV_E1tZY"
-          title="Sarthi Pune Logo Intro" frameborder="0" style="width: 100%;"
-          allow="accelerometer; autoplay; mute; loop; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen></iframe>
-      </div>
-  <div fxFlex="20" fxLayout="column"  fxLayout.lt-md="row" fxLayoutGap="1rem" fxLayoutGap.lt-md="0.3rem" class="imp-text-container" fxLayoutAlign.lt-md="center center">
-    <div class="imp-text">
-      <a href="/notices">{{getItem(content.notices)}}</a>
-    </div>
-    <div class="imp-text">
-      <a href="http://eapp.sarthi-maharashtragov.in/" target="_blank">{{getItem(content.interactiveEApplication)}}</a>
-    </div>
-    <div class="imp-text">
-      <a href="http://admin.sarthi-maharashtragov.in/" target="_blank">{{getItem(content.membershipLogin)}}</a>
-    </div>
-    <div class="imp-text">
-      <a href="/pages/tender">{{getItem(content.tender)}}</a>
-    </div>
-    <div class="imp-text">
-      <a href="/pages/success">{{getItem(content.success)}}</a>
-    </div>
-  </div>
+<div
+	class="maha-gov-small"
+	fxLayout="column"
+	fxLayoutGap="10px"
+	fxHide.gt-sm
+	fxLayoutAlign.lt-md="center center"
+	style="justify-content: space-between"
+>
+	<div fxFlex="15" fxLayout="row">
+		<div
+			*ngFor="let item of mahaGov"
+			class="item"
+			fxLayoutAlign="center center"
+			fxLayout="column"
+			style="
+				height: 'fit-content';
+
+				width: fit-content;
+			"
+		>
+			<img
+				style="width: auto !important"
+				[src]="'../../assets/images/ministers/' + item.image"
+				[alt]="item.position + ' Image'"
+			/>
+			<div class="contents" fxLayout="column">
+				<span class="name">{{ getItem(item.name) }}</span>
+				<span class="position">{{ getItem(item.position) }}</span>
+			</div>
+		</div>
+	</div>
+	<div
+		fxFlex="20"
+		fxLayout="column"
+		fxLayout.lt-md="row"
+		fxLayoutGap="1rem"
+		fxLayoutGap.lt-md="0.3rem"
+		class="imp-text-container"
+		fxLayoutAlign.lt-md="center center"
+	>
+		<div class="imp-text">
+			<a href="/notices">{{ getItem(content.notices) }}</a>
+		</div>
+		<div class="imp-text">
+			<a href="http://eapp.sarthi-maharashtragov.in/" target="_blank">{{
+				getItem(content.interactiveEApplication)
+			}}</a>
+		</div>
+		<div class="imp-text">
+			<a href="http://admin.sarthi-maharashtragov.in/" target="_blank">{{
+				getItem(content.membershipLogin)
+			}}</a>
+		</div>
+		<div class="imp-text">
+			<a href="/pages/tender">{{ getItem(content.tender) }}</a>
+		</div>
+		<div class="imp-text">
+			<a href="/pages/success">{{ getItem(content.success) }}</a>
+		</div>
+	</div>
+	<div fxFlex="65" style="width: 100%; background-color: black">
+		<iframe
+			width="100%"
+			height="100%"
+			src="https://www.youtube.com/embed/oCqQV_E1tZY?version=3&autoplay=1&mute=1&controls=0&showinfo=0&loop=1&playlist=oCqQV_E1tZY"
+			title="Sarthi Pune Logo Intro"
+			frameborder="0"
+			style="width: 100%; height: 500px"
+			allow="accelerometer; autoplay; mute; loop; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+			allowfullscreen
+		></iframe>
+	</div>
 </div>
 <app-notice [isHome]="true" fxHide.gt-sm></app-notice>
 <div class="sub-container">
-  <div class="about-container">
-    <div class="about-title" fxLayoutGap="15px">
-      <span style="color: #f67e22">
-        {{getItem(content.about)}} {{getItem(content.sarthi)}}
-      </span>
-    </div>
-    <div class="about-description">{{getItem(content.description)}}</div>
-    <div class="read-more" fxLayoutAlign="start center">
-      <a fxLayoutAlign="center" href="/pages/about-us">
-        {{getItem(content.read_more)}}
-      </a>
-    </div>
-    <div class="img-container" fxLayout="column" fxHide.lt-md fxLayoutAlign="center center">
-      <iframe width="400" height="250"
-        src="https://www.youtube.com/embed/Ur7ci_1kppw?version=3&autoplay=1&mute=1&controls=0&showinfo=0&playlist=Ur7ci_1kppw&loop=1"
-        title="YouTube video player" frameborder="0"
-        allow="accelerometer; autoplay; mute; loop; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen></iframe>
-      <span style="color: white; margin-top: 2rem; font-size: 1.2rem; line-height: 1.5rem;">
-        {{getItem(content.hq_video)}}
-      </span>
-    </div>
-  </div>
+	<div class="about-container">
+		<div class="about-title" fxLayoutGap="15px">
+			<span style="color: #f67e22">
+				{{ getItem(content.about) }} {{ getItem(content.sarthi) }}
+			</span>
+		</div>
+		<div class="about-description">{{ getItem(content.description) }}</div>
+		<div class="read-more" fxLayoutAlign="start center">
+			<a fxLayoutAlign="center" href="/pages/about-us">
+				{{ getItem(content.read_more) }}
+			</a>
+		</div>
+		<div
+			class="img-container"
+			fxLayout="column"
+			fxHide.lt-md
+			fxLayoutAlign="center center"
+		>
+			<iframe
+				width="400"
+				height="250"
+				src="https://www.youtube.com/embed/Ur7ci_1kppw?version=3&autoplay=1&mute=1&controls=0&showinfo=0&playlist=Ur7ci_1kppw&loop=1"
+				title="YouTube video player"
+				frameborder="0"
+				allow="accelerometer; autoplay; mute; loop; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+				allowfullscreen
+			></iframe>
+			<span
+				style="
+					color: white;
+					margin-top: 2rem;
+					font-size: 1.2rem;
+					line-height: 1.5rem;
+				"
+			>
+				{{ getItem(content.hq_video) }}
+			</span>
+		</div>
+	</div>
 </div>
 <app-notice [isHome]="true" fxHide.lt-md></app-notice>
 <div>
-  <owl-carousel-o [options]="customOptions">
-    <ng-template carouselSlide>
-      <img alt="bg" class="header-bg" src="../../assets/images/carousel/19.jpeg">
-    </ng-template>
-    <ng-template carouselSlide>
-      <img alt="bg" class="header-bg" src="../../assets/images/carousel/18.jpeg">
-    </ng-template>
-    <ng-template carouselSlide>
-      <img alt="bg" class="header-bg" src="../../assets/images/carousel/2.jpeg">
-    </ng-template>
-    <ng-template carouselSlide>
-      <img alt="bg" class="header-bg" src="../../assets/images/carousel/3.jpeg">
-    </ng-template>
-    <!-- <ng-template carouselSlide>
+	<owl-carousel-o [options]="customOptions">
+		<ng-template carouselSlide>
+			<img
+				alt="bg"
+				class="header-bg"
+				src="../../assets/images/carousel/19.jpeg"
+			/>
+		</ng-template>
+		<ng-template carouselSlide>
+			<img
+				alt="bg"
+				class="header-bg"
+				src="../../assets/images/carousel/18.jpeg"
+			/>
+		</ng-template>
+		<ng-template carouselSlide>
+			<img
+				alt="bg"
+				class="header-bg"
+				src="../../assets/images/carousel/2.jpeg"
+			/>
+		</ng-template>
+		<ng-template carouselSlide>
+			<img
+				alt="bg"
+				class="header-bg"
+				src="../../assets/images/carousel/3.jpeg"
+			/>
+		</ng-template>
+		<!-- <ng-template carouselSlide>
             <img alt="bg" class="header-bg" src="../../assets/images/carousel/4.jpeg">
         </ng-template> -->
-    <ng-template carouselSlide>
-      <img alt="bg" class="header-bg" src="../../assets/images/carousel/5.jpeg">
-    </ng-template>
-    <!-- <ng-template carouselSlide>
+		<ng-template carouselSlide>
+			<img
+				alt="bg"
+				class="header-bg"
+				src="../../assets/images/carousel/5.jpeg"
+			/>
+		</ng-template>
+		<!-- <ng-template carouselSlide>
           <img alt="bg" class="header-bg" src="../../assets/images/carousel/6.jpeg">
         </ng-template> -->
-    <ng-template carouselSlide>
-      <img alt="bg" class="header-bg" src="../../assets/images/carousel/7.jpeg">
-    </ng-template>
-    <!-- <ng-template carouselSlide>
+		<ng-template carouselSlide>
+			<img
+				alt="bg"
+				class="header-bg"
+				src="../../assets/images/carousel/7.jpeg"
+			/>
+		</ng-template>
+		<!-- <ng-template carouselSlide>
             <img alt="bg" class="header-bg" src="../../assets/images/carousel/8.jpeg">
         </ng-template> -->
-    <!-- <ng-template carouselSlide>
+		<!-- <ng-template carouselSlide>
             <img alt="bg" class="header-bg" src="../../assets/images/carousel/9.jpeg">
         </ng-template> -->
-    <!-- <ng-template carouselSlide>
+		<!-- <ng-template carouselSlide>
             <img alt="bg" class="header-bg" src="../../assets/images/carousel/10.jpeg">
         </ng-template> -->
-    <ng-template carouselSlide>
-      <img alt="bg" class="header-bg" src="../../assets/images/carousel/11.jpeg">
-    </ng-template>
-    <ng-template carouselSlide>
-      <img alt="bg" class="header-bg" src="../../assets/images/carousel/12.jpeg">
-    </ng-template>
-    <ng-template carouselSlide>
-      <img alt="bg" class="header-bg" src="../../assets/images/carousel/13.jpeg">
-    </ng-template>
-    <!-- <ng-template carouselSlide>
+		<ng-template carouselSlide>
+			<img
+				alt="bg"
+				class="header-bg"
+				src="../../assets/images/carousel/11.jpeg"
+			/>
+		</ng-template>
+		<ng-template carouselSlide>
+			<img
+				alt="bg"
+				class="header-bg"
+				src="../../assets/images/carousel/12.jpeg"
+			/>
+		</ng-template>
+		<ng-template carouselSlide>
+			<img
+				alt="bg"
+				class="header-bg"
+				src="../../assets/images/carousel/13.jpeg"
+			/>
+		</ng-template>
+		<!-- <ng-template carouselSlide>
           <img alt="bg" class="header-bg" src="../../assets/images/carousel/14.jpeg">
         </ng-template> -->
-    <!-- <ng-template carouselSlide>
+		<!-- <ng-template carouselSlide>
           <img alt="bg" class="header-bg" src="../../assets/images/carousel/15.jpeg">
         </ng-template>
         <ng-template carouselSlide>
           <img alt="bg" class="header-bg" src="../../assets/images/carousel/16.jpeg">
         </ng-template> -->
-    <ng-template carouselSlide>
-      <img alt="bg" class="header-bg" src="../../assets/images/carousel/17.jpeg">
-    </ng-template>
-  </owl-carousel-o>
+		<ng-template carouselSlide>
+			<img
+				alt="bg"
+				class="header-bg"
+				src="../../assets/images/carousel/17.jpeg"
+			/>
+		</ng-template>
+	</owl-carousel-o>
 </div>
-<div class="main-objectives-container" fxLayout="column" fxLayoutGap="3rem"  [ngStyle.lt-md]="{'padding':'1rem 0.3rem'}">
-  <div class="main-objectives" fxLayoutAlign="center">
-    <span>{{getItem(content.objectives.main)}}</span>
-    <span style="margin-left: 1.5vw;color: #f67e22;">{{getItem(content.objectives.title)}}</span>
-  </div>
-  <div class="objective-description" fxLayout="column">
-    {{getItem(content.objectives.desc)}}
-  </div>
-  <div class="objectives-card " fxLayout="row wrap" fxLayoutAlign="center center">
-    <a *ngFor="let item of objectives" (click)="openModal(item.name.en)" class="item"
-    [ngStyle.lt-md]="{'width':'30vw', 'height':'18vh'}"
-      style="width: 17rem;height: 8.5rem; cursor: pointer;" fxLayoutAlign="center center" fxLayout="column">
-      <fa-icon class="icon" [icon]="item.icon"></fa-icon>
-      <div class="contents" fxLayout="column">
-        <span class="name" style="text-align: center;">{{getItem(item.name)}}</span>
-      </div>
-    </a>
-  </div>
-  <div fxLayout="row" fxLayoutAlign="space-around center">
-    <iframe
-      src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fsarthimaharashtra%2F&tabs=timeline&width=500&height=700&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId"
-      width="500" height="700" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true"
-      allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
-    <!-- <lightgallery [settings]="settings" [onBeforeSlide]="onBeforeSlide">
+<div
+	class="main-objectives-container"
+	fxLayout="column"
+	fxLayoutGap="3rem"
+	[ngStyle.lt-md]="{ padding: '1rem 0.3rem' }"
+>
+	<div class="main-objectives" fxLayoutAlign="center">
+		<span>{{ getItem(content.objectives.main) }}</span>
+		<span style="margin-left: 1.5vw; color: #f67e22">{{
+			getItem(content.objectives.title)
+		}}</span>
+	</div>
+	<div class="objective-description" fxLayout="column">
+		{{ getItem(content.objectives.desc) }}
+	</div>
+	<div
+		class="objectives-card"
+		fxLayout="row wrap"
+		fxLayoutAlign="center center"
+	>
+		<a
+			*ngFor="let item of objectives"
+			(click)="openModal(item.name.en)"
+			class="item"
+			[ngStyle.lt-md]="{ width: '30vw', height: '18vh' }"
+			style="width: 17rem; height: 8.5rem; cursor: pointer"
+			fxLayoutAlign="center center"
+			fxLayout="column"
+		>
+			<fa-icon class="icon" [icon]="item.icon"></fa-icon>
+			<div class="contents" fxLayout="column">
+				<span class="name" style="text-align: center">{{
+					getItem(item.name)
+				}}</span>
+			</div>
+		</a>
+	</div>
+</div>
+
+<div style="margin-top: 30px; margin-bottom: 30px">
+	<div
+		fxLayout="row"
+		fxLayout.lt-md="column"
+		fxLayoutAlign="space-around center"
+	>
+		<!-- <lightgallery [settings]="settings" [onBeforeSlide]="onBeforeSlide">
       <a *ngFor="let gallery of photoGallery" [href]="apiUrl + '/' + gallery.filename">
         <img [alt]="gallery.originalName" [src]="apiUrl + '/' + gallery.filename" />
       </a>
     </lightgallery> -->
-    <app-photo-gallery [isHome]="true"></app-photo-gallery>
-  </div>
+		<app-photo-gallery [isHome]="true"></app-photo-gallery>
+		<iframe
+			src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fsarthimaharashtra%2F&tabs=timeline&width=500&height=700&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId"
+			width="100%"
+			height="700px"
+			style="
+				border: none;
+				overflow: hidden;
+				margin-left: 50px;
+				margin-right: 50px;
+				max-width: 500px;
+			"
+			scrolling="no"
+			frameborder="0"
+			allowfullscreen="true"
+			allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+		></iframe>
+	</div>
 </div>
-<owl-carousel-o [options]="customOptions" fxLayoutAlign="center" style="height: 12rem; overflow: hidden;">
 
-  <ng-template carouselSlide>
-    <div fxLayout="row" class="footer-carousel">
-      <div class="footer-c-content" fxLayout="row" fxLayoutAlign="space-between center">
-        <a href="https://www.india.gov.in/" target="_blank">
-          <div class="footer-bg-c">
-            <img alt="bg" class="footer-bg" src="../../assets/images/footer-carousel/img1.png">
-          </div>
-        </a>
-        <a href="https://aaplesarkar.mahaonline.gov.in/en" target="_blank">
-          <div class="footer-bg-c">
-            <img alt="bg" class="footer-bg" src="../../assets/images/footer-carousel/img2.png">
-          </div>
-        </a>
-        <a href="https://www.maharashtra.gov.in/1145/Government-Resolutions" target="_blank">
-          <div class="footer-bg-c">
-            <img alt="bg" class="footer-bg" src="../../assets/images/footer-carousel/img3.png">
-          </div>
-        </a>
-      </div>
-    </div>
-  </ng-template>
-  <ng-template carouselSlide>
-    <div fxLayout="row" class="footer-carousel">
-      <div class="footer-c-content" fxLayout="row" fxLayoutAlign="space-between center">
-        <a href="https://rtionline.gov.in/" target="_blank">
-          <div class="footer-bg-c">
-            <img alt="bg" class="footer-bg" src="../../assets/images/footer-carousel/img4.png">
-          </div>
-        </a>
-        <a href="https://www.india.gov.in/" target="_blank">
-          <div class="footer-bg-c">
-            <img alt="bg" class="footer-bg" src="../../assets/images/footer-carousel/img1.png">
-          </div>
-        </a>
-        <a href="https://aaplesarkar.mahaonline.gov.in/en" target="_blank">
-          <div class="footer-bg-c">
-            <img alt="bg" class="footer-bg" src="../../assets/images/footer-carousel/img2.png">
-          </div>
-        </a>
-      </div>
-    </div>
-  </ng-template>
-  <ng-template carouselSlide>
-    <div fxLayout="row" class="footer-carousel">
-      <div class="footer-c-content" fxLayout="row" fxLayoutAlign="space-between center">
-        <a href="https://www.maharashtra.gov.in/1145/Government-Resolutions" target="_blank">
-          <div class="footer-bg-c">
-            <img alt="bg" class="footer-bg" src="../../assets/images/footer-carousel/img3.png">
-          </div>
-        </a>
-        <a href="https://rtionline.gov.in/" target="_blank">
-          <div class="footer-bg-c">
-            <img alt="bg" class="footer-bg" src="../../assets/images/footer-carousel/img4.png">
-          </div>
-        </a>
-        <a href="https://www.india.gov.in/" target="_blank">
-          <div class="footer-bg-c">
-            <img alt="bg" class="footer-bg" src="../../assets/images/footer-carousel/img1.png">
-          </div>
-        </a>
-      </div>
-    </div>
-  </ng-template>
+<owl-carousel-o
+	[options]="customOptions"
+	fxLayoutAlign="center"
+	style="height: 12rem; overflow: hidden"
+>
+	<ng-template carouselSlide>
+		<div fxLayout="row" class="footer-carousel">
+			<div
+				class="footer-c-content"
+				fxLayout="row"
+				fxLayoutAlign="space-between center"
+			>
+				<a href="https://www.india.gov.in/" target="_blank">
+					<div class="footer-bg-c">
+						<img
+							alt="bg"
+							class="footer-bg"
+							src="../../assets/images/footer-carousel/img1.png"
+						/>
+					</div>
+				</a>
+				<a
+					href="https://aaplesarkar.mahaonline.gov.in/en"
+					target="_blank"
+				>
+					<div class="footer-bg-c">
+						<img
+							alt="bg"
+							class="footer-bg"
+							src="../../assets/images/footer-carousel/img2.png"
+						/>
+					</div>
+				</a>
+				<a
+					href="https://www.maharashtra.gov.in/1145/Government-Resolutions"
+					target="_blank"
+				>
+					<div class="footer-bg-c">
+						<img
+							alt="bg"
+							class="footer-bg"
+							src="../../assets/images/footer-carousel/img3.png"
+						/>
+					</div>
+				</a>
+			</div>
+		</div>
+	</ng-template>
+	<ng-template carouselSlide>
+		<div fxLayout="row" class="footer-carousel">
+			<div
+				class="footer-c-content"
+				fxLayout="row"
+				fxLayoutAlign="space-between center"
+			>
+				<a href="https://rtionline.gov.in/" target="_blank">
+					<div class="footer-bg-c">
+						<img
+							alt="bg"
+							class="footer-bg"
+							src="../../assets/images/footer-carousel/img4.png"
+						/>
+					</div>
+				</a>
+				<a href="https://www.india.gov.in/" target="_blank">
+					<div class="footer-bg-c">
+						<img
+							alt="bg"
+							class="footer-bg"
+							src="../../assets/images/footer-carousel/img1.png"
+						/>
+					</div>
+				</a>
+				<a
+					href="https://aaplesarkar.mahaonline.gov.in/en"
+					target="_blank"
+				>
+					<div class="footer-bg-c">
+						<img
+							alt="bg"
+							class="footer-bg"
+							src="../../assets/images/footer-carousel/img2.png"
+						/>
+					</div>
+				</a>
+			</div>
+		</div>
+	</ng-template>
+	<ng-template carouselSlide>
+		<div fxLayout="row" class="footer-carousel">
+			<div
+				class="footer-c-content"
+				fxLayout="row"
+				fxLayoutAlign="space-between center"
+			>
+				<a
+					href="https://www.maharashtra.gov.in/1145/Government-Resolutions"
+					target="_blank"
+				>
+					<div class="footer-bg-c">
+						<img
+							alt="bg"
+							class="footer-bg"
+							src="../../assets/images/footer-carousel/img3.png"
+						/>
+					</div>
+				</a>
+				<a href="https://rtionline.gov.in/" target="_blank">
+					<div class="footer-bg-c">
+						<img
+							alt="bg"
+							class="footer-bg"
+							src="../../assets/images/footer-carousel/img4.png"
+						/>
+					</div>
+				</a>
+				<a href="https://www.india.gov.in/" target="_blank">
+					<div class="footer-bg-c">
+						<img
+							alt="bg"
+							class="footer-bg"
+							src="../../assets/images/footer-carousel/img1.png"
+						/>
+					</div>
+				</a>
+			</div>
+		</div>
+	</ng-template>
 </owl-carousel-o>
-<div [class.active]="modalVisible" class="modal-container" fxLayoutAlign="center center">
-  <div class="modal-body" fxLayout="column" fxLayoutAlign="start center">
-    <h1>{{currentObjective}}</h1>
-    <ul *ngIf="isArray()">
-      <li class="rules" *ngFor="let item of getObjectiveContent()">
-        {{item}}
-      </li>
-    </ul>
-    <a (click)="toggleModal()" style="cursor: pointer;">
-      <fa-icon class="cross-icon" [icon]="faIcons.faTimes"></fa-icon>
-    </a>
-  </div>
+<div
+	[class.active]="modalVisible"
+	class="modal-container"
+	fxLayoutAlign="center center"
+>
+	<div class="modal-body" fxLayout="column" fxLayoutAlign="start center">
+		<h1>{{ currentObjective }}</h1>
+		<ul *ngIf="isArray()">
+			<li class="rules" *ngFor="let item of getObjectiveContent()">
+				{{ item }}
+			</li>
+		</ul>
+		<a (click)="toggleModal()" style="cursor: pointer">
+			<fa-icon class="cross-icon" [icon]="faIcons.faTimes"></fa-icon>
+		</a>
+	</div>
 </div>
