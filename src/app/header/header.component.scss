@@ -273,7 +273,7 @@ ul {
 	padding: 0 10px;
 	color: #354658;
 	font-weight: 600;
-  line-height: 1.7rem;
+	line-height: 1.7rem;
 }
 
 @keyframes color-change {
@@ -293,11 +293,10 @@ div.marquee {
 	margin-bottom: 0.5rem;
 	white-space: nowrap;
 	display: inline-block;
-	max-width: 100vw;
+	width: 100%;
 	animation: marquee linear 15s infinite;
 	a {
-		color: #A73333;
-;
+		color: #a73333;
 		font-size: 1.2rem;
 		font-weight: 600;
 		text-decoration: none;
@@ -340,18 +339,18 @@ div.marquee {
 	}
 }
 
-.header-small{
-  display: flex;
-  flex-direction: column !important;
+.header-small {
+	display: flex;
+	flex-direction: column !important;
 }
 
 @media screen and (max-width: 960px) {
-	.language-banner{
+	.language-banner {
 		padding-left: 5rem;
 	}
-  .marquee{
-    a{
-      background-color:#FFF3E9;
-    }
-  }
+	.marquee {
+		a {
+			background-color: #fff3e9;
+		}
+	}
 }
