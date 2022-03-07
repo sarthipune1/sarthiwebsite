@@ -102,7 +102,9 @@
 				[alt]="item.position + ' Image'"
 			/>
 			<div class="contents" fxLayout="column">
-				<span class="name">{{ getItem(item.name) }}</span>
+				<span class="name" style="white-space: nowrap">{{
+					getItem(item.name)
+				}}</span>
 				<span class="position">{{ getItem(item.position) }}</span>
 			</div>
 		</div>
