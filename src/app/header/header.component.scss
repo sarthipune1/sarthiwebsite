@@ -287,26 +287,32 @@ ul {
 		color: $orange;
 	}
 }
-
-div.marquee {
+div.marquee span {
+	margin-right: 100%;
+}
+div.marquee p {
+	white-space: nowrap;
+	margin-right: 1000px;
+}
+marquee {
 	padding: 0.5rem 0;
 	margin-bottom: 0.5rem;
-
-	animation: marquee linear 15s infinite;
-	a {
-		color: #a73333;
-		font-size: 1.2rem;
-		font-weight: 600;
-		text-decoration: none;
-	}
+	background-color: #f67e2228;
+}
+marquee {
 	fa-icon {
 		margin-right: 0.5rem;
 		margin-left: 1rem;
 		color: red;
 	}
-	&:hover {
-		animation-play-state: paused;
-	}
+}
+.marqueeText {
+	padding: 0.5rem 0;
+	margin-bottom: 0.5rem;
+	text-decoration: none;
+	color: #a73333;
+	font-size: 1.2rem;
+	font-weight: 600;
 }
 
 @keyframes marquee {
