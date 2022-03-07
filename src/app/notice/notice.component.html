@@ -8,27 +8,24 @@
   <div [ngStyle.lt-md]="{'height': 'auto', 'width': '85%'}" [ngStyle]="{'height': '40rem'}" class="main-container"
     fxLayout="row" fxLayout.lt-md="column" fxLayoutAlign="space-evenly center" fxLayoutGap="0px"
     fxLayoutGap.lt-md="40px">
-    <div class="Announcements-container" fxFlex="90" fxFlex.lt-md="90">
-      <div class="notice-header">
+    <div class="Announcements-container" fxFlex="90" fxFlex.lt-md="90" [ngStyle.lt-md]="{'background-color':'#FFF3E9'}">
+      <div class="notice-header" fxLayoutAlign.lt-md="center center" [ngStyle.lt-md]="{'color':'#F67E22'}">
         <span>Announcements</span>
       </div>
-      <div fxLayout.lt-md="column" fxLayoutGap="50px" class="notice-details-container">
+      <div fxLayout.lt-md="column" fxLayoutGap="50px" fxLayoutGap.lt-md="0" class="notice-details-container" >
         <div *ngFor="let category of categories" fxLayout="row" fxLayout.lt-md="column"
-          fxLayoutAlign="flex-start center" fxLayoutGap="20px" class="announcements Announcements-block-container">
-          <div class="Announcements-description">
-            <img alt="bg" [src]="'../../assets/images/'+getNoticeStatus(category.createdAt, category.expiry)">
+        [ngStyle.lt-md]="{'background-color':'white' ,'flex-direction':'row', 'margin': '10px', 'padding': '5px'}"
+          fxLayoutAlign="flex-start center" fxLayoutGap="20px" fxLayoutGap.lt-md="0" class="announcements Announcements-block-container">
+          <div class="Announcements-description" fxFlex.lt-md="15vw">
+            <img [ngStyle.lt-md]="{'margin-right': '10px'}" alt="bg" [src]="'../../assets/images/'+getNoticeStatus(category.createdAt, category.expiry)">
           </div>
-          <div fxLayout="column" class="check-here" fxLayoutGap="20px">
-            <div>
-              <span class="Announcements-sub-title">
+          <div fxLayout="column" class="check-here" fxLayoutGap="20px" fxFlex.lt-md="60vw">
+            <div [ngStyle.lt-md]="{'text-align':'center'}">
+              <span class="Announcements-sub-title"  [ngStyle.lt-md]="{'font-size':'0.6rem' ,'line-height':'0.5rem'}">
                 {{category.title}}
               </span>
               <br>
-              <!-- <span class="Announcements-sub-title">
-                {{strength.title}}
-                <br>
-              </span> -->
-              <a (click)="openCategory(category.title)" style="cursor: pointer;">
+              <a (click)="openCategory(category.title)" style="cursor: pointer;" [ngStyle.lt-md]="{'font-size':'0.6rem' ,'line-height':'0.5rem'}">
                 Check Here
               </a>
             </div>

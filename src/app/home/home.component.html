@@ -49,7 +49,7 @@
 </div>
 <!-- Mobile view for ministers -->
 
-<div class="maha-gov-small" fxLayout="column" fxLayoutGap="30px" fxHide.gt-sm
+<div class="maha-gov-small" fxLayout="column" fxLayoutGap="30px" fxHide.gt-sm fxLayoutAlign.lt-md="center center"
   style="justify-content: space-between; margin: 1rem; ">
     <div fxFlex="15" fxLayout="row">
       <div *ngFor="let item of mahaGov" class="item" fxLayoutAlign="center center" fxLayout="column"
@@ -85,9 +85,8 @@
       <a href="/pages/success">{{getItem(content.success)}}</a>
     </div>
   </div>
-
-
 </div>
+<app-notice [isHome]="true" fxHide.gt-sm></app-notice>
 <div class="sub-container">
   <div class="about-container">
     <div class="about-title" fxLayoutGap="15px">
@@ -101,7 +100,7 @@
         {{getItem(content.read_more)}}
       </a>
     </div>
-    <div class="img-container" fxLayout="column" fxHide.lt-sm fxLayoutAlign="center center">
+    <div class="img-container" fxLayout="column" fxHide.lt-md fxLayoutAlign="center center">
       <iframe width="400" height="250"
         src="https://www.youtube.com/embed/Ur7ci_1kppw?version=3&autoplay=1&mute=1&controls=0&showinfo=0&playlist=Ur7ci_1kppw&loop=1"
         title="YouTube video player" frameborder="0"
@@ -113,7 +112,7 @@
     </div>
   </div>
 </div>
-<app-notice [isHome]="true"></app-notice>
+<app-notice [isHome]="true" fxHide.lt-md></app-notice>
 <div>
   <owl-carousel-o [options]="customOptions">
     <ng-template carouselSlide>
@@ -172,7 +171,7 @@
     </ng-template>
   </owl-carousel-o>
 </div>
-<div class="main-objectives-container" fxLayout="column" fxLayoutGap="3rem">
+<div class="main-objectives-container" fxLayout="column" fxLayoutGap="3rem"  [ngStyle.lt-md]="{'padding':'1rem 0.3rem'}">
   <div class="main-objectives" fxLayoutAlign="center">
     <span>{{getItem(content.objectives.main)}}</span>
     <span style="margin-left: 1.5vw;color: #f67e22;">{{getItem(content.objectives.title)}}</span>
@@ -180,12 +179,13 @@
   <div class="objective-description" fxLayout="column">
     {{getItem(content.objectives.desc)}}
   </div>
-  <div class="objectives-card " fxLayout="row wrap" fxLayoutAlign="center center" fxLayout.lt-md="column">
+  <div class="objectives-card " fxLayout="row wrap" fxLayoutAlign="center center">
     <a *ngFor="let item of objectives" (click)="openModal(item.name.en)" class="item"
+    [ngStyle.lt-md]="{'width':'30vw', 'height':'18vh'}"
       style="width: 17rem;height: 8.5rem; cursor: pointer;" fxLayoutAlign="center center" fxLayout="column">
       <fa-icon class="icon" [icon]="item.icon"></fa-icon>
       <div class="contents" fxLayout="column">
-        <span class="name">{{getItem(item.name)}}</span>
+        <span class="name" style="text-align: center;">{{getItem(item.name)}}</span>
       </div>
     </a>
   </div>
