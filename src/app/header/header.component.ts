@@ -9,6 +9,9 @@ import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
 import { faHotjar } from '@fortawesome/free-brands-svg-icons';
 import { RouteService } from 'app/services/route.service';
 import { Subheader } from 'app/subheader/subheader.component';
+import { HttpClient } from '@angular/common/http';
+import { environment } from 'environments/environment';
+import { INotice } from 'app/notice/notice.component';
 
 @Component({
 	selector: 'app-header',
@@ -18,13 +21,18 @@ import { Subheader } from 'app/subheader/subheader.component';
 export class HeaderComponent implements OnInit, OnChanges {
 	@Input() route: string;
 
-	constructor(private routeService: RouteService) {}
-
-	ngOnChanges(): void {
-		console.log(this.route);
+	constructor(private routeService: RouteService, private http: HttpClient) {
+		this.getMarquee();
 	}
 
+	ngOnChanges(): void {
+		// console.log(this.route);
+	}
+
+	baseUrl = environment.apiUrl;
+
 	pageStats: Subheader;
+	marquee: INotice[];
 
 	ngOnInit(): void {
 		this.routeService.onGetData.subscribe((pageStats: Subheader) => {
@@ -51,32 +59,13 @@ export class HeaderComponent implements OnInit, OnChanges {
 		return key[l];
 	}
 
-	marque = [
-		{
-			title: 'छत्रपती शाहू महाराज राष्ट्रीय संशोधन अधिछात्रवृत्ती (CSMNRF -2021)',
-			link: 'https://api.sarthi-maharashtragov.in/notice-data/CSMNRF%20-%202021%20Ghoshnaaaa.pdf',
-		},
-		{
-			title: '250 Candidates eligible through Document Verification for MPSC ( State Services) - 2021-22 Coaching Program',
-			link: 'https://api.sarthi-maharashtragov.in/notice-data/Final%20250%20Candidate%20-%20MPSC%20State%20Service%202021%20-22-%20website.pdf',
-		},
-		{
-			title: 'UPSC (Civil Services) Mains 2021 Sponsorship Programme – APPLY HERE',
-			link: 'https://forms.gle/uwKHzgXNbuYVPCFZA',
-		},
-		{
-			title: 'MPSC (Maharashtra Engineering Services) Mains 2020 Sponsorship Programme – APPLY HERE',
-			link: 'https://forms.gle/pRV1RpiSraTPfbKt7',
-		},
-		{
-			title: 'MPSC MAINS 2020 - Eligible Candidate 1st and 2nd List',
-			link: 'https://api.sarthi-maharashtragov.in/notice-data/MPSC%20MAINS%202020%20-%20Eligible%20Candidate%201st%20List.pdf',
-		},
-		{
-			title: 'SARTHI- MPSC MAINS 2020 SPONSORSHIP PROGRAM - Pending Documents Candidates list',
-			link: 'https://api.sarthi-maharashtragov.in/notice-data/file_23CQWIIN.pdf',
-		},
-	];
+	getMarquee() {
+		this.http
+			.get(`${this.baseUrl}/notices/marquee`)
+			.subscribe((data: INotice[]) => {
+				this.marquee = data;
+			});
+	}
 
 	content = {
 		title: {

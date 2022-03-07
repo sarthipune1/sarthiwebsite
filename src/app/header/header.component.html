@@ -102,9 +102,9 @@
     </div>
   </div>
   <div class="marquee">
-    <span *ngFor="let item of marque">
+    <span *ngFor="let item of marquee">
       <fa-icon class="icon" [icon]="faIcons.faHotjar"></fa-icon>
-      <a href={{item.link}} target="_blank">
+      <a [href]="baseUrl + '/' + item.link" target="_blank">
         {{item.title}}
       </a>
     </span>
