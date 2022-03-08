@@ -141,12 +141,14 @@
 					</span>
 				</div>
 			</div>
-			<div class="nav-items" fxLayout="row" fxLayoutGap.gt-md="1rem ">
+			<div class="nav-items-mobile" fxLayout="row" fxLayoutGap.gt-md="1rem " [ngStyle.lt-md]="{'width':'90vw'}">
 				<div
-					fxLayout="column"
+					fxLayout="row"
 					fxFlex="100 "
 					fxLayoutGap="10px"
 					style="text-align: left"
+          fxLayoutAlign.lt-md="center space-between"
+          [ngStyle.lt-md]="{'flex-flow':'row wrap'}"
 				>
 					<a routerLink>Home</a>
 					<a routerLink="/pages/about-us">About Us</a>
