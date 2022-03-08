@@ -342,23 +342,19 @@
         <img [alt]="gallery.originalName" [src]="apiUrl + '/' + gallery.filename" />
       </a>
     </lightgallery> -->
-		<app-photo-gallery [isHome]="true"></app-photo-gallery>
-		<iframe
-			src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fsarthimaharashtra%2F&tabs=timeline&width=500&height=700&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId"
-			width="100%"
-			height="700px"
-			style="
-				border: none;
-				overflow: hidden;
-				margin-left: 50px;
-				margin-right: 50px;
-				max-width: 500px;
-			"
-			scrolling="no"
-			frameborder="0"
-			allowfullscreen="true"
-			allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
-		></iframe>
+		<div style="flex: 50%;"><app-photo-gallery [isHome]="true"></app-photo-gallery></div>
+	<div fxLayoutAlign="center center" style="flex: 50%; width: 100%;">
+      <iframe
+        src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fsarthimaharashtra%2F&tabs=timeline&width=500&height=700&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId"
+        width="100%" height="700px" style="
+      				border: none;
+      				overflow: hidden;
+      				margin-left: 10px;
+      				margin-right: 10px;
+      				max-width: 500px;
+      			" scrolling="no" frameborder="0" allowfullscreen="true"
+        allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+  </div>
 	</div>
 </div>
 
