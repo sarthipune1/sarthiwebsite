@@ -184,7 +184,7 @@ export class HomeComponent implements OnInit {
 		{
 			image: 'chief_minister.jpg',
 			name: {
-				en: 'Shri Uddhav Thakare',
+				en: 'Shri Uddhav Thackeray',
 				mr: 'श्री उद्धवजी ठाकरे',
 			},
 			position: {
