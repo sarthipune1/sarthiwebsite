@@ -51,3 +51,5 @@ target/**
 src/app/.history/**
 
 dist/**
+yarn.lock
+package-json.lock
