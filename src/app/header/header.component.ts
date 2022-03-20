@@ -29,6 +29,8 @@ export class HeaderComponent implements OnInit, OnChanges {
 		// console.log(this.route);
 	}
 
+  departmentToggled: boolean = false;
+
 	baseUrl = environment.apiUrl;
 
 	pageStats: Subheader;
@@ -123,7 +125,7 @@ export class HeaderComponent implements OnInit, OnChanges {
 				en: 'Department',
 				mr: 'विभाग',
 			},
-			path: '/department/administration-and-management',
+			path: '',
 			sublist: [
 				{
 					name: {
@@ -284,8 +286,12 @@ export class HeaderComponent implements OnInit, OnChanges {
 		faTimes,
 		faHotjar,
 	};
-	setToggled() {
-		this.isToggled = !this.isToggled;
+	setToggled(willClose:boolean = true) {
+    if(willClose){
+      this.isToggled = !this.isToggled;
+    } else {
+      this.departmentToggled = !this.departmentToggled;
+    }
 	}
 
 	increaseFont(zoomVal: number) {

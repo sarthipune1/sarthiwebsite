@@ -76,15 +76,17 @@
 				<ul
 					fxLayout="column"
 					fxLayoutAlign="end end"
-					(click)="setToggled()"
+
 				>
 					<li
 						*ngFor="let item of menu"
 						[ngClass]="{
 							active:
 								item.path === route ||
-								route.startsWith(item.path)
+								route.startsWith(item.path),
+                toggled : departmentToggled
 						}"
+            (click)="setToggled(item.path !== '')"
 					>
 						<a [routerLink]="item.path">{{ getItem(item.name) }}</a>
 						<ul *ngIf="item.sublist" class="sublist">
