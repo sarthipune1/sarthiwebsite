@@ -42,6 +42,7 @@ export interface IGallery {
 	createdAt: Date;
 	updatedAt: Date;
 	enabled?: boolean;
+  url: string;
 }
 
 @Component({

@@ -9,10 +9,10 @@
 </div> -->
 <div class="sarthi-banner" fxLayout="column" fxLayoutAlign="center center" [class.active]="isBannerVisible">
   <div class="inner" fxLayoutAlign="center center">
-    <img [src]="apiUrl + '/' + banner?.filename" alt="{{banner?.originalName}}">
-    <a (click)="toggleModal()" style="cursor: pointer;">
+    <a [href]="banner?.url" target="_blank" [title]="banner?.url"><img [src]="apiUrl + '/' + banner?.filename" alt="{{banner?.originalName}}"></a>
+    <!-- <a (click)="toggleModal()" style="cursor: pointer;">
       <fa-icon class="cross-icon" [icon]="faIcons.faTimes"></fa-icon>
-    </a>
+    </a> -->
   </div>
   <a class="btn-close" (click)="toggleModal()">
     Close

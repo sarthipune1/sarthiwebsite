@@ -53,6 +53,7 @@ export class AppComponent implements OnInit {
 		});
 	}
 	ngOnInit(): void {
+    this.getBanner();
 		const l = localStorage.getItem('lang');
 		if (l === undefined || l === null) {
 			localStorage.setItem('lang', 'en');
@@ -70,7 +71,7 @@ export class AppComponent implements OnInit {
 				},
 			})
 			.subscribe();
-		this.getBanner();
+
 	}
 	// Shows and hides the loading spinner during RouterEvent changes
 	navigationInterceptor(event: RouterEvent): void {
