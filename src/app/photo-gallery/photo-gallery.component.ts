@@ -16,7 +16,7 @@ export class PhotoGalleryComponent implements OnInit {
 	photoGallery: IGallery[] = [];
 	apiUrl = environment.apiUrl;
 
-	carousel() {
+	carousel(n:number) {
 		var i: number;
 		var x: any = document.getElementsByClassName('mySlides');
 		for (i = 0; i < x.length; i++) {
@@ -29,7 +29,13 @@ export class PhotoGalleryComponent implements OnInit {
 		if (x[this.slideIndex - 1] !== undefined) {
 			x[this.slideIndex - 1].style.display = 'block';
 		}
-		setTimeout(() => this.carousel(), 2000);
+    if(n>1){
+      setTimeout(() => {
+        this.carousel(n);
+      }, 10000);
+    } else {
+		setTimeout(() => this.carousel(n+1), 5000);
+    }
 	}
 
 	plusDivs(n) {
@@ -77,7 +83,7 @@ export class PhotoGalleryComponent implements OnInit {
 			.get<IGallery[]>(`${environment.apiUrl}/gallery`)
 			.subscribe((data) => {
 				this.photoGallery = data;
-				this.carousel();
+				this.carousel(0);
 			});
 	}
 }

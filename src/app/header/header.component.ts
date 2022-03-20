@@ -101,15 +101,15 @@ export class HeaderComponent implements OnInit, OnChanges {
 		},
 		{
 			name: {
-				en: 'Vision',
-				mr: 'स्वप्नवत',
+				en: 'Vision-Mission ',
+				mr: 'स्वप्नवत-शिष्टमंडळ',
 			},
 			path: '/pages/vision',
 		},
 		{
 			name: {
-				en: 'Mission ',
-				mr: 'शिष्टमंडळ',
+				en: 'Employment info ',
+				mr: 'रोजगार माहिती',
 			},
 			path: '/pages/mission',
 		},
