@@ -174,7 +174,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="navItems" fxHide.lt-md>
+	<div class="navItems" fxHide.lt-md >
 		<div
 			fxLayout="row"
 			fxLayoutAlign="space-between center"
@@ -196,13 +196,13 @@
 							item.path === route || route.startsWith(item.path)
 					}"
 				>
-					<a *ngIf="item.path" [routerLink]="item.path">
+					<a [ngStyle]="!route.startsWith(item.path)?{} : {'color':'white'}" *ngIf="item" [routerLink]="item.path">
 						{{ getItem(item.name) }}
 					</a>
 					<!-- <a *ngIf="item?.url" [href]="item?.url" target="_blank">
             {{getItem(item.name)}}
           </a> -->
-					<ul *ngIf="item.sublist" class="sublist">
+					<ul *ngIf="item.sublist" class="sublist" style="position: absolute !important">
 						<li *ngFor="let subitem of item.sublist">
 							<a [routerLink]="subitem.path">{{
 								getItem(subitem.name)
