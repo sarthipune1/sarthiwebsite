@@ -56,7 +56,7 @@ const routes: Routes = [
 		component: VisionComponent,
 	},
 	{
-		path: 'mission',
+		path: 'employment-news',
 		component: MissionComponent,
 	},
 ];
