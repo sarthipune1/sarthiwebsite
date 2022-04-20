@@ -26,7 +26,7 @@ export class MissionComponent implements OnInit {
 	modalVisible: boolean = false;
 	selectedExam: Exam;
 	exams: Exam[] = [];
-	baseUrl: string = environment.apiUrl + '/employment-news';
+	baseUrl: string = environment.apiUrl + '/mission';
 	faIcons = {
 		faTimes,
 	};
