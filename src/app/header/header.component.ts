@@ -29,7 +29,7 @@ export class HeaderComponent implements OnInit, OnChanges {
 		// console.log(this.route);
 	}
 
-  departmentToggled: boolean = false;
+	departmentToggled: boolean = false;
 
 	baseUrl = environment.apiUrl;
 
@@ -108,10 +108,10 @@ export class HeaderComponent implements OnInit, OnChanges {
 		},
 		{
 			name: {
-				en: 'Employment info ',
+				en: 'Employment News',
 				mr: 'रोजगार माहिती',
 			},
-			path: '/pages/mission',
+			path: '/pages/employment-news',
 		},
 		// {
 		// 	name: {
@@ -286,12 +286,12 @@ export class HeaderComponent implements OnInit, OnChanges {
 		faTimes,
 		faHotjar,
 	};
-	setToggled(willClose:boolean = true) {
-    if(willClose){
-      this.isToggled = !this.isToggled;
-    } else {
-      this.departmentToggled = !this.departmentToggled;
-    }
+	setToggled(willClose: boolean = true) {
+		if (willClose) {
+			this.isToggled = !this.isToggled;
+		} else {
+			this.departmentToggled = !this.departmentToggled;
+		}
 	}
 
 	increaseFont(zoomVal: number) {
