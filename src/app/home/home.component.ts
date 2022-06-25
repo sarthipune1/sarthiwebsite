@@ -427,6 +427,10 @@ export class HomeComponent implements OnInit {
 			en: 'Success Stories',
 			mr: 'यशोगाथा',
 		},
+		MSSDS: {
+			en: 'MSSDS',
+			mr: 'महाराष्ट्र राज्य कौशल्य विकास सोसायटी',
+		},
 		notices: {
 			en: 'Notice Board',
 			mr: 'सूचना फलक',
