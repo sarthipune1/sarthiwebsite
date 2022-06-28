@@ -428,8 +428,8 @@ export class HomeComponent implements OnInit {
 			mr: 'यशोगाथा',
 		},
 		MSSDS: {
-			en: 'MSSDS',
-			mr: 'महाराष्ट्र राज्य कौशल्य विकास सोसायटी',
+			en: 'Skill Development Training Program',
+			mr: 'कौशल्य विकास प्रशिक्षण कार्यक्रम',
 		},
 		notices: {
 			en: 'Notice Board',
