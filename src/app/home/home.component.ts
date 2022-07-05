@@ -185,8 +185,8 @@ export class HomeComponent implements OnInit {
 		{
 			image: 'chief_minister.jpg',
 			name: {
-				en: 'Shri Uddhav Thackeray',
-				mr: 'श्री उद्धवजी ठाकरे',
+				en: 'Shri Eknath Shinde',
+				mr: 'श्री एकनाथ शिंदे',
 			},
 			position: {
 				en: "Hon'ble Chief Minister of Maharashtra",
@@ -196,8 +196,8 @@ export class HomeComponent implements OnInit {
 		{
 			image: 'deputy_chief_minister.jpg',
 			name: {
-				en: 'Shri Ajit Pawar',
-				mr: 'श्री अजित पवार',
+				en: 'Shri Devendra Fadnavis',
+				mr: 'श्री देवेंद्र फडणवीस',
 			},
 			position: {
 				en: "Hon'ble Deputy Chief Minister",
