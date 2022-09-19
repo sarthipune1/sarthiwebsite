@@ -14,6 +14,7 @@ import { SuccessComponent } from '../success/success.component';
 import { GrComponent } from '../gr/gr.component';
 import { VisionComponent } from 'app/vision/vision.component';
 import { MissionComponent } from 'app/mission/mission.component';
+import { PrivacyPolicyComponent } from 'app/privacy-policy/privacy-policy.component';
 
 const routes: Routes = [
 	{
@@ -58,6 +59,10 @@ const routes: Routes = [
 	{
 		path: 'employment-news',
 		component: MissionComponent,
+	},
+	{
+		path: 'privacy-policy',
+		component: PrivacyPolicyComponent,
 	},
 ];
 
